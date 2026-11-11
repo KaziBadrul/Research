@@ -1,0 +1,207 @@
+# organamnist | config 54d6c6bc5c | 2026-11-11 23:41:41
+Frozen rule: anchor-aware eta with c = 8 (in-sample on ['bloodmnist', 'dermamnist', 'octmnist'], held-out test on ['breastmnist', 'organamnist', 'pneumoniamnist'])
+
+Leave-one-dataset-out choice of c on the original datasets (best mean BAcc on the other original datasets):
+  bloodmnist   -> c=4
+  dermamnist   -> c=4
+  octmnist     -> c=2
+
+=== bloodmnist | ORIGINAL (frozen rule is in-sample here) | mean anchor reliability r_a = 0.025 ===
+  K=1: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   14.18   14.18    8.09
+        Visual only                 1.000   57.76   50.71   55.27
+        PARA                        0.316   34.28   27.01   29.30
+        Shot-only                   0.450   43.53   33.97   39.18
+        Anchor-aware (LODO)         0.886   57.21   50.13   54.82
+        Anchor-aware frozen c=8     0.804   55.58   48.84   53.17
+        Oracle BAcc (cheat)         0.951   58.04   50.97   55.53
+  K=4: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   14.18   14.18    8.09
+        Visual only                 1.000   82.78   77.85   81.42
+        PARA                        0.607   69.39   64.64   65.37
+        Shot-only                   0.720   75.80   72.11   73.12
+        HOSO-style                  1.000   82.78   77.85   81.42
+        Anchor-aware (LODO)         0.979   82.72   77.85   81.32
+        Anchor-aware frozen c=8     0.959   82.59   77.86   81.16
+        Oracle BAcc (cheat)         0.976   82.90   77.94   81.48
+  K=16: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   14.18   14.18    8.09
+        Visual only                 1.000   90.73   89.28   89.94
+        PARA                        0.802   88.65   86.71   87.24
+        Shot-only                   0.847   89.68   88.10   88.46
+        HOSO-style                  1.000   90.73   89.28   89.94
+        Anchor-aware (LODO)         0.995   90.72   89.26   89.92
+        Anchor-aware frozen c=8     0.990   90.71   89.28   89.89
+        Oracle BAcc (cheat)         0.981   90.79   89.40   89.96
+
+=== dermamnist | ORIGINAL (frozen rule is in-sample here) | mean anchor reliability r_a = 0.082 ===
+  K=1: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   21.16   21.16   18.74
+        Visual only                 1.000   29.70   20.41   20.59
+        PARA                        0.333   26.45   22.70   21.85
+        Shot-only                   0.450   28.76   23.33   22.97
+        Anchor-aware (LODO)         0.748   30.22   23.48   22.19
+        Anchor-aware frozen c=8     0.631   29.43   23.12   22.18
+        Oracle BAcc (cheat)         0.693   32.07   25.97   23.33
+  K=4: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   21.16   21.16   18.74
+        Visual only                 1.000   45.66   39.41   32.88
+        PARA                        0.604   43.98   39.04   34.70
+        Shot-only                   0.720   46.09   40.87   35.60
+        HOSO-style                  0.776   44.93   37.48   33.48
+        Anchor-aware (LODO)         0.923   45.95   40.11   33.62
+        Anchor-aware frozen c=8     0.860   46.11   40.21   34.14
+        Oracle BAcc (cheat)         0.806   47.48   41.44   35.73
+  K=16: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   21.16   21.16   18.74
+        Visual only                 1.000   57.68   54.62   42.51
+        PARA                        0.799   57.41   54.20   44.24
+        Shot-only                   0.847   57.75   54.90   44.08
+        HOSO-style                  0.970   57.52   54.62   42.55
+        Anchor-aware (LODO)         0.978   57.66   54.87   42.73
+        Anchor-aware frozen c=8     0.958   57.62   54.68   42.89
+        Oracle BAcc (cheat)         0.886   58.64   55.46   44.07
+
+=== octmnist | ORIGINAL (frozen rule is in-sample here) | mean anchor reliability r_a = 0.164 ===
+  K=1: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   50.40   50.40   42.05
+        Visual only                 1.000   48.76   37.05   46.58
+        PARA                        0.328   52.56   47.70   44.49
+        Shot-only                   0.450   52.72   47.28   45.76
+        Anchor-aware (LODO)         0.785   51.14   41.83   48.36
+        Anchor-aware frozen c=8     0.500   53.24   47.77   47.57
+        Oracle BAcc (cheat)         0.490   56.58   51.38   51.60
+  K=4: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   50.40   50.40   42.05
+        Visual only                 1.000   65.28   46.77   64.45
+        PARA                        0.610   64.66   52.60   61.61
+        Shot-only                   0.720   66.40   50.55   64.59
+        HOSO-style                  0.820   64.37   47.72   62.35
+        Anchor-aware (LODO)         0.897   66.16   47.62   65.11
+        Anchor-aware frozen c=8     0.693   64.71   50.15   62.35
+        Oracle BAcc (cheat)         0.746   68.14   54.18   66.38
+  K=16: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   50.40   50.40   42.05
+        Visual only                 1.000   80.36   71.92   80.40
+        PARA                        0.802   80.49   73.58   80.22
+        Shot-only                   0.847   80.97   73.65   80.80
+        HOSO-style                  0.925   79.92   71.57   79.72
+        Anchor-aware (LODO)         0.973   80.52   72.10   80.52
+        Anchor-aware frozen c=8     0.899   80.78   72.70   80.70
+        Oracle BAcc (cheat)         0.878   81.66   74.22   81.53
+
+=== breastmnist | HELD-OUT (frozen rule never saw this dataset) | mean anchor reliability r_a = 0.231 ===
+  K=1: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   62.28   62.28   49.36
+        Visual only                 1.000   60.96   46.49   54.14
+        PARA                        0.325   62.28   62.28   49.36
+        Shot-only                   0.450   62.28   62.28   49.36
+        Anchor-aware frozen c=8     0.528   62.15   46.49   54.56
+        Oracle BAcc (cheat)         0.338   67.65   62.31   60.25
+  K=4: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   62.28   62.28   49.36
+        Visual only                 1.000   65.50   50.56   63.38
+        PARA                        0.587   65.50   50.56   63.38
+        Shot-only                   0.720   65.50   50.56   63.38
+        HOSO-style                  0.225   61.61   55.47   51.40
+        Anchor-aware frozen c=8     0.670   65.42   50.56   62.62
+        Oracle BAcc (cheat)         0.338   69.37   63.28   64.89
+  K=16: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   62.28   62.28   49.36
+        Visual only                 1.000   73.34   66.84   69.05
+        PARA                        0.790   73.34   66.84   69.05
+        Shot-only                   0.847   73.34   66.84   69.05
+        HOSO-style                  0.499   68.29   61.75   60.71
+        Anchor-aware frozen c=8     0.888   73.34   66.84   69.05
+        Oracle BAcc (cheat)         0.444   74.08   68.89   69.86
+
+=== organamnist | HELD-OUT (frozen rule never saw this dataset) | mean anchor reliability r_a = 0.196 ===
+  K=1: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   25.71   25.71   21.45
+        Visual only                 1.000   48.97   45.34   46.05
+        PARA                        0.353   37.30   34.62   32.81
+        Shot-only                   0.450   41.52   38.97   37.05
+        Anchor-aware frozen c=8     0.367   37.86   33.35   33.47
+        Oracle BAcc (cheat)         0.908   49.36   45.92   46.24
+  K=4: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   25.71   25.71   21.45
+        Visual only                 1.000   65.75   59.99   64.60
+        PARA                        0.605   57.40   53.06   54.26
+        Shot-only                   0.720   62.14   56.71   59.61
+        HOSO-style                  1.000   65.75   59.99   64.60
+        Anchor-aware frozen c=8     0.657   59.47   55.34   56.56
+        Oracle BAcc (cheat)         0.963   65.85   60.01   64.60
+  K=16: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   25.71   25.71   21.45
+        Visual only                 1.000   81.48   80.32   81.22
+        PARA                        0.797   79.74   78.19   78.34
+        Shot-only                   0.847   80.59   79.35   79.58
+        HOSO-style                  0.988   81.46   80.24   81.16
+        Anchor-aware frozen c=8     0.894   81.20   80.04   80.47
+        Oracle BAcc (cheat)         0.955   81.62   80.46   81.16
+
+=== pneumoniamnist | HELD-OUT (frozen rule never saw this dataset) | mean anchor reliability r_a = 0.392 ===
+  K=1: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   67.35   67.35   58.31
+        Visual only                 1.000   66.51   53.21   56.11
+        PARA                        0.325   67.35   67.35   58.31
+        Shot-only                   0.450   67.35   67.35   58.31
+        Anchor-aware frozen c=8     0.457   67.15   56.41   57.23
+        Oracle BAcc (cheat)         0.210   71.26   67.35   63.98
+  K=4: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   67.35   67.35   58.31
+        Visual only                 1.000   82.75   76.32   79.46
+        PARA                        0.603   82.75   76.32   79.46
+        Shot-only                   0.720   82.75   76.32   79.46
+        HOSO-style                  0.400   74.18   67.35   67.86
+        Anchor-aware frozen c=8     0.415   71.12   67.35   63.41
+        Oracle BAcc (cheat)         0.525   82.75   76.32   79.46
+  K=16: rule                          eta    BAcc    CVaR      F1
+        Zero-shot                   0.000   67.35   67.35   58.31
+        Visual only                 1.000   89.40   87.22   87.97
+        PARA                        0.799   89.40   87.22   87.97
+        Shot-only                   0.847   89.40   87.22   87.97
+        HOSO-style                  0.750   83.31   67.35   79.97
+        Anchor-aware frozen c=8     0.760   89.40   87.22   87.97
+        Oracle BAcc (cheat)         0.525   89.40   87.22   87.97
+
+HELD-OUT datasets ['breastmnist', 'organamnist', 'pneumoniamnist']: frozen c = 8 minus each rule  <-- the main test
+  vs             metric    mean diff   won  lost | settings sig. better / worse (p<0.05)
+  PARA           bacc          -0.68    35    22 | 1 / 1 of 12
+  PARA           macro_f1      -0.26    37    20 | 3 / 1 of 12
+  Shot-only      bacc          -1.50    24    33 | 1 / 3 of 12
+  Shot-only      macro_f1      -1.16    25    32 | 2 / 2 of 12
+  HOSO-style     bacc          +1.77    22    27 | 1 / 1 of 8
+  HOSO-style     macro_f1      +4.24    23    26 | 1 / 2 of 8
+  Visual only    bacc          -2.20    12    45 | 0 / 3 of 12
+  Visual only    macro_f1      -3.08    13    44 | 0 / 4 of 12
+  Zero-shot      bacc         +12.93    77    15 | 6 / 0 of 12
+  Zero-shot      macro_f1     +18.01    79    13 | 7 / 0 of 12
+
+ORIGINAL datasets ['bloodmnist', 'dermamnist', 'octmnist']: LODO minus each rule
+  vs             metric    mean diff   won  lost | settings sig. better / worse (p<0.05)
+  PARA           bacc          +4.94   140    40 | 10 / 0 of 18
+  PARA           macro_f1      +5.51   122    58 | 9 / 3 of 18
+  Shot-only      bacc          +2.29   120    57 | 6 / 0 of 18
+  Shot-only      macro_f1      +2.67   116    64 | 6 / 4 of 18
+  HOSO-style     bacc          +0.58    63    47 | 0 / 0 of 12
+  HOSO-style     macro_f1      +0.63    61    50 | 2 / 1 of 12
+  Visual only    bacc          +0.40   105    59 | 3 / 1 of 18
+  Visual only    macro_f1      +0.51   106    61 | 4 / 2 of 18
+  Zero-shot      bacc         +33.90   166    14 | 16 / 0 of 18
+  Zero-shot      macro_f1     +34.66   168    12 | 16 / 0 of 18
+
+ORIGINAL datasets ['bloodmnist', 'dermamnist', 'octmnist']: frozen c = 8 minus each rule (in-sample, for reference only)
+  vs             metric    mean diff   won  lost | settings sig. better / worse (p<0.05)
+  PARA           bacc          +4.77   140    39 | 10 / 0 of 18
+  PARA           macro_f1      +5.00   126    54 | 9 / 2 of 18
+  Shot-only      bacc          +2.12   113    65 | 6 / 0 of 18
+  Shot-only      macro_f1      +2.17   104    75 | 7 / 3 of 18
+  HOSO-style     bacc          +0.38    54    61 | 0 / 0 of 12
+  HOSO-style     macro_f1      +0.28    55    61 | 1 / 0 of 12
+  Visual only    bacc          +0.23    85    85 | 2 / 1 of 18
+  Visual only    macro_f1      -0.00    92    79 | 3 / 1 of 18
+  Zero-shot      bacc         +33.73   171     9 | 17 / 0 of 18
+  Zero-shot      macro_f1     +34.16   171     9 | 16 / 0 of 18
+
+Note: prompt sets on the same dataset share support draws, so pooled counts are not fully independent; the per-setting tests (10 draws each) are the safer evidence.

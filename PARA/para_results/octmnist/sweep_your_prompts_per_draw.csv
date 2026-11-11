@@ -1,0 +1,301 @@
+dataset,prompts,K,draw,method,acc,macro_f1,bacc
+octmnist,your prompts,1,0,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,1,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,2,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,3,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,4,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,5,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,6,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,7,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,8,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,9,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,1,0,Visual only,33.4000,28.5678,33.4000
+octmnist,your prompts,1,1,Visual only,41.2000,36.5928,41.2000
+octmnist,your prompts,1,2,Visual only,52.5000,51.7862,52.5000
+octmnist,your prompts,1,3,Visual only,45.2000,44.4468,45.2000
+octmnist,your prompts,1,4,Visual only,52.8000,50.4859,52.8000
+octmnist,your prompts,1,5,Visual only,55.6000,55.7202,55.6000
+octmnist,your prompts,1,6,Visual only,48.4000,43.7314,48.4000
+octmnist,your prompts,1,7,Visual only,46.5000,45.7615,46.5000
+octmnist,your prompts,1,8,Visual only,54.6000,52.4673,54.6000
+octmnist,your prompts,1,9,Visual only,57.8000,59.0758,57.8000
+octmnist,your prompts,1,0,Fixed eta 0.5,47.7000,40.1080,47.7000
+octmnist,your prompts,1,1,Fixed eta 0.5,49.4000,43.7550,49.4000
+octmnist,your prompts,1,2,Fixed eta 0.5,57.4000,51.0417,57.4000
+octmnist,your prompts,1,3,Fixed eta 0.5,48.3000,41.4780,48.3000
+octmnist,your prompts,1,4,Fixed eta 0.5,53.5000,51.2572,53.5000
+octmnist,your prompts,1,5,Fixed eta 0.5,56.3000,52.2170,56.3000
+octmnist,your prompts,1,6,Fixed eta 0.5,48.1000,42.8391,48.1000
+octmnist,your prompts,1,7,Fixed eta 0.5,56.5000,50.6018,56.5000
+octmnist,your prompts,1,8,Fixed eta 0.5,51.2000,47.6913,51.2000
+octmnist,your prompts,1,9,Fixed eta 0.5,63.2000,61.4339,63.2000
+octmnist,your prompts,1,0,PARA,47.9000,40.1019,47.9000
+octmnist,your prompts,1,1,PARA,51.8000,42.5099,51.8000
+octmnist,your prompts,1,2,PARA,52.1000,44.0968,52.1000
+octmnist,your prompts,1,3,PARA,50.6000,41.5653,50.6000
+octmnist,your prompts,1,4,PARA,50.0000,43.6554,50.0000
+octmnist,your prompts,1,5,PARA,51.5000,44.0647,51.5000
+octmnist,your prompts,1,6,PARA,48.3000,41.8959,48.3000
+octmnist,your prompts,1,7,PARA,52.2000,44.3090,52.2000
+octmnist,your prompts,1,8,PARA,49.5000,42.8720,49.5000
+octmnist,your prompts,1,9,PARA,53.5000,47.1057,53.5000
+octmnist,your prompts,1,0,Shot-only eta,47.2000,39.5334,47.2000
+octmnist,your prompts,1,1,Shot-only eta,50.0000,43.0021,50.0000
+octmnist,your prompts,1,2,Shot-only eta,55.2000,47.7489,55.2000
+octmnist,your prompts,1,3,Shot-only eta,49.1000,40.9877,49.1000
+octmnist,your prompts,1,4,Shot-only eta,51.4000,47.8794,51.4000
+octmnist,your prompts,1,5,Shot-only eta,53.4000,47.6416,53.4000
+octmnist,your prompts,1,6,Shot-only eta,47.6000,42.0962,47.6000
+octmnist,your prompts,1,7,Shot-only eta,54.5000,47.3871,54.5000
+octmnist,your prompts,1,8,Shot-only eta,49.2000,44.2624,49.2000
+octmnist,your prompts,1,9,Shot-only eta,59.8000,56.6459,59.8000
+octmnist,your prompts,1,0,PARA centered eta,47.7000,39.9938,47.7000
+octmnist,your prompts,1,1,PARA centered eta,51.4000,43.8515,51.4000
+octmnist,your prompts,1,2,PARA centered eta,55.2000,47.7489,55.2000
+octmnist,your prompts,1,3,PARA centered eta,49.3000,41.0913,49.3000
+octmnist,your prompts,1,4,PARA centered eta,50.6000,46.2464,50.6000
+octmnist,your prompts,1,5,PARA centered eta,53.3000,47.3953,53.3000
+octmnist,your prompts,1,6,PARA centered eta,48.1000,42.3680,48.1000
+octmnist,your prompts,1,7,PARA centered eta,53.6000,46.1930,53.6000
+octmnist,your prompts,1,8,PARA centered eta,49.0000,43.8917,49.0000
+octmnist,your prompts,1,9,PARA centered eta,57.7000,53.5138,57.7000
+octmnist,your prompts,1,0,Reliability eta,47.8000,40.0131,47.8000
+octmnist,your prompts,1,1,Reliability eta,51.4000,42.4002,51.4000
+octmnist,your prompts,1,2,Reliability eta,52.8000,44.9591,52.8000
+octmnist,your prompts,1,3,Reliability eta,50.1000,41.3631,50.1000
+octmnist,your prompts,1,4,Reliability eta,49.2000,42.2373,49.2000
+octmnist,your prompts,1,5,Reliability eta,51.5000,44.0430,51.5000
+octmnist,your prompts,1,6,Reliability eta,48.6000,41.8596,48.6000
+octmnist,your prompts,1,7,Reliability eta,52.5000,44.6457,52.5000
+octmnist,your prompts,1,8,Reliability eta,49.6000,43.0992,49.6000
+octmnist,your prompts,1,9,Reliability eta,52.1000,44.8764,52.1000
+octmnist,your prompts,1,0,Oracle by Acc (cheat),49.4000,41.1994,49.4000
+octmnist,your prompts,1,1,Oracle by Acc (cheat),52.4000,44.0219,52.4000
+octmnist,your prompts,1,2,Oracle by Acc (cheat),58.3000,52.6205,58.3000
+octmnist,your prompts,1,3,Oracle by Acc (cheat),51.0000,42.3383,51.0000
+octmnist,your prompts,1,4,Oracle by Acc (cheat),55.0000,53.4652,55.0000
+octmnist,your prompts,1,5,Oracle by Acc (cheat),59.2000,57.4212,59.2000
+octmnist,your prompts,1,6,Oracle by Acc (cheat),49.5000,41.5695,49.5000
+octmnist,your prompts,1,7,Oracle by Acc (cheat),59.9000,56.5910,59.9000
+octmnist,your prompts,1,8,Oracle by Acc (cheat),55.3000,53.2518,55.3000
+octmnist,your prompts,1,9,Oracle by Acc (cheat),66.3000,65.9478,66.3000
+octmnist,your prompts,1,0,Oracle by F1 (cheat),49.4000,41.1994,49.4000
+octmnist,your prompts,1,1,Oracle by F1 (cheat),49.9000,44.8761,49.9000
+octmnist,your prompts,1,2,Oracle by F1 (cheat),57.7000,55.1350,57.7000
+octmnist,your prompts,1,3,Oracle by F1 (cheat),45.8000,44.7391,45.8000
+octmnist,your prompts,1,4,Oracle by F1 (cheat),55.0000,53.4652,55.0000
+octmnist,your prompts,1,5,Oracle by F1 (cheat),59.2000,57.4212,59.2000
+octmnist,your prompts,1,6,Oracle by F1 (cheat),49.4000,44.8703,49.4000
+octmnist,your prompts,1,7,Oracle by F1 (cheat),59.3000,57.0974,59.3000
+octmnist,your prompts,1,8,Oracle by F1 (cheat),55.3000,53.2518,55.3000
+octmnist,your prompts,1,9,Oracle by F1 (cheat),66.3000,65.9478,66.3000
+octmnist,your prompts,1,0,Oracle by BAcc (cheat),49.4000,41.1994,49.4000
+octmnist,your prompts,1,1,Oracle by BAcc (cheat),52.4000,44.0219,52.4000
+octmnist,your prompts,1,2,Oracle by BAcc (cheat),58.3000,54.3618,58.3000
+octmnist,your prompts,1,3,Oracle by BAcc (cheat),51.0000,42.3383,51.0000
+octmnist,your prompts,1,4,Oracle by BAcc (cheat),55.0000,53.4652,55.0000
+octmnist,your prompts,1,5,Oracle by BAcc (cheat),59.2000,57.4212,59.2000
+octmnist,your prompts,1,6,Oracle by BAcc (cheat),49.5000,41.5695,49.5000
+octmnist,your prompts,1,7,Oracle by BAcc (cheat),59.9000,56.5910,59.9000
+octmnist,your prompts,1,8,Oracle by BAcc (cheat),55.3000,53.2518,55.3000
+octmnist,your prompts,1,9,Oracle by BAcc (cheat),66.3000,65.9478,66.3000
+octmnist,your prompts,4,0,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,1,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,2,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,3,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,4,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,5,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,6,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,7,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,8,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,9,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,4,0,Visual only,66.3000,66.0545,66.3000
+octmnist,your prompts,4,1,Visual only,47.2000,42.2258,47.2000
+octmnist,your prompts,4,2,Visual only,61.2000,62.3246,61.2000
+octmnist,your prompts,4,3,Visual only,63.8000,62.9454,63.8000
+octmnist,your prompts,4,4,Visual only,71.8000,71.3175,71.8000
+octmnist,your prompts,4,5,Visual only,81.1000,81.0221,81.1000
+octmnist,your prompts,4,6,Visual only,72.4000,71.9400,72.4000
+octmnist,your prompts,4,7,Visual only,69.7000,69.8512,69.7000
+octmnist,your prompts,4,8,Visual only,45.9000,44.4629,45.9000
+octmnist,your prompts,4,9,Visual only,73.5000,72.5078,73.5000
+octmnist,your prompts,4,0,Fixed eta 0.5,58.1000,54.3958,58.1000
+octmnist,your prompts,4,1,Fixed eta 0.5,53.3000,49.3544,53.3000
+octmnist,your prompts,4,2,Fixed eta 0.5,55.5000,51.2040,55.5000
+octmnist,your prompts,4,3,Fixed eta 0.5,61.2000,57.0739,61.2000
+octmnist,your prompts,4,4,Fixed eta 0.5,61.2000,55.9740,61.2000
+octmnist,your prompts,4,5,Fixed eta 0.5,60.7000,56.7057,60.7000
+octmnist,your prompts,4,6,Fixed eta 0.5,65.9000,62.3128,65.9000
+octmnist,your prompts,4,7,Fixed eta 0.5,59.6000,56.2825,59.6000
+octmnist,your prompts,4,8,Fixed eta 0.5,51.4000,46.4018,51.4000
+octmnist,your prompts,4,9,Fixed eta 0.5,62.3000,58.0642,62.3000
+octmnist,your prompts,4,0,PARA,64.9000,63.4362,64.9000
+octmnist,your prompts,4,1,PARA,52.1000,48.0687,52.1000
+octmnist,your prompts,4,2,PARA,59.7000,57.6959,59.7000
+octmnist,your prompts,4,3,PARA,62.6000,59.5280,62.6000
+octmnist,your prompts,4,4,PARA,67.6000,64.9603,67.6000
+octmnist,your prompts,4,5,PARA,72.2000,71.0576,72.2000
+octmnist,your prompts,4,6,PARA,71.2000,69.4055,71.2000
+octmnist,your prompts,4,7,PARA,69.6000,69.0676,69.6000
+octmnist,your prompts,4,8,PARA,52.6000,48.5530,52.6000
+octmnist,your prompts,4,9,PARA,71.8000,69.8295,71.8000
+octmnist,your prompts,4,0,Shot-only eta,67.2000,66.4374,67.2000
+octmnist,your prompts,4,1,Shot-only eta,49.9000,45.3190,49.9000
+octmnist,your prompts,4,2,Shot-only eta,62.7000,61.6833,62.7000
+octmnist,your prompts,4,3,Shot-only eta,63.2000,60.8121,63.2000
+octmnist,your prompts,4,4,Shot-only eta,71.0000,69.5418,71.0000
+octmnist,your prompts,4,5,Shot-only eta,77.9000,77.4570,77.9000
+octmnist,your prompts,4,6,Shot-only eta,71.7000,70.4491,71.7000
+octmnist,your prompts,4,7,Shot-only eta,72.6000,72.8239,72.6000
+octmnist,your prompts,4,8,Shot-only eta,50.6000,48.6962,50.6000
+octmnist,your prompts,4,9,Shot-only eta,75.0000,73.5067,75.0000
+octmnist,your prompts,4,0,PARA centered eta,55.4000,50.3021,55.4000
+octmnist,your prompts,4,1,PARA centered eta,53.1000,49.1340,53.1000
+octmnist,your prompts,4,2,PARA centered eta,56.6000,53.1099,56.6000
+octmnist,your prompts,4,3,PARA centered eta,60.0000,55.3314,60.0000
+octmnist,your prompts,4,4,PARA centered eta,59.1000,53.1223,59.1000
+octmnist,your prompts,4,5,PARA centered eta,57.9000,52.6524,57.9000
+octmnist,your prompts,4,6,PARA centered eta,65.5000,61.7642,65.5000
+octmnist,your prompts,4,7,PARA centered eta,56.3000,51.8944,56.3000
+octmnist,your prompts,4,8,PARA centered eta,52.1000,47.1817,52.1000
+octmnist,your prompts,4,9,PARA centered eta,55.2000,48.1322,55.2000
+octmnist,your prompts,4,0,Reliability eta,53.0000,46.7201,53.0000
+octmnist,your prompts,4,1,Reliability eta,50.7000,45.9565,50.7000
+octmnist,your prompts,4,2,Reliability eta,55.0000,50.4283,55.0000
+octmnist,your prompts,4,3,Reliability eta,53.3000,46.0055,53.3000
+octmnist,your prompts,4,4,Reliability eta,61.1000,55.8920,61.1000
+octmnist,your prompts,4,5,Reliability eta,54.3000,47.6738,54.3000
+octmnist,your prompts,4,6,Reliability eta,65.2000,61.3134,65.2000
+octmnist,your prompts,4,7,Reliability eta,55.3000,50.3170,55.3000
+octmnist,your prompts,4,8,Reliability eta,52.9000,48.7670,52.9000
+octmnist,your prompts,4,9,Reliability eta,51.4000,42.7045,51.4000
+octmnist,your prompts,4,0,Oracle by Acc (cheat),67.6000,67.0678,67.6000
+octmnist,your prompts,4,1,Oracle by Acc (cheat),53.3000,49.3544,53.3000
+octmnist,your prompts,4,2,Oracle by Acc (cheat),65.6000,65.3635,65.6000
+octmnist,your prompts,4,3,Oracle by Acc (cheat),65.0000,63.3314,65.0000
+octmnist,your prompts,4,4,Oracle by Acc (cheat),72.4000,71.7191,72.4000
+octmnist,your prompts,4,5,Oracle by Acc (cheat),81.7000,81.5563,81.7000
+octmnist,your prompts,4,6,Oracle by Acc (cheat),72.9000,72.3403,72.9000
+octmnist,your prompts,4,7,Oracle by Acc (cheat),72.8000,73.0942,72.8000
+octmnist,your prompts,4,8,Oracle by Acc (cheat),53.0000,48.4777,53.0000
+octmnist,your prompts,4,9,Oracle by Acc (cheat),75.3000,73.7534,75.3000
+octmnist,your prompts,4,0,Oracle by F1 (cheat),67.6000,67.0678,67.6000
+octmnist,your prompts,4,1,Oracle by F1 (cheat),53.3000,49.8130,53.3000
+octmnist,your prompts,4,2,Oracle by F1 (cheat),65.6000,65.3635,65.6000
+octmnist,your prompts,4,3,Oracle by F1 (cheat),64.6000,63.3454,64.6000
+octmnist,your prompts,4,4,Oracle by F1 (cheat),72.4000,71.7191,72.4000
+octmnist,your prompts,4,5,Oracle by F1 (cheat),81.7000,81.5634,81.7000
+octmnist,your prompts,4,6,Oracle by F1 (cheat),72.9000,72.3403,72.9000
+octmnist,your prompts,4,7,Oracle by F1 (cheat),72.8000,73.0942,72.8000
+octmnist,your prompts,4,8,Oracle by F1 (cheat),51.3000,49.1186,51.3000
+octmnist,your prompts,4,9,Oracle by F1 (cheat),75.3000,73.9151,75.3000
+octmnist,your prompts,4,0,Oracle by BAcc (cheat),67.6000,67.0678,67.6000
+octmnist,your prompts,4,1,Oracle by BAcc (cheat),53.3000,49.8130,53.3000
+octmnist,your prompts,4,2,Oracle by BAcc (cheat),65.6000,65.3635,65.6000
+octmnist,your prompts,4,3,Oracle by BAcc (cheat),65.0000,63.3314,65.0000
+octmnist,your prompts,4,4,Oracle by BAcc (cheat),72.4000,71.7191,72.4000
+octmnist,your prompts,4,5,Oracle by BAcc (cheat),81.7000,81.5563,81.7000
+octmnist,your prompts,4,6,Oracle by BAcc (cheat),72.9000,72.3403,72.9000
+octmnist,your prompts,4,7,Oracle by BAcc (cheat),72.8000,73.0942,72.8000
+octmnist,your prompts,4,8,Oracle by BAcc (cheat),53.0000,48.4777,53.0000
+octmnist,your prompts,4,9,Oracle by BAcc (cheat),75.3000,73.7534,75.3000
+octmnist,your prompts,16,0,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,1,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,2,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,3,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,4,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,5,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,6,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,7,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,8,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,9,Zero-shot,49.3000,41.0859,49.3000
+octmnist,your prompts,16,0,Visual only,82.4000,82.4743,82.4000
+octmnist,your prompts,16,1,Visual only,76.4000,76.7745,76.4000
+octmnist,your prompts,16,2,Visual only,84.7000,84.7823,84.7000
+octmnist,your prompts,16,3,Visual only,67.1000,67.7715,67.1000
+octmnist,your prompts,16,4,Visual only,85.3000,85.1559,85.3000
+octmnist,your prompts,16,5,Visual only,77.5000,76.6798,77.5000
+octmnist,your prompts,16,6,Visual only,85.7000,85.8889,85.7000
+octmnist,your prompts,16,7,Visual only,83.6000,83.4208,83.6000
+octmnist,your prompts,16,8,Visual only,80.3000,80.1292,80.3000
+octmnist,your prompts,16,9,Visual only,80.7000,80.9808,80.7000
+octmnist,your prompts,16,0,Fixed eta 0.5,63.8000,59.2880,63.8000
+octmnist,your prompts,16,1,Fixed eta 0.5,72.2000,70.7362,72.2000
+octmnist,your prompts,16,2,Fixed eta 0.5,66.3000,63.0145,66.3000
+octmnist,your prompts,16,3,Fixed eta 0.5,59.0000,54.5232,59.0000
+octmnist,your prompts,16,4,Fixed eta 0.5,69.3000,66.4512,69.3000
+octmnist,your prompts,16,5,Fixed eta 0.5,70.1000,67.5759,70.1000
+octmnist,your prompts,16,6,Fixed eta 0.5,61.0000,56.6529,61.0000
+octmnist,your prompts,16,7,Fixed eta 0.5,68.2000,64.7596,68.2000
+octmnist,your prompts,16,8,Fixed eta 0.5,64.3000,59.5361,64.3000
+octmnist,your prompts,16,9,Fixed eta 0.5,72.9000,71.0414,72.9000
+octmnist,your prompts,16,0,PARA,83.4000,83.2682,83.4000
+octmnist,your prompts,16,1,PARA,78.1000,78.2959,78.1000
+octmnist,your prompts,16,2,PARA,82.9000,82.7148,82.9000
+octmnist,your prompts,16,3,PARA,70.9000,71.2975,70.9000
+octmnist,your prompts,16,4,PARA,85.5000,85.2679,85.5000
+octmnist,your prompts,16,5,PARA,78.9000,77.9618,78.9000
+octmnist,your prompts,16,6,PARA,80.7000,80.5273,80.7000
+octmnist,your prompts,16,7,PARA,85.5000,85.4679,85.5000
+octmnist,your prompts,16,8,PARA,79.8000,79.3591,79.8000
+octmnist,your prompts,16,9,PARA,81.5000,81.3521,81.5000
+octmnist,your prompts,16,0,Shot-only eta,83.3000,83.2222,83.3000
+octmnist,your prompts,16,1,Shot-only eta,78.4000,78.6454,78.4000
+octmnist,your prompts,16,2,Shot-only eta,83.7000,83.6069,83.7000
+octmnist,your prompts,16,3,Shot-only eta,70.9000,71.3467,70.9000
+octmnist,your prompts,16,4,Shot-only eta,86.2000,85.9841,86.2000
+octmnist,your prompts,16,5,Shot-only eta,79.3000,78.2560,79.3000
+octmnist,your prompts,16,6,Shot-only eta,82.0000,81.8854,82.0000
+octmnist,your prompts,16,7,Shot-only eta,85.4000,85.3674,85.4000
+octmnist,your prompts,16,8,Shot-only eta,79.9000,79.5550,79.9000
+octmnist,your prompts,16,9,Shot-only eta,82.3000,82.2887,82.3000
+octmnist,your prompts,16,0,PARA centered eta,74.3000,72.6204,74.3000
+octmnist,your prompts,16,1,PARA centered eta,78.4000,78.1547,78.4000
+octmnist,your prompts,16,2,PARA centered eta,75.7000,74.5216,75.7000
+octmnist,your prompts,16,3,PARA centered eta,66.5000,64.5545,66.5000
+octmnist,your prompts,16,4,PARA centered eta,79.5000,78.6212,79.5000
+octmnist,your prompts,16,5,PARA centered eta,76.0000,75.0401,76.0000
+octmnist,your prompts,16,6,PARA centered eta,67.3000,65.2125,67.3000
+octmnist,your prompts,16,7,PARA centered eta,74.8000,73.3041,74.8000
+octmnist,your prompts,16,8,PARA centered eta,73.7000,71.7790,73.7000
+octmnist,your prompts,16,9,PARA centered eta,76.2000,74.9537,76.2000
+octmnist,your prompts,16,0,Reliability eta,62.9000,58.0836,62.9000
+octmnist,your prompts,16,1,Reliability eta,77.9000,77.4778,77.9000
+octmnist,your prompts,16,2,Reliability eta,72.0000,70.2181,72.0000
+octmnist,your prompts,16,3,Reliability eta,62.2000,58.8400,62.2000
+octmnist,your prompts,16,4,Reliability eta,69.1000,66.1961,69.1000
+octmnist,your prompts,16,5,Reliability eta,69.9000,67.3280,69.9000
+octmnist,your prompts,16,6,Reliability eta,61.7000,57.6714,61.7000
+octmnist,your prompts,16,7,Reliability eta,65.0000,60.5879,65.0000
+octmnist,your prompts,16,8,Reliability eta,61.9000,56.0760,61.9000
+octmnist,your prompts,16,9,Reliability eta,72.9000,71.0414,72.9000
+octmnist,your prompts,16,0,Oracle by Acc (cheat),83.5000,83.3522,83.5000
+octmnist,your prompts,16,1,Oracle by Acc (cheat),79.4000,79.3577,79.4000
+octmnist,your prompts,16,2,Oracle by Acc (cheat),84.7000,84.7823,84.7000
+octmnist,your prompts,16,3,Oracle by Acc (cheat),71.3000,71.4018,71.3000
+octmnist,your prompts,16,4,Oracle by Acc (cheat),86.9000,86.7397,86.9000
+octmnist,your prompts,16,5,Oracle by Acc (cheat),79.3000,78.2560,79.3000
+octmnist,your prompts,16,6,Oracle by Acc (cheat),85.7000,85.8889,85.7000
+octmnist,your prompts,16,7,Oracle by Acc (cheat),86.0000,85.9178,86.0000
+octmnist,your prompts,16,8,Oracle by Acc (cheat),80.3000,80.1292,80.3000
+octmnist,your prompts,16,9,Oracle by Acc (cheat),82.5000,82.4934,82.5000
+octmnist,your prompts,16,0,Oracle by F1 (cheat),83.5000,83.3903,83.5000
+octmnist,your prompts,16,1,Oracle by F1 (cheat),79.4000,79.3577,79.4000
+octmnist,your prompts,16,2,Oracle by F1 (cheat),84.7000,84.7823,84.7000
+octmnist,your prompts,16,3,Oracle by F1 (cheat),71.3000,71.6414,71.3000
+octmnist,your prompts,16,4,Oracle by F1 (cheat),86.9000,86.7397,86.9000
+octmnist,your prompts,16,5,Oracle by F1 (cheat),79.3000,78.2560,79.3000
+octmnist,your prompts,16,6,Oracle by F1 (cheat),85.7000,85.8889,85.7000
+octmnist,your prompts,16,7,Oracle by F1 (cheat),86.0000,85.9456,86.0000
+octmnist,your prompts,16,8,Oracle by F1 (cheat),80.3000,80.1292,80.3000
+octmnist,your prompts,16,9,Oracle by F1 (cheat),82.5000,82.4934,82.5000
+octmnist,your prompts,16,0,Oracle by BAcc (cheat),83.5000,83.3522,83.5000
+octmnist,your prompts,16,1,Oracle by BAcc (cheat),79.4000,79.3577,79.4000
+octmnist,your prompts,16,2,Oracle by BAcc (cheat),84.7000,84.7823,84.7000
+octmnist,your prompts,16,3,Oracle by BAcc (cheat),71.3000,71.4018,71.3000
+octmnist,your prompts,16,4,Oracle by BAcc (cheat),86.9000,86.7397,86.9000
+octmnist,your prompts,16,5,Oracle by BAcc (cheat),79.3000,78.2560,79.3000
+octmnist,your prompts,16,6,Oracle by BAcc (cheat),85.7000,85.8889,85.7000
+octmnist,your prompts,16,7,Oracle by BAcc (cheat),86.0000,85.9178,86.0000
+octmnist,your prompts,16,8,Oracle by BAcc (cheat),80.3000,80.1292,80.3000
+octmnist,your prompts,16,9,Oracle by BAcc (cheat),82.5000,82.4934,82.5000

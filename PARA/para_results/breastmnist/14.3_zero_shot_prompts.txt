@@ -1,0 +1,32 @@
+# breastmnist | config 7d80fcfffe | 2026-11-12 01:12:19
+malignant                                    -> 'malignant tumor': 50 prompts | cos(hand anchor, GPT anchor) = 0.942
+normal, benign                               -> 'benign tumor + normal scan': 100 prompts | cos(hand anchor, GPT anchor) = 0.940
+example: an ultrasound image showing irregular or spiculated margins, indicating a malignant breast tumor.
+
+anchors               Acc  Macro-F1   BAcc
+your prompts        33.33     30.77  53.63
+50 GPT-4            71.79     67.96  70.93
+
+class                               true % | predicted % hand    GPT | recall % hand    GPT
+malignant                             26.9 |             92.3   38.5 |          97.6   69.0
+normal, benign                        73.1 |              7.7   61.5 |           9.6   72.8
+support reliability (your prompts, draw 0, K=16): r_anchor 0.098 | r_visual 0.275 | eta 0.589
+support reliability (50 GPT-4, draw 0, K=16): r_anchor 0.253 | r_visual 0.275 | eta 0.464
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+malignant                              0.515      0.526         0.526         True   14.04
+normal, benign                         0.530      0.538         0.538         True   13.43
+-> own-text delta 0.522 vs other-text delta 0.532 (gap +0.010); images closest to their own text for 2/2 classes
+-> phi: real classes 13.73 (max possible 16) | random natural mix 13.37 | random uniform over classes 13.58
+-> mean cosine between support images: same class 0.849 | different class 0.839
+-> eta(S) = 0.790
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+malignant                              0.606      1.394         1.394         True    2.36
+normal, benign                         0.904      1.096         1.096         True    0.88
+-> own-text delta 0.755 vs other-text delta 1.245 (gap +0.490); images closest to their own text for 2/2 classes
+-> phi: real classes 1.62 (max possible 16) | random natural mix 1.09 | random uniform over classes 1.29
+-> mean cosine between support images: same class 0.041 | different class -0.027
+-> eta(S) = 0.464

@@ -1,0 +1,301 @@
+dataset,prompts,K,draw,method,acc,macro_f1,bacc
+breastmnist,your prompts,1,0,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,1,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,2,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,3,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,4,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,5,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,6,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,7,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,8,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,9,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,0,Visual only,70.5128,67.4292,71.5539
+breastmnist,your prompts,1,1,Visual only,58.3333,57.8326,67.7318
+breastmnist,your prompts,1,2,Visual only,58.9744,47.0626,47.1178
+breastmnist,your prompts,1,3,Visual only,34.6154,32.7473,53.7594
+breastmnist,your prompts,1,4,Visual only,42.3077,41.9643,58.2707
+breastmnist,your prompts,1,5,Visual only,72.4359,56.1884,56.3283
+breastmnist,your prompts,1,6,Visual only,62.8205,48.6259,48.9975
+breastmnist,your prompts,1,7,Visual only,75.6410,72.8522,77.3183
+breastmnist,your prompts,1,8,Visual only,42.9487,42.7582,57.9574
+breastmnist,your prompts,1,9,Visual only,83.3333,76.5278,74.3108
+breastmnist,your prompts,1,0,Fixed eta 0.5,41.0256,40.7823,55.8897
+breastmnist,your prompts,1,1,Fixed eta 0.5,42.3077,41.5292,60.5263
+breastmnist,your prompts,1,2,Fixed eta 0.5,40.3846,40.3822,51.6917
+breastmnist,your prompts,1,3,Fixed eta 0.5,31.4103,28.1972,52.3183
+breastmnist,your prompts,1,4,Fixed eta 0.5,38.4615,37.2128,57.1429
+breastmnist,your prompts,1,5,Fixed eta 0.5,51.9231,51.5869,61.0902
+breastmnist,your prompts,1,6,Fixed eta 0.5,46.1538,46.1184,57.1429
+breastmnist,your prompts,1,7,Fixed eta 0.5,47.4359,47.3580,62.5313
+breastmnist,your prompts,1,8,Fixed eta 0.5,37.1795,35.6566,56.2657
+breastmnist,your prompts,1,9,Fixed eta 0.5,55.1282,55.0099,67.0426
+breastmnist,your prompts,1,0,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,1,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,2,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,3,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,4,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,5,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,6,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,7,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,8,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,9,PARA,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,0,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,1,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,2,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,3,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,4,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,5,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,6,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,7,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,8,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,9,Shot-only eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,0,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,1,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,2,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,3,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,4,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,5,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,6,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,7,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,8,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,9,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,0,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,1,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,2,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,3,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,4,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,5,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,6,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,7,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,8,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,9,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,1,0,Oracle by Acc (cheat),70.5128,67.4292,71.5539
+breastmnist,your prompts,1,1,Oracle by Acc (cheat),58.3333,57.8326,67.7318
+breastmnist,your prompts,1,2,Oracle by Acc (cheat),58.9744,47.0626,47.1178
+breastmnist,your prompts,1,3,Oracle by Acc (cheat),34.6154,32.7473,53.7594
+breastmnist,your prompts,1,4,Oracle by Acc (cheat),42.3077,41.9643,58.2707
+breastmnist,your prompts,1,5,Oracle by Acc (cheat),72.4359,56.1884,56.3283
+breastmnist,your prompts,1,6,Oracle by Acc (cheat),62.8205,48.6259,48.9975
+breastmnist,your prompts,1,7,Oracle by Acc (cheat),75.6410,72.8522,77.3183
+breastmnist,your prompts,1,8,Oracle by Acc (cheat),42.9487,42.7582,57.9574
+breastmnist,your prompts,1,9,Oracle by Acc (cheat),83.3333,76.5278,74.3108
+breastmnist,your prompts,1,0,Oracle by F1 (cheat),70.5128,67.4292,71.5539
+breastmnist,your prompts,1,1,Oracle by F1 (cheat),58.3333,57.8326,67.7318
+breastmnist,your prompts,1,2,Oracle by F1 (cheat),58.9744,47.0626,47.1178
+breastmnist,your prompts,1,3,Oracle by F1 (cheat),34.6154,32.7473,53.7594
+breastmnist,your prompts,1,4,Oracle by F1 (cheat),42.3077,41.9643,58.2707
+breastmnist,your prompts,1,5,Oracle by F1 (cheat),72.4359,56.1884,56.3283
+breastmnist,your prompts,1,6,Oracle by F1 (cheat),62.8205,48.6259,48.9975
+breastmnist,your prompts,1,7,Oracle by F1 (cheat),75.6410,72.8522,77.3183
+breastmnist,your prompts,1,8,Oracle by F1 (cheat),42.9487,42.7582,57.9574
+breastmnist,your prompts,1,9,Oracle by F1 (cheat),83.3333,76.5278,74.3108
+breastmnist,your prompts,1,0,Oracle by BAcc (cheat),70.5128,67.4292,71.5539
+breastmnist,your prompts,1,1,Oracle by BAcc (cheat),58.3333,57.8326,67.7318
+breastmnist,your prompts,1,2,Oracle by BAcc (cheat),33.3333,30.7732,53.6341
+breastmnist,your prompts,1,3,Oracle by BAcc (cheat),34.6154,32.7473,53.7594
+breastmnist,your prompts,1,4,Oracle by BAcc (cheat),42.3077,41.9643,58.2707
+breastmnist,your prompts,1,5,Oracle by BAcc (cheat),51.9231,51.5869,61.0902
+breastmnist,your prompts,1,6,Oracle by BAcc (cheat),46.1538,46.1184,57.1429
+breastmnist,your prompts,1,7,Oracle by BAcc (cheat),75.6410,72.8522,77.3183
+breastmnist,your prompts,1,8,Oracle by BAcc (cheat),42.9487,42.7582,57.9574
+breastmnist,your prompts,1,9,Oracle by BAcc (cheat),83.3333,76.5278,74.3108
+breastmnist,your prompts,4,0,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,1,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,2,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,3,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,4,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,5,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,6,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,7,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,8,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,9,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,0,Visual only,71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,Visual only,65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,Visual only,69.2308,67.0654,72.9323
+breastmnist,your prompts,4,3,Visual only,62.8205,60.4753,65.5388
+breastmnist,your prompts,4,4,Visual only,65.3846,61.4215,64.2857
+breastmnist,your prompts,4,5,Visual only,71.7949,68.2692,71.6792
+breastmnist,your prompts,4,6,Visual only,57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,Visual only,82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,Visual only,58.3333,50.8125,51.1905
+breastmnist,your prompts,4,9,Visual only,77.5641,72.8507,74.1228
+breastmnist,your prompts,4,0,Fixed eta 0.5,43.5897,43.3570,59.1479
+breastmnist,your prompts,4,1,Fixed eta 0.5,41.0256,40.9868,53.6341
+breastmnist,your prompts,4,2,Fixed eta 0.5,46.1538,46.0119,61.6541
+breastmnist,your prompts,4,3,Fixed eta 0.5,48.0769,48.0577,62.2180
+breastmnist,your prompts,4,4,Fixed eta 0.5,44.2308,44.2101,57.3308
+breastmnist,your prompts,4,5,Fixed eta 0.5,44.8718,44.7264,60.0251
+breastmnist,your prompts,4,6,Fixed eta 0.5,39.1026,38.9797,52.3183
+breastmnist,your prompts,4,7,Fixed eta 0.5,54.4872,54.1689,64.3484
+breastmnist,your prompts,4,8,Fixed eta 0.5,43.5897,43.5062,57.6441
+breastmnist,your prompts,4,9,Fixed eta 0.5,50.6410,50.5414,61.7168
+breastmnist,your prompts,4,0,PARA,71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,PARA,65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,PARA,69.2308,67.0654,72.9323
+breastmnist,your prompts,4,3,PARA,62.8205,60.4753,65.5388
+breastmnist,your prompts,4,4,PARA,65.3846,61.4215,64.2857
+breastmnist,your prompts,4,5,PARA,71.7949,68.2692,71.6792
+breastmnist,your prompts,4,6,PARA,57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,PARA,82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,PARA,58.3333,50.8125,51.1905
+breastmnist,your prompts,4,9,PARA,77.5641,72.8507,74.1228
+breastmnist,your prompts,4,0,Shot-only eta,71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,Shot-only eta,65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,Shot-only eta,69.2308,67.0654,72.9323
+breastmnist,your prompts,4,3,Shot-only eta,62.8205,60.4753,65.5388
+breastmnist,your prompts,4,4,Shot-only eta,65.3846,61.4215,64.2857
+breastmnist,your prompts,4,5,Shot-only eta,71.7949,68.2692,71.6792
+breastmnist,your prompts,4,6,Shot-only eta,57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,Shot-only eta,82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,Shot-only eta,58.3333,50.8125,51.1905
+breastmnist,your prompts,4,9,Shot-only eta,77.5641,72.8507,74.1228
+breastmnist,your prompts,4,0,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,1,PARA centered eta,65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,3,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,4,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,5,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,6,PARA centered eta,57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,8,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,9,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,0,Reliability eta,71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,Reliability eta,65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,3,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,4,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,5,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,6,Reliability eta,57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,Reliability eta,82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,9,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,4,0,Oracle by Acc (cheat),71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,Oracle by Acc (cheat),65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,Oracle by Acc (cheat),69.2308,67.0654,72.9323
+breastmnist,your prompts,4,3,Oracle by Acc (cheat),62.8205,60.4753,65.5388
+breastmnist,your prompts,4,4,Oracle by Acc (cheat),65.3846,61.4215,64.2857
+breastmnist,your prompts,4,5,Oracle by Acc (cheat),71.7949,68.2692,71.6792
+breastmnist,your prompts,4,6,Oracle by Acc (cheat),57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,Oracle by Acc (cheat),82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,Oracle by Acc (cheat),58.3333,50.8125,51.1905
+breastmnist,your prompts,4,9,Oracle by Acc (cheat),77.5641,72.8507,74.1228
+breastmnist,your prompts,4,0,Oracle by F1 (cheat),71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,Oracle by F1 (cheat),65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,Oracle by F1 (cheat),69.2308,67.0654,72.9323
+breastmnist,your prompts,4,3,Oracle by F1 (cheat),62.8205,60.4753,65.5388
+breastmnist,your prompts,4,4,Oracle by F1 (cheat),65.3846,61.4215,64.2857
+breastmnist,your prompts,4,5,Oracle by F1 (cheat),71.7949,68.2692,71.6792
+breastmnist,your prompts,4,6,Oracle by F1 (cheat),57.0513,49.8825,50.3133
+breastmnist,your prompts,4,7,Oracle by F1 (cheat),82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,Oracle by F1 (cheat),58.3333,50.8125,51.1905
+breastmnist,your prompts,4,9,Oracle by F1 (cheat),77.5641,72.8507,74.1228
+breastmnist,your prompts,4,0,Oracle by BAcc (cheat),71.1538,67.3898,70.4887
+breastmnist,your prompts,4,1,Oracle by BAcc (cheat),65.3846,60.2642,62.0301
+breastmnist,your prompts,4,2,Oracle by BAcc (cheat),69.2308,67.0654,72.9323
+breastmnist,your prompts,4,3,Oracle by BAcc (cheat),62.8205,60.4753,65.5388
+breastmnist,your prompts,4,4,Oracle by BAcc (cheat),65.3846,61.4215,64.2857
+breastmnist,your prompts,4,5,Oracle by BAcc (cheat),71.7949,68.2692,71.6792
+breastmnist,your prompts,4,6,Oracle by BAcc (cheat),33.3333,30.7732,53.6341
+breastmnist,your prompts,4,7,Oracle by BAcc (cheat),82.6923,75.3843,73.1203
+breastmnist,your prompts,4,8,Oracle by BAcc (cheat),43.5897,43.5062,57.6441
+breastmnist,your prompts,4,9,Oracle by BAcc (cheat),77.5641,72.8507,74.1228
+breastmnist,your prompts,16,0,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,1,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,2,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,3,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,4,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,5,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,6,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,7,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,8,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,9,Zero-shot,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,0,Visual only,71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,Visual only,71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,Visual only,67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,Visual only,75.0000,72.5042,77.6316
+breastmnist,your prompts,16,4,Visual only,62.1795,61.0116,68.8596
+breastmnist,your prompts,16,5,Visual only,66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,Visual only,75.0000,71.1481,73.8722
+breastmnist,your prompts,16,7,Visual only,79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,Visual only,79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,Visual only,73.0769,70.2614,74.8120
+breastmnist,your prompts,16,0,Fixed eta 0.5,49.3590,49.3402,63.8471
+breastmnist,your prompts,16,1,Fixed eta 0.5,47.4359,47.4273,61.0276
+breastmnist,your prompts,16,2,Fixed eta 0.5,43.5897,43.3570,59.1479
+breastmnist,your prompts,16,3,Fixed eta 0.5,48.7179,48.6842,63.4085
+breastmnist,your prompts,16,4,Fixed eta 0.5,41.0256,40.3987,58.1454
+breastmnist,your prompts,16,5,Fixed eta 0.5,42.9487,42.6636,58.7093
+breastmnist,your prompts,16,6,Fixed eta 0.5,52.5641,52.5641,66.7920
+breastmnist,your prompts,16,7,Fixed eta 0.5,49.3590,49.3569,63.0952
+breastmnist,your prompts,16,8,Fixed eta 0.5,51.2821,51.2500,66.6667
+breastmnist,your prompts,16,9,Fixed eta 0.5,47.4359,47.3580,62.5313
+breastmnist,your prompts,16,0,PARA,71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,PARA,71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,PARA,67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,PARA,75.0000,72.5042,77.6316
+breastmnist,your prompts,16,4,PARA,62.1795,61.0116,68.8596
+breastmnist,your prompts,16,5,PARA,66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,PARA,75.0000,71.1481,73.8722
+breastmnist,your prompts,16,7,PARA,79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,PARA,79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,PARA,73.0769,70.2614,74.8120
+breastmnist,your prompts,16,0,Shot-only eta,71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,Shot-only eta,71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,Shot-only eta,67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,Shot-only eta,75.0000,72.5042,77.6316
+breastmnist,your prompts,16,4,Shot-only eta,62.1795,61.0116,68.8596
+breastmnist,your prompts,16,5,Shot-only eta,66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,Shot-only eta,75.0000,71.1481,73.8722
+breastmnist,your prompts,16,7,Shot-only eta,79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,Shot-only eta,79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,Shot-only eta,73.0769,70.2614,74.8120
+breastmnist,your prompts,16,0,PARA centered eta,71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,PARA centered eta,71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,PARA centered eta,67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,4,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,5,PARA centered eta,66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,7,PARA centered eta,79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,9,PARA centered eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,0,Reliability eta,71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,Reliability eta,71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,Reliability eta,67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,4,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,5,Reliability eta,66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,7,Reliability eta,79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,Reliability eta,79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,Reliability eta,33.3333,30.7732,53.6341
+breastmnist,your prompts,16,0,Oracle by Acc (cheat),71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,Oracle by Acc (cheat),71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,Oracle by Acc (cheat),67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,Oracle by Acc (cheat),75.0000,72.5042,77.6316
+breastmnist,your prompts,16,4,Oracle by Acc (cheat),62.1795,61.0116,68.8596
+breastmnist,your prompts,16,5,Oracle by Acc (cheat),66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,Oracle by Acc (cheat),75.0000,71.1481,73.8722
+breastmnist,your prompts,16,7,Oracle by Acc (cheat),79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,Oracle by Acc (cheat),79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,Oracle by Acc (cheat),73.0769,70.2614,74.8120
+breastmnist,your prompts,16,0,Oracle by F1 (cheat),71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,Oracle by F1 (cheat),71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,Oracle by F1 (cheat),67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,Oracle by F1 (cheat),75.0000,72.5042,77.6316
+breastmnist,your prompts,16,4,Oracle by F1 (cheat),62.1795,61.0116,68.8596
+breastmnist,your prompts,16,5,Oracle by F1 (cheat),66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,Oracle by F1 (cheat),75.0000,71.1481,73.8722
+breastmnist,your prompts,16,7,Oracle by F1 (cheat),79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,Oracle by F1 (cheat),79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,Oracle by F1 (cheat),73.0769,70.2614,74.8120
+breastmnist,your prompts,16,0,Oracle by BAcc (cheat),71.1538,67.7019,71.2406
+breastmnist,your prompts,16,1,Oracle by BAcc (cheat),71.1538,68.2741,72.7444
+breastmnist,your prompts,16,2,Oracle by BAcc (cheat),67.3077,62.6672,64.8496
+breastmnist,your prompts,16,3,Oracle by BAcc (cheat),75.0000,72.5042,77.6316
+breastmnist,your prompts,16,4,Oracle by BAcc (cheat),62.1795,61.0116,68.8596
+breastmnist,your prompts,16,5,Oracle by BAcc (cheat),66.0256,64.0005,69.9875
+breastmnist,your prompts,16,6,Oracle by BAcc (cheat),75.0000,71.1481,73.8722
+breastmnist,your prompts,16,7,Oracle by BAcc (cheat),79.4872,75.6393,77.6942
+breastmnist,your prompts,16,8,Oracle by BAcc (cheat),79.4872,76.9231,81.4536
+breastmnist,your prompts,16,9,Oracle by BAcc (cheat),73.0769,70.2614,74.8120

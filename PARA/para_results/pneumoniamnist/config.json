@@ -1,0 +1,26 @@
+{
+  "dataset": "pneumoniamnist",
+  "medmnist_size": 128,
+  "seed": 1,
+  "n_test": 624,
+  "test_idx": "6425064b1f",
+  "epochs": 80,
+  "batch_size": 32,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lr_lora": 0.0001,
+  "lr_scale": 0.001,
+  "weight_decay": 0.0001,
+  "config_fingerprint": "d5009332c7",
+  "sweep_shots": [
+    1,
+    4,
+    16
+  ],
+  "sweep_draws": 10,
+  "sweep_seeds": 1,
+  "lambda_": 0.9,
+  "rel_eps": 0.1,
+  "n_mu": 2000,
+  "saved_at": "2026-11-12 00:38:43"
+}

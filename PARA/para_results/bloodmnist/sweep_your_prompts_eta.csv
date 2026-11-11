@@ -1,0 +1,271 @@
+dataset,prompts,K,draw,quantity,value
+bloodmnist,your prompts,1,0,centered,0.44479
+bloodmnist,your prompts,1,1,centered,0.44429
+bloodmnist,your prompts,1,2,centered,0.43265
+bloodmnist,your prompts,1,3,centered,0.42610
+bloodmnist,your prompts,1,4,centered,0.43018
+bloodmnist,your prompts,1,5,centered,0.43062
+bloodmnist,your prompts,1,6,centered,0.43591
+bloodmnist,your prompts,1,7,centered,0.43492
+bloodmnist,your prompts,1,8,centered,0.43736
+bloodmnist,your prompts,1,9,centered,0.42366
+bloodmnist,your prompts,1,0,eta(S),0.31320
+bloodmnist,your prompts,1,1,eta(S),0.31383
+bloodmnist,your prompts,1,2,eta(S),0.31078
+bloodmnist,your prompts,1,3,eta(S),0.31035
+bloodmnist,your prompts,1,4,eta(S),0.31147
+bloodmnist,your prompts,1,5,eta(S),0.31261
+bloodmnist,your prompts,1,6,eta(S),0.31519
+bloodmnist,your prompts,1,7,eta(S),0.31116
+bloodmnist,your prompts,1,8,eta(S),0.31254
+bloodmnist,your prompts,1,9,eta(S),0.31157
+bloodmnist,your prompts,1,0,oracle Acc,0.97500
+bloodmnist,your prompts,1,1,oracle Acc,0.87500
+bloodmnist,your prompts,1,2,oracle Acc,1.00000
+bloodmnist,your prompts,1,3,oracle Acc,0.87500
+bloodmnist,your prompts,1,4,oracle Acc,1.00000
+bloodmnist,your prompts,1,5,oracle Acc,0.95000
+bloodmnist,your prompts,1,6,oracle Acc,0.90000
+bloodmnist,your prompts,1,7,oracle Acc,1.00000
+bloodmnist,your prompts,1,8,oracle Acc,0.90000
+bloodmnist,your prompts,1,9,oracle Acc,0.95000
+bloodmnist,your prompts,1,0,oracle BAcc,0.87500
+bloodmnist,your prompts,1,1,oracle BAcc,0.87500
+bloodmnist,your prompts,1,2,oracle BAcc,1.00000
+bloodmnist,your prompts,1,3,oracle BAcc,0.87500
+bloodmnist,your prompts,1,4,oracle BAcc,0.97500
+bloodmnist,your prompts,1,5,oracle BAcc,0.95000
+bloodmnist,your prompts,1,6,oracle BAcc,0.95000
+bloodmnist,your prompts,1,7,oracle BAcc,1.00000
+bloodmnist,your prompts,1,8,oracle BAcc,0.90000
+bloodmnist,your prompts,1,9,oracle BAcc,0.92500
+bloodmnist,your prompts,1,0,oracle F1,0.95000
+bloodmnist,your prompts,1,1,oracle F1,0.87500
+bloodmnist,your prompts,1,2,oracle F1,1.00000
+bloodmnist,your prompts,1,3,oracle F1,0.87500
+bloodmnist,your prompts,1,4,oracle F1,1.00000
+bloodmnist,your prompts,1,5,oracle F1,0.95000
+bloodmnist,your prompts,1,6,oracle F1,0.95000
+bloodmnist,your prompts,1,7,oracle F1,1.00000
+bloodmnist,your prompts,1,8,oracle F1,0.90000
+bloodmnist,your prompts,1,9,oracle F1,1.00000
+bloodmnist,your prompts,1,0,r_anchor,0.00000
+bloodmnist,your prompts,1,1,r_anchor,0.00643
+bloodmnist,your prompts,1,2,r_anchor,0.03237
+bloodmnist,your prompts,1,3,r_anchor,0.06568
+bloodmnist,your prompts,1,4,r_anchor,0.05694
+bloodmnist,your prompts,1,5,r_anchor,0.00048
+bloodmnist,your prompts,1,6,r_anchor,0.01275
+bloodmnist,your prompts,1,7,r_anchor,0.02585
+bloodmnist,your prompts,1,8,r_anchor,0.02981
+bloodmnist,your prompts,1,9,r_anchor,0.06308
+bloodmnist,your prompts,1,0,r_visual,0.00000
+bloodmnist,your prompts,1,1,r_visual,0.00000
+bloodmnist,your prompts,1,2,r_visual,0.00000
+bloodmnist,your prompts,1,3,r_visual,0.00000
+bloodmnist,your prompts,1,4,r_visual,0.00000
+bloodmnist,your prompts,1,5,r_visual,0.00000
+bloodmnist,your prompts,1,6,r_visual,0.00000
+bloodmnist,your prompts,1,7,r_visual,0.00000
+bloodmnist,your prompts,1,8,r_visual,0.00000
+bloodmnist,your prompts,1,9,r_visual,0.00000
+bloodmnist,your prompts,1,0,reliability,0.45000
+bloodmnist,your prompts,1,1,reliability,0.43599
+bloodmnist,your prompts,1,2,reliability,0.38731
+bloodmnist,your prompts,1,3,reliability,0.33876
+bloodmnist,your prompts,1,4,reliability,0.35027
+bloodmnist,your prompts,1,5,reliability,0.44891
+bloodmnist,your prompts,1,6,reliability,0.42302
+bloodmnist,your prompts,1,7,reliability,0.39849
+bloodmnist,your prompts,1,8,reliability,0.39162
+bloodmnist,your prompts,1,9,reliability,0.34210
+bloodmnist,your prompts,1,0,shot-only,0.45000
+bloodmnist,your prompts,1,1,shot-only,0.45000
+bloodmnist,your prompts,1,2,shot-only,0.45000
+bloodmnist,your prompts,1,3,shot-only,0.45000
+bloodmnist,your prompts,1,4,shot-only,0.45000
+bloodmnist,your prompts,1,5,shot-only,0.45000
+bloodmnist,your prompts,1,6,shot-only,0.45000
+bloodmnist,your prompts,1,7,shot-only,0.45000
+bloodmnist,your prompts,1,8,shot-only,0.45000
+bloodmnist,your prompts,1,9,shot-only,0.45000
+bloodmnist,your prompts,4,0,centered,0.56960
+bloodmnist,your prompts,4,1,centered,0.57472
+bloodmnist,your prompts,4,2,centered,0.55289
+bloodmnist,your prompts,4,3,centered,0.58114
+bloodmnist,your prompts,4,4,centered,0.57711
+bloodmnist,your prompts,4,5,centered,0.54051
+bloodmnist,your prompts,4,6,centered,0.56416
+bloodmnist,your prompts,4,7,centered,0.57180
+bloodmnist,your prompts,4,8,centered,0.54625
+bloodmnist,your prompts,4,9,centered,0.57776
+bloodmnist,your prompts,4,0,eta(S),0.60355
+bloodmnist,your prompts,4,1,eta(S),0.60478
+bloodmnist,your prompts,4,2,eta(S),0.60381
+bloodmnist,your prompts,4,3,eta(S),0.60381
+bloodmnist,your prompts,4,4,eta(S),0.60394
+bloodmnist,your prompts,4,5,eta(S),0.60455
+bloodmnist,your prompts,4,6,eta(S),0.60397
+bloodmnist,your prompts,4,7,eta(S),0.60373
+bloodmnist,your prompts,4,8,eta(S),0.60368
+bloodmnist,your prompts,4,9,eta(S),0.60477
+bloodmnist,your prompts,4,0,oracle Acc,1.00000
+bloodmnist,your prompts,4,1,oracle Acc,1.00000
+bloodmnist,your prompts,4,2,oracle Acc,1.00000
+bloodmnist,your prompts,4,3,oracle Acc,1.00000
+bloodmnist,your prompts,4,4,oracle Acc,1.00000
+bloodmnist,your prompts,4,5,oracle Acc,0.95000
+bloodmnist,your prompts,4,6,oracle Acc,1.00000
+bloodmnist,your prompts,4,7,oracle Acc,1.00000
+bloodmnist,your prompts,4,8,oracle Acc,0.95000
+bloodmnist,your prompts,4,9,oracle Acc,0.95000
+bloodmnist,your prompts,4,0,oracle BAcc,1.00000
+bloodmnist,your prompts,4,1,oracle BAcc,1.00000
+bloodmnist,your prompts,4,2,oracle BAcc,1.00000
+bloodmnist,your prompts,4,3,oracle BAcc,1.00000
+bloodmnist,your prompts,4,4,oracle BAcc,0.95000
+bloodmnist,your prompts,4,5,oracle BAcc,0.92500
+bloodmnist,your prompts,4,6,oracle BAcc,0.97500
+bloodmnist,your prompts,4,7,oracle BAcc,0.97500
+bloodmnist,your prompts,4,8,oracle BAcc,0.95000
+bloodmnist,your prompts,4,9,oracle BAcc,0.95000
+bloodmnist,your prompts,4,0,oracle F1,1.00000
+bloodmnist,your prompts,4,1,oracle F1,1.00000
+bloodmnist,your prompts,4,2,oracle F1,1.00000
+bloodmnist,your prompts,4,3,oracle F1,1.00000
+bloodmnist,your prompts,4,4,oracle F1,0.95000
+bloodmnist,your prompts,4,5,oracle F1,0.95000
+bloodmnist,your prompts,4,6,oracle F1,1.00000
+bloodmnist,your prompts,4,7,oracle F1,1.00000
+bloodmnist,your prompts,4,8,oracle F1,0.95000
+bloodmnist,your prompts,4,9,oracle F1,0.95000
+bloodmnist,your prompts,4,0,r_anchor,0.03662
+bloodmnist,your prompts,4,1,r_anchor,0.02236
+bloodmnist,your prompts,4,2,r_anchor,0.02702
+bloodmnist,your prompts,4,3,r_anchor,0.00000
+bloodmnist,your prompts,4,4,r_anchor,0.02150
+bloodmnist,your prompts,4,5,r_anchor,0.00000
+bloodmnist,your prompts,4,6,r_anchor,0.02289
+bloodmnist,your prompts,4,7,r_anchor,0.02442
+bloodmnist,your prompts,4,8,r_anchor,0.00383
+bloodmnist,your prompts,4,9,r_anchor,0.00000
+bloodmnist,your prompts,4,0,r_visual,0.24707
+bloodmnist,your prompts,4,1,r_visual,0.25622
+bloodmnist,your prompts,4,2,r_visual,0.23886
+bloodmnist,your prompts,4,3,r_visual,0.26799
+bloodmnist,your prompts,4,4,r_visual,0.30455
+bloodmnist,your prompts,4,5,r_visual,0.12344
+bloodmnist,your prompts,4,6,r_visual,0.22062
+bloodmnist,your prompts,4,7,r_visual,0.27265
+bloodmnist,your prompts,4,8,r_visual,0.25073
+bloodmnist,your prompts,4,9,r_visual,0.24671
+bloodmnist,your prompts,4,0,reliability,0.64579
+bloodmnist,your prompts,4,1,reliability,0.66989
+bloodmnist,your prompts,4,2,reliability,0.65462
+bloodmnist,your prompts,4,3,reliability,0.70769
+bloodmnist,your prompts,4,4,reliability,0.69213
+bloodmnist,your prompts,4,5,reliability,0.62174
+bloodmnist,your prompts,4,6,reliability,0.65062
+bloodmnist,your prompts,4,7,reliability,0.67472
+bloodmnist,your prompts,4,8,reliability,0.69442
+bloodmnist,your prompts,4,9,reliability,0.69853
+bloodmnist,your prompts,4,0,shot-only,0.72000
+bloodmnist,your prompts,4,1,shot-only,0.72000
+bloodmnist,your prompts,4,2,shot-only,0.72000
+bloodmnist,your prompts,4,3,shot-only,0.72000
+bloodmnist,your prompts,4,4,shot-only,0.72000
+bloodmnist,your prompts,4,5,shot-only,0.72000
+bloodmnist,your prompts,4,6,shot-only,0.72000
+bloodmnist,your prompts,4,7,shot-only,0.72000
+bloodmnist,your prompts,4,8,shot-only,0.72000
+bloodmnist,your prompts,4,9,shot-only,0.72000
+bloodmnist,your prompts,16,0,centered,0.73746
+bloodmnist,your prompts,16,1,centered,0.74077
+bloodmnist,your prompts,16,2,centered,0.73993
+bloodmnist,your prompts,16,3,centered,0.72489
+bloodmnist,your prompts,16,4,centered,0.72903
+bloodmnist,your prompts,16,5,centered,0.72959
+bloodmnist,your prompts,16,6,centered,0.74539
+bloodmnist,your prompts,16,7,centered,0.75298
+bloodmnist,your prompts,16,8,centered,0.73728
+bloodmnist,your prompts,16,9,centered,0.73447
+bloodmnist,your prompts,16,0,eta(S),0.80087
+bloodmnist,your prompts,16,1,eta(S),0.80074
+bloodmnist,your prompts,16,2,eta(S),0.80077
+bloodmnist,your prompts,16,3,eta(S),0.80020
+bloodmnist,your prompts,16,4,eta(S),0.80033
+bloodmnist,your prompts,16,5,eta(S),0.80060
+bloodmnist,your prompts,16,6,eta(S),0.80033
+bloodmnist,your prompts,16,7,eta(S),0.80091
+bloodmnist,your prompts,16,8,eta(S),0.80081
+bloodmnist,your prompts,16,9,eta(S),0.80091
+bloodmnist,your prompts,16,0,oracle Acc,1.00000
+bloodmnist,your prompts,16,1,oracle Acc,1.00000
+bloodmnist,your prompts,16,2,oracle Acc,1.00000
+bloodmnist,your prompts,16,3,oracle Acc,1.00000
+bloodmnist,your prompts,16,4,oracle Acc,0.95000
+bloodmnist,your prompts,16,5,oracle Acc,1.00000
+bloodmnist,your prompts,16,6,oracle Acc,0.95000
+bloodmnist,your prompts,16,7,oracle Acc,0.97500
+bloodmnist,your prompts,16,8,oracle Acc,0.97500
+bloodmnist,your prompts,16,9,oracle Acc,1.00000
+bloodmnist,your prompts,16,0,oracle BAcc,1.00000
+bloodmnist,your prompts,16,1,oracle BAcc,1.00000
+bloodmnist,your prompts,16,2,oracle BAcc,1.00000
+bloodmnist,your prompts,16,3,oracle BAcc,0.97500
+bloodmnist,your prompts,16,4,oracle BAcc,0.95000
+bloodmnist,your prompts,16,5,oracle BAcc,0.95000
+bloodmnist,your prompts,16,6,oracle BAcc,0.95000
+bloodmnist,your prompts,16,7,oracle BAcc,0.97500
+bloodmnist,your prompts,16,8,oracle BAcc,0.97500
+bloodmnist,your prompts,16,9,oracle BAcc,1.00000
+bloodmnist,your prompts,16,0,oracle F1,1.00000
+bloodmnist,your prompts,16,1,oracle F1,1.00000
+bloodmnist,your prompts,16,2,oracle F1,1.00000
+bloodmnist,your prompts,16,3,oracle F1,1.00000
+bloodmnist,your prompts,16,4,oracle F1,0.95000
+bloodmnist,your prompts,16,5,oracle F1,1.00000
+bloodmnist,your prompts,16,6,oracle F1,0.95000
+bloodmnist,your prompts,16,7,oracle F1,1.00000
+bloodmnist,your prompts,16,8,oracle F1,1.00000
+bloodmnist,your prompts,16,9,oracle F1,1.00000
+bloodmnist,your prompts,16,0,r_anchor,0.01796
+bloodmnist,your prompts,16,1,r_anchor,0.02025
+bloodmnist,your prompts,16,2,r_anchor,0.01555
+bloodmnist,your prompts,16,3,r_anchor,0.02414
+bloodmnist,your prompts,16,4,r_anchor,0.01348
+bloodmnist,your prompts,16,5,r_anchor,0.01934
+bloodmnist,your prompts,16,6,r_anchor,0.01445
+bloodmnist,your prompts,16,7,r_anchor,0.02599
+bloodmnist,your prompts,16,8,r_anchor,0.02939
+bloodmnist,your prompts,16,9,r_anchor,0.01794
+bloodmnist,your prompts,16,0,r_visual,0.25539
+bloodmnist,your prompts,16,1,r_visual,0.24897
+bloodmnist,your prompts,16,2,r_visual,0.26202
+bloodmnist,your prompts,16,3,r_visual,0.22500
+bloodmnist,your prompts,16,4,r_visual,0.25458
+bloodmnist,your prompts,16,5,r_visual,0.24599
+bloodmnist,your prompts,16,6,r_visual,0.30841
+bloodmnist,your prompts,16,7,r_visual,0.34453
+bloodmnist,your prompts,16,8,r_visual,0.27388
+bloodmnist,your prompts,16,9,r_visual,0.24968
+bloodmnist,your prompts,16,0,reliability,0.67572
+bloodmnist,your prompts,16,1,reliability,0.66935
+bloodmnist,your prompts,16,2,reliability,0.68225
+bloodmnist,your prompts,16,3,reliability,0.65125
+bloodmnist,your prompts,16,4,reliability,0.68180
+bloodmnist,your prompts,16,5,reliability,0.66918
+bloodmnist,your prompts,16,6,reliability,0.70299
+bloodmnist,your prompts,16,7,reliability,0.70125
+bloodmnist,your prompts,16,8,reliability,0.66861
+bloodmnist,your prompts,16,9,reliability,0.67300
+bloodmnist,your prompts,16,0,shot-only,0.84706
+bloodmnist,your prompts,16,1,shot-only,0.84706
+bloodmnist,your prompts,16,2,shot-only,0.84706
+bloodmnist,your prompts,16,3,shot-only,0.84706
+bloodmnist,your prompts,16,4,shot-only,0.84706
+bloodmnist,your prompts,16,5,shot-only,0.84706
+bloodmnist,your prompts,16,6,shot-only,0.84706
+bloodmnist,your prompts,16,7,shot-only,0.84706
+bloodmnist,your prompts,16,8,shot-only,0.84706
+bloodmnist,your prompts,16,9,shot-only,0.84706

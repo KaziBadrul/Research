@@ -1,0 +1,52 @@
+# dermamnist | config 0209bf8cc7 | 2026-11-12 01:17:52
+actinic keratoses and intraepithelial carcin -> 'actinic keratosis': 50 prompts | cos(hand anchor, GPT anchor) = 0.870
+basal cell carcinoma                         -> 'basal cell carcinoma': 50 prompts | cos(hand anchor, GPT anchor) = 0.820
+benign keratosis-like lesions                -> 'benign keratosis': 50 prompts | cos(hand anchor, GPT anchor) = 0.815
+dermatofibroma                               -> 'dermatofibroma': 50 prompts | cos(hand anchor, GPT anchor) = 0.733
+melanoma                                     -> 'melanoma': 50 prompts | cos(hand anchor, GPT anchor) = 0.897
+melanocytic nevi                             -> 'melanocytic nevus': 50 prompts | cos(hand anchor, GPT anchor) = 0.863
+vascular lesions                             -> 'vascular lesion': 50 prompts | cos(hand anchor, GPT anchor) = 0.821
+example: Actinic keratosis presents as rough, scaly patches on sun-exposed areas of the skin, often with a pink or red base.
+
+anchors               Acc  Macro-F1   BAcc
+your prompts        31.95     15.70  20.93
+50 GPT-4            53.55     21.79  21.39
+
+class                               true % | predicted % hand    GPT | recall % hand    GPT
+actinic keratoses and intraepithel     3.3 |              0.2    4.4 |           0.0    7.6
+basal cell carcinoma                   5.1 |             16.8    1.2 |          26.2    8.7
+benign keratosis-like lesions         11.0 |              2.4   11.1 |          10.9   34.5
+dermatofibroma                         1.1 |             28.7    0.1 |          39.1    0.0
+melanoma                              11.2 |             10.9   17.1 |          20.2   14.3
+melanocytic nevi                      66.8 |             36.0   64.8 |          39.7   70.7
+vascular lesions                       1.5 |              5.0    1.4 |          10.3   13.8
+support reliability (your prompts, draw 0, K=16): r_anchor 0.066 | r_visual 0.250 | eta 0.610
+support reliability (50 GPT-4, draw 0, K=16): r_anchor 0.066 | r_visual 0.250 | eta 0.610
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+actinic keratoses and intraepithel     0.624      0.627         0.598        False   14.56
+basal cell carcinoma                   0.626      0.617         0.599        False   14.09
+benign keratosis-like lesions          0.590      0.623         0.579        False   14.39
+dermatofibroma                         0.663      0.624         0.606        False   14.26
+melanoma                               0.569      0.617         0.559        False   14.15
+melanocytic nevi                       0.602      0.642         0.613         True   14.88
+vascular lesions                       0.600      0.619         0.592        False   13.28
+-> own-text delta 0.611 vs other-text delta 0.624 (gap +0.014); images closest to their own text for 1/7 classes
+-> phi: real classes 14.23 (max possible 16) | random natural mix 14.32 | random uniform over classes 13.66
+-> mean cosine between support images: same class 0.882 | different class 0.854
+-> eta(S) = 0.807
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+actinic keratoses and intraepithel     0.835      1.021         0.856         True    4.89
+basal cell carcinoma                   0.775      1.031         0.860         True    4.46
+benign keratosis-like lesions          0.778      1.041         0.935         True    2.31
+dermatofibroma                         0.953      0.993         0.773        False    3.65
+melanoma                               0.828      1.039         0.719        False    1.69
+melanocytic nevi                       1.064      0.988         0.717        False    2.14
+vascular lesions                       0.811      1.032         0.697        False    7.64
+-> own-text delta 0.864 vs other-text delta 1.021 (gap +0.157); images closest to their own text for 3/7 classes
+-> phi: real classes 3.83 (max possible 16) | random natural mix 1.08 | random uniform over classes 1.37
+-> mean cosine between support images: same class 0.188 | different class 0.039
+-> eta(S) = 0.660

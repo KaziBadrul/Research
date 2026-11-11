@@ -1,0 +1,301 @@
+dataset,prompts,K,draw,method,acc,macro_f1,bacc
+organamnist,your prompts,1,0,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,1,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,2,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,3,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,4,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,5,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,6,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,7,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,8,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,9,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,1,0,Visual only,50.5500,44.8094,47.6612
+organamnist,your prompts,1,1,Visual only,53.4000,49.4324,51.5482
+organamnist,your prompts,1,2,Visual only,53.8500,47.1935,50.6635
+organamnist,your prompts,1,3,Visual only,45.0500,41.3456,44.6429
+organamnist,your prompts,1,4,Visual only,49.4000,43.0631,47.7500
+organamnist,your prompts,1,5,Visual only,51.5000,46.3613,48.8979
+organamnist,your prompts,1,6,Visual only,49.1000,38.9834,46.0436
+organamnist,your prompts,1,7,Visual only,55.4500,50.3029,51.1644
+organamnist,your prompts,1,8,Visual only,51.3000,47.5969,49.2169
+organamnist,your prompts,1,9,Visual only,56.8500,51.3771,52.0671
+organamnist,your prompts,1,0,Fixed eta 0.5,41.9500,37.8564,41.8720
+organamnist,your prompts,1,1,Fixed eta 0.5,47.0500,43.1724,48.2587
+organamnist,your prompts,1,2,Fixed eta 0.5,43.8000,38.5870,41.9732
+organamnist,your prompts,1,3,Fixed eta 0.5,36.8500,35.1083,38.9589
+organamnist,your prompts,1,4,Fixed eta 0.5,43.6000,38.9236,43.7273
+organamnist,your prompts,1,5,Fixed eta 0.5,40.6500,36.6027,42.2748
+organamnist,your prompts,1,6,Fixed eta 0.5,43.9500,35.5260,42.3685
+organamnist,your prompts,1,7,Fixed eta 0.5,46.1500,41.0015,45.7268
+organamnist,your prompts,1,8,Fixed eta 0.5,43.9500,40.7588,43.5966
+organamnist,your prompts,1,9,Fixed eta 0.5,47.5500,42.3588,45.3875
+organamnist,your prompts,1,0,PARA,36.2000,32.3459,36.3988
+organamnist,your prompts,1,1,PARA,39.7000,36.2472,41.3724
+organamnist,your prompts,1,2,PARA,34.3000,31.3451,34.7744
+organamnist,your prompts,1,3,PARA,32.4000,30.5968,34.4734
+organamnist,your prompts,1,4,PARA,36.3000,33.5438,37.9647
+organamnist,your prompts,1,5,PARA,34.0000,30.3603,36.4822
+organamnist,your prompts,1,6,PARA,36.6500,30.9563,37.0178
+organamnist,your prompts,1,7,PARA,38.4500,34.2674,39.6662
+organamnist,your prompts,1,8,PARA,36.0500,33.3014,36.1814
+organamnist,your prompts,1,9,PARA,39.1500,35.1753,38.6312
+organamnist,your prompts,1,0,Shot-only eta,39.7000,35.7588,39.7287
+organamnist,your prompts,1,1,Shot-only eta,44.5000,40.6236,45.9772
+organamnist,your prompts,1,2,Shot-only eta,40.7000,36.1967,39.6288
+organamnist,your prompts,1,3,Shot-only eta,36.1500,34.6460,38.3050
+organamnist,your prompts,1,4,Shot-only eta,41.6000,37.3951,42.1337
+organamnist,your prompts,1,5,Shot-only eta,38.0000,33.9912,39.9333
+organamnist,your prompts,1,6,Shot-only eta,41.8000,34.2930,40.8446
+organamnist,your prompts,1,7,Shot-only eta,43.7500,38.8126,43.9165
+organamnist,your prompts,1,8,Shot-only eta,42.1000,39.0185,41.7905
+organamnist,your prompts,1,9,Shot-only eta,44.8000,39.7955,42.9900
+organamnist,your prompts,1,0,PARA centered eta,37.3500,33.3670,37.4127
+organamnist,your prompts,1,1,PARA centered eta,42.4500,38.7335,44.0728
+organamnist,your prompts,1,2,PARA centered eta,37.8000,33.9151,37.3037
+organamnist,your prompts,1,3,PARA centered eta,35.0000,33.5805,36.9399
+organamnist,your prompts,1,4,PARA centered eta,40.1000,36.2953,40.8543
+organamnist,your prompts,1,5,PARA centered eta,36.5000,32.6033,38.6550
+organamnist,your prompts,1,6,PARA centered eta,39.8500,32.9190,39.3809
+organamnist,your prompts,1,7,PARA centered eta,40.7500,36.3388,41.7062
+organamnist,your prompts,1,8,PARA centered eta,39.4500,36.5428,39.2819
+organamnist,your prompts,1,9,PARA centered eta,42.7000,38.3283,41.7393
+organamnist,your prompts,1,0,Reliability eta,29.5500,26.8002,30.8392
+organamnist,your prompts,1,1,Reliability eta,33.1000,30.5209,35.1879
+organamnist,your prompts,1,2,Reliability eta,29.4500,26.7354,30.7020
+organamnist,your prompts,1,3,Reliability eta,29.0500,27.0041,31.1026
+organamnist,your prompts,1,4,Reliability eta,30.0000,28.0512,32.3428
+organamnist,your prompts,1,5,Reliability eta,31.9000,28.4404,34.6004
+organamnist,your prompts,1,6,Reliability eta,33.1500,28.8104,34.1439
+organamnist,your prompts,1,7,Reliability eta,30.1000,27.3166,32.3843
+organamnist,your prompts,1,8,Reliability eta,30.2500,27.9791,31.2998
+organamnist,your prompts,1,9,Reliability eta,34.7000,31.3623,35.0371
+organamnist,your prompts,1,0,Oracle by Acc (cheat),50.5500,44.8094,47.6612
+organamnist,your prompts,1,1,Oracle by Acc (cheat),53.4000,49.7388,52.0527
+organamnist,your prompts,1,2,Oracle by Acc (cheat),53.8500,47.1935,50.6635
+organamnist,your prompts,1,3,Oracle by Acc (cheat),45.2500,41.6283,44.9086
+organamnist,your prompts,1,4,Oracle by Acc (cheat),49.9500,43.6712,48.7272
+organamnist,your prompts,1,5,Oracle by Acc (cheat),51.5500,46.4647,49.1113
+organamnist,your prompts,1,6,Oracle by Acc (cheat),49.9500,39.8985,46.8672
+organamnist,your prompts,1,7,Oracle by Acc (cheat),55.4500,50.3029,51.1644
+organamnist,your prompts,1,8,Oracle by Acc (cheat),51.3000,47.5969,49.2169
+organamnist,your prompts,1,9,Oracle by Acc (cheat),57.0500,51.6038,52.3815
+organamnist,your prompts,1,0,Oracle by F1 (cheat),50.5000,44.8560,47.8051
+organamnist,your prompts,1,1,Oracle by F1 (cheat),53.3500,49.7528,52.1122
+organamnist,your prompts,1,2,Oracle by F1 (cheat),53.8500,47.1935,50.6635
+organamnist,your prompts,1,3,Oracle by F1 (cheat),45.2500,41.6283,44.9086
+organamnist,your prompts,1,4,Oracle by F1 (cheat),49.9000,43.8398,48.8393
+organamnist,your prompts,1,5,Oracle by F1 (cheat),51.5500,46.4647,49.1113
+organamnist,your prompts,1,6,Oracle by F1 (cheat),49.9500,39.8985,46.8672
+organamnist,your prompts,1,7,Oracle by F1 (cheat),55.4500,50.3029,51.1644
+organamnist,your prompts,1,8,Oracle by F1 (cheat),51.3000,47.5969,49.2169
+organamnist,your prompts,1,9,Oracle by F1 (cheat),57.0500,51.6038,52.3815
+organamnist,your prompts,1,0,Oracle by BAcc (cheat),50.5000,44.8560,47.8051
+organamnist,your prompts,1,1,Oracle by BAcc (cheat),53.2000,49.6857,52.1477
+organamnist,your prompts,1,2,Oracle by BAcc (cheat),53.8500,47.1935,50.6635
+organamnist,your prompts,1,3,Oracle by BAcc (cheat),45.2500,41.6283,44.9086
+organamnist,your prompts,1,4,Oracle by BAcc (cheat),49.8000,43.7448,48.8756
+organamnist,your prompts,1,5,Oracle by BAcc (cheat),51.1000,46.2578,49.4205
+organamnist,your prompts,1,6,Oracle by BAcc (cheat),49.6000,39.6871,46.9374
+organamnist,your prompts,1,7,Oracle by BAcc (cheat),55.3000,50.1535,51.2015
+organamnist,your prompts,1,8,Oracle by BAcc (cheat),51.3000,47.5969,49.2169
+organamnist,your prompts,1,9,Oracle by BAcc (cheat),57.0500,51.6038,52.3815
+organamnist,your prompts,4,0,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,1,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,2,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,3,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,4,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,5,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,6,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,7,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,8,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,9,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,4,0,Visual only,70.5500,66.7773,67.4596
+organamnist,your prompts,4,1,Visual only,70.5500,65.6897,67.8795
+organamnist,your prompts,4,2,Visual only,72.9000,69.4272,70.3956
+organamnist,your prompts,4,3,Visual only,60.4000,56.4714,58.8762
+organamnist,your prompts,4,4,Visual only,65.8000,63.4873,65.8131
+organamnist,your prompts,4,5,Visual only,67.0500,61.6713,63.5500
+organamnist,your prompts,4,6,Visual only,72.6000,68.9954,69.3758
+organamnist,your prompts,4,7,Visual only,68.6000,63.2858,64.2942
+organamnist,your prompts,4,8,Visual only,65.1000,61.0611,61.1136
+organamnist,your prompts,4,9,Visual only,72.6000,69.1505,68.7554
+organamnist,your prompts,4,0,Fixed eta 0.5,49.8500,46.5061,50.5914
+organamnist,your prompts,4,1,Fixed eta 0.5,54.4000,50.6567,53.8775
+organamnist,your prompts,4,2,Fixed eta 0.5,55.3000,50.8554,54.0302
+organamnist,your prompts,4,3,Fixed eta 0.5,45.3000,43.5434,46.3372
+organamnist,your prompts,4,4,Fixed eta 0.5,47.0000,44.3136,49.3769
+organamnist,your prompts,4,5,Fixed eta 0.5,49.9500,48.2242,50.4597
+organamnist,your prompts,4,6,Fixed eta 0.5,50.8000,47.1675,50.9230
+organamnist,your prompts,4,7,Fixed eta 0.5,50.3500,44.8016,48.5024
+organamnist,your prompts,4,8,Fixed eta 0.5,48.4500,43.0580,47.5632
+organamnist,your prompts,4,9,Fixed eta 0.5,55.2000,51.4488,54.3640
+organamnist,your prompts,4,0,PARA,57.6000,54.3607,57.5944
+organamnist,your prompts,4,1,PARA,62.2000,58.2847,61.2851
+organamnist,your prompts,4,2,PARA,63.3500,58.8633,61.3473
+organamnist,your prompts,4,3,PARA,51.6500,49.4400,52.4988
+organamnist,your prompts,4,4,PARA,54.7500,51.6281,56.5820
+organamnist,your prompts,4,5,PARA,57.0000,55.0468,57.0129
+organamnist,your prompts,4,6,PARA,58.8000,54.2382,57.3591
+organamnist,your prompts,4,7,PARA,57.1000,50.7646,54.2493
+organamnist,your prompts,4,8,PARA,55.1000,49.7728,53.6310
+organamnist,your prompts,4,9,PARA,64.3500,60.1837,62.4389
+organamnist,your prompts,4,0,Shot-only eta,63.6500,60.2224,62.2764
+organamnist,your prompts,4,1,Shot-only eta,67.2000,62.9472,65.7262
+organamnist,your prompts,4,2,Shot-only eta,67.9500,63.8789,65.9453
+organamnist,your prompts,4,3,Shot-only eta,55.8000,52.5753,55.5943
+organamnist,your prompts,4,4,Shot-only eta,60.6000,57.3180,61.4006
+organamnist,your prompts,4,5,Shot-only eta,62.8000,59.5042,61.4184
+organamnist,your prompts,4,6,Shot-only eta,66.4500,61.9966,64.5012
+organamnist,your prompts,4,7,Shot-only eta,63.4000,57.0242,59.7553
+organamnist,your prompts,4,8,Shot-only eta,60.8000,55.1838,57.8301
+organamnist,your prompts,4,9,Shot-only eta,69.2500,65.4569,66.9383
+organamnist,your prompts,4,0,PARA centered eta,51.8500,48.4533,52.4571
+organamnist,your prompts,4,1,PARA centered eta,58.1500,54.2920,57.4602
+organamnist,your prompts,4,2,PARA centered eta,59.6000,54.9912,58.1288
+organamnist,your prompts,4,3,PARA centered eta,48.0500,46.2168,49.0478
+organamnist,your prompts,4,4,PARA centered eta,49.8000,47.1050,52.3548
+organamnist,your prompts,4,5,PARA centered eta,53.8000,52.1017,54.1225
+organamnist,your prompts,4,6,PARA centered eta,54.5500,50.4502,53.7182
+organamnist,your prompts,4,7,PARA centered eta,52.8500,46.8762,50.4945
+organamnist,your prompts,4,8,PARA centered eta,51.8500,46.3592,50.6260
+organamnist,your prompts,4,9,PARA centered eta,57.9000,53.8480,56.6563
+organamnist,your prompts,4,0,Reliability eta,57.3500,54.1440,57.3647
+organamnist,your prompts,4,1,Reliability eta,63.1500,59.1249,62.0484
+organamnist,your prompts,4,2,Reliability eta,63.2500,58.8357,61.3250
+organamnist,your prompts,4,3,Reliability eta,52.2500,49.7800,52.8645
+organamnist,your prompts,4,4,Reliability eta,54.9500,51.7745,56.7196
+organamnist,your prompts,4,5,Reliability eta,56.6500,54.7080,56.6633
+organamnist,your prompts,4,6,Reliability eta,57.6500,53.1430,56.2657
+organamnist,your prompts,4,7,Reliability eta,57.6000,51.2199,54.6448
+organamnist,your prompts,4,8,Reliability eta,53.8000,48.4442,52.4505
+organamnist,your prompts,4,9,Reliability eta,59.5500,55.4081,58.0952
+organamnist,your prompts,4,0,Oracle by Acc (cheat),70.5500,66.7773,67.4596
+organamnist,your prompts,4,1,Oracle by Acc (cheat),70.5500,65.7408,67.9034
+organamnist,your prompts,4,2,Oracle by Acc (cheat),72.9000,69.4272,70.3956
+organamnist,your prompts,4,3,Oracle by Acc (cheat),60.4000,56.4714,58.8762
+organamnist,your prompts,4,4,Oracle by Acc (cheat),65.8500,63.4734,65.9904
+organamnist,your prompts,4,5,Oracle by Acc (cheat),67.3500,61.9415,63.9764
+organamnist,your prompts,4,6,Oracle by Acc (cheat),72.6500,68.9903,69.4824
+organamnist,your prompts,4,7,Oracle by Acc (cheat),68.6000,63.2858,64.2942
+organamnist,your prompts,4,8,Oracle by Acc (cheat),65.1000,61.0611,61.1136
+organamnist,your prompts,4,9,Oracle by Acc (cheat),72.6000,69.1505,68.7554
+organamnist,your prompts,4,0,Oracle by F1 (cheat),70.5500,66.7773,67.4596
+organamnist,your prompts,4,1,Oracle by F1 (cheat),70.5500,65.7408,67.9034
+organamnist,your prompts,4,2,Oracle by F1 (cheat),72.9000,69.4272,70.3956
+organamnist,your prompts,4,3,Oracle by F1 (cheat),60.4000,56.4714,58.8762
+organamnist,your prompts,4,4,Oracle by F1 (cheat),65.8000,63.4873,65.8131
+organamnist,your prompts,4,5,Oracle by F1 (cheat),67.1500,62.3166,64.1276
+organamnist,your prompts,4,6,Oracle by F1 (cheat),72.6000,68.9954,69.3758
+organamnist,your prompts,4,7,Oracle by F1 (cheat),68.6000,63.2858,64.2942
+organamnist,your prompts,4,8,Oracle by F1 (cheat),65.1000,61.0611,61.1136
+organamnist,your prompts,4,9,Oracle by F1 (cheat),72.5500,69.1779,68.7827
+organamnist,your prompts,4,0,Oracle by BAcc (cheat),70.5500,66.7773,67.4596
+organamnist,your prompts,4,1,Oracle by BAcc (cheat),70.5500,65.7408,67.9034
+organamnist,your prompts,4,2,Oracle by BAcc (cheat),72.9000,69.4272,70.3956
+organamnist,your prompts,4,3,Oracle by BAcc (cheat),60.2500,56.4263,58.9066
+organamnist,your prompts,4,4,Oracle by BAcc (cheat),65.8500,63.4734,65.9904
+organamnist,your prompts,4,5,Oracle by BAcc (cheat),67.1500,62.3166,64.1276
+organamnist,your prompts,4,6,Oracle by BAcc (cheat),72.6500,68.9903,69.4824
+organamnist,your prompts,4,7,Oracle by BAcc (cheat),68.5500,63.0071,64.3657
+organamnist,your prompts,4,8,Oracle by BAcc (cheat),64.9000,60.6634,61.1212
+organamnist,your prompts,4,9,Oracle by BAcc (cheat),72.5500,69.1779,68.7827
+organamnist,your prompts,16,0,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,1,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,2,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,3,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,4,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,5,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,6,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,7,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,8,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,9,Zero-shot,22.8000,21.4453,25.7088
+organamnist,your prompts,16,0,Visual only,83.8500,82.3357,82.0674
+organamnist,your prompts,16,1,Visual only,84.1000,82.4047,82.4252
+organamnist,your prompts,16,2,Visual only,81.8500,80.5296,80.8981
+organamnist,your prompts,16,3,Visual only,82.4000,81.0932,81.7680
+organamnist,your prompts,16,4,Visual only,82.2000,80.0255,80.6348
+organamnist,your prompts,16,5,Visual only,82.7500,79.8988,80.3211
+organamnist,your prompts,16,6,Visual only,81.3000,79.7359,80.3287
+organamnist,your prompts,16,7,Visual only,83.9500,81.9403,81.4141
+organamnist,your prompts,16,8,Visual only,82.3500,80.9344,80.9150
+organamnist,your prompts,16,9,Visual only,85.5500,83.2832,83.9996
+organamnist,your prompts,16,0,Fixed eta 0.5,58.4000,56.5936,59.7956
+organamnist,your prompts,16,1,Fixed eta 0.5,58.5500,56.1148,59.4199
+organamnist,your prompts,16,2,Fixed eta 0.5,62.8000,61.0717,63.8692
+organamnist,your prompts,16,3,Fixed eta 0.5,56.2500,54.9079,58.7950
+organamnist,your prompts,16,4,Fixed eta 0.5,59.8500,58.3011,61.5339
+organamnist,your prompts,16,5,Fixed eta 0.5,57.9000,54.4278,58.2210
+organamnist,your prompts,16,6,Fixed eta 0.5,60.3000,56.2305,59.4428
+organamnist,your prompts,16,7,Fixed eta 0.5,58.8500,56.3702,59.7739
+organamnist,your prompts,16,8,Fixed eta 0.5,56.1500,56.2471,59.1916
+organamnist,your prompts,16,9,Fixed eta 0.5,62.1000,59.3268,62.6312
+organamnist,your prompts,16,0,PARA,82.7000,80.2730,80.8942
+organamnist,your prompts,16,1,PARA,81.1500,78.7855,80.1427
+organamnist,your prompts,16,2,PARA,80.5500,78.7349,79.9275
+organamnist,your prompts,16,3,PARA,79.1500,77.1604,79.2617
+organamnist,your prompts,16,4,PARA,81.0500,78.8734,80.1651
+organamnist,your prompts,16,5,PARA,80.6000,77.1325,78.9270
+organamnist,your prompts,16,6,PARA,78.9000,76.8252,78.4240
+organamnist,your prompts,16,7,PARA,81.4000,79.0589,79.9410
+organamnist,your prompts,16,8,PARA,78.6000,76.5050,77.9553
+organamnist,your prompts,16,9,PARA,82.8500,80.0789,81.7926
+organamnist,your prompts,16,0,Shot-only eta,83.2500,81.1013,81.3511
+organamnist,your prompts,16,1,Shot-only eta,82.5000,80.4220,81.4467
+organamnist,your prompts,16,2,Shot-only eta,80.9500,79.3566,80.3635
+organamnist,your prompts,16,3,Shot-only eta,80.2500,78.2217,79.9187
+organamnist,your prompts,16,4,Shot-only eta,81.8000,79.6174,80.6628
+organamnist,your prompts,16,5,Shot-only eta,82.0500,78.8178,79.9755
+organamnist,your prompts,16,6,Shot-only eta,79.8500,78.1019,79.3280
+organamnist,your prompts,16,7,Shot-only eta,82.8000,80.6733,81.0340
+organamnist,your prompts,16,8,Shot-only eta,80.3500,78.3202,79.3624
+organamnist,your prompts,16,9,Shot-only eta,83.8000,81.1894,82.4794
+organamnist,your prompts,16,0,PARA centered eta,80.9000,78.3853,79.7097
+organamnist,your prompts,16,1,PARA centered eta,78.1500,75.4216,77.5269
+organamnist,your prompts,16,2,PARA centered eta,79.1500,77.3384,79.0112
+organamnist,your prompts,16,3,PARA centered eta,76.6500,74.2545,77.1318
+organamnist,your prompts,16,4,PARA centered eta,79.2000,76.7359,78.2928
+organamnist,your prompts,16,5,PARA centered eta,77.7500,74.0301,76.2900
+organamnist,your prompts,16,6,PARA centered eta,76.6000,73.9233,76.0705
+organamnist,your prompts,16,7,PARA centered eta,79.4000,76.5676,78.0991
+organamnist,your prompts,16,8,PARA centered eta,75.8500,73.5082,75.4959
+organamnist,your prompts,16,9,PARA centered eta,80.3500,77.3211,79.5433
+organamnist,your prompts,16,0,Reliability eta,74.6000,71.8862,74.3092
+organamnist,your prompts,16,1,Reliability eta,70.1000,67.4173,70.5266
+organamnist,your prompts,16,2,Reliability eta,75.7500,73.7221,76.0424
+organamnist,your prompts,16,3,Reliability eta,71.1000,68.5610,72.1710
+organamnist,your prompts,16,4,Reliability eta,72.8000,69.7903,72.3679
+organamnist,your prompts,16,5,Reliability eta,69.2000,64.9788,68.2372
+organamnist,your prompts,16,6,Reliability eta,69.6500,66.1022,69.1581
+organamnist,your prompts,16,7,Reliability eta,71.8500,68.7828,71.5619
+organamnist,your prompts,16,8,Reliability eta,70.8500,69.1101,71.6532
+organamnist,your prompts,16,9,Reliability eta,75.5500,72.3825,75.4554
+organamnist,your prompts,16,0,Oracle by Acc (cheat),83.9500,81.9346,81.9052
+organamnist,your prompts,16,1,Oracle by Acc (cheat),84.1000,82.4047,82.4252
+organamnist,your prompts,16,2,Oracle by Acc (cheat),81.8500,80.5924,81.0605
+organamnist,your prompts,16,3,Oracle by Acc (cheat),82.4000,80.8993,81.8391
+organamnist,your prompts,16,4,Oracle by Acc (cheat),82.4500,80.2503,81.0751
+organamnist,your prompts,16,5,Oracle by Acc (cheat),82.7500,79.8870,80.5869
+organamnist,your prompts,16,6,Oracle by Acc (cheat),81.3000,79.7359,80.3287
+organamnist,your prompts,16,7,Oracle by Acc (cheat),83.9500,81.9403,81.4141
+organamnist,your prompts,16,8,Oracle by Acc (cheat),82.3500,80.9344,80.9150
+organamnist,your prompts,16,9,Oracle by Acc (cheat),85.6000,83.3370,84.1810
+organamnist,your prompts,16,0,Oracle by F1 (cheat),83.8500,82.3357,82.0674
+organamnist,your prompts,16,1,Oracle by F1 (cheat),84.1000,82.4047,82.4252
+organamnist,your prompts,16,2,Oracle by F1 (cheat),81.8500,80.5924,81.0605
+organamnist,your prompts,16,3,Oracle by F1 (cheat),82.4000,81.0932,81.7680
+organamnist,your prompts,16,4,Oracle by F1 (cheat),82.4500,80.2503,81.0751
+organamnist,your prompts,16,5,Oracle by F1 (cheat),82.7500,80.0285,80.5323
+organamnist,your prompts,16,6,Oracle by F1 (cheat),81.3000,79.7359,80.3287
+organamnist,your prompts,16,7,Oracle by F1 (cheat),83.9000,81.9988,81.5441
+organamnist,your prompts,16,8,Oracle by F1 (cheat),82.3500,80.9344,80.9150
+organamnist,your prompts,16,9,Oracle by F1 (cheat),85.6000,83.3370,84.1810
+organamnist,your prompts,16,0,Oracle by BAcc (cheat),83.8500,82.3357,82.0674
+organamnist,your prompts,16,1,Oracle by BAcc (cheat),83.9000,82.0393,82.4430
+organamnist,your prompts,16,2,Oracle by BAcc (cheat),81.8500,80.5924,81.0605
+organamnist,your prompts,16,3,Oracle by BAcc (cheat),82.4000,80.8993,81.8391
+organamnist,your prompts,16,4,Oracle by BAcc (cheat),82.4500,80.2503,81.0751
+organamnist,your prompts,16,5,Oracle by BAcc (cheat),82.7500,79.8870,80.5869
+organamnist,your prompts,16,6,Oracle by BAcc (cheat),81.3000,79.7359,80.3287
+organamnist,your prompts,16,7,Oracle by BAcc (cheat),83.5000,81.5422,81.7307
+organamnist,your prompts,16,8,Oracle by BAcc (cheat),82.3500,80.9344,80.9150
+organamnist,your prompts,16,9,Oracle by BAcc (cheat),85.6000,83.3370,84.1810

@@ -1,0 +1,271 @@
+dataset,prompts,K,draw,quantity,value
+organamnist,your prompts,1,0,centered,0.38794
+organamnist,your prompts,1,1,centered,0.40866
+organamnist,your prompts,1,2,centered,0.41444
+organamnist,your prompts,1,3,centered,0.41270
+organamnist,your prompts,1,4,centered,0.41739
+organamnist,your prompts,1,5,centered,0.42674
+organamnist,your prompts,1,6,centered,0.41514
+organamnist,your prompts,1,7,centered,0.39654
+organamnist,your prompts,1,8,centered,0.40270
+organamnist,your prompts,1,9,centered,0.40621
+organamnist,your prompts,1,0,eta(S),0.34911
+organamnist,your prompts,1,1,eta(S),0.35287
+organamnist,your prompts,1,2,eta(S),0.35362
+organamnist,your prompts,1,3,eta(S),0.35251
+organamnist,your prompts,1,4,eta(S),0.35534
+organamnist,your prompts,1,5,eta(S),0.36273
+organamnist,your prompts,1,6,eta(S),0.35857
+organamnist,your prompts,1,7,eta(S),0.34848
+organamnist,your prompts,1,8,eta(S),0.34852
+organamnist,your prompts,1,9,eta(S),0.35152
+organamnist,your prompts,1,0,oracle Acc,1.00000
+organamnist,your prompts,1,1,oracle Acc,0.92500
+organamnist,your prompts,1,2,oracle Acc,1.00000
+organamnist,your prompts,1,3,oracle Acc,0.97500
+organamnist,your prompts,1,4,oracle Acc,0.82500
+organamnist,your prompts,1,5,oracle Acc,0.97500
+organamnist,your prompts,1,6,oracle Acc,0.80000
+organamnist,your prompts,1,7,oracle Acc,1.00000
+organamnist,your prompts,1,8,oracle Acc,1.00000
+organamnist,your prompts,1,9,oracle Acc,0.97500
+organamnist,your prompts,1,0,oracle BAcc,0.97500
+organamnist,your prompts,1,1,oracle BAcc,0.85000
+organamnist,your prompts,1,2,oracle BAcc,1.00000
+organamnist,your prompts,1,3,oracle BAcc,0.97500
+organamnist,your prompts,1,4,oracle BAcc,0.77500
+organamnist,your prompts,1,5,oracle BAcc,0.85000
+organamnist,your prompts,1,6,oracle BAcc,0.72500
+organamnist,your prompts,1,7,oracle BAcc,0.95000
+organamnist,your prompts,1,8,oracle BAcc,1.00000
+organamnist,your prompts,1,9,oracle BAcc,0.97500
+organamnist,your prompts,1,0,oracle F1,0.97500
+organamnist,your prompts,1,1,oracle F1,0.90000
+organamnist,your prompts,1,2,oracle F1,1.00000
+organamnist,your prompts,1,3,oracle F1,0.97500
+organamnist,your prompts,1,4,oracle F1,0.80000
+organamnist,your prompts,1,5,oracle F1,0.97500
+organamnist,your prompts,1,6,oracle F1,0.80000
+organamnist,your prompts,1,7,oracle F1,1.00000
+organamnist,your prompts,1,8,oracle F1,1.00000
+organamnist,your prompts,1,9,oracle F1,0.97500
+organamnist,your prompts,1,0,r_anchor,0.28963
+organamnist,your prompts,1,1,r_anchor,0.19300
+organamnist,your prompts,1,2,r_anchor,0.17386
+organamnist,your prompts,1,3,r_anchor,0.17577
+organamnist,your prompts,1,4,r_anchor,0.20612
+organamnist,your prompts,1,5,r_anchor,0.08786
+organamnist,your prompts,1,6,r_anchor,0.13188
+organamnist,your prompts,1,7,r_anchor,0.29051
+organamnist,your prompts,1,8,r_anchor,0.20680
+organamnist,your prompts,1,9,r_anchor,0.13011
+organamnist,your prompts,1,0,r_visual,0.00000
+organamnist,your prompts,1,1,r_visual,0.00000
+organamnist,your prompts,1,2,r_visual,0.00000
+organamnist,your prompts,1,3,r_visual,0.00000
+organamnist,your prompts,1,4,r_visual,0.00000
+organamnist,your prompts,1,5,r_visual,0.00000
+organamnist,your prompts,1,6,r_visual,0.00000
+organamnist,your prompts,1,7,r_visual,0.00000
+organamnist,your prompts,1,8,r_visual,0.00000
+organamnist,your prompts,1,9,r_visual,0.00000
+organamnist,your prompts,1,0,reliability,0.18381
+organamnist,your prompts,1,1,reliability,0.22901
+organamnist,your prompts,1,2,reliability,0.24073
+organamnist,your prompts,1,3,reliability,0.23951
+organamnist,your prompts,1,4,reliability,0.22161
+organamnist,your prompts,1,5,reliability,0.31265
+organamnist,your prompts,1,6,reliability,0.27118
+organamnist,your prompts,1,7,reliability,0.18348
+organamnist,your prompts,1,8,reliability,0.22124
+organamnist,your prompts,1,9,reliability,0.27264
+organamnist,your prompts,1,0,shot-only,0.45000
+organamnist,your prompts,1,1,shot-only,0.45000
+organamnist,your prompts,1,2,shot-only,0.45000
+organamnist,your prompts,1,3,shot-only,0.45000
+organamnist,your prompts,1,4,shot-only,0.45000
+organamnist,your prompts,1,5,shot-only,0.45000
+organamnist,your prompts,1,6,shot-only,0.45000
+organamnist,your prompts,1,7,shot-only,0.45000
+organamnist,your prompts,1,8,shot-only,0.45000
+organamnist,your prompts,1,9,shot-only,0.45000
+organamnist,your prompts,4,0,centered,0.53609
+organamnist,your prompts,4,1,centered,0.54654
+organamnist,your prompts,4,2,centered,0.54202
+organamnist,your prompts,4,3,centered,0.54375
+organamnist,your prompts,4,4,centered,0.53586
+organamnist,your prompts,4,5,centered,0.55162
+organamnist,your prompts,4,6,centered,0.54530
+organamnist,your prompts,4,7,centered,0.52807
+organamnist,your prompts,4,8,centered,0.55601
+organamnist,your prompts,4,9,centered,0.53069
+organamnist,your prompts,4,0,eta(S),0.60645
+organamnist,your prompts,4,1,eta(S),0.60701
+organamnist,your prompts,4,2,eta(S),0.60454
+organamnist,your prompts,4,3,eta(S),0.60679
+organamnist,your prompts,4,4,eta(S),0.60307
+organamnist,your prompts,4,5,eta(S),0.60649
+organamnist,your prompts,4,6,eta(S),0.60493
+organamnist,your prompts,4,7,eta(S),0.60274
+organamnist,your prompts,4,8,eta(S),0.60375
+organamnist,your prompts,4,9,eta(S),0.60314
+organamnist,your prompts,4,0,oracle Acc,1.00000
+organamnist,your prompts,4,1,oracle Acc,0.97500
+organamnist,your prompts,4,2,oracle Acc,1.00000
+organamnist,your prompts,4,3,oracle Acc,1.00000
+organamnist,your prompts,4,4,oracle Acc,0.97500
+organamnist,your prompts,4,5,oracle Acc,0.92500
+organamnist,your prompts,4,6,oracle Acc,0.97500
+organamnist,your prompts,4,7,oracle Acc,1.00000
+organamnist,your prompts,4,8,oracle Acc,1.00000
+organamnist,your prompts,4,9,oracle Acc,1.00000
+organamnist,your prompts,4,0,oracle BAcc,1.00000
+organamnist,your prompts,4,1,oracle BAcc,0.97500
+organamnist,your prompts,4,2,oracle BAcc,1.00000
+organamnist,your prompts,4,3,oracle BAcc,0.95000
+organamnist,your prompts,4,4,oracle BAcc,0.97500
+organamnist,your prompts,4,5,oracle BAcc,0.90000
+organamnist,your prompts,4,6,oracle BAcc,0.97500
+organamnist,your prompts,4,7,oracle BAcc,0.92500
+organamnist,your prompts,4,8,oracle BAcc,0.95000
+organamnist,your prompts,4,9,oracle BAcc,0.97500
+organamnist,your prompts,4,0,oracle F1,1.00000
+organamnist,your prompts,4,1,oracle F1,0.97500
+organamnist,your prompts,4,2,oracle F1,1.00000
+organamnist,your prompts,4,3,oracle F1,1.00000
+organamnist,your prompts,4,4,oracle F1,1.00000
+organamnist,your prompts,4,5,oracle F1,0.90000
+organamnist,your prompts,4,6,oracle F1,1.00000
+organamnist,your prompts,4,7,oracle F1,1.00000
+organamnist,your prompts,4,8,oracle F1,1.00000
+organamnist,your prompts,4,9,oracle F1,0.97500
+organamnist,your prompts,4,0,r_anchor,0.18668
+organamnist,your prompts,4,1,r_anchor,0.17626
+organamnist,your prompts,4,2,r_anchor,0.22319
+organamnist,your prompts,4,3,r_anchor,0.20010
+organamnist,your prompts,4,4,r_anchor,0.19346
+organamnist,your prompts,4,5,r_anchor,0.19242
+organamnist,your prompts,4,6,r_anchor,0.22806
+organamnist,your prompts,4,7,r_anchor,0.20711
+organamnist,your prompts,4,8,r_anchor,0.18281
+organamnist,your prompts,4,9,r_anchor,0.28604
+organamnist,your prompts,4,0,r_visual,0.48251
+organamnist,your prompts,4,1,r_visual,0.51197
+organamnist,your prompts,4,2,r_visual,0.55509
+organamnist,your prompts,4,3,r_visual,0.62899
+organamnist,your prompts,4,4,r_visual,0.50750
+organamnist,your prompts,4,5,r_visual,0.49436
+organamnist,your prompts,4,6,r_visual,0.52132
+organamnist,your prompts,4,7,r_visual,0.55467
+organamnist,your prompts,4,8,r_visual,0.41976
+organamnist,your prompts,4,9,r_visual,0.50927
+organamnist,your prompts,4,0,reliability,0.60316
+organamnist,your prompts,4,1,reliability,0.62008
+organamnist,your prompts,4,2,reliability,0.60267
+organamnist,your prompts,4,3,reliability,0.63754
+organamnist,your prompts,4,4,reliability,0.60685
+organamnist,your prompts,4,5,reliability,0.60322
+organamnist,your prompts,4,6,reliability,0.58900
+organamnist,your prompts,4,7,reliability,0.61262
+organamnist,your prompts,4,8,reliability,0.58286
+organamnist,your prompts,4,9,reliability,0.55092
+organamnist,your prompts,4,0,shot-only,0.72000
+organamnist,your prompts,4,1,shot-only,0.72000
+organamnist,your prompts,4,2,shot-only,0.72000
+organamnist,your prompts,4,3,shot-only,0.72000
+organamnist,your prompts,4,4,shot-only,0.72000
+organamnist,your prompts,4,5,shot-only,0.72000
+organamnist,your prompts,4,6,shot-only,0.72000
+organamnist,your prompts,4,7,shot-only,0.72000
+organamnist,your prompts,4,8,shot-only,0.72000
+organamnist,your prompts,4,9,shot-only,0.72000
+organamnist,your prompts,16,0,centered,0.73984
+organamnist,your prompts,16,1,centered,0.72328
+organamnist,your prompts,16,2,centered,0.74060
+organamnist,your prompts,16,3,centered,0.73490
+organamnist,your prompts,16,4,centered,0.73005
+organamnist,your prompts,16,5,centered,0.72514
+organamnist,your prompts,16,6,centered,0.73364
+organamnist,your prompts,16,7,centered,0.74096
+organamnist,your prompts,16,8,centered,0.73859
+organamnist,your prompts,16,9,centered,0.72952
+organamnist,your prompts,16,0,eta(S),0.79789
+organamnist,your prompts,16,1,eta(S),0.79650
+organamnist,your prompts,16,2,eta(S),0.79851
+organamnist,your prompts,16,3,eta(S),0.79651
+organamnist,your prompts,16,4,eta(S),0.79704
+organamnist,your prompts,16,5,eta(S),0.79572
+organamnist,your prompts,16,6,eta(S),0.79708
+organamnist,your prompts,16,7,eta(S),0.79876
+organamnist,your prompts,16,8,eta(S),0.79771
+organamnist,your prompts,16,9,eta(S),0.79661
+organamnist,your prompts,16,0,oracle Acc,0.90000
+organamnist,your prompts,16,1,oracle Acc,1.00000
+organamnist,your prompts,16,2,oracle Acc,0.97500
+organamnist,your prompts,16,3,oracle Acc,0.95000
+organamnist,your prompts,16,4,oracle Acc,0.90000
+organamnist,your prompts,16,5,oracle Acc,0.92500
+organamnist,your prompts,16,6,oracle Acc,1.00000
+organamnist,your prompts,16,7,oracle Acc,1.00000
+organamnist,your prompts,16,8,oracle Acc,1.00000
+organamnist,your prompts,16,9,oracle Acc,0.97500
+organamnist,your prompts,16,0,oracle BAcc,1.00000
+organamnist,your prompts,16,1,oracle BAcc,0.92500
+organamnist,your prompts,16,2,oracle BAcc,0.97500
+organamnist,your prompts,16,3,oracle BAcc,0.95000
+organamnist,your prompts,16,4,oracle BAcc,0.90000
+organamnist,your prompts,16,5,oracle BAcc,0.92500
+organamnist,your prompts,16,6,oracle BAcc,1.00000
+organamnist,your prompts,16,7,oracle BAcc,0.90000
+organamnist,your prompts,16,8,oracle BAcc,1.00000
+organamnist,your prompts,16,9,oracle BAcc,0.97500
+organamnist,your prompts,16,0,oracle F1,1.00000
+organamnist,your prompts,16,1,oracle F1,1.00000
+organamnist,your prompts,16,2,oracle F1,0.97500
+organamnist,your prompts,16,3,oracle F1,1.00000
+organamnist,your prompts,16,4,oracle F1,0.90000
+organamnist,your prompts,16,5,oracle F1,0.97500
+organamnist,your prompts,16,6,oracle F1,1.00000
+organamnist,your prompts,16,7,oracle F1,0.97500
+organamnist,your prompts,16,8,oracle F1,1.00000
+organamnist,your prompts,16,9,oracle F1,0.97500
+organamnist,your prompts,16,0,r_anchor,0.17763
+organamnist,your prompts,16,1,r_anchor,0.19533
+organamnist,your prompts,16,2,r_anchor,0.18914
+organamnist,your prompts,16,3,r_anchor,0.17204
+organamnist,your prompts,16,4,r_anchor,0.20848
+organamnist,your prompts,16,5,r_anchor,0.21719
+organamnist,your prompts,16,6,r_anchor,0.19519
+organamnist,your prompts,16,7,r_anchor,0.19745
+organamnist,your prompts,16,8,r_anchor,0.17167
+organamnist,your prompts,16,9,r_anchor,0.19688
+organamnist,your prompts,16,0,r_visual,0.57856
+organamnist,your prompts,16,1,r_visual,0.52549
+organamnist,your prompts,16,2,r_visual,0.66186
+organamnist,your prompts,16,3,r_visual,0.60376
+organamnist,your prompts,16,4,r_visual,0.61270
+organamnist,your prompts,16,5,r_visual,0.55536
+organamnist,your prompts,16,6,r_visual,0.55849
+organamnist,your prompts,16,7,r_visual,0.60593
+organamnist,your prompts,16,8,r_visual,0.63673
+organamnist,your prompts,16,9,r_visual,0.61488
+organamnist,your prompts,16,0,reliability,0.63869
+organamnist,your prompts,16,1,reliability,0.61135
+organamnist,your prompts,16,2,reliability,0.65240
+organamnist,your prompts,16,3,reliability,0.64909
+organamnist,your prompts,16,4,reliability,0.62813
+organamnist,your prompts,16,5,reliability,0.60647
+organamnist,your prompts,16,6,reliability,0.62143
+organamnist,your prompts,16,7,reliability,0.63320
+organamnist,your prompts,16,8,reliability,0.65753
+organamnist,your prompts,16,9,reliability,0.63591
+organamnist,your prompts,16,0,shot-only,0.84706
+organamnist,your prompts,16,1,shot-only,0.84706
+organamnist,your prompts,16,2,shot-only,0.84706
+organamnist,your prompts,16,3,shot-only,0.84706
+organamnist,your prompts,16,4,shot-only,0.84706
+organamnist,your prompts,16,5,shot-only,0.84706
+organamnist,your prompts,16,6,shot-only,0.84706
+organamnist,your prompts,16,7,shot-only,0.84706
+organamnist,your prompts,16,8,shot-only,0.84706
+organamnist,your prompts,16,9,shot-only,0.84706

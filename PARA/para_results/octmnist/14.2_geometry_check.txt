@@ -1,0 +1,23 @@
+# octmnist | config 50c2cb2afc | 2026-11-12 00:17:59
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+choroidal neovascularization           0.567      0.562         0.544        False   14.56
+diabetic macular edema                 0.559      0.570         0.548        False   14.60
+drusen                                 0.575      0.567         0.537        False   14.95
+normal                                 0.530      0.581         0.571         True   15.29
+-> own-text delta 0.558 vs other-text delta 0.570 (gap +0.012); images closest to their own text for 1/4 classes
+-> phi: real classes 14.85 (max possible 16) | random natural mix 14.69 | random uniform over classes 14.65
+-> mean cosine between support images: same class 0.924 | different class 0.912
+-> eta(S) = 0.803
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+choroidal neovascularization           0.681      1.098         0.986         True    2.76
+diabetic macular edema                 0.742      1.064         1.010         True    3.54
+drusen                                 0.947      1.036         0.848        False    1.63
+normal                                 0.704      1.113         0.976         True    2.42
+-> own-text delta 0.769 vs other-text delta 1.078 (gap +0.309); images closest to their own text for 3/4 classes
+-> phi: real classes 2.59 (max possible 16) | random natural mix 1.06 | random uniform over classes 1.01
+-> mean cosine between support images: same class 0.106 | different class -0.030
+-> eta(S) = 0.588

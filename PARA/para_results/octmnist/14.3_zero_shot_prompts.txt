@@ -1,0 +1,40 @@
+# octmnist | config 50c2cb2afc | 2026-11-12 00:18:05
+choroidal neovascularization                 -> 'choroidal neovascularization': 50 prompts | cos(hand anchor, GPT anchor) = 0.889
+diabetic macular edema                       -> 'diabetic macular edema': 50 prompts | cos(hand anchor, GPT anchor) = 0.917
+drusen                                       -> 'drusen': 50 prompts | cos(hand anchor, GPT anchor) = 0.927
+normal                                       -> 'normal OCT scan': 50 prompts | cos(hand anchor, GPT anchor) = 0.914
+example: OCT scan showing subretinal fluid accumulation due to abnormal blood vessels growth
+
+anchors               Acc  Macro-F1   BAcc
+your prompts        49.30     41.09  49.30
+50 GPT-4            51.50     43.02  51.50
+
+class                               true % | predicted % hand    GPT | recall % hand    GPT
+choroidal neovascularization          25.0 |              8.9   39.9 |          20.0   70.4
+diabetic macular edema                25.0 |             25.0   12.2 |          76.4   35.6
+drusen                                25.0 |              2.6    0.4 |           1.2    0.8
+normal                                25.0 |             63.5   47.5 |          99.6   99.2
+support reliability (your prompts, draw 0, K=16): r_anchor 0.169 | r_visual 0.219 | eta 0.488
+support reliability (50 GPT-4, draw 0, K=16): r_anchor 0.197 | r_visual 0.219 | eta 0.466
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+choroidal neovascularization           0.546      0.563         0.553         True   14.56
+diabetic macular edema                 0.547      0.560         0.546        False   14.60
+drusen                                 0.575      0.558         0.542        False   14.95
+normal                                 0.537      0.571         0.564         True   15.29
+-> own-text delta 0.551 vs other-text delta 0.563 (gap +0.012); images closest to their own text for 2/4 classes
+-> phi: real classes 14.85 (max possible 16) | random natural mix 14.69 | random uniform over classes 14.65
+-> mean cosine between support images: same class 0.924 | different class 0.912
+-> eta(S) = 0.802
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+choroidal neovascularization           0.637      1.090         0.904         True    2.76
+diabetic macular edema                 0.698      1.061         0.787         True    3.54
+drusen                                 0.786      1.119         0.693        False    1.63
+normal                                 0.542      1.193         0.962         True    2.42
+-> own-text delta 0.666 vs other-text delta 1.116 (gap +0.450); images closest to their own text for 3/4 classes
+-> phi: real classes 2.59 (max possible 16) | random natural mix 1.06 | random uniform over classes 1.01
+-> mean cosine between support images: same class 0.106 | different class -0.030
+-> eta(S) = 0.558

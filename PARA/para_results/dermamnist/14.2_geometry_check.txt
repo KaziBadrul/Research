@@ -1,0 +1,29 @@
+# dermamnist | config 0209bf8cc7 | 2026-11-12 01:16:39
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+actinic keratoses and intraepithel     0.554      0.531         0.520        False   14.56
+basal cell carcinoma                   0.511      0.529         0.507        False   14.09
+benign keratosis-like lesions          0.536      0.529         0.513        False   14.39
+dermatofibroma                         0.504      0.533         0.512         True   14.26
+melanoma                               0.505      0.531         0.505         True   14.15
+melanocytic nevi                       0.528      0.539         0.518        False   14.88
+vascular lesions                       0.536      0.547         0.516        False   13.28
+-> own-text delta 0.525 vs other-text delta 0.534 (gap +0.009); images closest to their own text for 2/7 classes
+-> phi: real classes 14.23 (max possible 16) | random natural mix 14.32 | random uniform over classes 13.66
+-> mean cosine between support images: same class 0.882 | different class 0.854
+-> eta(S) = 0.794
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+actinic keratoses and intraepithel     0.828      1.031         0.716        False    4.89
+basal cell carcinoma                   0.873      1.022         0.747        False    4.46
+benign keratosis-like lesions          0.865      1.022         0.984         True    2.31
+dermatofibroma                         0.835      1.017         0.776        False    3.65
+melanoma                               0.694      1.043         0.744         True    1.69
+melanocytic nevi                       1.092      0.989         0.784        False    2.14
+vascular lesions                       0.831      1.030         0.816        False    7.64
+-> own-text delta 0.860 vs other-text delta 1.022 (gap +0.162); images closest to their own text for 2/7 classes
+-> phi: real classes 3.83 (max possible 16) | random natural mix 1.08 | random uniform over classes 1.37
+-> mean cosine between support images: same class 0.188 | different class 0.039
+-> eta(S) = 0.658

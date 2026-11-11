@@ -1,0 +1,11 @@
+# octmnist | config 50c2cb2afc | 2026-11-11 10:35:01
+
+[octmnist|own]   K | PARA Acc   rule | PARA F1   rule | PARA BAcc   rule | PARA BAcc CVaR   rule | rule eta
+[octmnist|own]   1 |    50.74  50.97 |   43.22  43.74 |     50.74  50.97 |          48.10  48.15 |    0.376
+[octmnist|own]   4 |    64.43  60.14 |   62.16  56.64 |     64.43  60.14 |          52.35  52.50 |    0.546
+[octmnist|own]  16 |    80.72  77.61 |   80.55  76.99 |     80.72  77.61 |          74.50  71.10 |    0.656
+
+[octmnist|gpt]   K | PARA Acc   rule | PARA F1   rule | PARA BAcc   rule | PARA BAcc CVaR   rule | rule eta
+[octmnist|gpt]   1 |    54.38  54.18 |   45.75  45.59 |     54.38  54.18 |          47.30  47.35 |    0.341
+[octmnist|gpt]   4 |    64.88  62.63 |   61.05  56.65 |     64.88  62.63 |          52.85  52.70 |    0.533
+[octmnist|gpt]  16 |    80.27  75.65 |   79.88  73.43 |     80.27  75.65 |          72.65  69.60 |    0.635

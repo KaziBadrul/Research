@@ -1,0 +1,271 @@
+dataset,prompts,K,draw,quantity,value
+bloodmnist,50 GPT-4,1,0,centered,0.45063
+bloodmnist,50 GPT-4,1,1,centered,0.44390
+bloodmnist,50 GPT-4,1,2,centered,0.44309
+bloodmnist,50 GPT-4,1,3,centered,0.43680
+bloodmnist,50 GPT-4,1,4,centered,0.43357
+bloodmnist,50 GPT-4,1,5,centered,0.43703
+bloodmnist,50 GPT-4,1,6,centered,0.42991
+bloodmnist,50 GPT-4,1,7,centered,0.42469
+bloodmnist,50 GPT-4,1,8,centered,0.44739
+bloodmnist,50 GPT-4,1,9,centered,0.42329
+bloodmnist,50 GPT-4,1,0,eta(S),0.31885
+bloodmnist,50 GPT-4,1,1,eta(S),0.32167
+bloodmnist,50 GPT-4,1,2,eta(S),0.31878
+bloodmnist,50 GPT-4,1,3,eta(S),0.31785
+bloodmnist,50 GPT-4,1,4,eta(S),0.31990
+bloodmnist,50 GPT-4,1,5,eta(S),0.32016
+bloodmnist,50 GPT-4,1,6,eta(S),0.32120
+bloodmnist,50 GPT-4,1,7,eta(S),0.31697
+bloodmnist,50 GPT-4,1,8,eta(S),0.31940
+bloodmnist,50 GPT-4,1,9,eta(S),0.31800
+bloodmnist,50 GPT-4,1,0,oracle Acc,1.00000
+bloodmnist,50 GPT-4,1,1,oracle Acc,0.97500
+bloodmnist,50 GPT-4,1,2,oracle Acc,0.87500
+bloodmnist,50 GPT-4,1,3,oracle Acc,0.95000
+bloodmnist,50 GPT-4,1,4,oracle Acc,0.97500
+bloodmnist,50 GPT-4,1,5,oracle Acc,1.00000
+bloodmnist,50 GPT-4,1,6,oracle Acc,0.85000
+bloodmnist,50 GPT-4,1,7,oracle Acc,1.00000
+bloodmnist,50 GPT-4,1,8,oracle Acc,1.00000
+bloodmnist,50 GPT-4,1,9,oracle Acc,0.97500
+bloodmnist,50 GPT-4,1,0,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,1,1,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,1,2,oracle BAcc,0.87500
+bloodmnist,50 GPT-4,1,3,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,1,4,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,1,5,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,1,6,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,1,7,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,1,8,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,1,9,oracle BAcc,0.92500
+bloodmnist,50 GPT-4,1,0,oracle F1,1.00000
+bloodmnist,50 GPT-4,1,1,oracle F1,0.97500
+bloodmnist,50 GPT-4,1,2,oracle F1,0.82500
+bloodmnist,50 GPT-4,1,3,oracle F1,0.95000
+bloodmnist,50 GPT-4,1,4,oracle F1,0.97500
+bloodmnist,50 GPT-4,1,5,oracle F1,0.97500
+bloodmnist,50 GPT-4,1,6,oracle F1,0.85000
+bloodmnist,50 GPT-4,1,7,oracle F1,1.00000
+bloodmnist,50 GPT-4,1,8,oracle F1,1.00000
+bloodmnist,50 GPT-4,1,9,oracle F1,0.92500
+bloodmnist,50 GPT-4,1,0,r_anchor,0.00000
+bloodmnist,50 GPT-4,1,1,r_anchor,0.04612
+bloodmnist,50 GPT-4,1,2,r_anchor,0.01976
+bloodmnist,50 GPT-4,1,3,r_anchor,0.04455
+bloodmnist,50 GPT-4,1,4,r_anchor,0.06582
+bloodmnist,50 GPT-4,1,5,r_anchor,0.01130
+bloodmnist,50 GPT-4,1,6,r_anchor,0.07283
+bloodmnist,50 GPT-4,1,7,r_anchor,0.02847
+bloodmnist,50 GPT-4,1,8,r_anchor,0.01837
+bloodmnist,50 GPT-4,1,9,r_anchor,0.05443
+bloodmnist,50 GPT-4,1,0,r_visual,0.00000
+bloodmnist,50 GPT-4,1,1,r_visual,0.00000
+bloodmnist,50 GPT-4,1,2,r_visual,0.00000
+bloodmnist,50 GPT-4,1,3,r_visual,0.00000
+bloodmnist,50 GPT-4,1,4,r_visual,0.00000
+bloodmnist,50 GPT-4,1,5,r_visual,0.00000
+bloodmnist,50 GPT-4,1,6,r_visual,0.00000
+bloodmnist,50 GPT-4,1,7,r_visual,0.00000
+bloodmnist,50 GPT-4,1,8,r_visual,0.00000
+bloodmnist,50 GPT-4,1,9,r_visual,0.00000
+bloodmnist,50 GPT-4,1,0,reliability,0.45000
+bloodmnist,50 GPT-4,1,1,reliability,0.36568
+bloodmnist,50 GPT-4,1,2,reliability,0.40954
+bloodmnist,50 GPT-4,1,3,reliability,0.36802
+bloodmnist,50 GPT-4,1,4,reliability,0.33858
+bloodmnist,50 GPT-4,1,5,reliability,0.42594
+bloodmnist,50 GPT-4,1,6,reliability,0.32987
+bloodmnist,50 GPT-4,1,7,reliability,0.39393
+bloodmnist,50 GPT-4,1,8,reliability,0.41215
+bloodmnist,50 GPT-4,1,9,reliability,0.35374
+bloodmnist,50 GPT-4,1,0,shot-only,0.45000
+bloodmnist,50 GPT-4,1,1,shot-only,0.45000
+bloodmnist,50 GPT-4,1,2,shot-only,0.45000
+bloodmnist,50 GPT-4,1,3,shot-only,0.45000
+bloodmnist,50 GPT-4,1,4,shot-only,0.45000
+bloodmnist,50 GPT-4,1,5,shot-only,0.45000
+bloodmnist,50 GPT-4,1,6,shot-only,0.45000
+bloodmnist,50 GPT-4,1,7,shot-only,0.45000
+bloodmnist,50 GPT-4,1,8,shot-only,0.45000
+bloodmnist,50 GPT-4,1,9,shot-only,0.45000
+bloodmnist,50 GPT-4,4,0,centered,0.57170
+bloodmnist,50 GPT-4,4,1,centered,0.58143
+bloodmnist,50 GPT-4,4,2,centered,0.55987
+bloodmnist,50 GPT-4,4,3,centered,0.57563
+bloodmnist,50 GPT-4,4,4,centered,0.58214
+bloodmnist,50 GPT-4,4,5,centered,0.52424
+bloodmnist,50 GPT-4,4,6,centered,0.56346
+bloodmnist,50 GPT-4,4,7,centered,0.56986
+bloodmnist,50 GPT-4,4,8,centered,0.54955
+bloodmnist,50 GPT-4,4,9,centered,0.57712
+bloodmnist,50 GPT-4,4,0,eta(S),0.61059
+bloodmnist,50 GPT-4,4,1,eta(S),0.61180
+bloodmnist,50 GPT-4,4,2,eta(S),0.61100
+bloodmnist,50 GPT-4,4,3,eta(S),0.60996
+bloodmnist,50 GPT-4,4,4,eta(S),0.61104
+bloodmnist,50 GPT-4,4,5,eta(S),0.60975
+bloodmnist,50 GPT-4,4,6,eta(S),0.61033
+bloodmnist,50 GPT-4,4,7,eta(S),0.60994
+bloodmnist,50 GPT-4,4,8,eta(S),0.60997
+bloodmnist,50 GPT-4,4,9,eta(S),0.61077
+bloodmnist,50 GPT-4,4,0,oracle Acc,1.00000
+bloodmnist,50 GPT-4,4,1,oracle Acc,1.00000
+bloodmnist,50 GPT-4,4,2,oracle Acc,0.97500
+bloodmnist,50 GPT-4,4,3,oracle Acc,1.00000
+bloodmnist,50 GPT-4,4,4,oracle Acc,0.90000
+bloodmnist,50 GPT-4,4,5,oracle Acc,1.00000
+bloodmnist,50 GPT-4,4,6,oracle Acc,0.97500
+bloodmnist,50 GPT-4,4,7,oracle Acc,1.00000
+bloodmnist,50 GPT-4,4,8,oracle Acc,0.97500
+bloodmnist,50 GPT-4,4,9,oracle Acc,1.00000
+bloodmnist,50 GPT-4,4,0,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,4,1,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,4,2,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,4,3,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,4,4,oracle BAcc,0.90000
+bloodmnist,50 GPT-4,4,5,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,4,6,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,4,7,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,4,8,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,4,9,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,4,0,oracle F1,1.00000
+bloodmnist,50 GPT-4,4,1,oracle F1,1.00000
+bloodmnist,50 GPT-4,4,2,oracle F1,0.97500
+bloodmnist,50 GPT-4,4,3,oracle F1,1.00000
+bloodmnist,50 GPT-4,4,4,oracle F1,0.82500
+bloodmnist,50 GPT-4,4,5,oracle F1,1.00000
+bloodmnist,50 GPT-4,4,6,oracle F1,0.97500
+bloodmnist,50 GPT-4,4,7,oracle F1,1.00000
+bloodmnist,50 GPT-4,4,8,oracle F1,0.97500
+bloodmnist,50 GPT-4,4,9,oracle F1,0.97500
+bloodmnist,50 GPT-4,4,0,r_anchor,0.04194
+bloodmnist,50 GPT-4,4,1,r_anchor,0.01799
+bloodmnist,50 GPT-4,4,2,r_anchor,0.02465
+bloodmnist,50 GPT-4,4,3,r_anchor,0.01082
+bloodmnist,50 GPT-4,4,4,r_anchor,0.03649
+bloodmnist,50 GPT-4,4,5,r_anchor,0.02701
+bloodmnist,50 GPT-4,4,6,r_anchor,0.03601
+bloodmnist,50 GPT-4,4,7,r_anchor,0.03600
+bloodmnist,50 GPT-4,4,8,r_anchor,0.01271
+bloodmnist,50 GPT-4,4,9,r_anchor,0.01938
+bloodmnist,50 GPT-4,4,0,r_visual,0.24707
+bloodmnist,50 GPT-4,4,1,r_visual,0.25622
+bloodmnist,50 GPT-4,4,2,r_visual,0.23886
+bloodmnist,50 GPT-4,4,3,r_visual,0.26799
+bloodmnist,50 GPT-4,4,4,r_visual,0.30455
+bloodmnist,50 GPT-4,4,5,r_visual,0.12344
+bloodmnist,50 GPT-4,4,6,r_visual,0.22062
+bloodmnist,50 GPT-4,4,7,r_visual,0.27265
+bloodmnist,50 GPT-4,4,8,r_visual,0.25073
+bloodmnist,50 GPT-4,4,9,r_visual,0.24671
+bloodmnist,50 GPT-4,4,0,reliability,0.63877
+bloodmnist,50 GPT-4,4,1,reliability,0.67607
+bloodmnist,50 GPT-4,4,2,reliability,0.65797
+bloodmnist,50 GPT-4,4,3,reliability,0.69170
+bloodmnist,50 GPT-4,4,4,reliability,0.67296
+bloodmnist,50 GPT-4,4,5,reliability,0.57383
+bloodmnist,50 GPT-4,4,6,reliability,0.63193
+bloodmnist,50 GPT-4,4,7,reliability,0.65936
+bloodmnist,50 GPT-4,4,8,reliability,0.68112
+bloodmnist,50 GPT-4,4,9,reliability,0.66948
+bloodmnist,50 GPT-4,4,0,shot-only,0.72000
+bloodmnist,50 GPT-4,4,1,shot-only,0.72000
+bloodmnist,50 GPT-4,4,2,shot-only,0.72000
+bloodmnist,50 GPT-4,4,3,shot-only,0.72000
+bloodmnist,50 GPT-4,4,4,shot-only,0.72000
+bloodmnist,50 GPT-4,4,5,shot-only,0.72000
+bloodmnist,50 GPT-4,4,6,shot-only,0.72000
+bloodmnist,50 GPT-4,4,7,shot-only,0.72000
+bloodmnist,50 GPT-4,4,8,shot-only,0.72000
+bloodmnist,50 GPT-4,4,9,shot-only,0.72000
+bloodmnist,50 GPT-4,16,0,centered,0.74001
+bloodmnist,50 GPT-4,16,1,centered,0.74466
+bloodmnist,50 GPT-4,16,2,centered,0.74606
+bloodmnist,50 GPT-4,16,3,centered,0.73070
+bloodmnist,50 GPT-4,16,4,centered,0.73278
+bloodmnist,50 GPT-4,16,5,centered,0.73326
+bloodmnist,50 GPT-4,16,6,centered,0.74159
+bloodmnist,50 GPT-4,16,7,centered,0.75613
+bloodmnist,50 GPT-4,16,8,centered,0.73852
+bloodmnist,50 GPT-4,16,9,centered,0.73971
+bloodmnist,50 GPT-4,16,0,eta(S),0.80370
+bloodmnist,50 GPT-4,16,1,eta(S),0.80382
+bloodmnist,50 GPT-4,16,2,eta(S),0.80369
+bloodmnist,50 GPT-4,16,3,eta(S),0.80311
+bloodmnist,50 GPT-4,16,4,eta(S),0.80333
+bloodmnist,50 GPT-4,16,5,eta(S),0.80361
+bloodmnist,50 GPT-4,16,6,eta(S),0.80306
+bloodmnist,50 GPT-4,16,7,eta(S),0.80389
+bloodmnist,50 GPT-4,16,8,eta(S),0.80370
+bloodmnist,50 GPT-4,16,9,eta(S),0.80380
+bloodmnist,50 GPT-4,16,0,oracle Acc,0.90000
+bloodmnist,50 GPT-4,16,1,oracle Acc,0.97500
+bloodmnist,50 GPT-4,16,2,oracle Acc,1.00000
+bloodmnist,50 GPT-4,16,3,oracle Acc,0.95000
+bloodmnist,50 GPT-4,16,4,oracle Acc,0.95000
+bloodmnist,50 GPT-4,16,5,oracle Acc,1.00000
+bloodmnist,50 GPT-4,16,6,oracle Acc,1.00000
+bloodmnist,50 GPT-4,16,7,oracle Acc,1.00000
+bloodmnist,50 GPT-4,16,8,oracle Acc,0.90000
+bloodmnist,50 GPT-4,16,9,oracle Acc,0.97500
+bloodmnist,50 GPT-4,16,0,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,16,1,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,16,2,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,16,3,oracle BAcc,0.95000
+bloodmnist,50 GPT-4,16,4,oracle BAcc,0.95000
+bloodmnist,50 GPT-4,16,5,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,16,6,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,16,7,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,16,8,oracle BAcc,1.00000
+bloodmnist,50 GPT-4,16,9,oracle BAcc,0.97500
+bloodmnist,50 GPT-4,16,0,oracle F1,1.00000
+bloodmnist,50 GPT-4,16,1,oracle F1,0.97500
+bloodmnist,50 GPT-4,16,2,oracle F1,1.00000
+bloodmnist,50 GPT-4,16,3,oracle F1,0.95000
+bloodmnist,50 GPT-4,16,4,oracle F1,0.95000
+bloodmnist,50 GPT-4,16,5,oracle F1,1.00000
+bloodmnist,50 GPT-4,16,6,oracle F1,1.00000
+bloodmnist,50 GPT-4,16,7,oracle F1,1.00000
+bloodmnist,50 GPT-4,16,8,oracle F1,1.00000
+bloodmnist,50 GPT-4,16,9,oracle F1,0.97500
+bloodmnist,50 GPT-4,16,0,r_anchor,0.01982
+bloodmnist,50 GPT-4,16,1,r_anchor,0.01970
+bloodmnist,50 GPT-4,16,2,r_anchor,0.01711
+bloodmnist,50 GPT-4,16,3,r_anchor,0.02584
+bloodmnist,50 GPT-4,16,4,r_anchor,0.02209
+bloodmnist,50 GPT-4,16,5,r_anchor,0.01738
+bloodmnist,50 GPT-4,16,6,r_anchor,0.02839
+bloodmnist,50 GPT-4,16,7,r_anchor,0.02395
+bloodmnist,50 GPT-4,16,8,r_anchor,0.02338
+bloodmnist,50 GPT-4,16,9,r_anchor,0.01913
+bloodmnist,50 GPT-4,16,0,r_visual,0.25539
+bloodmnist,50 GPT-4,16,1,r_visual,0.24897
+bloodmnist,50 GPT-4,16,2,r_visual,0.26202
+bloodmnist,50 GPT-4,16,3,r_visual,0.22500
+bloodmnist,50 GPT-4,16,4,r_visual,0.25458
+bloodmnist,50 GPT-4,16,5,r_visual,0.24599
+bloodmnist,50 GPT-4,16,6,r_visual,0.30841
+bloodmnist,50 GPT-4,16,7,r_visual,0.34453
+bloodmnist,50 GPT-4,16,8,r_visual,0.27388
+bloodmnist,50 GPT-4,16,9,r_visual,0.24968
+bloodmnist,50 GPT-4,16,0,reliability,0.67307
+bloodmnist,50 GPT-4,16,1,reliability,0.67013
+bloodmnist,50 GPT-4,16,2,reliability,0.68002
+bloodmnist,50 GPT-4,16,3,reliability,0.64878
+bloodmnist,50 GPT-4,16,4,reliability,0.66949
+bloodmnist,50 GPT-4,16,5,reliability,0.67201
+bloodmnist,50 GPT-4,16,6,reliability,0.68474
+bloodmnist,50 GPT-4,16,7,reliability,0.70377
+bloodmnist,50 GPT-4,16,8,reliability,0.67669
+bloodmnist,50 GPT-4,16,9,reliability,0.67131
+bloodmnist,50 GPT-4,16,0,shot-only,0.84706
+bloodmnist,50 GPT-4,16,1,shot-only,0.84706
+bloodmnist,50 GPT-4,16,2,shot-only,0.84706
+bloodmnist,50 GPT-4,16,3,shot-only,0.84706
+bloodmnist,50 GPT-4,16,4,shot-only,0.84706
+bloodmnist,50 GPT-4,16,5,shot-only,0.84706
+bloodmnist,50 GPT-4,16,6,shot-only,0.84706
+bloodmnist,50 GPT-4,16,7,shot-only,0.84706
+bloodmnist,50 GPT-4,16,8,shot-only,0.84706
+bloodmnist,50 GPT-4,16,9,shot-only,0.84706

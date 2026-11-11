@@ -1,0 +1,19 @@
+# breastmnist | config 7d80fcfffe | 2026-11-12 01:11:30
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+malignant                              0.512      0.555         0.555         True   14.04
+normal, benign                         0.569      0.538         0.538        False   13.43
+-> own-text delta 0.540 vs other-text delta 0.546 (gap +0.006); images closest to their own text for 1/2 classes
+-> phi: real classes 13.73 (max possible 16) | random natural mix 13.37 | random uniform over classes 13.58
+-> mean cosine between support images: same class 0.849 | different class 0.839
+-> eta(S) = 0.793
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+malignant                              0.808      1.192         1.192         True    2.36
+normal, benign                         1.010      0.990         0.990        False    0.88
+-> own-text delta 0.909 vs other-text delta 1.091 (gap +0.181); images closest to their own text for 1/2 classes
+-> phi: real classes 1.62 (max possible 16) | random natural mix 1.09 | random uniform over classes 1.29
+-> mean cosine between support images: same class 0.041 | different class -0.027
+-> eta(S) = 0.507

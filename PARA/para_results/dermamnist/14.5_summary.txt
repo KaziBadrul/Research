@@ -1,0 +1,133 @@
+# dermamnist | config 0209bf8cc7 | 2026-11-10 23:40:05
+
+==================== dermamnist | your prompts ====================
+10 draws per K | CVaR20 = mean of the worst 2 draw(s) | corr = correlation across draws (needs |r| > ~0.63 to mean much with 10 draws)
+
+K = 1 | support reliability: anchor r_a 0.100 +- 0.062 | visual r_v 0.000 +- 0.000
+  eta rule         mean     SD    min    max | corr with oracle by:    Acc     F1   BAcc
+  eta(S)          0.318  0.003  0.312  0.322 |                      +0.33  +0.21  +0.33
+  centered        0.426  0.010  0.410  0.441 |                      +0.14  +0.08  +0.15
+  shot-only       0.450  0.000  0.450  0.450 |                       +nan   +nan   +nan
+  reliability     0.312  0.062  0.217  0.409 |                      -0.16  +0.25  +0.36
+  oracle Acc      0.358  0.345  0.000  0.975 |                                         
+  oracle F1       0.613  0.195  0.100  0.800 |                                         
+  oracle BAcc     0.668  0.269  0.000  0.925 |                                         
+  method                        Acc   CVaR |     F1   CVaR |   BAcc    SD   CVaR
+  Zero-shot                   31.95  31.95 |  15.70  15.70 |  20.93  0.00  20.93
+  Visual only                 31.85  14.25 |  20.47  11.21 |  29.70  6.81  19.54
+  Fixed eta 0.5               35.55  21.90 |  21.62  15.35 |  29.46  4.74  22.78
+  PARA                        35.73  25.28 |  19.29  14.21 |  26.24  3.27  21.27
+  Shot-only eta               35.70  22.38 |  20.92  14.98 |  28.83  4.39  22.47
+  PARA centered eta           35.84  22.90 |  20.62  14.51 |  28.33  4.34  22.09
+  Reliability eta             35.23  24.67 |  18.98  14.80 |  25.71  3.50  21.27
+  Oracle by Acc (cheat)       39.99  31.95 |  21.21  15.70 |  27.54  6.07  20.93
+  Oracle by F1 (cheat)        36.27  20.85 |  22.94  16.15 |  31.03  4.86  23.61
+  Oracle by BAcc (cheat)      35.49  18.10 |  22.15  14.31 |  31.86  4.69  25.33
+
+K = 4 | support reliability: anchor r_a 0.084 +- 0.026 | visual r_v 0.142 +- 0.065
+  eta rule         mean     SD    min    max | corr with oracle by:    Acc     F1   BAcc
+  eta(S)          0.589  0.003  0.585  0.594 |                      -0.66  -0.66  -0.34
+  centered        0.492  0.016  0.474  0.530 |                      +0.12  -0.29  +0.24
+  shot-only       0.720  0.000  0.720  0.720 |                       +nan   +nan   +nan
+  reliability     0.502  0.068  0.389  0.629 |                      -0.11  -0.35  +0.13
+  oracle Acc      0.725  0.169  0.400  0.975 |                                         
+  oracle F1       0.740  0.129  0.550  0.975 |                                         
+  oracle BAcc     0.790  0.121  0.600  0.975 |                                         
+  method                        Acc   CVaR |     F1   CVaR |   BAcc    SD   CVaR
+  Zero-shot                   31.95  31.95 |  15.70  15.70 |  20.93  0.00  20.93
+  Visual only                 44.66  33.27 |  32.64  24.75 |  45.80  4.15  39.48
+  Fixed eta 0.5               45.50  35.58 |  31.00  27.46 |  41.55  3.64  37.23
+  PARA                        46.52  35.12 |  33.15  28.38 |  44.55  3.60  39.88
+  Shot-only eta               47.09  35.33 |  34.52  28.33 |  46.44  3.44  42.04
+  PARA centered eta           45.32  35.55 |  30.57  26.95 |  41.18  3.64  36.54
+  Reliability eta             45.19  34.33 |  30.99  26.48 |  41.92  4.39  36.42
+  Oracle by Acc (cheat)       48.69  40.77 |  34.40  27.27 |  45.98  5.23  37.98
+  Oracle by F1 (cheat)        48.07  38.65 |  35.40  28.88 |  47.02  4.03  41.23
+  Oracle by BAcc (cheat)      47.76  36.80 |  35.05  28.29 |  47.42  3.79  42.18
+
+K = 16 | support reliability: anchor r_a 0.078 +- 0.014 | visual r_v 0.272 +- 0.022
+  eta rule         mean     SD    min    max | corr with oracle by:    Acc     F1   BAcc
+  eta(S)          0.792  0.001  0.791  0.794 |                      -0.04  +0.13  -0.04
+  centered        0.638  0.013  0.614  0.658 |                      -0.17  -0.39  -0.05
+  shot-only       0.847  0.000  0.847  0.847 |                       +nan   +nan   +nan
+  reliability     0.609  0.010  0.592  0.623 |                      -0.23  +0.24  +0.31
+  oracle Acc      0.855  0.086  0.700  1.000 |                                         
+  oracle F1       0.820  0.053  0.750  0.925 |                                         
+  oracle BAcc     0.878  0.082  0.750  1.000 |                                         
+  method                        Acc   CVaR |     F1   CVaR |   BAcc    SD   CVaR
+  Zero-shot                   31.95  31.95 |  15.70  15.70 |  20.93  0.00  20.93
+  Visual only                 56.67  52.35 |  42.58  40.40 |  57.88  2.10  54.92
+  Fixed eta 0.5               51.46  47.33 |  36.76  35.10 |  48.43  1.96  45.43
+  PARA                        56.96  51.73 |  43.57  41.11 |  57.53  2.29  54.62
+  Shot-only eta               57.21  52.08 |  43.66  41.02 |  57.97  2.20  55.19
+  PARA centered eta           54.80  49.72 |  40.79  38.17 |  53.59  1.90  50.25
+  Reliability eta             54.17  49.15 |  40.22  37.95 |  52.72  1.93  49.39
+  Oracle by Acc (cheat)       57.55  52.50 |  43.59  40.88 |  58.06  1.99  55.32
+  Oracle by F1 (cheat)        57.19  52.05 |  44.06  41.34 |  58.50  2.59  54.87
+  Oracle by BAcc (cheat)      57.38  52.50 |  43.82  40.88 |  58.90  2.21  56.04
+
+==================== dermamnist | 50 GPT-4 ====================
+10 draws per K | CVaR20 = mean of the worst 2 draw(s) | corr = correlation across draws (needs |r| > ~0.63 to mean much with 10 draws)
+
+K = 1 | support reliability: anchor r_a 0.079 +- 0.085 | visual r_v 0.000 +- 0.000
+  eta rule         mean     SD    min    max | corr with oracle by:    Acc     F1   BAcc
+  eta(S)          0.347  0.002  0.343  0.350 |                      -0.10  -0.18  +0.05
+  centered        0.430  0.007  0.416  0.438 |                      -0.10  -0.17  +0.28
+  shot-only       0.450  0.000  0.450  0.450 |                       +nan   +nan   +nan
+  reliability     0.349  0.090  0.207  0.450 |                      +0.44  +0.28  +0.49
+  oracle Acc      0.145  0.190  0.000  0.550 |                                         
+  oracle F1       0.480  0.218  0.100  0.900 |                                         
+  oracle BAcc     0.718  0.214  0.200  0.950 |                                         
+  method                        Acc   CVaR |     F1   CVaR |   BAcc    SD   CVaR
+  Zero-shot                   53.55  53.55 |  21.79  21.79 |  21.39  0.00  21.39
+  Visual only                 31.12  11.93 |  20.71  10.83 |  29.69  6.19  21.28
+  Fixed eta 0.5               45.36  27.82 |  24.82  18.76 |  29.20  3.66  24.16
+  PARA                        49.58  37.20 |  24.41  20.97 |  26.66  2.16  24.14
+  Shot-only eta               46.79  30.38 |  25.01  19.41 |  28.69  3.29  24.18
+  PARA centered eta           47.46  31.77 |  24.92  19.94 |  28.47  3.18  24.18
+  Reliability eta             49.69  35.60 |  24.65  21.46 |  26.99  2.06  23.93
+  Oracle by Acc (cheat)       55.29  53.55 |  23.64  21.79 |  23.88  3.38  21.39
+  Oracle by F1 (cheat)        49.30  42.10 |  26.17  22.62 |  29.47  4.24  22.81
+  Oracle by BAcc (cheat)      40.77  23.60 |  24.51  18.72 |  32.28  4.20  26.60
+
+K = 4 | support reliability: anchor r_a 0.070 +- 0.064 | visual r_v 0.142 +- 0.065
+  eta rule         mean     SD    min    max | corr with oracle by:    Acc     F1   BAcc
+  eta(S)          0.619  0.003  0.613  0.623 |                      -0.19  -0.46  -0.35
+  centered        0.494  0.017  0.461  0.532 |                      -0.14  -0.01  -0.51
+  shot-only       0.720  0.000  0.720  0.720 |                       +nan   +nan   +nan
+  reliability     0.528  0.088  0.366  0.688 |                      -0.46  -0.49  -0.69
+  oracle Acc      0.378  0.209  0.000  0.825 |                                         
+  oracle F1       0.668  0.128  0.350  0.850 |                                         
+  oracle BAcc     0.823  0.075  0.700  0.975 |                                         
+  method                        Acc   CVaR |     F1   CVaR |   BAcc    SD   CVaR
+  Zero-shot                   53.55  53.55 |  21.79  21.79 |  21.39  0.00  21.39
+  Visual only                 45.43  33.73 |  33.13  25.22 |  45.52  4.14  39.33
+  Fixed eta 0.5               55.49  47.17 |  34.41  28.43 |  39.49  2.68  35.34
+  PARA                        53.92  43.88 |  36.25  29.84 |  43.41  3.93  38.20
+  Shot-only eta               52.48  41.42 |  36.67  29.49 |  45.74  4.26  39.71
+  PARA centered eta           55.47  47.35 |  33.93  28.35 |  39.04  3.04  34.59
+  Reliability eta             54.42  44.90 |  34.51  28.17 |  40.52  5.70  32.57
+  Oracle by Acc (cheat)       57.85  54.38 |  32.29  24.74 |  35.17  7.00  24.74
+  Oracle by F1 (cheat)        54.67  48.42 |  37.70  30.60 |  45.71  6.19  36.23
+  Oracle by BAcc (cheat)      50.43  38.82 |  36.40  28.81 |  47.53  4.43  40.69
+
+K = 16 | support reliability: anchor r_a 0.083 +- 0.016 | visual r_v 0.272 +- 0.022
+  eta rule         mean     SD    min    max | corr with oracle by:    Acc     F1   BAcc
+  eta(S)          0.806  0.001  0.805  0.807 |                      -0.01  +0.35  -0.28
+  centered        0.641  0.014  0.613  0.660 |                      -0.45  +0.24  -0.31
+  shot-only       0.847  0.000  0.847  0.847 |                       +nan   +nan   +nan
+  reliability     0.603  0.018  0.575  0.642 |                      +0.23  +0.84  -0.44
+  oracle Acc      0.603  0.070  0.500  0.750 |                                         
+  oracle F1       0.703  0.073  0.650  0.900 |                                         
+  oracle BAcc     0.895  0.076  0.775  1.000 |                                         
+  method                        Acc   CVaR |     F1   CVaR |   BAcc    SD   CVaR
+  Zero-shot                   53.55  53.55 |  21.79  21.79 |  21.39  0.00  21.39
+  Visual only                 56.64  51.88 |  42.45  39.94 |  57.49  2.02  54.32
+  Fixed eta 0.5               61.65  58.40 |  40.52  37.24 |  45.40  1.72  42.65
+  PARA                        60.31  56.55 |  44.92  42.78 |  57.29  2.41  53.78
+  Shot-only eta               59.69  55.98 |  44.51  42.48 |  57.52  1.92  54.60
+  PARA centered eta           62.09  58.78 |  44.72  42.83 |  52.62  2.28  49.82
+  Reliability eta             62.11  59.10 |  44.07  41.88 |  51.08  2.05  48.89
+  Oracle by Acc (cheat)       62.73  59.92 |  44.67  41.71 |  51.47  3.30  47.49
+  Oracle by F1 (cheat)        61.85  58.33 |  45.88  43.45 |  55.57  2.71  51.76
+  Oracle by BAcc (cheat)      58.97  55.45 |  44.32  42.50 |  58.38  2.09  54.87

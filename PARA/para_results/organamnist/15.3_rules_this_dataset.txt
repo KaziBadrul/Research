@@ -1,0 +1,36 @@
+# organamnist | config 54d6c6bc5c | 2026-11-11 23:33:18
+
+[organamnist | your prompts | K=1]  anchor reliability r_a = 0.189
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  25.71  25.71 |  21.45  21.45
+  Visual only             1.000 |  48.97  45.34 |  46.05  40.16
+  PARA                    0.353 |  37.30  34.62 |  32.81  30.48
+  Shot-only               0.450 |  41.52  38.97 |  37.05  34.14
+  Oracle BAcc (cheat)     0.908 |  49.36  45.92 |  46.24  40.66
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.944  0.895  0.811  0.687  0.530  0.367  0.230  0.132  0.071
+    BAcc                  49.08  48.91  48.69  47.61  43.98  37.86  32.54  29.17  27.19
+
+[organamnist | your prompts | K=4]  anchor reliability r_a = 0.208
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  25.71  25.71 |  21.45  21.45
+  Visual only             1.000 |  65.75  59.99 |  64.60  58.77
+  PARA                    0.605 |  57.40  53.06 |  54.26  49.61
+  Shot-only               0.720 |  62.14  56.71 |  59.61  53.88
+  HOSO-style              1.000 |  65.75  59.99 |  64.60  58.77
+  Oracle BAcc (cheat)     0.963 |  65.85  60.01 |  64.60  58.54
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.984  0.968  0.938  0.884  0.792  0.657  0.491  0.326  0.195
+    BAcc                  65.74  65.70  65.48  65.26  63.96  59.47  49.69  39.15  32.64
+
+[organamnist | your prompts | K=16]  anchor reliability r_a = 0.192
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  25.71  25.71 |  21.45  21.45
+  Visual only             1.000 |  81.48  80.32 |  81.22  79.82
+  PARA                    0.797 |  79.74  78.19 |  78.34  76.67
+  Shot-only               0.847 |  80.59  79.35 |  79.58  78.16
+  HOSO-style              0.988 |  81.46  80.24 |  81.16  79.51
+  Oracle BAcc (cheat)     0.955 |  81.62  80.46 |  81.16  79.81
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.996  0.993  0.985  0.971  0.944  0.894  0.808  0.678  0.513
+    BAcc                  81.47  81.49  81.52  81.48  81.44  81.20  79.83  75.01  61.56

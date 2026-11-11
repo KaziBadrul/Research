@@ -1,0 +1,37 @@
+# organamnist | config 54d6c6bc5c | 2026-11-12 00:52:58
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+bladder                                0.668      0.648         0.611        False   12.83
+femur-left                             0.631      0.651         0.626        False   12.82
+femur-right                            0.636      0.653         0.627        False   12.80
+heart                                  0.521      0.680         0.642         True   13.53
+kidney-left                            0.620      0.645         0.615        False   12.69
+kidney-right                           0.660      0.656         0.610        False   12.56
+liver                                  0.601      0.635         0.587        False   13.04
+lung-left                              0.565      0.637         0.555        False   13.76
+lung-right                             0.557      0.660         0.571         True   13.83
+pancreas                               0.564      0.629         0.587         True   12.78
+spleen                                 0.618      0.621         0.561        False   12.42
+-> own-text delta 0.604 vs other-text delta 0.647 (gap +0.043); images closest to their own text for 3/11 classes
+-> phi: real classes 13.01 (max possible 16) | random natural mix 11.05 | random uniform over classes 11.19
+-> mean cosine between support images: same class 0.800 | different class 0.671
+-> eta(S) = 0.798
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+bladder                                0.865      1.024         0.735        False    5.93
+femur-left                             0.864      1.019         0.858        False    8.87
+femur-right                            0.831      1.025         0.829        False    7.97
+heart                                  0.367      1.061         0.882         True    6.70
+kidney-left                            0.819      1.024         0.843         True    6.16
+kidney-right                           1.027      1.008         0.829        False    4.81
+liver                                  0.819      1.007         0.847         True    7.77
+lung-left                              0.609      1.038         0.676         True    7.76
+lung-right                             0.520      1.043         0.608         True    9.19
+pancreas                               0.728      1.032         0.715        False    5.70
+spleen                                 0.956      1.008         0.815        False    3.18
+-> own-text delta 0.764 vs other-text delta 1.026 (gap +0.262); images closest to their own text for 5/11 classes
+-> phi: real classes 6.73 (max possible 16) | random natural mix 0.96 | random uniform over classes 1.44
+-> mean cosine between support images: same class 0.382 | different class -0.014
+-> eta(S) = 0.740

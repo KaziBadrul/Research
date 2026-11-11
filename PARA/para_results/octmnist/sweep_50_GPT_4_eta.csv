@@ -1,0 +1,271 @@
+dataset,prompts,K,draw,quantity,value
+octmnist,50 GPT-4,1,0,centered,0.43515
+octmnist,50 GPT-4,1,1,centered,0.43486
+octmnist,50 GPT-4,1,2,centered,0.43702
+octmnist,50 GPT-4,1,3,centered,0.43787
+octmnist,50 GPT-4,1,4,centered,0.43160
+octmnist,50 GPT-4,1,5,centered,0.42764
+octmnist,50 GPT-4,1,6,centered,0.40820
+octmnist,50 GPT-4,1,7,centered,0.43960
+octmnist,50 GPT-4,1,8,centered,0.43130
+octmnist,50 GPT-4,1,9,centered,0.41135
+octmnist,50 GPT-4,1,0,eta(S),0.33205
+octmnist,50 GPT-4,1,1,eta(S),0.32862
+octmnist,50 GPT-4,1,2,eta(S),0.32583
+octmnist,50 GPT-4,1,3,eta(S),0.32398
+octmnist,50 GPT-4,1,4,eta(S),0.32705
+octmnist,50 GPT-4,1,5,eta(S),0.33244
+octmnist,50 GPT-4,1,6,eta(S),0.32351
+octmnist,50 GPT-4,1,7,eta(S),0.32566
+octmnist,50 GPT-4,1,8,eta(S),0.32721
+octmnist,50 GPT-4,1,9,eta(S),0.32398
+octmnist,50 GPT-4,1,0,oracle Acc,0.15000
+octmnist,50 GPT-4,1,1,oracle Acc,0.17500
+octmnist,50 GPT-4,1,2,oracle Acc,0.65000
+octmnist,50 GPT-4,1,3,oracle Acc,0.25000
+octmnist,50 GPT-4,1,4,oracle Acc,0.75000
+octmnist,50 GPT-4,1,5,oracle Acc,0.62500
+octmnist,50 GPT-4,1,6,oracle Acc,0.27500
+octmnist,50 GPT-4,1,7,oracle Acc,0.50000
+octmnist,50 GPT-4,1,8,oracle Acc,0.95000
+octmnist,50 GPT-4,1,9,oracle Acc,0.80000
+octmnist,50 GPT-4,1,0,oracle BAcc,0.15000
+octmnist,50 GPT-4,1,1,oracle BAcc,0.17500
+octmnist,50 GPT-4,1,2,oracle BAcc,0.65000
+octmnist,50 GPT-4,1,3,oracle BAcc,0.25000
+octmnist,50 GPT-4,1,4,oracle BAcc,0.75000
+octmnist,50 GPT-4,1,5,oracle BAcc,0.62500
+octmnist,50 GPT-4,1,6,oracle BAcc,0.27500
+octmnist,50 GPT-4,1,7,oracle BAcc,0.50000
+octmnist,50 GPT-4,1,8,oracle BAcc,0.95000
+octmnist,50 GPT-4,1,9,oracle BAcc,0.80000
+octmnist,50 GPT-4,1,0,oracle F1,0.15000
+octmnist,50 GPT-4,1,1,oracle F1,0.17500
+octmnist,50 GPT-4,1,2,oracle F1,0.72500
+octmnist,50 GPT-4,1,3,oracle F1,0.25000
+octmnist,50 GPT-4,1,4,oracle F1,0.75000
+octmnist,50 GPT-4,1,5,oracle F1,0.65000
+octmnist,50 GPT-4,1,6,oracle F1,0.80000
+octmnist,50 GPT-4,1,7,oracle F1,0.55000
+octmnist,50 GPT-4,1,8,oracle F1,1.00000
+octmnist,50 GPT-4,1,9,oracle F1,0.82500
+octmnist,50 GPT-4,1,0,r_anchor,0.19085
+octmnist,50 GPT-4,1,1,r_anchor,0.10253
+octmnist,50 GPT-4,1,2,r_anchor,0.16668
+octmnist,50 GPT-4,1,3,r_anchor,0.13039
+octmnist,50 GPT-4,1,4,r_anchor,0.09318
+octmnist,50 GPT-4,1,5,r_anchor,0.17606
+octmnist,50 GPT-4,1,6,r_anchor,0.21886
+octmnist,50 GPT-4,1,7,r_anchor,0.12402
+octmnist,50 GPT-4,1,8,r_anchor,0.10678
+octmnist,50 GPT-4,1,9,r_anchor,0.22794
+octmnist,50 GPT-4,1,0,r_visual,0.00000
+octmnist,50 GPT-4,1,1,r_visual,0.00000
+octmnist,50 GPT-4,1,2,r_visual,0.00000
+octmnist,50 GPT-4,1,3,r_visual,0.00000
+octmnist,50 GPT-4,1,4,r_visual,0.00000
+octmnist,50 GPT-4,1,5,r_visual,0.00000
+octmnist,50 GPT-4,1,6,r_visual,0.00000
+octmnist,50 GPT-4,1,7,r_visual,0.00000
+octmnist,50 GPT-4,1,8,r_visual,0.00000
+octmnist,50 GPT-4,1,9,r_visual,0.00000
+octmnist,50 GPT-4,1,0,reliability,0.23027
+octmnist,50 GPT-4,1,1,reliability,0.29749
+octmnist,50 GPT-4,1,2,reliability,0.24544
+octmnist,50 GPT-4,1,3,reliability,0.27241
+octmnist,50 GPT-4,1,4,reliability,0.30698
+octmnist,50 GPT-4,1,5,reliability,0.23932
+octmnist,50 GPT-4,1,6,reliability,0.21487
+octmnist,50 GPT-4,1,7,reliability,0.27776
+octmnist,50 GPT-4,1,8,reliability,0.29337
+octmnist,50 GPT-4,1,9,reliability,0.21031
+octmnist,50 GPT-4,1,0,shot-only,0.45000
+octmnist,50 GPT-4,1,1,shot-only,0.45000
+octmnist,50 GPT-4,1,2,shot-only,0.45000
+octmnist,50 GPT-4,1,3,shot-only,0.45000
+octmnist,50 GPT-4,1,4,shot-only,0.45000
+octmnist,50 GPT-4,1,5,shot-only,0.45000
+octmnist,50 GPT-4,1,6,shot-only,0.45000
+octmnist,50 GPT-4,1,7,shot-only,0.45000
+octmnist,50 GPT-4,1,8,shot-only,0.45000
+octmnist,50 GPT-4,1,9,shot-only,0.45000
+octmnist,50 GPT-4,4,0,centered,0.41397
+octmnist,50 GPT-4,4,1,centered,0.49067
+octmnist,50 GPT-4,4,2,centered,0.52689
+octmnist,50 GPT-4,4,3,centered,0.46732
+octmnist,50 GPT-4,4,4,centered,0.44555
+octmnist,50 GPT-4,4,5,centered,0.42355
+octmnist,50 GPT-4,4,6,centered,0.48644
+octmnist,50 GPT-4,4,7,centered,0.43320
+octmnist,50 GPT-4,4,8,centered,0.46936
+octmnist,50 GPT-4,4,9,centered,0.37679
+octmnist,50 GPT-4,4,0,eta(S),0.60775
+octmnist,50 GPT-4,4,1,eta(S),0.61030
+octmnist,50 GPT-4,4,2,eta(S),0.61341
+octmnist,50 GPT-4,4,3,eta(S),0.61059
+octmnist,50 GPT-4,4,4,eta(S),0.60623
+octmnist,50 GPT-4,4,5,eta(S),0.60572
+octmnist,50 GPT-4,4,6,eta(S),0.60892
+octmnist,50 GPT-4,4,7,eta(S),0.60975
+octmnist,50 GPT-4,4,8,eta(S),0.61177
+octmnist,50 GPT-4,4,9,eta(S),0.60754
+octmnist,50 GPT-4,4,0,oracle Acc,0.82500
+octmnist,50 GPT-4,4,1,oracle Acc,0.00000
+octmnist,50 GPT-4,4,2,oracle Acc,0.80000
+octmnist,50 GPT-4,4,3,oracle Acc,0.82500
+octmnist,50 GPT-4,4,4,oracle Acc,0.95000
+octmnist,50 GPT-4,4,5,oracle Acc,0.87500
+octmnist,50 GPT-4,4,6,oracle Acc,0.77500
+octmnist,50 GPT-4,4,7,oracle Acc,0.87500
+octmnist,50 GPT-4,4,8,oracle Acc,0.40000
+octmnist,50 GPT-4,4,9,oracle Acc,0.80000
+octmnist,50 GPT-4,4,0,oracle BAcc,0.82500
+octmnist,50 GPT-4,4,1,oracle BAcc,0.00000
+octmnist,50 GPT-4,4,2,oracle BAcc,0.80000
+octmnist,50 GPT-4,4,3,oracle BAcc,0.82500
+octmnist,50 GPT-4,4,4,oracle BAcc,0.95000
+octmnist,50 GPT-4,4,5,oracle BAcc,0.87500
+octmnist,50 GPT-4,4,6,oracle BAcc,0.77500
+octmnist,50 GPT-4,4,7,oracle BAcc,0.87500
+octmnist,50 GPT-4,4,8,oracle BAcc,0.40000
+octmnist,50 GPT-4,4,9,oracle BAcc,0.80000
+octmnist,50 GPT-4,4,0,oracle F1,0.82500
+octmnist,50 GPT-4,4,1,oracle F1,0.77500
+octmnist,50 GPT-4,4,2,oracle F1,0.80000
+octmnist,50 GPT-4,4,3,oracle F1,0.82500
+octmnist,50 GPT-4,4,4,oracle F1,1.00000
+octmnist,50 GPT-4,4,5,oracle F1,0.87500
+octmnist,50 GPT-4,4,6,oracle F1,0.92500
+octmnist,50 GPT-4,4,7,oracle F1,0.90000
+octmnist,50 GPT-4,4,8,oracle F1,0.55000
+octmnist,50 GPT-4,4,9,oracle F1,0.80000
+octmnist,50 GPT-4,4,0,r_anchor,0.15995
+octmnist,50 GPT-4,4,1,r_anchor,0.08962
+octmnist,50 GPT-4,4,2,r_anchor,0.24307
+octmnist,50 GPT-4,4,3,r_anchor,0.14761
+octmnist,50 GPT-4,4,4,r_anchor,0.24205
+octmnist,50 GPT-4,4,5,r_anchor,0.24143
+octmnist,50 GPT-4,4,6,r_anchor,0.15854
+octmnist,50 GPT-4,4,7,r_anchor,0.24126
+octmnist,50 GPT-4,4,8,r_anchor,0.19995
+octmnist,50 GPT-4,4,9,r_anchor,0.23353
+octmnist,50 GPT-4,4,0,r_visual,0.06321
+octmnist,50 GPT-4,4,1,r_visual,0.06556
+octmnist,50 GPT-4,4,2,r_visual,0.37254
+octmnist,50 GPT-4,4,3,r_visual,0.04143
+octmnist,50 GPT-4,4,4,r_visual,0.29608
+octmnist,50 GPT-4,4,5,r_visual,0.09626
+octmnist,50 GPT-4,4,6,r_visual,0.18980
+octmnist,50 GPT-4,4,7,r_visual,0.11671
+octmnist,50 GPT-4,4,8,r_visual,0.29702
+octmnist,50 GPT-4,4,9,r_visual,0.01759
+octmnist,50 GPT-4,4,0,reliability,0.34712
+octmnist,50 GPT-4,4,1,reliability,0.41952
+octmnist,50 GPT-4,4,2,reliability,0.52143
+octmnist,50 GPT-4,4,3,reliability,0.32719
+octmnist,50 GPT-4,4,4,reliability,0.48294
+octmnist,50 GPT-4,4,5,reliability,0.32851
+octmnist,50 GPT-4,4,6,reliability,0.47565
+octmnist,50 GPT-4,4,7,reliability,0.34955
+octmnist,50 GPT-4,4,8,reliability,0.51267
+octmnist,50 GPT-4,4,9,reliability,0.23459
+octmnist,50 GPT-4,4,0,shot-only,0.72000
+octmnist,50 GPT-4,4,1,shot-only,0.72000
+octmnist,50 GPT-4,4,2,shot-only,0.72000
+octmnist,50 GPT-4,4,3,shot-only,0.72000
+octmnist,50 GPT-4,4,4,shot-only,0.72000
+octmnist,50 GPT-4,4,5,shot-only,0.72000
+octmnist,50 GPT-4,4,6,shot-only,0.72000
+octmnist,50 GPT-4,4,7,shot-only,0.72000
+octmnist,50 GPT-4,4,8,shot-only,0.72000
+octmnist,50 GPT-4,4,9,shot-only,0.72000
+octmnist,50 GPT-4,16,0,centered,0.55755
+octmnist,50 GPT-4,16,1,centered,0.56969
+octmnist,50 GPT-4,16,2,centered,0.55079
+octmnist,50 GPT-4,16,3,centered,0.57106
+octmnist,50 GPT-4,16,4,centered,0.55239
+octmnist,50 GPT-4,16,5,centered,0.56376
+octmnist,50 GPT-4,16,6,centered,0.55950
+octmnist,50 GPT-4,16,7,centered,0.51418
+octmnist,50 GPT-4,16,8,centered,0.55862
+octmnist,50 GPT-4,16,9,centered,0.53217
+octmnist,50 GPT-4,16,0,eta(S),0.80194
+octmnist,50 GPT-4,16,1,eta(S),0.80241
+octmnist,50 GPT-4,16,2,eta(S),0.80176
+octmnist,50 GPT-4,16,3,eta(S),0.80151
+octmnist,50 GPT-4,16,4,eta(S),0.80050
+octmnist,50 GPT-4,16,5,eta(S),0.80153
+octmnist,50 GPT-4,16,6,eta(S),0.80156
+octmnist,50 GPT-4,16,7,eta(S),0.80107
+octmnist,50 GPT-4,16,8,eta(S),0.80089
+octmnist,50 GPT-4,16,9,eta(S),0.80127
+octmnist,50 GPT-4,16,0,oracle Acc,0.92500
+octmnist,50 GPT-4,16,1,oracle Acc,0.80000
+octmnist,50 GPT-4,16,2,oracle Acc,0.97500
+octmnist,50 GPT-4,16,3,oracle Acc,0.80000
+octmnist,50 GPT-4,16,4,oracle Acc,0.92500
+octmnist,50 GPT-4,16,5,oracle Acc,1.00000
+octmnist,50 GPT-4,16,6,oracle Acc,0.95000
+octmnist,50 GPT-4,16,7,oracle Acc,0.85000
+octmnist,50 GPT-4,16,8,oracle Acc,0.95000
+octmnist,50 GPT-4,16,9,oracle Acc,0.87500
+octmnist,50 GPT-4,16,0,oracle BAcc,0.92500
+octmnist,50 GPT-4,16,1,oracle BAcc,0.80000
+octmnist,50 GPT-4,16,2,oracle BAcc,0.97500
+octmnist,50 GPT-4,16,3,oracle BAcc,0.80000
+octmnist,50 GPT-4,16,4,oracle BAcc,0.92500
+octmnist,50 GPT-4,16,5,oracle BAcc,1.00000
+octmnist,50 GPT-4,16,6,oracle BAcc,0.95000
+octmnist,50 GPT-4,16,7,oracle BAcc,0.85000
+octmnist,50 GPT-4,16,8,oracle BAcc,0.95000
+octmnist,50 GPT-4,16,9,oracle BAcc,0.87500
+octmnist,50 GPT-4,16,0,oracle F1,0.92500
+octmnist,50 GPT-4,16,1,oracle F1,0.80000
+octmnist,50 GPT-4,16,2,oracle F1,0.97500
+octmnist,50 GPT-4,16,3,oracle F1,0.95000
+octmnist,50 GPT-4,16,4,oracle F1,0.92500
+octmnist,50 GPT-4,16,5,oracle F1,1.00000
+octmnist,50 GPT-4,16,6,oracle F1,0.95000
+octmnist,50 GPT-4,16,7,oracle F1,0.85000
+octmnist,50 GPT-4,16,8,oracle F1,0.95000
+octmnist,50 GPT-4,16,9,oracle F1,0.87500
+octmnist,50 GPT-4,16,0,r_anchor,0.19652
+octmnist,50 GPT-4,16,1,r_anchor,0.10812
+octmnist,50 GPT-4,16,2,r_anchor,0.22851
+octmnist,50 GPT-4,16,3,r_anchor,0.17906
+octmnist,50 GPT-4,16,4,r_anchor,0.21624
+octmnist,50 GPT-4,16,5,r_anchor,0.19131
+octmnist,50 GPT-4,16,6,r_anchor,0.23156
+octmnist,50 GPT-4,16,7,r_anchor,0.19193
+octmnist,50 GPT-4,16,8,r_anchor,0.24864
+octmnist,50 GPT-4,16,9,r_anchor,0.23125
+octmnist,50 GPT-4,16,0,r_visual,0.21887
+octmnist,50 GPT-4,16,1,r_visual,0.20127
+octmnist,50 GPT-4,16,2,r_visual,0.30039
+octmnist,50 GPT-4,16,3,r_visual,0.24957
+octmnist,50 GPT-4,16,4,r_visual,0.22804
+octmnist,50 GPT-4,16,5,r_visual,0.24372
+octmnist,50 GPT-4,16,6,r_visual,0.26219
+octmnist,50 GPT-4,16,7,r_visual,0.19165
+octmnist,50 GPT-4,16,8,r_visual,0.26988
+octmnist,50 GPT-4,16,9,r_visual,0.22395
+octmnist,50 GPT-4,16,0,reliability,0.46635
+octmnist,50 GPT-4,16,1,reliability,0.53230
+octmnist,50 GPT-4,16,2,reliability,0.49437
+octmnist,50 GPT-4,16,3,reliability,0.50048
+octmnist,50 GPT-4,16,4,reliability,0.45824
+octmnist,50 GPT-4,16,5,reliability,0.48714
+octmnist,50 GPT-4,16,6,reliability,0.46987
+octmnist,50 GPT-4,16,7,reliability,0.44979
+octmnist,50 GPT-4,16,8,reliability,0.46330
+octmnist,50 GPT-4,16,9,reliability,0.44499
+octmnist,50 GPT-4,16,0,shot-only,0.84706
+octmnist,50 GPT-4,16,1,shot-only,0.84706
+octmnist,50 GPT-4,16,2,shot-only,0.84706
+octmnist,50 GPT-4,16,3,shot-only,0.84706
+octmnist,50 GPT-4,16,4,shot-only,0.84706
+octmnist,50 GPT-4,16,5,shot-only,0.84706
+octmnist,50 GPT-4,16,6,shot-only,0.84706
+octmnist,50 GPT-4,16,7,shot-only,0.84706
+octmnist,50 GPT-4,16,8,shot-only,0.84706
+octmnist,50 GPT-4,16,9,shot-only,0.84706

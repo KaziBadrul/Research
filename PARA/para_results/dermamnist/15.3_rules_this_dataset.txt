@@ -1,0 +1,71 @@
+# dermamnist | config 0209bf8cc7 | 2026-11-11 18:05:38
+
+[dermamnist | your prompts | K=1]  anchor reliability r_a = 0.100
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  20.93  20.93 |  15.70  15.70
+  Visual only             1.000 |  29.70  19.54 |  20.47  11.21
+  PARA                    0.318 |  26.24  21.27 |  19.29  14.21
+  Shot-only               0.450 |  28.83  22.47 |  20.92  14.98
+  Oracle BAcc (cheat)     0.668 |  31.86  25.33 |  22.15  14.31
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.972  0.946  0.900  0.823  0.712  0.572  0.423  0.287  0.178
+    BAcc                  29.73  29.69  29.82  30.12  29.99  29.10  27.51  25.68  24.26
+
+[dermamnist | your prompts | K=4]  anchor reliability r_a = 0.084
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  20.93  20.93 |  15.70  15.70
+  Visual only             1.000 |  45.80  39.48 |  32.64  24.75
+  PARA                    0.589 |  44.55  39.88 |  33.15  28.38
+  Shot-only               0.720 |  46.44  42.04 |  34.52  28.33
+  HOSO-style              0.743 |  45.10  38.65 |  32.70  27.56
+  Oracle BAcc (cheat)     0.790 |  47.42  42.18 |  35.05  28.29
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.994  0.989  0.977  0.956  0.916  0.846  0.735  0.586  0.420
+    BAcc                  45.80  45.89  45.96  46.01  46.25  46.57  46.35  44.56  37.68
+
+[dermamnist | your prompts | K=16]  anchor reliability r_a = 0.078
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  20.93  20.93 |  15.70  15.70
+  Visual only             1.000 |  57.88  54.92 |  42.58  40.40
+  PARA                    0.792 |  57.53  54.62 |  43.57  41.11
+  Shot-only               0.847 |  57.97  55.19 |  43.66  41.02
+  HOSO-style              0.957 |  57.70  54.92 |  42.62  40.40
+  Oracle BAcc (cheat)     0.878 |  58.90  56.04 |  43.82  40.88
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.999  0.997  0.995  0.989  0.979  0.959  0.922  0.855  0.748
+    BAcc                  57.90  57.94  57.96  58.01  57.98  57.89  58.00  58.04  56.62
+
+[dermamnist | 50 GPT-4 | K=1]  anchor reliability r_a = 0.079
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  21.39  21.39 |  21.79  21.79
+  Visual only             1.000 |  29.69  21.28 |  20.71  10.83
+  PARA                    0.347 |  26.66  24.14 |  24.41  20.97
+  Shot-only               0.450 |  28.69  24.18 |  25.01  19.41
+  Oracle BAcc (cheat)     0.718 |  32.28  26.60 |  24.51  18.72
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.977  0.957  0.921  0.864  0.785  0.690  0.592  0.500  0.420
+    BAcc                  29.70  29.77  30.00  30.56  30.45  29.77  28.78  26.65  25.83
+
+[dermamnist | 50 GPT-4 | K=4]  anchor reliability r_a = 0.070
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  21.39  21.39 |  21.79  21.79
+  Visual only             1.000 |  45.52  39.33 |  33.13  25.22
+  PARA                    0.619 |  43.41  38.20 |  36.25  29.84
+  Shot-only               0.720 |  45.74  39.71 |  36.67  29.49
+  HOSO-style              0.810 |  44.75  36.31 |  34.26  27.15
+  Oracle BAcc (cheat)     0.823 |  47.53  40.69 |  36.40  28.81
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.995  0.990  0.980  0.962  0.930  0.875  0.792  0.682  0.556
+    BAcc                  45.46  45.57  45.56  45.75  45.65  45.65  44.29  42.64  39.41
+
+[dermamnist | 50 GPT-4 | K=16]  anchor reliability r_a = 0.083
+  rule                      eta |   BAcc   CVaR |     F1   CVaR
+  Zero-shot               0.000 |  21.39  21.39 |  21.79  21.79
+  Visual only             1.000 |  57.49  54.32 |  42.45  39.94
+  PARA                    0.806 |  57.29  53.78 |  44.92  42.78
+  Shot-only               0.847 |  57.52  54.60 |  44.51  42.48
+  HOSO-style              0.982 |  57.33  54.32 |  42.47  39.94
+  Oracle BAcc (cheat)     0.895 |  58.38  54.87 |  44.32  42.50
+  anchor-aware, by c       0.25    0.5      1      2      4      8     16     32     64
+    eta                   0.999  0.997  0.994  0.989  0.978  0.957  0.917  0.847  0.735
+    BAcc                  57.50  57.51  57.51  57.38  57.34  57.36  57.59  57.60  55.80

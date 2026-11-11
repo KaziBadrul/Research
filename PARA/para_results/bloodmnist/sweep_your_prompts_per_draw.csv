@@ -1,0 +1,301 @@
+dataset,prompts,K,draw,method,acc,macro_f1,bacc
+bloodmnist,your prompts,1,0,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,1,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,2,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,3,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,4,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,5,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,6,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,7,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,8,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,9,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,1,0,Visual only,64.5000,57.4417,58.7251
+bloodmnist,your prompts,1,1,Visual only,58.1500,51.6093,55.4710
+bloodmnist,your prompts,1,2,Visual only,57.5000,47.4987,50.0292
+bloodmnist,your prompts,1,3,Visual only,64.7000,57.7630,59.5481
+bloodmnist,your prompts,1,4,Visual only,65.8000,59.5292,60.2051
+bloodmnist,your prompts,1,5,Visual only,61.4500,57.1434,57.5957
+bloodmnist,your prompts,1,6,Visual only,68.2000,61.5380,65.9321
+bloodmnist,your prompts,1,7,Visual only,49.1000,46.6523,48.5334
+bloodmnist,your prompts,1,8,Visual only,62.9500,59.7061,60.9143
+bloodmnist,your prompts,1,9,Visual only,60.7500,53.1362,57.3694
+bloodmnist,your prompts,1,0,Fixed eta 0.5,50.1000,44.6139,49.2608
+bloodmnist,your prompts,1,1,Fixed eta 0.5,45.3500,42.3257,45.2045
+bloodmnist,your prompts,1,2,Fixed eta 0.5,43.5000,36.1593,38.6392
+bloodmnist,your prompts,1,3,Fixed eta 0.5,56.4500,51.4118,53.1364
+bloodmnist,your prompts,1,4,Fixed eta 0.5,46.5000,41.4574,44.4039
+bloodmnist,your prompts,1,5,Fixed eta 0.5,47.0000,43.4063,46.4894
+bloodmnist,your prompts,1,6,Fixed eta 0.5,52.2000,47.3888,52.4246
+bloodmnist,your prompts,1,7,Fixed eta 0.5,32.7000,27.9572,31.7788
+bloodmnist,your prompts,1,8,Fixed eta 0.5,52.8000,50.5812,52.7728
+bloodmnist,your prompts,1,9,Fixed eta 0.5,47.5000,41.4704,47.1768
+bloodmnist,your prompts,1,0,PARA,33.0000,25.9853,30.8344
+bloodmnist,your prompts,1,1,PARA,29.2500,24.5004,28.7124
+bloodmnist,your prompts,1,2,PARA,28.3000,21.0425,24.1089
+bloodmnist,your prompts,1,3,PARA,33.2500,26.0947,30.4756
+bloodmnist,your prompts,1,4,PARA,32.3500,23.6628,30.5029
+bloodmnist,your prompts,1,5,PARA,32.9500,25.6077,31.3997
+bloodmnist,your prompts,1,6,PARA,34.7000,28.4424,33.8426
+bloodmnist,your prompts,1,7,PARA,25.2500,17.3990,23.1763
+bloodmnist,your prompts,1,8,PARA,35.1500,30.7681,34.9723
+bloodmnist,your prompts,1,9,PARA,33.3500,25.4461,32.0851
+bloodmnist,your prompts,1,0,Shot-only eta,46.1000,40.5364,45.3858
+bloodmnist,your prompts,1,1,Shot-only eta,42.0000,39.1631,42.0667
+bloodmnist,your prompts,1,2,Shot-only eta,39.0500,32.2585,34.6398
+bloodmnist,your prompts,1,3,Shot-only eta,50.2000,44.9443,47.4668
+bloodmnist,your prompts,1,4,Shot-only eta,43.3500,37.7725,41.6692
+bloodmnist,your prompts,1,5,Shot-only eta,43.3000,39.0539,42.9281
+bloodmnist,your prompts,1,6,Shot-only eta,49.0500,44.3435,49.2008
+bloodmnist,your prompts,1,7,Shot-only eta,29.8500,24.0276,28.6023
+bloodmnist,your prompts,1,8,Shot-only eta,49.4000,47.0847,49.7779
+bloodmnist,your prompts,1,9,Shot-only eta,44.3000,38.0438,44.2660
+bloodmnist,your prompts,1,0,PARA centered eta,45.8500,40.2711,45.1985
+bloodmnist,your prompts,1,1,PARA centered eta,41.5500,38.6866,41.6672
+bloodmnist,your prompts,1,2,PARA centered eta,37.7000,30.8011,33.3921
+bloodmnist,your prompts,1,3,PARA centered eta,47.0000,41.4887,44.3526
+bloodmnist,your prompts,1,4,PARA centered eta,41.7000,35.7138,40.1684
+bloodmnist,your prompts,1,5,PARA centered eta,41.9500,37.3861,41.6784
+bloodmnist,your prompts,1,6,PARA centered eta,47.3500,42.5723,47.4453
+bloodmnist,your prompts,1,7,PARA centered eta,28.9000,22.7144,27.5321
+bloodmnist,your prompts,1,8,PARA centered eta,48.6500,46.3986,49.1143
+bloodmnist,your prompts,1,9,PARA centered eta,42.0500,35.7317,42.2158
+bloodmnist,your prompts,1,0,Reliability eta,46.1000,40.5364,45.3858
+bloodmnist,your prompts,1,1,Reliability eta,40.9500,38.0844,41.1480
+bloodmnist,your prompts,1,2,Reliability eta,34.3000,27.1582,29.6954
+bloodmnist,your prompts,1,3,Reliability eta,36.5000,30.0291,33.8224
+bloodmnist,your prompts,1,4,Reliability eta,35.0500,27.0106,33.4768
+bloodmnist,your prompts,1,5,Reliability eta,43.1000,38.7818,42.6692
+bloodmnist,your prompts,1,6,Reliability eta,46.1000,41.2809,46.1818
+bloodmnist,your prompts,1,7,Reliability eta,27.1000,20.2714,25.3749
+bloodmnist,your prompts,1,8,Reliability eta,44.3000,41.8544,44.8091
+bloodmnist,your prompts,1,9,Reliability eta,35.6000,28.2390,34.8687
+bloodmnist,your prompts,1,0,Oracle by Acc (cheat),64.6000,57.7236,59.1617
+bloodmnist,your prompts,1,1,Oracle by Acc (cheat),58.8000,52.5777,56.3492
+bloodmnist,your prompts,1,2,Oracle by Acc (cheat),57.5000,47.4987,50.0292
+bloodmnist,your prompts,1,3,Oracle by Acc (cheat),65.8500,58.9307,60.6211
+bloodmnist,your prompts,1,4,Oracle by Acc (cheat),65.8000,59.5292,60.2051
+bloodmnist,your prompts,1,5,Oracle by Acc (cheat),61.5500,57.3356,58.0144
+bloodmnist,your prompts,1,6,Oracle by Acc (cheat),68.5500,61.8066,66.0460
+bloodmnist,your prompts,1,7,Oracle by Acc (cheat),49.1000,46.6523,48.5334
+bloodmnist,your prompts,1,8,Oracle by Acc (cheat),62.9500,59.9418,61.2339
+bloodmnist,your prompts,1,9,Oracle by Acc (cheat),60.8000,53.1190,57.4854
+bloodmnist,your prompts,1,0,Oracle by F1 (cheat),64.5500,57.8061,59.2822
+bloodmnist,your prompts,1,1,Oracle by F1 (cheat),58.8000,52.5777,56.3492
+bloodmnist,your prompts,1,2,Oracle by F1 (cheat),57.5000,47.4987,50.0292
+bloodmnist,your prompts,1,3,Oracle by F1 (cheat),65.8500,58.9307,60.6211
+bloodmnist,your prompts,1,4,Oracle by F1 (cheat),65.8000,59.5292,60.2051
+bloodmnist,your prompts,1,5,Oracle by F1 (cheat),61.5500,57.3356,58.0144
+bloodmnist,your prompts,1,6,Oracle by F1 (cheat),68.5000,61.8675,66.2073
+bloodmnist,your prompts,1,7,Oracle by F1 (cheat),49.1000,46.6523,48.5334
+bloodmnist,your prompts,1,8,Oracle by F1 (cheat),62.9500,59.9418,61.2339
+bloodmnist,your prompts,1,9,Oracle by F1 (cheat),60.7500,53.1362,57.3694
+bloodmnist,your prompts,1,0,Oracle by BAcc (cheat),64.1000,57.6989,59.4047
+bloodmnist,your prompts,1,1,Oracle by BAcc (cheat),58.8000,52.5777,56.3492
+bloodmnist,your prompts,1,2,Oracle by BAcc (cheat),57.5000,47.4987,50.0292
+bloodmnist,your prompts,1,3,Oracle by BAcc (cheat),65.8500,58.9307,60.6211
+bloodmnist,your prompts,1,4,Oracle by BAcc (cheat),65.7000,59.4943,60.2397
+bloodmnist,your prompts,1,5,Oracle by BAcc (cheat),61.5500,57.3356,58.0144
+bloodmnist,your prompts,1,6,Oracle by BAcc (cheat),68.5000,61.8675,66.2073
+bloodmnist,your prompts,1,7,Oracle by BAcc (cheat),49.1000,46.6523,48.5334
+bloodmnist,your prompts,1,8,Oracle by BAcc (cheat),62.9500,59.9418,61.2339
+bloodmnist,your prompts,1,9,Oracle by BAcc (cheat),60.7500,53.1243,57.5217
+bloodmnist,your prompts,4,0,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,1,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,2,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,3,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,4,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,5,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,6,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,7,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,8,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,9,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,4,0,Visual only,82.8000,80.7196,82.4685
+bloodmnist,your prompts,4,1,Visual only,87.8000,86.3022,88.1588
+bloodmnist,your prompts,4,2,Visual only,85.3500,82.2181,83.2984
+bloodmnist,your prompts,4,3,Visual only,79.8000,77.2905,79.3114
+bloodmnist,your prompts,4,4,Visual only,79.4500,74.6593,76.0570
+bloodmnist,your prompts,4,5,Visual only,85.0500,83.7301,85.1180
+bloodmnist,your prompts,4,6,Visual only,84.0000,82.0177,83.2559
+bloodmnist,your prompts,4,7,Visual only,83.3000,80.8958,81.6803
+bloodmnist,your prompts,4,8,Visual only,86.1000,84.1616,84.6908
+bloodmnist,your prompts,4,9,Visual only,82.3500,79.9836,82.2030
+bloodmnist,your prompts,4,0,Fixed eta 0.5,52.3000,49.5835,53.3139
+bloodmnist,your prompts,4,1,Fixed eta 0.5,57.2500,56.4519,61.9022
+bloodmnist,your prompts,4,2,Fixed eta 0.5,53.8500,53.5175,56.0684
+bloodmnist,your prompts,4,3,Fixed eta 0.5,56.1500,54.9766,59.0745
+bloodmnist,your prompts,4,4,Fixed eta 0.5,55.5500,52.5343,56.4365
+bloodmnist,your prompts,4,5,Fixed eta 0.5,62.8000,60.9995,65.3412
+bloodmnist,your prompts,4,6,Fixed eta 0.5,59.1000,57.5364,62.5232
+bloodmnist,your prompts,4,7,Fixed eta 0.5,56.6000,54.3375,58.8021
+bloodmnist,your prompts,4,8,Fixed eta 0.5,60.0000,58.9425,63.3429
+bloodmnist,your prompts,4,9,Fixed eta 0.5,53.7500,51.6945,56.2989
+bloodmnist,your prompts,4,0,PARA,65.7000,62.2716,65.7859
+bloodmnist,your prompts,4,1,PARA,68.6500,68.3693,72.5681
+bloodmnist,your prompts,4,2,PARA,64.4500,64.1627,66.2097
+bloodmnist,your prompts,4,3,PARA,65.2500,64.0171,67.7089
+bloodmnist,your prompts,4,4,PARA,66.5500,63.6289,66.4085
+bloodmnist,your prompts,4,5,PARA,75.5000,73.1579,76.5943
+bloodmnist,your prompts,4,6,PARA,70.9000,69.4995,73.1200
+bloodmnist,your prompts,4,7,PARA,68.3000,66.2867,69.8521
+bloodmnist,your prompts,4,8,PARA,70.0000,69.5072,72.4870
+bloodmnist,your prompts,4,9,PARA,66.3000,64.4791,68.1878
+bloodmnist,your prompts,4,0,Shot-only eta,75.1500,71.4238,74.9371
+bloodmnist,your prompts,4,1,Shot-only eta,81.0000,79.7458,82.4740
+bloodmnist,your prompts,4,2,Shot-only eta,75.2000,73.6040,75.3978
+bloodmnist,your prompts,4,3,Shot-only eta,73.0500,71.1686,74.3016
+bloodmnist,your prompts,4,4,Shot-only eta,75.0000,70.9681,73.0850
+bloodmnist,your prompts,4,5,Shot-only eta,82.5000,80.3631,83.3970
+bloodmnist,your prompts,4,6,Shot-only eta,79.7500,77.6289,80.3046
+bloodmnist,your prompts,4,7,Shot-only eta,76.9500,74.6791,77.0032
+bloodmnist,your prompts,4,8,Shot-only eta,79.6000,77.7761,80.1595
+bloodmnist,your prompts,4,9,Shot-only eta,76.3500,73.9143,77.2579
+bloodmnist,your prompts,4,0,PARA centered eta,60.7500,57.8645,61.3141
+bloodmnist,your prompts,4,1,PARA centered eta,65.1500,64.8197,69.4766
+bloodmnist,your prompts,4,2,PARA centered eta,59.0000,58.7575,60.9784
+bloodmnist,your prompts,4,3,PARA centered eta,63.6000,62.4488,66.2450
+bloodmnist,your prompts,4,4,PARA centered eta,63.5000,60.6271,63.6703
+bloodmnist,your prompts,4,5,PARA centered eta,67.9500,65.9651,69.7758
+bloodmnist,your prompts,4,6,PARA centered eta,66.5500,65.3956,69.6033
+bloodmnist,your prompts,4,7,PARA centered eta,65.7000,63.7989,67.7513
+bloodmnist,your prompts,4,8,PARA centered eta,64.7500,64.1140,67.7856
+bloodmnist,your prompts,4,9,PARA centered eta,63.1000,61.4297,65.3922
+bloodmnist,your prompts,4,0,Reliability eta,70.1000,66.4755,69.9892
+bloodmnist,your prompts,4,1,Reliability eta,76.0000,75.1802,78.5535
+bloodmnist,your prompts,4,2,Reliability eta,70.0500,69.4105,71.2843
+bloodmnist,your prompts,4,3,Reliability eta,72.6500,70.7594,74.0185
+bloodmnist,your prompts,4,4,Reliability eta,73.4000,69.5614,71.8288
+bloodmnist,your prompts,4,5,Reliability eta,77.0000,74.6148,78.0494
+bloodmnist,your prompts,4,6,Reliability eta,74.7000,73.1774,76.3047
+bloodmnist,your prompts,4,7,Reliability eta,74.2000,71.9730,74.7294
+bloodmnist,your prompts,4,8,Reliability eta,78.2500,76.5930,78.9613
+bloodmnist,your prompts,4,9,Reliability eta,75.2000,72.8311,76.2052
+bloodmnist,your prompts,4,0,Oracle by Acc (cheat),82.8000,80.7196,82.4685
+bloodmnist,your prompts,4,1,Oracle by Acc (cheat),87.8000,86.3022,88.1588
+bloodmnist,your prompts,4,2,Oracle by Acc (cheat),85.3500,82.2181,83.2984
+bloodmnist,your prompts,4,3,Oracle by Acc (cheat),79.8000,77.2905,79.3114
+bloodmnist,your prompts,4,4,Oracle by Acc (cheat),79.4500,74.6593,76.0570
+bloodmnist,your prompts,4,5,Oracle by Acc (cheat),85.6000,84.2414,85.8552
+bloodmnist,your prompts,4,6,Oracle by Acc (cheat),84.0000,82.0177,83.2559
+bloodmnist,your prompts,4,7,Oracle by Acc (cheat),83.3000,80.8958,81.6803
+bloodmnist,your prompts,4,8,Oracle by Acc (cheat),86.1500,84.2094,84.8819
+bloodmnist,your prompts,4,9,Oracle by Acc (cheat),82.5500,80.2764,82.5294
+bloodmnist,your prompts,4,0,Oracle by F1 (cheat),82.8000,80.7196,82.4685
+bloodmnist,your prompts,4,1,Oracle by F1 (cheat),87.8000,86.3022,88.1588
+bloodmnist,your prompts,4,2,Oracle by F1 (cheat),85.3500,82.2181,83.2984
+bloodmnist,your prompts,4,3,Oracle by F1 (cheat),79.8000,77.2905,79.3114
+bloodmnist,your prompts,4,4,Oracle by F1 (cheat),79.3500,74.7235,76.2689
+bloodmnist,your prompts,4,5,Oracle by F1 (cheat),85.6000,84.2414,85.8552
+bloodmnist,your prompts,4,6,Oracle by F1 (cheat),84.0000,82.0177,83.2559
+bloodmnist,your prompts,4,7,Oracle by F1 (cheat),83.3000,80.8958,81.6803
+bloodmnist,your prompts,4,8,Oracle by F1 (cheat),86.1500,84.2094,84.8819
+bloodmnist,your prompts,4,9,Oracle by F1 (cheat),82.5500,80.2764,82.5294
+bloodmnist,your prompts,4,0,Oracle by BAcc (cheat),82.8000,80.7196,82.4685
+bloodmnist,your prompts,4,1,Oracle by BAcc (cheat),87.8000,86.3022,88.1588
+bloodmnist,your prompts,4,2,Oracle by BAcc (cheat),85.3500,82.2181,83.2984
+bloodmnist,your prompts,4,3,Oracle by BAcc (cheat),79.8000,77.2905,79.3114
+bloodmnist,your prompts,4,4,Oracle by BAcc (cheat),79.3500,74.7235,76.2689
+bloodmnist,your prompts,4,5,Oracle by BAcc (cheat),85.5500,84.1902,85.8746
+bloodmnist,your prompts,4,6,Oracle by BAcc (cheat),83.9000,81.8862,83.3387
+bloodmnist,your prompts,4,7,Oracle by BAcc (cheat),83.1500,80.7737,81.7342
+bloodmnist,your prompts,4,8,Oracle by BAcc (cheat),86.1500,84.2094,84.8819
+bloodmnist,your prompts,4,9,Oracle by BAcc (cheat),82.5500,80.2764,82.5294
+bloodmnist,your prompts,16,0,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,1,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,2,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,3,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,4,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,5,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,6,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,7,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,8,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,9,Zero-shot,18.6500,9.7006,14.8616
+bloodmnist,your prompts,16,0,Visual only,90.4000,89.1080,90.5394
+bloodmnist,your prompts,16,1,Visual only,91.4500,90.4388,91.6785
+bloodmnist,your prompts,16,2,Visual only,90.7000,89.8633,90.2837
+bloodmnist,your prompts,16,3,Visual only,92.4000,91.4187,91.7630
+bloodmnist,your prompts,16,4,Visual only,91.5500,90.9706,91.8666
+bloodmnist,your prompts,16,5,Visual only,92.1500,90.9990,91.5770
+bloodmnist,your prompts,16,6,Visual only,89.3500,87.5321,88.4132
+bloodmnist,your prompts,16,7,Visual only,89.9000,88.5851,89.7621
+bloodmnist,your prompts,16,8,Visual only,91.5000,89.9824,90.5392
+bloodmnist,your prompts,16,9,Visual only,91.0500,90.0428,90.4310
+bloodmnist,your prompts,16,0,Fixed eta 0.5,63.1000,61.7561,66.4177
+bloodmnist,your prompts,16,1,Fixed eta 0.5,67.5000,66.4733,70.0781
+bloodmnist,your prompts,16,2,Fixed eta 0.5,59.3500,59.9707,62.3663
+bloodmnist,your prompts,16,3,Fixed eta 0.5,61.6500,60.7427,65.6661
+bloodmnist,your prompts,16,4,Fixed eta 0.5,60.5000,59.0538,64.1881
+bloodmnist,your prompts,16,5,Fixed eta 0.5,62.5000,60.8263,66.2368
+bloodmnist,your prompts,16,6,Fixed eta 0.5,65.6000,64.3442,69.8433
+bloodmnist,your prompts,16,7,Fixed eta 0.5,58.3500,56.7740,61.6378
+bloodmnist,your prompts,16,8,Fixed eta 0.5,60.3500,58.4506,63.7698
+bloodmnist,your prompts,16,9,Fixed eta 0.5,57.4500,55.9014,60.1873
+bloodmnist,your prompts,16,0,PARA,88.0000,86.2118,88.8448
+bloodmnist,your prompts,16,1,PARA,88.2500,86.8204,89.0456
+bloodmnist,your prompts,16,2,PARA,87.1500,85.8295,87.0617
+bloodmnist,your prompts,16,3,PARA,88.6000,87.1469,88.9074
+bloodmnist,your prompts,16,4,PARA,89.3000,88.0846,90.0053
+bloodmnist,your prompts,16,5,PARA,89.6000,87.9464,89.7714
+bloodmnist,your prompts,16,6,PARA,88.2000,86.5128,88.1793
+bloodmnist,your prompts,16,7,PARA,85.7000,84.2193,86.6234
+bloodmnist,your prompts,16,8,PARA,87.4000,85.3699,87.5991
+bloodmnist,your prompts,16,9,PARA,87.5500,86.1020,88.0660
+bloodmnist,your prompts,16,0,Shot-only eta,89.0000,87.3918,89.7390
+bloodmnist,your prompts,16,1,Shot-only eta,89.9000,88.6671,90.4953
+bloodmnist,your prompts,16,2,Shot-only eta,88.5500,87.4726,88.4979
+bloodmnist,your prompts,16,3,Shot-only eta,90.3000,88.9360,90.3511
+bloodmnist,your prompts,16,4,Shot-only eta,90.7000,89.7309,91.2985
+bloodmnist,your prompts,16,5,Shot-only eta,90.4000,88.8845,90.4351
+bloodmnist,your prompts,16,6,Shot-only eta,88.6000,86.8526,88.2927
+bloodmnist,your prompts,16,7,Shot-only eta,87.9500,86.6459,88.4631
+bloodmnist,your prompts,16,8,Shot-only eta,89.1000,87.2997,88.9932
+bloodmnist,your prompts,16,9,Shot-only eta,88.8500,87.7090,89.1152
+bloodmnist,your prompts,16,0,PARA centered eta,85.9000,83.9190,87.2186
+bloodmnist,your prompts,16,1,PARA centered eta,86.4500,84.6685,87.5197
+bloodmnist,your prompts,16,2,PARA centered eta,85.2500,83.7574,85.2826
+bloodmnist,your prompts,16,3,PARA centered eta,85.0500,83.5793,86.0350
+bloodmnist,your prompts,16,4,PARA centered eta,86.8500,85.4888,88.1078
+bloodmnist,your prompts,16,5,PARA centered eta,86.6000,84.3981,87.0447
+bloodmnist,your prompts,16,6,PARA centered eta,86.6500,84.8716,87.0262
+bloodmnist,your prompts,16,7,PARA centered eta,83.5000,81.9896,84.7170
+bloodmnist,your prompts,16,8,PARA centered eta,84.4500,82.0564,85.1401
+bloodmnist,your prompts,16,9,PARA centered eta,83.2000,81.3747,84.1510
+bloodmnist,your prompts,16,0,Reliability eta,83.3000,81.2224,84.9777
+bloodmnist,your prompts,16,1,Reliability eta,84.6000,82.4550,85.7579
+bloodmnist,your prompts,16,2,Reliability eta,83.0000,81.3943,83.4623
+bloodmnist,your prompts,16,3,Reliability eta,79.6500,78.2854,81.4377
+bloodmnist,your prompts,16,4,Reliability eta,82.9500,81.7347,84.6803
+bloodmnist,your prompts,16,5,Reliability eta,83.6000,81.2616,84.5492
+bloodmnist,your prompts,16,6,Reliability eta,84.6500,82.9607,85.5894
+bloodmnist,your prompts,16,7,Reliability eta,80.7500,78.9125,82.0986
+bloodmnist,your prompts,16,8,Reliability eta,79.5500,77.4031,81.0691
+bloodmnist,your prompts,16,9,Reliability eta,78.2000,76.5090,80.0663
+bloodmnist,your prompts,16,0,Oracle by Acc (cheat),90.4000,89.1080,90.5394
+bloodmnist,your prompts,16,1,Oracle by Acc (cheat),91.4500,90.4388,91.6785
+bloodmnist,your prompts,16,2,Oracle by Acc (cheat),90.7000,89.8633,90.2837
+bloodmnist,your prompts,16,3,Oracle by Acc (cheat),92.4000,91.4187,91.7630
+bloodmnist,your prompts,16,4,Oracle by Acc (cheat),91.7000,91.0717,92.1485
+bloodmnist,your prompts,16,5,Oracle by Acc (cheat),92.1500,90.9990,91.5770
+bloodmnist,your prompts,16,6,Oracle by Acc (cheat),89.5500,87.7903,88.8256
+bloodmnist,your prompts,16,7,Oracle by Acc (cheat),89.9000,88.5543,89.8317
+bloodmnist,your prompts,16,8,Oracle by Acc (cheat),91.5000,89.9712,90.7344
+bloodmnist,your prompts,16,9,Oracle by Acc (cheat),91.0500,90.0428,90.4310
+bloodmnist,your prompts,16,0,Oracle by F1 (cheat),90.4000,89.1080,90.5394
+bloodmnist,your prompts,16,1,Oracle by F1 (cheat),91.4500,90.4388,91.6785
+bloodmnist,your prompts,16,2,Oracle by F1 (cheat),90.7000,89.8633,90.2837
+bloodmnist,your prompts,16,3,Oracle by F1 (cheat),92.4000,91.4187,91.7630
+bloodmnist,your prompts,16,4,Oracle by F1 (cheat),91.7000,91.0717,92.1485
+bloodmnist,your prompts,16,5,Oracle by F1 (cheat),92.1500,90.9990,91.5770
+bloodmnist,your prompts,16,6,Oracle by F1 (cheat),89.5500,87.7903,88.8256
+bloodmnist,your prompts,16,7,Oracle by F1 (cheat),89.9000,88.5851,89.7621
+bloodmnist,your prompts,16,8,Oracle by F1 (cheat),91.5000,89.9824,90.5392
+bloodmnist,your prompts,16,9,Oracle by F1 (cheat),91.0500,90.0428,90.4310
+bloodmnist,your prompts,16,0,Oracle by BAcc (cheat),90.4000,89.1080,90.5394
+bloodmnist,your prompts,16,1,Oracle by BAcc (cheat),91.4500,90.4388,91.6785
+bloodmnist,your prompts,16,2,Oracle by BAcc (cheat),90.7000,89.8633,90.2837
+bloodmnist,your prompts,16,3,Oracle by BAcc (cheat),92.2500,91.2542,91.7708
+bloodmnist,your prompts,16,4,Oracle by BAcc (cheat),91.7000,91.0717,92.1485
+bloodmnist,your prompts,16,5,Oracle by BAcc (cheat),92.0500,90.8472,91.6006
+bloodmnist,your prompts,16,6,Oracle by BAcc (cheat),89.5500,87.7903,88.8256
+bloodmnist,your prompts,16,7,Oracle by BAcc (cheat),89.9000,88.5543,89.8317
+bloodmnist,your prompts,16,8,Oracle by BAcc (cheat),91.5000,89.9712,90.7344
+bloodmnist,your prompts,16,9,Oracle by BAcc (cheat),91.0500,90.0428,90.4310

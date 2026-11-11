@@ -1,0 +1,56 @@
+# bloodmnist | config 959a299066 | 2026-11-12 01:08:47
+basophil                                     -> 'basophil': 50 prompts | cos(hand anchor, GPT anchor) = 0.941
+eosinophil                                   -> 'eosinophil': 50 prompts | cos(hand anchor, GPT anchor) = 0.940
+erythroblast                                 -> 'erythroblast': 50 prompts | cos(hand anchor, GPT anchor) = 0.970
+immature granulocytes(myelocytes, metamyeloc -> 'immature granulocytes': 50 prompts | cos(hand anchor, GPT anchor) = 0.808
+lymphocyte                                   -> 'lymphocyte': 50 prompts | cos(hand anchor, GPT anchor) = 0.937
+monocyte                                     -> 'monocyte': 50 prompts | cos(hand anchor, GPT anchor) = 0.933
+neutrophil                                   -> 'neutrophil': 50 prompts | cos(hand anchor, GPT anchor) = 0.960
+platelet                                     -> 'platelet': 50 prompts | cos(hand anchor, GPT anchor) = 0.799
+example: A blood smear with a bilobed nucleus and large, dark blue granules indicating a basophil.
+
+anchors               Acc  Macro-F1   BAcc
+your prompts        18.65      9.70  14.86
+50 GPT-4            20.35      6.47  13.49
+
+class                               true % | predicted % hand    GPT | recall % hand    GPT
+basophil                               7.4 |              2.4    0.8 |           4.1    0.7
+eosinophil                            18.4 |              0.4    0.1 |           0.0    0.5
+erythroblast                           9.2 |              9.4    0.1 |          10.9    0.0
+immature granulocytes(myelocytes,     16.0 |              0.9    2.5 |           3.4    3.8
+lymphocyte                             7.5 |              7.8    7.1 |           0.7    1.3
+monocyte                               8.2 |             29.0    3.5 |          24.5    3.7
+neutrophil                            19.6 |             49.4   85.9 |          75.3   98.0
+platelet                              13.9 |              0.7    0.1 |           0.0    0.0
+support reliability (your prompts, draw 0, K=16): r_anchor 0.018 | r_visual 0.255 | eta 0.676
+support reliability (50 GPT-4, draw 0, K=16): r_anchor 0.020 | r_visual 0.255 | eta 0.673
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+basophil                               0.552      0.555         0.530        False   15.48
+eosinophil                             0.536      0.544         0.516        False   15.39
+erythroblast                           0.529      0.538         0.506        False   15.25
+immature granulocytes(myelocytes,      0.541      0.550         0.526        False   15.33
+lymphocyte                             0.519      0.544         0.510        False   15.52
+monocyte                               0.530      0.548         0.520        False   15.37
+neutrophil                             0.515      0.551         0.526         True   15.57
+platelet                               0.616      0.521         0.499        False   15.55
+-> own-text delta 0.542 vs other-text delta 0.544 (gap +0.002); images closest to their own text for 1/8 classes
+-> phi: real classes 15.43 (max possible 16) | random natural mix 15.23 | random uniform over classes 15.16
+-> mean cosine between support images: same class 0.962 | different class 0.945
+-> eta(S) = 0.804
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+basophil                               0.986      1.048         0.689        False    6.23
+eosinophil                             0.875      1.025         0.882         True    5.52
+erythroblast                           0.910      0.977         0.719        False    5.53
+immature granulocytes(myelocytes,      1.093      1.021         0.777        False    2.77
+lymphocyte                             0.867      1.008         0.782        False    4.61
+monocyte                               0.933      1.000         0.929        False    4.00
+neutrophil                             0.875      0.988         0.898         True    4.87
+platelet                               1.037      0.986         0.825        False    9.21
+-> own-text delta 0.947 vs other-text delta 1.007 (gap +0.060); images closest to their own text for 2/8 classes
+-> phi: real classes 5.34 (max possible 16) | random natural mix 1.12 | random uniform over classes 0.94
+-> mean cosine between support images: same class 0.289 | different class -0.036
+-> eta(S) = 0.740

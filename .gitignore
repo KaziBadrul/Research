@@ -1,0 +1,53 @@
+# ---------------------------------------------------------------
+# Datasets (large, re-downloadable)
+# ---------------------------------------------------------------
+# PARA/medmnist/ holds MedMNIST .npz files (~3.5 GB); fetch with the
+# `medmnist` package instead of committing.
+PARA/medmnist/
+**/medmnist/
+*.npz
+*.npy
+data/
+datasets/
+
+# ---------------------------------------------------------------
+# Model weights, tensor caches, checkpoints (regenerable)
+# ---------------------------------------------------------------
+# e.g. PARA/para_results/<dataset>/zS_cache.pt — cached CLIP features
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*_cache.*
+checkpoints/
+wandb/
+runs/
+lightning_logs/
+
+# Small result artifacts (csv/txt/json/png) under para_results/ ARE kept.
+
+# ---------------------------------------------------------------
+# Python / Jupyter
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+
+# ---------------------------------------------------------------
+# OS / editor junk
+# ---------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*:Zone.Identifier
+.vscode/
+.idea/
+*.swp

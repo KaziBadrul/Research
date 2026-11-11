@@ -1,0 +1,301 @@
+dataset,prompts,K,draw,method,acc,macro_f1,bacc
+breastmnist,50 GPT-4,1,0,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,1,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,0,Visual only,71.1538,68.2741,72.7444
+breastmnist,50 GPT-4,1,1,Visual only,68.5897,66.2591,71.7419
+breastmnist,50 GPT-4,1,2,Visual only,57.6923,43.5897,43.9850
+breastmnist,50 GPT-4,1,3,Visual only,35.2564,33.5498,54.1980
+breastmnist,50 GPT-4,1,4,Visual only,44.2308,44.0445,59.5865
+breastmnist,50 GPT-4,1,5,Visual only,71.7949,54.6032,55.1378
+breastmnist,50 GPT-4,1,6,Visual only,61.5385,44.7462,45.8647
+breastmnist,50 GPT-4,1,7,Visual only,67.9487,66.1458,72.8070
+breastmnist,50 GPT-4,1,8,Visual only,41.6667,41.4719,56.3283
+breastmnist,50 GPT-4,1,9,Visual only,83.3333,76.0567,73.5589
+breastmnist,50 GPT-4,1,0,Fixed eta 0.5,66.0256,63.7607,69.2356
+breastmnist,50 GPT-4,1,1,Fixed eta 0.5,66.6667,64.7917,71.1779
+breastmnist,50 GPT-4,1,2,Fixed eta 0.5,61.5385,57.5163,60.1504
+breastmnist,50 GPT-4,1,3,Fixed eta 0.5,41.0256,40.7823,55.8897
+breastmnist,50 GPT-4,1,4,Fixed eta 0.5,50.6410,50.6390,63.9724
+breastmnist,50 GPT-4,1,5,Fixed eta 0.5,73.0769,66.2894,66.5414
+breastmnist,50 GPT-4,1,6,Fixed eta 0.5,69.2308,63.4589,64.6617
+breastmnist,50 GPT-4,1,7,Fixed eta 0.5,66.6667,64.7917,71.1779
+breastmnist,50 GPT-4,1,8,Fixed eta 0.5,46.1538,46.1450,57.8947
+breastmnist,50 GPT-4,1,9,Fixed eta 0.5,80.1282,75.9535,77.3810
+breastmnist,50 GPT-4,1,0,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,1,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,0,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,1,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,0,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,1,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,0,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,1,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,0,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,1,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,Oracle by Acc (cheat),73.0769,66.2894,66.5414
+breastmnist,50 GPT-4,1,6,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,Oracle by Acc (cheat),83.3333,76.0567,73.5589
+breastmnist,50 GPT-4,1,0,Oracle by F1 (cheat),71.1538,68.2741,72.7444
+breastmnist,50 GPT-4,1,1,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,2,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,8,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,Oracle by F1 (cheat),83.3333,76.0567,73.5589
+breastmnist,50 GPT-4,1,0,Oracle by BAcc (cheat),71.1538,68.2741,72.7444
+breastmnist,50 GPT-4,1,1,Oracle by BAcc (cheat),68.5897,66.2591,71.7419
+breastmnist,50 GPT-4,1,2,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,3,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,4,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,5,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,6,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,7,Oracle by BAcc (cheat),67.9487,66.1458,72.8070
+breastmnist,50 GPT-4,1,8,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,1,9,Oracle by BAcc (cheat),80.1282,75.9535,77.3810
+breastmnist,50 GPT-4,4,0,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,2,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,3,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,4,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,5,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,6,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,7,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,8,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,9,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,0,Visual only,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,Visual only,65.3846,60.2642,62.0301
+breastmnist,50 GPT-4,4,2,Visual only,69.8718,67.6363,73.3709
+breastmnist,50 GPT-4,4,3,Visual only,63.4615,60.7504,65.2256
+breastmnist,50 GPT-4,4,4,Visual only,65.3846,61.4215,64.2857
+breastmnist,50 GPT-4,4,5,Visual only,71.1538,67.3898,70.4887
+breastmnist,50 GPT-4,4,6,Visual only,57.6923,49.7560,50.0000
+breastmnist,50 GPT-4,4,7,Visual only,82.6923,75.3843,73.1203
+breastmnist,50 GPT-4,4,8,Visual only,57.6923,50.3472,50.7519
+breastmnist,50 GPT-4,4,9,Visual only,77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,0,Fixed eta 0.5,71.7949,69.3571,74.6867
+breastmnist,50 GPT-4,4,1,Fixed eta 0.5,64.1026,62.0833,67.9198
+breastmnist,50 GPT-4,4,2,Fixed eta 0.5,65.3846,63.8641,71.0526
+breastmnist,50 GPT-4,4,3,Fixed eta 0.5,66.0256,63.2321,67.7318
+breastmnist,50 GPT-4,4,4,Fixed eta 0.5,62.1795,59.6581,64.3484
+breastmnist,50 GPT-4,4,5,Fixed eta 0.5,66.6667,64.0617,68.9223
+breastmnist,50 GPT-4,4,6,Fixed eta 0.5,60.8974,58.5666,63.4712
+breastmnist,50 GPT-4,4,7,Fixed eta 0.5,77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,8,Fixed eta 0.5,61.5385,58.2143,61.6541
+breastmnist,50 GPT-4,4,9,Fixed eta 0.5,69.2308,66.0131,69.9248
+breastmnist,50 GPT-4,4,0,PARA,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,PARA,65.3846,60.2642,62.0301
+breastmnist,50 GPT-4,4,2,PARA,69.8718,67.6363,73.3709
+breastmnist,50 GPT-4,4,3,PARA,63.4615,60.7504,65.2256
+breastmnist,50 GPT-4,4,4,PARA,65.3846,61.4215,64.2857
+breastmnist,50 GPT-4,4,5,PARA,71.1538,67.3898,70.4887
+breastmnist,50 GPT-4,4,6,PARA,57.6923,49.7560,50.0000
+breastmnist,50 GPT-4,4,7,PARA,82.6923,75.3843,73.1203
+breastmnist,50 GPT-4,4,8,PARA,57.6923,50.3472,50.7519
+breastmnist,50 GPT-4,4,9,PARA,77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,0,Shot-only eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,Shot-only eta,65.3846,60.2642,62.0301
+breastmnist,50 GPT-4,4,2,Shot-only eta,69.8718,67.6363,73.3709
+breastmnist,50 GPT-4,4,3,Shot-only eta,63.4615,60.7504,65.2256
+breastmnist,50 GPT-4,4,4,Shot-only eta,65.3846,61.4215,64.2857
+breastmnist,50 GPT-4,4,5,Shot-only eta,71.1538,67.3898,70.4887
+breastmnist,50 GPT-4,4,6,Shot-only eta,57.6923,49.7560,50.0000
+breastmnist,50 GPT-4,4,7,Shot-only eta,82.6923,75.3843,73.1203
+breastmnist,50 GPT-4,4,8,Shot-only eta,57.6923,50.3472,50.7519
+breastmnist,50 GPT-4,4,9,Shot-only eta,77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,0,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,PARA centered eta,65.3846,60.2642,62.0301
+breastmnist,50 GPT-4,4,2,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,3,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,4,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,5,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,6,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,7,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,8,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,9,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,0,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,Reliability eta,65.3846,60.2642,62.0301
+breastmnist,50 GPT-4,4,2,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,3,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,4,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,5,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,6,Reliability eta,57.6923,49.7560,50.0000
+breastmnist,50 GPT-4,4,7,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,8,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,9,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,0,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,1,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,2,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,3,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,4,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,5,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,6,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,7,Oracle by Acc (cheat),82.6923,75.3843,73.1203
+breastmnist,50 GPT-4,4,8,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,9,Oracle by Acc (cheat),77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,0,Oracle by F1 (cheat),71.7949,69.3571,74.6867
+breastmnist,50 GPT-4,4,1,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,2,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,3,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,4,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,5,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,6,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,7,Oracle by F1 (cheat),82.6923,75.3843,73.1203
+breastmnist,50 GPT-4,4,8,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,9,Oracle by F1 (cheat),77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,0,Oracle by BAcc (cheat),71.7949,69.3571,74.6867
+breastmnist,50 GPT-4,4,1,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,2,Oracle by BAcc (cheat),69.8718,67.6363,73.3709
+breastmnist,50 GPT-4,4,3,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,4,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,5,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,6,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,7,Oracle by BAcc (cheat),77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,4,8,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,4,9,Oracle by BAcc (cheat),77.5641,72.8507,74.1228
+breastmnist,50 GPT-4,16,0,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,1,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,2,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,3,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,4,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,5,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,6,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,7,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,8,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,9,Zero-shot,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,0,Visual only,71.1538,67.7019,71.2406
+breastmnist,50 GPT-4,16,1,Visual only,71.7949,69.1089,73.9348
+breastmnist,50 GPT-4,16,2,Visual only,67.3077,62.6672,64.8496
+breastmnist,50 GPT-4,16,3,Visual only,75.0000,72.5042,77.6316
+breastmnist,50 GPT-4,16,4,Visual only,62.1795,61.0116,68.8596
+breastmnist,50 GPT-4,16,5,Visual only,65.3846,63.2011,68.7970
+breastmnist,50 GPT-4,16,6,Visual only,75.0000,71.1481,73.8722
+breastmnist,50 GPT-4,16,7,Visual only,79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,Visual only,80.1282,77.5352,81.8922
+breastmnist,50 GPT-4,16,9,Visual only,73.0769,70.2614,74.8120
+breastmnist,50 GPT-4,16,0,Fixed eta 0.5,67.3077,64.6196,69.3609
+breastmnist,50 GPT-4,16,1,Fixed eta 0.5,67.9487,65.9270,72.0551
+breastmnist,50 GPT-4,16,2,Fixed eta 0.5,64.7436,62.6421,68.3584
+breastmnist,50 GPT-4,16,3,Fixed eta 0.5,71.1538,69.0135,75.0000
+breastmnist,50 GPT-4,16,4,Fixed eta 0.5,63.4615,62.1536,69.7368
+breastmnist,50 GPT-4,16,5,Fixed eta 0.5,64.7436,63.2941,70.6140
+breastmnist,50 GPT-4,16,6,Fixed eta 0.5,73.7179,71.5569,77.5063
+breastmnist,50 GPT-4,16,7,Fixed eta 0.5,73.7179,70.5728,74.4987
+breastmnist,50 GPT-4,16,8,Fixed eta 0.5,78.8462,76.0858,80.2632
+breastmnist,50 GPT-4,16,9,Fixed eta 0.5,71.1538,69.2308,75.7519
+breastmnist,50 GPT-4,16,0,PARA,71.1538,67.7019,71.2406
+breastmnist,50 GPT-4,16,1,PARA,71.7949,69.1089,73.9348
+breastmnist,50 GPT-4,16,2,PARA,67.3077,62.6672,64.8496
+breastmnist,50 GPT-4,16,3,PARA,75.0000,72.5042,77.6316
+breastmnist,50 GPT-4,16,4,PARA,62.1795,61.0116,68.8596
+breastmnist,50 GPT-4,16,5,PARA,65.3846,63.2011,68.7970
+breastmnist,50 GPT-4,16,6,PARA,75.0000,71.1481,73.8722
+breastmnist,50 GPT-4,16,7,PARA,79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,PARA,80.1282,77.5352,81.8922
+breastmnist,50 GPT-4,16,9,PARA,73.0769,70.2614,74.8120
+breastmnist,50 GPT-4,16,0,Shot-only eta,71.1538,67.7019,71.2406
+breastmnist,50 GPT-4,16,1,Shot-only eta,71.7949,69.1089,73.9348
+breastmnist,50 GPT-4,16,2,Shot-only eta,67.3077,62.6672,64.8496
+breastmnist,50 GPT-4,16,3,Shot-only eta,75.0000,72.5042,77.6316
+breastmnist,50 GPT-4,16,4,Shot-only eta,62.1795,61.0116,68.8596
+breastmnist,50 GPT-4,16,5,Shot-only eta,65.3846,63.2011,68.7970
+breastmnist,50 GPT-4,16,6,Shot-only eta,75.0000,71.1481,73.8722
+breastmnist,50 GPT-4,16,7,Shot-only eta,79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,Shot-only eta,80.1282,77.5352,81.8922
+breastmnist,50 GPT-4,16,9,Shot-only eta,73.0769,70.2614,74.8120
+breastmnist,50 GPT-4,16,0,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,1,PARA centered eta,71.7949,69.1089,73.9348
+breastmnist,50 GPT-4,16,2,PARA centered eta,67.3077,62.6672,64.8496
+breastmnist,50 GPT-4,16,3,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,4,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,5,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,6,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,7,PARA centered eta,79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,9,PARA centered eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,0,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,1,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,2,Reliability eta,67.3077,62.6672,64.8496
+breastmnist,50 GPT-4,16,3,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,4,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,5,Reliability eta,65.3846,63.2011,68.7970
+breastmnist,50 GPT-4,16,6,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,7,Reliability eta,79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,9,Reliability eta,71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,0,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,1,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,2,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,3,Oracle by Acc (cheat),75.0000,72.5042,77.6316
+breastmnist,50 GPT-4,16,4,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,5,Oracle by Acc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,6,Oracle by Acc (cheat),75.0000,71.1481,73.8722
+breastmnist,50 GPT-4,16,7,Oracle by Acc (cheat),79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,Oracle by Acc (cheat),80.1282,77.5352,81.8922
+breastmnist,50 GPT-4,16,9,Oracle by Acc (cheat),73.0769,70.2614,74.8120
+breastmnist,50 GPT-4,16,0,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,1,Oracle by F1 (cheat),71.7949,69.1089,73.9348
+breastmnist,50 GPT-4,16,2,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,3,Oracle by F1 (cheat),75.0000,72.5042,77.6316
+breastmnist,50 GPT-4,16,4,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,5,Oracle by F1 (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,6,Oracle by F1 (cheat),73.7179,71.5569,77.5063
+breastmnist,50 GPT-4,16,7,Oracle by F1 (cheat),79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,Oracle by F1 (cheat),80.1282,77.5352,81.8922
+breastmnist,50 GPT-4,16,9,Oracle by F1 (cheat),73.0769,70.2614,74.8120
+breastmnist,50 GPT-4,16,0,Oracle by BAcc (cheat),71.1538,67.7019,71.2406
+breastmnist,50 GPT-4,16,1,Oracle by BAcc (cheat),71.7949,69.1089,73.9348
+breastmnist,50 GPT-4,16,2,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,3,Oracle by BAcc (cheat),75.0000,72.5042,77.6316
+breastmnist,50 GPT-4,16,4,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,5,Oracle by BAcc (cheat),71.7949,67.9552,70.9273
+breastmnist,50 GPT-4,16,6,Oracle by BAcc (cheat),73.7179,71.5569,77.5063
+breastmnist,50 GPT-4,16,7,Oracle by BAcc (cheat),79.4872,75.6393,77.6942
+breastmnist,50 GPT-4,16,8,Oracle by BAcc (cheat),80.1282,77.5352,81.8922
+breastmnist,50 GPT-4,16,9,Oracle by BAcc (cheat),71.1538,69.2308,75.7519

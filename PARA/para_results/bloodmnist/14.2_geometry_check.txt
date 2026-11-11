@@ -1,0 +1,31 @@
+# bloodmnist | config 959a299066 | 2026-11-12 01:08:12
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+basophil                               0.536      0.535         0.523        False   15.48
+eosinophil                             0.528      0.522         0.509        False   15.39
+erythroblast                           0.509      0.522         0.503        False   15.25
+immature granulocytes(myelocytes,      0.548      0.529         0.522        False   15.33
+lymphocyte                             0.520      0.524         0.507        False   15.52
+monocyte                               0.517      0.531         0.517        False   15.37
+neutrophil                             0.509      0.532         0.515         True   15.57
+platelet                               0.522      0.524         0.500        False   15.55
+-> own-text delta 0.524 vs other-text delta 0.527 (gap +0.004); images closest to their own text for 1/8 classes
+-> phi: real classes 15.43 (max possible 16) | random natural mix 15.23 | random uniform over classes 15.16
+-> mean cosine between support images: same class 0.962 | different class 0.945
+-> eta(S) = 0.801
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+basophil                               0.927      1.021         0.881        False    6.23
+eosinophil                             0.989      1.027         0.773        False    5.52
+erythroblast                           0.917      1.004         0.826        False    5.53
+immature granulocytes(myelocytes,      0.904      1.029         0.831        False    2.77
+lymphocyte                             1.060      0.978         0.817        False    4.61
+monocyte                               0.983      1.000         0.879        False    4.00
+neutrophil                             0.810      1.019         0.859         True    4.87
+platelet                               0.818      1.001         0.774        False    9.21
+-> own-text delta 0.926 vs other-text delta 1.010 (gap +0.084); images closest to their own text for 1/8 classes
+-> phi: real classes 5.34 (max possible 16) | random natural mix 1.12 | random uniform over classes 0.94
+-> mean cosine between support images: same class 0.289 | different class -0.036
+-> eta(S) = 0.737

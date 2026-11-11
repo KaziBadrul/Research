@@ -1,0 +1,19 @@
+# pneumoniamnist | config d5009332c7 | 2026-11-12 00:39:15
+
+######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+normal                                 0.518      0.570         0.570         True   14.79
+pneumonia                              0.583      0.567         0.567        False   14.16
+-> own-text delta 0.551 vs other-text delta 0.569 (gap +0.018); images closest to their own text for 1/2 classes
+-> phi: real classes 14.47 (max possible 16) | random natural mix 14.18 | random uniform over classes 14.38
+-> mean cosine between support images: same class 0.898 | different class 0.864
+-> eta(S) = 0.799
+
+######## CENTERED space (candidate fix) | K=16, draw 0 ########
+class                              delta own mean other nearest other own closest?     phi
+normal                                 0.763      1.237         1.237         True    5.01
+pneumonia                              0.978      1.022         1.022         True    1.73
+-> own-text delta 0.870 vs other-text delta 1.130 (gap +0.259); images closest to their own text for 2/2 classes
+-> phi: real classes 3.37 (max possible 16) | random natural mix 1.08 | random uniform over classes 1.74
+-> mean cosine between support images: same class 0.158 | different class -0.134
+-> eta(S) = 0.639

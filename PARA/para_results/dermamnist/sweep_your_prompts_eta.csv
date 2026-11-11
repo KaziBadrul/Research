@@ -1,0 +1,271 @@
+dataset,prompts,K,draw,quantity,value
+dermamnist,your prompts,1,0,centered,0.40989
+dermamnist,your prompts,1,1,centered,0.42971
+dermamnist,your prompts,1,2,centered,0.44126
+dermamnist,your prompts,1,3,centered,0.43168
+dermamnist,your prompts,1,4,centered,0.42276
+dermamnist,your prompts,1,5,centered,0.41693
+dermamnist,your prompts,1,6,centered,0.42731
+dermamnist,your prompts,1,7,centered,0.43787
+dermamnist,your prompts,1,8,centered,0.41148
+dermamnist,your prompts,1,9,centered,0.43344
+dermamnist,your prompts,1,0,eta(S),0.31879
+dermamnist,your prompts,1,1,eta(S),0.31824
+dermamnist,your prompts,1,2,eta(S),0.32172
+dermamnist,your prompts,1,3,eta(S),0.31570
+dermamnist,your prompts,1,4,eta(S),0.31646
+dermamnist,your prompts,1,5,eta(S),0.31901
+dermamnist,your prompts,1,6,eta(S),0.31829
+dermamnist,your prompts,1,7,eta(S),0.32023
+dermamnist,your prompts,1,8,eta(S),0.31216
+dermamnist,your prompts,1,9,eta(S),0.31967
+dermamnist,your prompts,1,0,oracle Acc,0.02500
+dermamnist,your prompts,1,1,oracle Acc,0.67500
+dermamnist,your prompts,1,2,oracle Acc,0.62500
+dermamnist,your prompts,1,3,oracle Acc,0.25000
+dermamnist,your prompts,1,4,oracle Acc,0.00000
+dermamnist,your prompts,1,5,oracle Acc,0.97500
+dermamnist,your prompts,1,6,oracle Acc,0.75000
+dermamnist,your prompts,1,7,oracle Acc,0.00000
+dermamnist,your prompts,1,8,oracle Acc,0.07500
+dermamnist,your prompts,1,9,oracle Acc,0.20000
+dermamnist,your prompts,1,0,oracle BAcc,0.72500
+dermamnist,your prompts,1,1,oracle BAcc,0.75000
+dermamnist,your prompts,1,2,oracle BAcc,0.47500
+dermamnist,your prompts,1,3,oracle BAcc,0.85000
+dermamnist,your prompts,1,4,oracle BAcc,0.00000
+dermamnist,your prompts,1,5,oracle BAcc,0.92500
+dermamnist,your prompts,1,6,oracle BAcc,0.80000
+dermamnist,your prompts,1,7,oracle BAcc,0.85000
+dermamnist,your prompts,1,8,oracle BAcc,0.45000
+dermamnist,your prompts,1,9,oracle BAcc,0.85000
+dermamnist,your prompts,1,0,oracle F1,0.67500
+dermamnist,your prompts,1,1,oracle F1,0.72500
+dermamnist,your prompts,1,2,oracle F1,0.72500
+dermamnist,your prompts,1,3,oracle F1,0.80000
+dermamnist,your prompts,1,4,oracle F1,0.10000
+dermamnist,your prompts,1,5,oracle F1,0.80000
+dermamnist,your prompts,1,6,oracle F1,0.57500
+dermamnist,your prompts,1,7,oracle F1,0.50000
+dermamnist,your prompts,1,8,oracle F1,0.57500
+dermamnist,your prompts,1,9,oracle F1,0.65000
+dermamnist,your prompts,1,0,r_anchor,0.12790
+dermamnist,your prompts,1,1,r_anchor,0.10714
+dermamnist,your prompts,1,2,r_anchor,0.04665
+dermamnist,your prompts,1,3,r_anchor,0.02010
+dermamnist,your prompts,1,4,r_anchor,0.16818
+dermamnist,your prompts,1,5,r_anchor,0.21530
+dermamnist,your prompts,1,6,r_anchor,0.07233
+dermamnist,your prompts,1,7,r_anchor,0.02959
+dermamnist,your prompts,1,8,r_anchor,0.15463
+dermamnist,your prompts,1,9,r_anchor,0.06285
+dermamnist,your prompts,1,0,r_visual,0.00000
+dermamnist,your prompts,1,1,r_visual,0.00000
+dermamnist,your prompts,1,2,r_visual,0.00000
+dermamnist,your prompts,1,3,r_visual,0.00000
+dermamnist,your prompts,1,4,r_visual,0.00000
+dermamnist,your prompts,1,5,r_visual,0.00000
+dermamnist,your prompts,1,6,r_visual,0.00000
+dermamnist,your prompts,1,7,r_visual,0.00000
+dermamnist,your prompts,1,8,r_visual,0.00000
+dermamnist,your prompts,1,9,r_visual,0.00000
+dermamnist,your prompts,1,0,reliability,0.27447
+dermamnist,your prompts,1,1,reliability,0.29303
+dermamnist,your prompts,1,2,reliability,0.36488
+dermamnist,your prompts,1,3,reliability,0.40891
+dermamnist,your prompts,1,4,reliability,0.24445
+dermamnist,your prompts,1,5,reliability,0.21671
+dermamnist,your prompts,1,6,reliability,0.33048
+dermamnist,your prompts,1,7,reliability,0.39200
+dermamnist,your prompts,1,8,reliability,0.25379
+dermamnist,your prompts,1,9,reliability,0.34240
+dermamnist,your prompts,1,0,shot-only,0.45000
+dermamnist,your prompts,1,1,shot-only,0.45000
+dermamnist,your prompts,1,2,shot-only,0.45000
+dermamnist,your prompts,1,3,shot-only,0.45000
+dermamnist,your prompts,1,4,shot-only,0.45000
+dermamnist,your prompts,1,5,shot-only,0.45000
+dermamnist,your prompts,1,6,shot-only,0.45000
+dermamnist,your prompts,1,7,shot-only,0.45000
+dermamnist,your prompts,1,8,shot-only,0.45000
+dermamnist,your prompts,1,9,shot-only,0.45000
+dermamnist,your prompts,4,0,centered,0.49138
+dermamnist,your prompts,4,1,centered,0.48934
+dermamnist,your prompts,4,2,centered,0.48403
+dermamnist,your prompts,4,3,centered,0.50487
+dermamnist,your prompts,4,4,centered,0.47541
+dermamnist,your prompts,4,5,centered,0.47353
+dermamnist,your prompts,4,6,centered,0.47787
+dermamnist,your prompts,4,7,centered,0.49354
+dermamnist,your prompts,4,8,centered,0.52978
+dermamnist,your prompts,4,9,centered,0.49851
+dermamnist,your prompts,4,0,eta(S),0.58741
+dermamnist,your prompts,4,1,eta(S),0.58563
+dermamnist,your prompts,4,2,eta(S),0.59014
+dermamnist,your prompts,4,3,eta(S),0.58661
+dermamnist,your prompts,4,4,eta(S),0.59107
+dermamnist,your prompts,4,5,eta(S),0.58813
+dermamnist,your prompts,4,6,eta(S),0.58457
+dermamnist,your prompts,4,7,eta(S),0.59012
+dermamnist,your prompts,4,8,eta(S),0.59366
+dermamnist,your prompts,4,9,eta(S),0.59234
+dermamnist,your prompts,4,0,oracle Acc,0.85000
+dermamnist,your prompts,4,1,oracle Acc,0.75000
+dermamnist,your prompts,4,2,oracle Acc,0.65000
+dermamnist,your prompts,4,3,oracle Acc,0.97500
+dermamnist,your prompts,4,4,oracle Acc,0.62500
+dermamnist,your prompts,4,5,oracle Acc,0.62500
+dermamnist,your prompts,4,6,oracle Acc,0.97500
+dermamnist,your prompts,4,7,oracle Acc,0.62500
+dermamnist,your prompts,4,8,oracle Acc,0.77500
+dermamnist,your prompts,4,9,oracle Acc,0.40000
+dermamnist,your prompts,4,0,oracle BAcc,0.82500
+dermamnist,your prompts,4,1,oracle BAcc,0.75000
+dermamnist,your prompts,4,2,oracle BAcc,0.87500
+dermamnist,your prompts,4,3,oracle BAcc,0.95000
+dermamnist,your prompts,4,4,oracle BAcc,0.72500
+dermamnist,your prompts,4,5,oracle BAcc,0.62500
+dermamnist,your prompts,4,6,oracle BAcc,0.97500
+dermamnist,your prompts,4,7,oracle BAcc,0.60000
+dermamnist,your prompts,4,8,oracle BAcc,0.85000
+dermamnist,your prompts,4,9,oracle BAcc,0.72500
+dermamnist,your prompts,4,0,oracle F1,0.82500
+dermamnist,your prompts,4,1,oracle F1,0.75000
+dermamnist,your prompts,4,2,oracle F1,0.87500
+dermamnist,your prompts,4,3,oracle F1,0.82500
+dermamnist,your prompts,4,4,oracle F1,0.72500
+dermamnist,your prompts,4,5,oracle F1,0.62500
+dermamnist,your prompts,4,6,oracle F1,0.97500
+dermamnist,your prompts,4,7,oracle F1,0.60000
+dermamnist,your prompts,4,8,oracle F1,0.65000
+dermamnist,your prompts,4,9,oracle F1,0.55000
+dermamnist,your prompts,4,0,r_anchor,0.06833
+dermamnist,your prompts,4,1,r_anchor,0.10180
+dermamnist,your prompts,4,2,r_anchor,0.12698
+dermamnist,your prompts,4,3,r_anchor,0.06734
+dermamnist,your prompts,4,4,r_anchor,0.05252
+dermamnist,your prompts,4,5,r_anchor,0.10925
+dermamnist,your prompts,4,6,r_anchor,0.09153
+dermamnist,your prompts,4,7,r_anchor,0.10846
+dermamnist,your prompts,4,8,r_anchor,0.04031
+dermamnist,your prompts,4,9,r_anchor,0.07586
+dermamnist,your prompts,4,0,r_visual,0.12413
+dermamnist,your prompts,4,1,r_visual,0.11629
+dermamnist,your prompts,4,2,r_visual,0.17463
+dermamnist,your prompts,4,3,r_visual,0.11345
+dermamnist,your prompts,4,4,r_visual,0.01611
+dermamnist,your prompts,4,5,r_visual,0.08896
+dermamnist,your prompts,4,6,r_visual,0.11136
+dermamnist,your prompts,4,7,r_visual,0.21056
+dermamnist,your prompts,4,8,r_visual,0.22502
+dermamnist,your prompts,4,9,r_visual,0.23507
+dermamnist,your prompts,4,0,reliability,0.51399
+dermamnist,your prompts,4,1,reliability,0.46559
+dermamnist,your prompts,4,2,reliability,0.49275
+dermamnist,your prompts,4,3,reliability,0.50449
+dermamnist,your prompts,4,4,reliability,0.38900
+dermamnist,your prompts,4,5,reliability,0.42708
+dermamnist,your prompts,4,6,reliability,0.47215
+dermamnist,your prompts,4,7,reliability,0.53852
+dermamnist,your prompts,4,8,reliability,0.62862
+dermamnist,your prompts,4,9,reliability,0.59022
+dermamnist,your prompts,4,0,shot-only,0.72000
+dermamnist,your prompts,4,1,shot-only,0.72000
+dermamnist,your prompts,4,2,shot-only,0.72000
+dermamnist,your prompts,4,3,shot-only,0.72000
+dermamnist,your prompts,4,4,shot-only,0.72000
+dermamnist,your prompts,4,5,shot-only,0.72000
+dermamnist,your prompts,4,6,shot-only,0.72000
+dermamnist,your prompts,4,7,shot-only,0.72000
+dermamnist,your prompts,4,8,shot-only,0.72000
+dermamnist,your prompts,4,9,shot-only,0.72000
+dermamnist,your prompts,16,0,centered,0.65843
+dermamnist,your prompts,16,1,centered,0.64492
+dermamnist,your prompts,16,2,centered,0.63073
+dermamnist,your prompts,16,3,centered,0.61401
+dermamnist,your prompts,16,4,centered,0.64372
+dermamnist,your prompts,16,5,centered,0.63134
+dermamnist,your prompts,16,6,centered,0.62023
+dermamnist,your prompts,16,7,centered,0.64683
+dermamnist,your prompts,16,8,centered,0.63863
+dermamnist,your prompts,16,9,centered,0.64831
+dermamnist,your prompts,16,0,eta(S),0.79357
+dermamnist,your prompts,16,1,eta(S),0.79259
+dermamnist,your prompts,16,2,eta(S),0.79065
+dermamnist,your prompts,16,3,eta(S),0.79252
+dermamnist,your prompts,16,4,eta(S),0.79282
+dermamnist,your prompts,16,5,eta(S),0.79307
+dermamnist,your prompts,16,6,eta(S),0.79137
+dermamnist,your prompts,16,7,eta(S),0.79196
+dermamnist,your prompts,16,8,eta(S),0.79248
+dermamnist,your prompts,16,9,eta(S),0.79353
+dermamnist,your prompts,16,0,oracle Acc,0.87500
+dermamnist,your prompts,16,1,oracle Acc,0.80000
+dermamnist,your prompts,16,2,oracle Acc,0.95000
+dermamnist,your prompts,16,3,oracle Acc,0.95000
+dermamnist,your prompts,16,4,oracle Acc,0.70000
+dermamnist,your prompts,16,5,oracle Acc,0.80000
+dermamnist,your prompts,16,6,oracle Acc,0.82500
+dermamnist,your prompts,16,7,oracle Acc,0.80000
+dermamnist,your prompts,16,8,oracle Acc,0.85000
+dermamnist,your prompts,16,9,oracle Acc,1.00000
+dermamnist,your prompts,16,0,oracle BAcc,0.75000
+dermamnist,your prompts,16,1,oracle BAcc,0.85000
+dermamnist,your prompts,16,2,oracle BAcc,0.95000
+dermamnist,your prompts,16,3,oracle BAcc,0.92500
+dermamnist,your prompts,16,4,oracle BAcc,0.97500
+dermamnist,your prompts,16,5,oracle BAcc,0.80000
+dermamnist,your prompts,16,6,oracle BAcc,0.77500
+dermamnist,your prompts,16,7,oracle BAcc,0.85000
+dermamnist,your prompts,16,8,oracle BAcc,0.90000
+dermamnist,your prompts,16,9,oracle BAcc,1.00000
+dermamnist,your prompts,16,0,oracle F1,0.75000
+dermamnist,your prompts,16,1,oracle F1,0.85000
+dermamnist,your prompts,16,2,oracle F1,0.77500
+dermamnist,your prompts,16,3,oracle F1,0.92500
+dermamnist,your prompts,16,4,oracle F1,0.80000
+dermamnist,your prompts,16,5,oracle F1,0.80000
+dermamnist,your prompts,16,6,oracle F1,0.77500
+dermamnist,your prompts,16,7,oracle F1,0.80000
+dermamnist,your prompts,16,8,oracle F1,0.90000
+dermamnist,your prompts,16,9,oracle F1,0.82500
+dermamnist,your prompts,16,0,r_anchor,0.06628
+dermamnist,your prompts,16,1,r_anchor,0.07856
+dermamnist,your prompts,16,2,r_anchor,0.10155
+dermamnist,your prompts,16,3,r_anchor,0.05253
+dermamnist,your prompts,16,4,r_anchor,0.08450
+dermamnist,your prompts,16,5,r_anchor,0.08329
+dermamnist,your prompts,16,6,r_anchor,0.09708
+dermamnist,your prompts,16,7,r_anchor,0.07436
+dermamnist,your prompts,16,8,r_anchor,0.08102
+dermamnist,your prompts,16,9,r_anchor,0.06203
+dermamnist,your prompts,16,0,r_visual,0.25001
+dermamnist,your prompts,16,1,r_visual,0.27399
+dermamnist,your prompts,16,2,r_visual,0.28952
+dermamnist,your prompts,16,3,r_visual,0.23375
+dermamnist,your prompts,16,4,r_visual,0.31564
+dermamnist,your prompts,16,5,r_visual,0.28526
+dermamnist,your prompts,16,6,r_visual,0.27856
+dermamnist,your prompts,16,7,r_visual,0.27956
+dermamnist,your prompts,16,8,r_visual,0.26440
+dermamnist,your prompts,16,9,r_visual,0.24944
+dermamnist,your prompts,16,0,reliability,0.61014
+dermamnist,your prompts,16,1,reliability,0.60916
+dermamnist,your prompts,16,2,reliability,0.59311
+dermamnist,your prompts,16,3,reliability,0.61770
+dermamnist,your prompts,16,4,reliability,0.62331
+dermamnist,your prompts,16,5,reliability,0.60986
+dermamnist,your prompts,16,6,reliability,0.59186
+dermamnist,your prompts,16,7,reliability,0.61671
+dermamnist,your prompts,16,8,reliability,0.60130
+dermamnist,your prompts,16,9,reliability,0.61488
+dermamnist,your prompts,16,0,shot-only,0.84706
+dermamnist,your prompts,16,1,shot-only,0.84706
+dermamnist,your prompts,16,2,shot-only,0.84706
+dermamnist,your prompts,16,3,shot-only,0.84706
+dermamnist,your prompts,16,4,shot-only,0.84706
+dermamnist,your prompts,16,5,shot-only,0.84706
+dermamnist,your prompts,16,6,shot-only,0.84706
+dermamnist,your prompts,16,7,shot-only,0.84706
+dermamnist,your prompts,16,8,shot-only,0.84706
+dermamnist,your prompts,16,9,shot-only,0.84706

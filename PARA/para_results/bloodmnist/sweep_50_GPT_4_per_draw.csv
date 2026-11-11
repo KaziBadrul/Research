@@ -1,0 +1,301 @@
+dataset,prompts,K,draw,method,acc,macro_f1,bacc
+bloodmnist,50 GPT-4,1,0,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,1,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,2,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,3,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,4,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,5,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,6,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,7,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,8,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,9,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,1,0,Visual only,62.1000,57.1813,58.9480
+bloodmnist,50 GPT-4,1,1,Visual only,59.6500,52.9611,57.6532
+bloodmnist,50 GPT-4,1,2,Visual only,58.5500,47.9270,50.9207
+bloodmnist,50 GPT-4,1,3,Visual only,66.7000,60.0037,61.1955
+bloodmnist,50 GPT-4,1,4,Visual only,64.4500,58.4692,60.6369
+bloodmnist,50 GPT-4,1,5,Visual only,60.9500,53.4687,53.3573
+bloodmnist,50 GPT-4,1,6,Visual only,67.5500,61.2964,66.6939
+bloodmnist,50 GPT-4,1,7,Visual only,53.8000,49.1849,53.7725
+bloodmnist,50 GPT-4,1,8,Visual only,63.1000,61.0955,61.6441
+bloodmnist,50 GPT-4,1,9,Visual only,57.8000,51.7486,56.0547
+bloodmnist,50 GPT-4,1,0,Fixed eta 0.5,46.2500,40.0462,44.7967
+bloodmnist,50 GPT-4,1,1,Fixed eta 0.5,47.5500,38.5849,45.9183
+bloodmnist,50 GPT-4,1,2,Fixed eta 0.5,43.2000,32.5796,36.7177
+bloodmnist,50 GPT-4,1,3,Fixed eta 0.5,53.2000,43.4493,48.4056
+bloodmnist,50 GPT-4,1,4,Fixed eta 0.5,50.7000,44.4473,47.2974
+bloodmnist,50 GPT-4,1,5,Fixed eta 0.5,50.7000,43.2262,44.0395
+bloodmnist,50 GPT-4,1,6,Fixed eta 0.5,49.6000,42.9231,49.9311
+bloodmnist,50 GPT-4,1,7,Fixed eta 0.5,39.6500,33.0197,39.2260
+bloodmnist,50 GPT-4,1,8,Fixed eta 0.5,52.5000,47.4647,51.7691
+bloodmnist,50 GPT-4,1,9,Fixed eta 0.5,50.1500,40.9257,48.6809
+bloodmnist,50 GPT-4,1,0,PARA,38.8500,31.3843,37.6258
+bloodmnist,50 GPT-4,1,1,PARA,45.2000,36.0264,42.4668
+bloodmnist,50 GPT-4,1,2,PARA,34.8000,25.0808,28.7861
+bloodmnist,50 GPT-4,1,3,PARA,48.3500,37.7717,43.7846
+bloodmnist,50 GPT-4,1,4,PARA,42.2500,36.1717,37.8174
+bloodmnist,50 GPT-4,1,5,PARA,41.4500,35.6838,35.6387
+bloodmnist,50 GPT-4,1,6,PARA,41.5000,35.6565,41.8323
+bloodmnist,50 GPT-4,1,7,PARA,33.5500,25.6197,31.9702
+bloodmnist,50 GPT-4,1,8,PARA,45.1500,38.7606,43.5504
+bloodmnist,50 GPT-4,1,9,PARA,43.5500,34.9021,41.9327
+bloodmnist,50 GPT-4,1,0,Shot-only eta,44.8000,38.5431,43.3838
+bloodmnist,50 GPT-4,1,1,Shot-only eta,47.6000,38.4976,45.6403
+bloodmnist,50 GPT-4,1,2,Shot-only eta,41.5500,31.3150,35.2046
+bloodmnist,50 GPT-4,1,3,Shot-only eta,52.9000,43.1622,48.0991
+bloodmnist,50 GPT-4,1,4,Shot-only eta,48.5000,42.4681,44.6537
+bloodmnist,50 GPT-4,1,5,Shot-only eta,49.2500,42.1030,42.6218
+bloodmnist,50 GPT-4,1,6,Shot-only eta,48.4000,42.0941,48.7589
+bloodmnist,50 GPT-4,1,7,Shot-only eta,38.2000,31.3544,37.4222
+bloodmnist,50 GPT-4,1,8,Shot-only eta,51.3500,46.0540,50.5675
+bloodmnist,50 GPT-4,1,9,Shot-only eta,49.8000,40.6990,48.2566
+bloodmnist,50 GPT-4,1,0,PARA centered eta,44.8000,38.5406,43.3838
+bloodmnist,50 GPT-4,1,1,PARA centered eta,47.6500,38.5596,45.6701
+bloodmnist,50 GPT-4,1,2,PARA centered eta,41.1000,30.9915,34.8827
+bloodmnist,50 GPT-4,1,3,PARA centered eta,52.6000,42.9501,47.9520
+bloodmnist,50 GPT-4,1,4,PARA centered eta,47.9500,41.9313,44.0826
+bloodmnist,50 GPT-4,1,5,PARA centered eta,49.0000,42.1963,42.5848
+bloodmnist,50 GPT-4,1,6,PARA centered eta,47.7000,41.5438,48.0914
+bloodmnist,50 GPT-4,1,7,PARA centered eta,37.5000,30.5358,36.5931
+bloodmnist,50 GPT-4,1,8,PARA centered eta,51.2500,45.9808,50.5585
+bloodmnist,50 GPT-4,1,9,PARA centered eta,48.9500,40.1841,47.4780
+bloodmnist,50 GPT-4,1,0,Reliability eta,44.8000,38.5431,43.3838
+bloodmnist,50 GPT-4,1,1,Reliability eta,46.2000,37.0615,43.7477
+bloodmnist,50 GPT-4,1,2,Reliability eta,39.2500,29.3015,32.9564
+bloodmnist,50 GPT-4,1,3,Reliability eta,50.4500,40.1872,45.5103
+bloodmnist,50 GPT-4,1,4,Reliability eta,43.8000,37.7741,39.4036
+bloodmnist,50 GPT-4,1,5,Reliability eta,48.9000,42.2826,42.5470
+bloodmnist,50 GPT-4,1,6,Reliability eta,41.8000,35.9241,42.0892
+bloodmnist,50 GPT-4,1,7,Reliability eta,36.6500,29.4116,35.4303
+bloodmnist,50 GPT-4,1,8,Reliability eta,50.1500,44.7811,49.4187
+bloodmnist,50 GPT-4,1,9,Reliability eta,46.6000,37.7428,45.0197
+bloodmnist,50 GPT-4,1,0,Oracle by Acc (cheat),62.1000,57.1813,58.9480
+bloodmnist,50 GPT-4,1,1,Oracle by Acc (cheat),59.7000,53.0545,57.7421
+bloodmnist,50 GPT-4,1,2,Oracle by Acc (cheat),59.5500,49.0813,51.9647
+bloodmnist,50 GPT-4,1,3,Oracle by Acc (cheat),66.7500,60.0472,61.1620
+bloodmnist,50 GPT-4,1,4,Oracle by Acc (cheat),64.6000,58.6913,60.7979
+bloodmnist,50 GPT-4,1,5,Oracle by Acc (cheat),60.9500,53.4687,53.3573
+bloodmnist,50 GPT-4,1,6,Oracle by Acc (cheat),67.7500,61.7757,66.8900
+bloodmnist,50 GPT-4,1,7,Oracle by Acc (cheat),53.8000,49.1849,53.7725
+bloodmnist,50 GPT-4,1,8,Oracle by Acc (cheat),63.1000,61.0955,61.6441
+bloodmnist,50 GPT-4,1,9,Oracle by Acc (cheat),58.0000,51.9506,56.2716
+bloodmnist,50 GPT-4,1,0,Oracle by F1 (cheat),62.1000,57.1813,58.9480
+bloodmnist,50 GPT-4,1,1,Oracle by F1 (cheat),59.7000,53.0545,57.7421
+bloodmnist,50 GPT-4,1,2,Oracle by F1 (cheat),59.4000,49.1363,51.8315
+bloodmnist,50 GPT-4,1,3,Oracle by F1 (cheat),66.7500,60.0472,61.1620
+bloodmnist,50 GPT-4,1,4,Oracle by F1 (cheat),64.6000,58.6913,60.7979
+bloodmnist,50 GPT-4,1,5,Oracle by F1 (cheat),60.9000,53.5780,53.3663
+bloodmnist,50 GPT-4,1,6,Oracle by F1 (cheat),67.7500,61.7757,66.8900
+bloodmnist,50 GPT-4,1,7,Oracle by F1 (cheat),53.8000,49.1849,53.7725
+bloodmnist,50 GPT-4,1,8,Oracle by F1 (cheat),63.1000,61.0955,61.6441
+bloodmnist,50 GPT-4,1,9,Oracle by F1 (cheat),57.9500,52.0544,56.2762
+bloodmnist,50 GPT-4,1,0,Oracle by BAcc (cheat),62.1000,57.1813,58.9480
+bloodmnist,50 GPT-4,1,1,Oracle by BAcc (cheat),59.7000,53.0545,57.7421
+bloodmnist,50 GPT-4,1,2,Oracle by BAcc (cheat),59.5500,49.0813,51.9647
+bloodmnist,50 GPT-4,1,3,Oracle by BAcc (cheat),66.7000,60.0037,61.1955
+bloodmnist,50 GPT-4,1,4,Oracle by BAcc (cheat),64.6000,58.6913,60.7979
+bloodmnist,50 GPT-4,1,5,Oracle by BAcc (cheat),60.9000,53.5780,53.3663
+bloodmnist,50 GPT-4,1,6,Oracle by BAcc (cheat),67.7500,61.6328,66.9162
+bloodmnist,50 GPT-4,1,7,Oracle by BAcc (cheat),53.8000,49.1849,53.7725
+bloodmnist,50 GPT-4,1,8,Oracle by BAcc (cheat),63.1000,61.0955,61.6441
+bloodmnist,50 GPT-4,1,9,Oracle by BAcc (cheat),57.9500,52.0544,56.2762
+bloodmnist,50 GPT-4,4,0,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,1,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,2,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,3,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,4,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,5,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,6,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,7,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,8,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,9,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,4,0,Visual only,83.5000,81.5274,83.4779
+bloodmnist,50 GPT-4,4,1,Visual only,87.5000,85.7941,87.9969
+bloodmnist,50 GPT-4,4,2,Visual only,86.1500,83.2049,84.3090
+bloodmnist,50 GPT-4,4,3,Visual only,80.0000,77.5223,79.3434
+bloodmnist,50 GPT-4,4,4,Visual only,80.4000,75.7133,76.7020
+bloodmnist,50 GPT-4,4,5,Visual only,85.1500,83.6962,85.4581
+bloodmnist,50 GPT-4,4,6,Visual only,85.3000,83.4952,84.0741
+bloodmnist,50 GPT-4,4,7,Visual only,82.8000,80.8180,81.3736
+bloodmnist,50 GPT-4,4,8,Visual only,85.9500,83.7725,83.9443
+bloodmnist,50 GPT-4,4,9,Visual only,83.0500,80.8958,82.7265
+bloodmnist,50 GPT-4,4,0,Fixed eta 0.5,65.2500,60.4274,64.9085
+bloodmnist,50 GPT-4,4,1,Fixed eta 0.5,68.6000,65.5378,70.1313
+bloodmnist,50 GPT-4,4,2,Fixed eta 0.5,67.2500,65.0892,67.6450
+bloodmnist,50 GPT-4,4,3,Fixed eta 0.5,59.7000,56.3905,60.1753
+bloodmnist,50 GPT-4,4,4,Fixed eta 0.5,63.2000,57.6695,61.3781
+bloodmnist,50 GPT-4,4,5,Fixed eta 0.5,68.8000,63.6102,69.8140
+bloodmnist,50 GPT-4,4,6,Fixed eta 0.5,67.1000,63.1304,66.1774
+bloodmnist,50 GPT-4,4,7,Fixed eta 0.5,66.5000,63.6152,66.1738
+bloodmnist,50 GPT-4,4,8,Fixed eta 0.5,68.0000,64.7396,67.5702
+bloodmnist,50 GPT-4,4,9,Fixed eta 0.5,65.0500,59.9482,64.7993
+bloodmnist,50 GPT-4,4,0,PARA,68.1000,63.0841,68.5115
+bloodmnist,50 GPT-4,4,1,PARA,71.9000,68.0359,73.4572
+bloodmnist,50 GPT-4,4,2,PARA,71.7000,68.2303,71.7455
+bloodmnist,50 GPT-4,4,3,PARA,62.9000,59.0114,63.6951
+bloodmnist,50 GPT-4,4,4,PARA,65.0000,59.0618,62.8788
+bloodmnist,50 GPT-4,4,5,PARA,70.4000,65.0884,71.8844
+bloodmnist,50 GPT-4,4,6,PARA,69.5000,64.7963,68.8534
+bloodmnist,50 GPT-4,4,7,PARA,69.5000,65.3371,69.4179
+bloodmnist,50 GPT-4,4,8,PARA,70.7000,66.4157,70.1699
+bloodmnist,50 GPT-4,4,9,PARA,67.8000,63.0382,68.3579
+bloodmnist,50 GPT-4,4,0,Shot-only eta,71.0000,67.0366,71.3443
+bloodmnist,50 GPT-4,4,1,Shot-only eta,75.5500,73.1618,76.9935
+bloodmnist,50 GPT-4,4,2,Shot-only eta,72.9500,69.3135,72.7753
+bloodmnist,50 GPT-4,4,3,Shot-only eta,69.9500,68.3478,70.1831
+bloodmnist,50 GPT-4,4,4,Shot-only eta,76.5500,72.9199,73.3466
+bloodmnist,50 GPT-4,4,5,Shot-only eta,76.8000,74.8042,78.0607
+bloodmnist,50 GPT-4,4,6,Shot-only eta,75.2500,73.0869,74.5077
+bloodmnist,50 GPT-4,4,7,Shot-only eta,76.1000,74.2449,75.4775
+bloodmnist,50 GPT-4,4,8,Shot-only eta,75.1000,72.4122,74.1736
+bloodmnist,50 GPT-4,4,9,Shot-only eta,70.0000,65.8441,70.8893
+bloodmnist,50 GPT-4,4,0,PARA centered eta,67.4000,62.4180,67.5666
+bloodmnist,50 GPT-4,4,1,PARA centered eta,71.2000,67.8174,72.8356
+bloodmnist,50 GPT-4,4,2,PARA centered eta,70.2000,67.2725,70.3351
+bloodmnist,50 GPT-4,4,3,PARA centered eta,62.0000,58.3291,62.6596
+bloodmnist,50 GPT-4,4,4,PARA centered eta,64.8500,58.8077,62.7085
+bloodmnist,50 GPT-4,4,5,PARA centered eta,69.1000,63.7826,70.2012
+bloodmnist,50 GPT-4,4,6,PARA centered eta,68.8500,64.3027,68.0933
+bloodmnist,50 GPT-4,4,7,PARA centered eta,68.2500,64.1402,68.0515
+bloodmnist,50 GPT-4,4,8,PARA centered eta,69.4500,65.7162,68.9147
+bloodmnist,50 GPT-4,4,9,PARA centered eta,67.2500,62.5456,67.5798
+bloodmnist,50 GPT-4,4,0,Reliability eta,68.6000,63.6530,69.0098
+bloodmnist,50 GPT-4,4,1,Reliability eta,72.8000,68.8688,74.4587
+bloodmnist,50 GPT-4,4,2,Reliability eta,72.1000,68.2106,72.0740
+bloodmnist,50 GPT-4,4,3,Reliability eta,67.0500,64.9015,67.4946
+bloodmnist,50 GPT-4,4,4,Reliability eta,69.5000,65.9343,67.0958
+bloodmnist,50 GPT-4,4,5,Reliability eta,70.1500,64.8724,71.5437
+bloodmnist,50 GPT-4,4,6,Reliability eta,69.6500,64.9011,69.1054
+bloodmnist,50 GPT-4,4,7,Reliability eta,71.9500,69.0377,71.7541
+bloodmnist,50 GPT-4,4,8,Reliability eta,72.6000,68.9883,71.9223
+bloodmnist,50 GPT-4,4,9,Reliability eta,68.9500,64.4411,69.7266
+bloodmnist,50 GPT-4,4,0,Oracle by Acc (cheat),83.5000,81.5274,83.4779
+bloodmnist,50 GPT-4,4,1,Oracle by Acc (cheat),87.5000,85.7941,87.9969
+bloodmnist,50 GPT-4,4,2,Oracle by Acc (cheat),86.1500,83.2542,84.3416
+bloodmnist,50 GPT-4,4,3,Oracle by Acc (cheat),80.0000,77.5223,79.3434
+bloodmnist,50 GPT-4,4,4,Oracle by Acc (cheat),80.5000,75.7570,76.8412
+bloodmnist,50 GPT-4,4,5,Oracle by Acc (cheat),85.1500,83.6962,85.4581
+bloodmnist,50 GPT-4,4,6,Oracle by Acc (cheat),85.3000,83.5439,84.1154
+bloodmnist,50 GPT-4,4,7,Oracle by Acc (cheat),82.8000,80.8180,81.3736
+bloodmnist,50 GPT-4,4,8,Oracle by Acc (cheat),86.2000,84.0829,84.3131
+bloodmnist,50 GPT-4,4,9,Oracle by Acc (cheat),83.0500,80.8958,82.7265
+bloodmnist,50 GPT-4,4,0,Oracle by F1 (cheat),83.5000,81.5274,83.4779
+bloodmnist,50 GPT-4,4,1,Oracle by F1 (cheat),87.5000,85.7941,87.9969
+bloodmnist,50 GPT-4,4,2,Oracle by F1 (cheat),86.1500,83.2542,84.3416
+bloodmnist,50 GPT-4,4,3,Oracle by F1 (cheat),80.0000,77.5223,79.3434
+bloodmnist,50 GPT-4,4,4,Oracle by F1 (cheat),80.2500,75.7749,76.7176
+bloodmnist,50 GPT-4,4,5,Oracle by F1 (cheat),85.1500,83.6962,85.4581
+bloodmnist,50 GPT-4,4,6,Oracle by F1 (cheat),85.3000,83.5439,84.1154
+bloodmnist,50 GPT-4,4,7,Oracle by F1 (cheat),82.8000,80.8180,81.3736
+bloodmnist,50 GPT-4,4,8,Oracle by F1 (cheat),86.2000,84.0829,84.3131
+bloodmnist,50 GPT-4,4,9,Oracle by F1 (cheat),83.0000,80.9150,82.8230
+bloodmnist,50 GPT-4,4,0,Oracle by BAcc (cheat),83.5000,81.5274,83.4779
+bloodmnist,50 GPT-4,4,1,Oracle by BAcc (cheat),87.5000,85.7941,87.9969
+bloodmnist,50 GPT-4,4,2,Oracle by BAcc (cheat),86.1500,83.2542,84.3416
+bloodmnist,50 GPT-4,4,3,Oracle by BAcc (cheat),80.0000,77.5223,79.3434
+bloodmnist,50 GPT-4,4,4,Oracle by BAcc (cheat),80.5000,75.7570,76.8412
+bloodmnist,50 GPT-4,4,5,Oracle by BAcc (cheat),85.1500,83.6962,85.4581
+bloodmnist,50 GPT-4,4,6,Oracle by BAcc (cheat),85.3000,83.5439,84.1154
+bloodmnist,50 GPT-4,4,7,Oracle by BAcc (cheat),82.8000,80.8180,81.3736
+bloodmnist,50 GPT-4,4,8,Oracle by BAcc (cheat),86.2000,84.0829,84.3131
+bloodmnist,50 GPT-4,4,9,Oracle by BAcc (cheat),83.0000,80.9150,82.8230
+bloodmnist,50 GPT-4,16,0,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,1,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,2,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,3,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,4,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,5,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,6,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,7,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,8,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,9,Zero-shot,20.3500,6.4716,13.4945
+bloodmnist,50 GPT-4,16,0,Visual only,90.0000,88.8015,90.0968
+bloodmnist,50 GPT-4,16,1,Visual only,91.4500,90.3685,91.5393
+bloodmnist,50 GPT-4,16,2,Visual only,90.5000,89.6407,90.0488
+bloodmnist,50 GPT-4,16,3,Visual only,92.1500,91.1425,91.5700
+bloodmnist,50 GPT-4,16,4,Visual only,91.7000,91.1793,92.0344
+bloodmnist,50 GPT-4,16,5,Visual only,92.9000,91.9241,92.3421
+bloodmnist,50 GPT-4,16,6,Visual only,89.8000,88.0817,89.0960
+bloodmnist,50 GPT-4,16,7,Visual only,89.9000,88.6370,89.8635
+bloodmnist,50 GPT-4,16,8,Visual only,91.2000,89.7708,90.2506
+bloodmnist,50 GPT-4,16,9,Visual only,91.2000,90.3681,90.8256
+bloodmnist,50 GPT-4,16,0,Fixed eta 0.5,73.5000,69.2951,74.4898
+bloodmnist,50 GPT-4,16,1,Fixed eta 0.5,75.9000,72.2985,76.9558
+bloodmnist,50 GPT-4,16,2,Fixed eta 0.5,72.5500,69.8677,72.3499
+bloodmnist,50 GPT-4,16,3,Fixed eta 0.5,75.6500,72.9499,76.3199
+bloodmnist,50 GPT-4,16,4,Fixed eta 0.5,75.5000,71.9441,76.3305
+bloodmnist,50 GPT-4,16,5,Fixed eta 0.5,75.4500,71.5082,75.6600
+bloodmnist,50 GPT-4,16,6,Fixed eta 0.5,72.7500,67.8616,72.8208
+bloodmnist,50 GPT-4,16,7,Fixed eta 0.5,72.4000,67.6097,73.1901
+bloodmnist,50 GPT-4,16,8,Fixed eta 0.5,74.1000,68.4762,73.9505
+bloodmnist,50 GPT-4,16,9,Fixed eta 0.5,72.0500,69.2542,72.6978
+bloodmnist,50 GPT-4,16,0,PARA,88.7500,87.3004,88.6006
+bloodmnist,50 GPT-4,16,1,PARA,90.4500,89.3406,90.6154
+bloodmnist,50 GPT-4,16,2,PARA,87.4500,86.8871,86.9904
+bloodmnist,50 GPT-4,16,3,PARA,90.3500,89.4832,89.8587
+bloodmnist,50 GPT-4,16,4,PARA,91.2000,90.4867,91.3707
+bloodmnist,50 GPT-4,16,5,PARA,90.5500,89.4688,90.1464
+bloodmnist,50 GPT-4,16,6,PARA,88.3000,86.4594,87.4783
+bloodmnist,50 GPT-4,16,7,PARA,85.9000,84.4050,86.1699
+bloodmnist,50 GPT-4,16,8,PARA,90.0500,88.4753,89.1127
+bloodmnist,50 GPT-4,16,9,PARA,88.9500,88.1640,88.6522
+bloodmnist,50 GPT-4,16,0,Shot-only eta,89.5000,88.1052,89.3581
+bloodmnist,50 GPT-4,16,1,Shot-only eta,90.8500,89.7842,90.9846
+bloodmnist,50 GPT-4,16,2,Shot-only eta,89.5500,88.6313,89.0010
+bloodmnist,50 GPT-4,16,3,Shot-only eta,91.3500,90.3182,90.7178
+bloodmnist,50 GPT-4,16,4,Shot-only eta,91.4000,90.7013,91.5881
+bloodmnist,50 GPT-4,16,5,Shot-only eta,91.6000,90.5847,91.1036
+bloodmnist,50 GPT-4,16,6,Shot-only eta,88.8500,87.0451,88.0837
+bloodmnist,50 GPT-4,16,7,Shot-only eta,87.4500,85.9926,87.5702
+bloodmnist,50 GPT-4,16,8,Shot-only eta,90.8500,89.3095,89.8146
+bloodmnist,50 GPT-4,16,9,Shot-only eta,89.9500,89.1173,89.6601
+bloodmnist,50 GPT-4,16,0,PARA centered eta,86.9500,85.3275,86.9177
+bloodmnist,50 GPT-4,16,1,PARA centered eta,85.7000,84.6124,86.3262
+bloodmnist,50 GPT-4,16,2,PARA centered eta,77.9000,76.2141,78.3199
+bloodmnist,50 GPT-4,16,3,PARA centered eta,82.7500,81.8822,82.9259
+bloodmnist,50 GPT-4,16,4,PARA centered eta,88.9000,87.9336,89.1540
+bloodmnist,50 GPT-4,16,5,PARA centered eta,85.9500,84.7353,85.9443
+bloodmnist,50 GPT-4,16,6,PARA centered eta,86.4500,84.4327,85.7632
+bloodmnist,50 GPT-4,16,7,PARA centered eta,83.8000,82.1126,84.2834
+bloodmnist,50 GPT-4,16,8,PARA centered eta,88.7000,86.9874,87.8563
+bloodmnist,50 GPT-4,16,9,PARA centered eta,82.8500,82.4387,83.1382
+bloodmnist,50 GPT-4,16,0,Reliability eta,78.6500,75.7875,79.3590
+bloodmnist,50 GPT-4,16,1,Reliability eta,77.9500,74.0828,79.2031
+bloodmnist,50 GPT-4,16,2,Reliability eta,75.7000,73.0139,76.2246
+bloodmnist,50 GPT-4,16,3,Reliability eta,77.9000,74.9072,78.6294
+bloodmnist,50 GPT-4,16,4,Reliability eta,81.3000,79.1795,82.2110
+bloodmnist,50 GPT-4,16,5,Reliability eta,79.7500,76.2664,80.3180
+bloodmnist,50 GPT-4,16,6,Reliability eta,83.5000,81.2284,83.0043
+bloodmnist,50 GPT-4,16,7,Reliability eta,80.7500,78.3448,81.4633
+bloodmnist,50 GPT-4,16,8,Reliability eta,84.6500,82.4131,84.0648
+bloodmnist,50 GPT-4,16,9,Reliability eta,76.7000,74.0468,77.5927
+bloodmnist,50 GPT-4,16,0,Oracle by Acc (cheat),90.1000,88.7815,90.0755
+bloodmnist,50 GPT-4,16,1,Oracle by Acc (cheat),91.5000,90.4468,91.5785
+bloodmnist,50 GPT-4,16,2,Oracle by Acc (cheat),90.5000,89.6407,90.0488
+bloodmnist,50 GPT-4,16,3,Oracle by Acc (cheat),92.3000,91.2875,91.7385
+bloodmnist,50 GPT-4,16,4,Oracle by Acc (cheat),91.8500,91.3046,92.1457
+bloodmnist,50 GPT-4,16,5,Oracle by Acc (cheat),92.9000,91.9241,92.3421
+bloodmnist,50 GPT-4,16,6,Oracle by Acc (cheat),89.8000,88.0817,89.0960
+bloodmnist,50 GPT-4,16,7,Oracle by Acc (cheat),89.9000,88.6370,89.8635
+bloodmnist,50 GPT-4,16,8,Oracle by Acc (cheat),91.2500,89.7442,90.2284
+bloodmnist,50 GPT-4,16,9,Oracle by Acc (cheat),91.2000,90.3717,90.8573
+bloodmnist,50 GPT-4,16,0,Oracle by F1 (cheat),90.0000,88.8015,90.0968
+bloodmnist,50 GPT-4,16,1,Oracle by F1 (cheat),91.5000,90.4468,91.5785
+bloodmnist,50 GPT-4,16,2,Oracle by F1 (cheat),90.5000,89.6407,90.0488
+bloodmnist,50 GPT-4,16,3,Oracle by F1 (cheat),92.3000,91.2875,91.7385
+bloodmnist,50 GPT-4,16,4,Oracle by F1 (cheat),91.8500,91.3046,92.1457
+bloodmnist,50 GPT-4,16,5,Oracle by F1 (cheat),92.9000,91.9241,92.3421
+bloodmnist,50 GPT-4,16,6,Oracle by F1 (cheat),89.8000,88.0817,89.0960
+bloodmnist,50 GPT-4,16,7,Oracle by F1 (cheat),89.9000,88.6370,89.8635
+bloodmnist,50 GPT-4,16,8,Oracle by F1 (cheat),91.2000,89.7708,90.2506
+bloodmnist,50 GPT-4,16,9,Oracle by F1 (cheat),91.2000,90.3717,90.8573
+bloodmnist,50 GPT-4,16,0,Oracle by BAcc (cheat),90.0000,88.8015,90.0968
+bloodmnist,50 GPT-4,16,1,Oracle by BAcc (cheat),91.5000,90.4468,91.5785
+bloodmnist,50 GPT-4,16,2,Oracle by BAcc (cheat),90.5000,89.6407,90.0488
+bloodmnist,50 GPT-4,16,3,Oracle by BAcc (cheat),92.3000,91.2875,91.7385
+bloodmnist,50 GPT-4,16,4,Oracle by BAcc (cheat),91.8500,91.3046,92.1457
+bloodmnist,50 GPT-4,16,5,Oracle by BAcc (cheat),92.9000,91.9241,92.3421
+bloodmnist,50 GPT-4,16,6,Oracle by BAcc (cheat),89.8000,88.0817,89.0960
+bloodmnist,50 GPT-4,16,7,Oracle by BAcc (cheat),89.9000,88.6370,89.8635
+bloodmnist,50 GPT-4,16,8,Oracle by BAcc (cheat),91.2000,89.7708,90.2506
+bloodmnist,50 GPT-4,16,9,Oracle by BAcc (cheat),91.2000,90.3717,90.8573
