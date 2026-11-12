@@ -25,7 +25,7 @@ PARA's step is the same in all five cases.
 \end{figure}
 
 \paragraph{The best step follows relative anchor quality.}
-The best step in hindsight (chosen on the test set) varies widely: from $0.17$ to $0.95$ for the log-probability blend of Section~\ref{sec:finding4},
+The best step in hindsight (chosen on the test set for each draw, then averaged over draws) varies widely: from $0.17$ to $0.95$ for the log-probability blend of Section~\ref{sec:finding4},
 and from $0.49$ to $0.98$ for the standardized blend on the multi-class datasets
 (on binary datasets the standardized blend has no unique best step, Section~\ref{sec:finding2}).
 It is ordered by the gap between zero-shot and visual-only BAcc (Figure~\ref{fig:best_eta}):
@@ -59,7 +59,11 @@ so that a useless anchor ($r_a \approx 0$) gives $\eta_{\text{aa}} \approx 1$, a
 \paragraph{It worked in-sample and failed on held-out data.}
 Table~\ref{tab:T4_preregistered_rule} reports the rule minus each baseline.
 On the design datasets it beats PARA by $4.77$ BAcc points (significantly better in 10 of 18 settings, 7 after Holm's correction, worse in none)
-and shot-only by $2.12$; choosing $c$ by leave-one-dataset-out instead gives a similar $4.94$ over PARA.
+and shot-only by $2.12$.
+Choosing $c$ by leave-one-dataset-out gives a similar $4.94$ over PARA.
+This check selects $c$ by mean BAcc on the other two design datasets ($c = 4$, $4$ and $2$),
+not by the CVaR20 criterion that gave $c = 8$; leave-one-dataset-out by CVaR20 would choose $c = 16$, $8$ and $4$,
+so the CVaR20 choice of $c$ is itself unstable across the design datasets.
 On the held-out datasets it is worse than every baseline:
 $-0.68$ BAcc against PARA, $-1.50$ against shot-only and $-2.20$ against visual only,
 and its worst case is worse still, with CVaR20 lower by $4.05$, $4.82$ and $1.89$ points.
@@ -71,12 +75,13 @@ Against visual only it is significantly worse in 3 of 12 settings (2 after Holm'
 Each held-out dataset broke the rule in a different way, and all three point to the missing half of the comparison.
 \begin{itemize}
   \item \emph{OrganAMNIST: a decent anchor, a much better trained branch.}
-  Its anchor reliability ($r_a = 0.196$) is higher than OCTMNIST's ($0.164$), so the rule keeps the step low ($0.367$ at $K = 1$).
-  But the trained branch is far ahead (visual only $48.97$ BAcc against $25.71$ for zero-shot), and the best step is $0.91$.
+  At $K = 1$ its anchor reliability ($r_a = 0.189$) is higher than OCTMNIST's ($0.123$), so the rule keeps the step low (mean $0.367$).
+  But the trained branch is far ahead (visual only $48.97$ BAcc against $25.71$ for zero-shot),
+  and the best step for the standardized blend is $0.91$.
   The rule reaches $37.86$; visual only reaches $48.97$.
   Over all 21 multi-class settings, including OrganAMNIST, the correlation between $r_a$ and the best step drops to $-0.45$.
   \item \emph{PneumoniaMNIST at $K = 4$: the anchor is good, but not good enough.}
-  Its high anchor reliability (mean $r_a = 0.392$) keeps the step below the binary switch point on 7 of 10 draws (mean step $0.415$),
+  Its high anchor reliability (mean $r_a = 0.444$ at $K = 4$) keeps the step below the binary switch point on 7 of 10 draws (mean step $0.415$),
   so on those draws the rule returns the anchor. It reaches $71.12$ BAcc, while the trained branch has already reached $82.75$.
   \item \emph{BreastMNIST at $K = 1$: an unstable estimate.}
   With one image per class, $r_a$ varies so much between draws that the step falls on either side of the switch point
@@ -86,13 +91,17 @@ Each held-out dataset broke the rule in a different way, and all three point to 
 \end{itemize}
 In each case the rule saw only the anchor's reliability, while the right step depends on the anchor relative to a trained branch it cannot see.
 The trained branch's reliability is hard to estimate on the support set, because the branch is fitted to those same images;
-a reliability estimated in the frozen space underestimates the trained branch, and the step we built from it was worse than PARA's
-($54.73$ against $57.54$ mean BAcc on the design datasets; Appendix~B).
+a reliability estimated in the frozen space describes a different, untrained classifier, and the step we built from it was worse than PARA's
+($54.73$ against $57.54$ mean BAcc on the design datasets; Appendix~\ref{app:reliability}).
 
 \paragraph{Measuring the trained branch directly.}
 The HOSO-style step does measure the trained branch, by holding out one shot per class.
-Where the support set is large enough it can be accurate: on OrganAMNIST it comes within $0.10$ and $0.16$ points of the oracle at $K = 4$ and $16$
-($65.75$ against $65.85$, $81.46$ against $81.62$).
+Where the trained branch is clearly better it finds that out:
+on OrganAMNIST it picks $\eta = 1$ on every draw at $K = 4$ and $\eta \ge 0.875$ at $K = 16$,
+and comes within $0.10$ and $0.16$ points of the standardized-blend oracle
+($65.75$ against $65.85$, $81.46$ against $81.62$; Table~\ref{tab:T2a_mean_bacc} lists the log-probability oracle instead).
+This is no better than visual only, which reaches the same $65.75$ and $81.48$:
+the held-out shot detects which branch is better but adds nothing beyond choosing it.
 On the binary datasets, a single held-out image per class makes it noisy:
 on PneumoniaMNIST at $K = 16$ it reaches $83.31$ BAcc against $89.40$ for PARA, and its worst case falls back to the anchor's $67.35$ against $87.22$.
 It also needs an extra training run per draw and cannot be used at $K = 1$.

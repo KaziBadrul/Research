@@ -1,0 +1,19 @@
+\section{A step from frozen-space reliability of both branches}\label{app:reliability}
+
+Before the anchor-aware rule of Section~\ref{sec:finding3}, we tried a step that compares the two branches directly,
+with both reliabilities estimated in the frozen space on the labelled support set.
+The anchor's reliability $r_a$ is as in Section~\ref{sec:finding3}: the mean softmax probability that $\tau_0 \langle u_i, t_c \rangle$
+gives to the true class of each support image, rescaled as $(p - 1/C)/(1 - 1/C)$ so that chance is $0$ and perfect is $1$, and clipped to $[0, 1]$.
+The visual side $r_v$ stands in for the trained branch with a leave-one-out prototype classifier on the frozen embeddings:
+each support image $u_i$ is scored by its cosine to every class prototype $h_c / \lVert h_c \rVert$,
+with $u_i$ removed from its own class's prototype, and $r_v$ is the same rescaled mean true-class probability under a softmax with $\tau_0$.
+At $K = 1$ there is no other image to build a prototype from, and $r_v = 0$.
+The step is
+\begin{equation}
+  \eta_{\text{rel}} = \lambda\,\frac{r_v + \epsilon}{r_v + r_a + 2\epsilon}, \qquad \epsilon = 0.1,
+\end{equation}
+with $\epsilon$ fixed in advance and not tuned.
+On the design datasets it reaches $54.73$ mean BAcc against $57.54$ for PARA.
+The frozen prototype classifier is not the LoRA-adapted branch that is blended, which is fine-tuned on these same images,
+so $r_v$ need not reflect how far the trained branch should be trusted.
+The held-out datasets show the same ordering ($65.09$ against $68.01$ for PARA).

@@ -23,6 +23,8 @@ On BloodMNIST at $K = 1$, mean BAcc rises from $34.28$ to $53.09$ and CVaR20 fro
 on OrganAMNIST at $K = 1$, CVaR20 rises from $34.62$ to $43.00$ (Table~\ref{tab:T2b_cvar20_bacc}).
 On the binary datasets the mean gain is small ($0.36$ BAcc; 2 of 9 settings better, 1 after Holm's correction, none worse),
 and all of it comes from BreastMNIST; on PneumoniaMNIST the log-probability blend is slightly worse at every $K$.
+Table~\ref{tab:T2c_macro_f1} gives Macro-F1 for every method.
+In Macro-F1 the binary picture is mixed: $1.00$ points higher on average, but 2 settings significantly better and 2 significantly worse.
 
 \input{../tables/T3_paired_tests.tex}
 
@@ -37,10 +39,13 @@ Under the log-probability blend the support branch can overrule the anchor where
 including on the poor draws where its confident predictions are wrong.
 We did not measure calibration directly; this explanation is consistent with the pattern but remains a hypothesis.
 \input{../tables/T2b_cvar20_bacc.tex}
+\input{../tables/T2c_macro_f1.tex}
 
 \paragraph{The blend has a real interior, but PARA's step does not fit it.}
 Sweeping $\eta$ shows what the log-probability blend makes possible (Figure~\ref{fig:eta_curves}, orange).
-The optima below are chosen in hindsight on the mean curve, so they show what a good step could achieve, not what any rule achieved.
+The optima below are the peaks of the curve averaged over draws, not the per-draw best steps of Section~\ref{sec:finding3} and Figure~\ref{fig:best_eta},
+so the two can differ (on OCTMNIST at $K = 1$, $0.55$ here against $0.49$ there for the standardized blend).
+Both are chosen in hindsight, so they show what a good step could achieve, not what any rule achieved.
 On BreastMNIST the curve has an interior optimum that beats both branches, which the standardized blend cannot produce:
 $64.60$ BAcc at $\eta = 0.075$ for $K = 1$, $69.33$ at $0.35$ for $K = 4$, and $74.28$ at $0.525$ for $K = 16$,
 against best standardized values of $62.28$, $65.50$ and $73.34$.
@@ -54,5 +59,6 @@ The best step for the log-probability blend still follows relative anchor qualit
 \paragraph{The oracle confirms the direction.}
 Choosing the step in hindsight for each draw, the log-probability blend matches or beats the standardized blend in 17 of 18 dataset and $K$ cells
 (the exception is DermaMNIST at $K = 16$, by $0.02$ points), with the largest margins on BreastMNIST.
-Blending in log-probability space is thus at least as expressive as blending standardized scores, and on binary tasks strictly more so;
+With the best step known, the log-probability blend is thus as good as the standardized blend or better almost everywhere,
+and clearly better on the binary tasks, where the standardized blend can only pick a side;
 what it still needs is a step that knows how reliable each branch is, which is the open problem of Section~\ref{sec:finding3}.

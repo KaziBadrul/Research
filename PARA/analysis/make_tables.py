@@ -52,7 +52,9 @@ def to_latex(df, path, caption, label, bold=None, fmt="{:.2f}"):
     cols = list(df.columns)
     align = "".join("r" if pd.api.types.is_numeric_dtype(df[c]) else "l" for c in cols)
     esc = lambda s: str(s).replace("_", r"\_").replace("%", r"\%").replace("&", r"\&")
+    # adjustbox only shrinks a table that is wider than the text block; narrow tables are left alone
     lines = [r"\begin{table}[t]", r"\centering", r"\small", rf"\caption{{{caption}}}", rf"\label{{{label}}}",
+             r"\begin{adjustbox}{max width=\linewidth}",
              rf"\begin{{tabular}}{{{align}}}", r"\toprule", " & ".join(esc(c) for c in cols) + r" \\", r"\midrule"]
     for i, (_, r) in enumerate(df.iterrows()):
         cells = []
@@ -60,15 +62,23 @@ def to_latex(df, path, caption, label, bold=None, fmt="{:.2f}"):
             v = r[c]
             s = (fmt.format(v) if isinstance(v, (float, np.floating)) and not pd.isna(v)
                  else ("--" if (isinstance(v, float) and pd.isna(v)) else esc(v)))
+            if re.fullmatch(r"-0(\.0+)?", s):          # no negative zero after rounding
+                s = s[1:]
             cells.append(rf"\textbf{{{s}}}" if (i, c) in bold else s)
         lines.append(" & ".join(cells) + r" \\")
-    lines += [r"\bottomrule", r"\end{tabular}", r"\end{table}", ""]
+    lines += [r"\bottomrule", r"\end{tabular}", r"\end{adjustbox}", r"\end{table}", ""]
     open(path, "w", encoding="utf-8").write("\n".join(lines))
 
 
-def save(df, name, caption, bold=None, fmt="{:.2f}"):
+def save(df, name, caption, bold=None, fmt="{:.2f}", tex_cols=None):
+    """CSV keeps every column under its full name. tex_cols ({csv column: LaTeX header}, ordered) picks and renames
+    the columns that go into the paper's LaTeX table; bold cells are given by CSV column names."""
     df.to_csv(os.path.join(OUT, f"{name}.csv"), index=False)
-    to_latex(df, os.path.join(OUT, f"{name}.tex"), caption, f"tab:{name}", bold, fmt)
+    tex, tbold = df, bold
+    if tex_cols:
+        tex = df[list(tex_cols)].rename(columns=tex_cols)
+        tbold = {(i, tex_cols[c]) for i, c in (bold or set()) if c in tex_cols}
+    to_latex(tex, os.path.join(OUT, f"{name}.tex"), caption, f"tab:{name}", tbold, fmt)
     print(f"\n######## {name}: {caption}")
     print(df.to_string(index=False, float_format=lambda x: f"{x:.2f}"))
 
@@ -151,7 +161,9 @@ for d in ORDER:
 t1 = pd.DataFrame(t1)
 save(t1, "T1_datasets", "Datasets. Zero-shot BAcc (\\%) on the evaluated test subset, per prompt set. "
      "``Your prompts'' are 5 hand-written visual descriptions per class for DermaMNIST and 5 generic templates elsewhere; "
-     "GPT-4 prompts are BiomedCoOp's (BreastMNIST via BUSI: benign and normal pooled).")
+     "GPT-4 prompts are BiomedCoOp's (BreastMNIST via BUSI: benign and normal pooled). ZS: zero-shot.",
+     tex_cols={"Dataset": "Dataset", "Classes": "Classes", "Test (eval)": "Test images", "Image px": "Pixels",
+               "ZS BAcc (your prompts)": "ZS BAcc, own", "ZS BAcc (GPT-4)": "ZS BAcc, GPT-4", "Split": "Split"})
 # compare zero-shot with 16_screening (which used the full test split) and logprob_table
 pairs = []
 for _, r in t1.iterrows():
@@ -187,23 +199,27 @@ for d in ORDER:
         i = len(t2)
         for metric in ["BAcc", "CVaR"]:
             cands = {f"{m} {metric}": row[f"{m} {metric}"] for m, _ in METHODS if not m.startswith("Oracle")}
-            best = max(cands.values())
-            bold |= {(i, c) for c, v in cands.items() if np.isclose(v, best, atol=1e-9)}
+            # bold every cell that ties the best one at the printed precision (2 decimals)
+            best = round(max(cands.values()), 2)
+            bold |= {(i, c) for c, v in cands.items() if round(v, 2) == best}
         candf = {f"{m} F1": rowf[f"{m} F1"] for m, _ in METHODS if not m.startswith("Oracle")}
-        boldf |= {(i, c) for c, v in candf.items() if np.isclose(v, max(candf.values()), atol=1e-9)}
+        boldf |= {(i, c) for c, v in candf.items() if round(v, 2) == round(max(candf.values()), 2)}
         t2.append(row); t2f.append(rowf)
 t2, t2f = pd.DataFrame(t2), pd.DataFrame(t2f)
 ORACLE_NOTE = "*Oracle picks $\\eta$ on the test set per draw and is not achievable."
+T2_ABBR = "ZS: zero-shot; z: standardized blend; lp: log-probability blend; Shot: shot-only step."
+T2_TEX = {"Dataset": "Dataset", "K": "$K$", "Zero-shot": "ZS", "Visual only": "Visual", "PARA (z)": "PARA (z)",
+          "PARA (log-prob)": "PARA (lp)", "Shot-only (z)": "Shot (z)", "Oracle (log-prob)*": "Oracle (lp)*"}
 for name, metric, what in [("T2a_mean_bacc", "BAcc", "Mean BAcc (\\%) over 10 support draws, averaged over prompt sets"),
                            ("T2b_cvar20_bacc", "CVaR", "CVaR20 BAcc (\\%): mean of the worst 2 of 10 support draws, "
                                                       "averaged over prompt sets")]:
     cols = ["Dataset", "K"] + [c for c in t2.columns if c.endswith(f" {metric}")]
     panel = t2[cols].rename(columns=lambda c: c[: -len(f" {metric}")] if c.endswith(f" {metric}") else c)
     pbold = {(i, c[: -len(f" {metric}")]) for i, c in bold if c.endswith(f" {metric}")}
-    save(panel, name, f"{what}. Bold: best non-oracle method per row. {ORACLE_NOTE}", pbold)
+    save(panel, name, f"{what}. {T2_ABBR} Bold: best non-oracle method per row. {ORACLE_NOTE}", pbold, tex_cols=T2_TEX)
 t2f_panel = t2f.rename(columns=lambda c: c[:-3] if c.endswith(" F1") else c)
-save(t2f_panel, "T2c_macro_f1", f"Mean Macro-F1 (\\%), same runs as Tables T2a and T2b. Bold: best non-oracle method "
-     f"per row. {ORACLE_NOTE}", {(i, c[:-3]) for i, c in boldf})
+save(t2f_panel, "T2c_macro_f1", f"Mean Macro-F1 (\\%), same runs as Tables~\\ref{{tab:T2a_mean_bacc}} and~\\ref{{tab:T2b_cvar20_bacc}}. Bold: best non-oracle method "
+     f"per row. {T2_ABBR} {ORACLE_NOTE}", {(i, c[:-3]) for i, c in boldf}, tex_cols=T2_TEX)
 report_diffs("T2 vs logprob_table.csv", pairs)
 # cross-check: z-score PARA / shot-only in logprob_scores vs rule_scores (two independent files, same runs)
 x = []
@@ -221,7 +237,7 @@ per_b = paired(lp, "PARA [logprob]", "PARA [zscore]", "name")
 per_a.to_csv(os.path.join(OUT, "T3a_per_setting.csv"), index=False)
 per_b.to_csv(os.path.join(OUT, "T3b_per_setting.csv"), index=False)
 t3 = []
-for comp, per in [("(a) Shot-only minus PARA", per_a), ("(b) Log-prob minus z-score at PARA eta", per_b)]:
+for comp, per in [("(a) shot-only minus PARA", per_a), ("(b) log-prob minus z-score", per_b)]:
     # No pooled "all" row: with 10 draws the smallest Wilcoxon p is 2/1024, so Holm over more than 25 settings can never reject.
     groups = [("binary", per.dataset.isin(binary)), ("multi-class", ~per.dataset.isin(binary))]
     if comp.startswith("(a)"):
@@ -229,12 +245,16 @@ for comp, per in [("(a) Shot-only minus PARA", per_a), ("(b) Log-prob minus z-sc
     for g, mask in groups:
         t3.append({"Comparison": comp, **aggregate(per[mask], g)})
 t3 = pd.DataFrame(t3)
+PAIRED_TEX = {"Comparison": "Comparison", "group": "Group", "settings": "$n$", "dBAcc": "$\\Delta$BAcc",
+              "sig +/- BAcc": "sig.", "Holm +/- BAcc": "Holm", "dF1": "$\\Delta$F1", "sig +/- F1": "sig. (F1)",
+              "Holm +/- F1": "Holm (F1)", "dCVaR20": "$\\Delta$CVaR20"}
 HOLM_NOTE = ("``Holm'' applies Holm's correction across the settings of each row. With 10 draws the smallest attainable "
              "two-sided Wilcoxon $p$ is $2/1024 \\approx 0.002$, so a Holm-significant setting is one where nearly every "
              "draw moves the same way.")
 save(t3, "T3_paired_tests", "Paired differences over support draws. Wilcoxon signed-rank per (dataset, prompt set, K) "
      "setting; counts of settings significantly better/worse at $p<0.05$. " + HOLM_NOTE +
-     " $\\Delta$CVaR20 is the mean over settings.")
+     " $\\Delta$CVaR20 is the mean over settings. (b) uses PARA's step for both blends. "
+     "Counts of draws won and lost are in the CSV.", tex_cols=PAIRED_TEX)
 # compare (b) with logprob_summary.txt; (a) design/held-out with the values recorded during verification
 txt = open(os.path.join(ROOT, "logprob_summary.txt"), encoding="utf-8").read()
 pairs = []
@@ -270,7 +290,9 @@ for block, rule, dss in [("Design, in-sample (frozen c=8)", "Frozen c=8", DESIGN
 t4 = pd.DataFrame(t4)
 save(t4, "T4_preregistered_rule", "Anchor-aware rule minus each baseline. Wilcoxon per setting over 10 draws; counts "
      "of settings significantly better/worse ($p<0.05$). " + HOLM_NOTE +
-     " LODO picks $c$ by mean BAcc on the other design datasets.")
+     " LODO picks $c$ by mean BAcc on the other design datasets. Counts of draws won and lost are in the CSV.",
+     tex_cols={"Setting": "Setting", "vs": "vs",
+               **{k: v for k, v in PAIRED_TEX.items() if k not in ("Comparison", "group")}})
 # compare with cross_dataset_summary.txt
 txt = open(os.path.join(ROOT, "cross_dataset_summary.txt"), encoding="utf-8").read()
 blocks = {"Held-out (frozen c=8)": r"HELD-OUT datasets.*?<-- the main test\n(.*?)\n\n",

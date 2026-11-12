@@ -45,7 +45,8 @@ Finding~2 follows from the standardization alone and holds for any backbone with
   the per-setting tests are the safer reading.
   With 10 draws per setting, the smallest attainable Wilcoxon $p$ is about $0.002$, which limits how many settings can survive Holm's correction.
   \item \emph{The anchor-aware constant.} $c = 8$ was chosen in-sample on the design datasets.
-  It was fixed before any held-out run, but this is documented by file timestamps rather than a dated commit.
+  We chose it before training on any held-out dataset, but the choice itself was not recorded with a date (Section~\ref{sec:setup}),
+  and leave-one-dataset-out by the same CVaR20 criterion picks a different $c$ for each left-out dataset.
   \item \emph{The log-probability blend was motivated by held-out results.} It has no fitted parameters, but the idea came after we saw the binary failure,
   so its binary results are not a clean held-out test.
   \item \emph{Hindsight quantities.} The oracle step, the best points on the $\eta$ curves, and the zero-shot minus visual-only gap all use test labels.

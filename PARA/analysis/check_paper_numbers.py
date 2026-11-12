@@ -53,6 +53,12 @@ print("all citations are in refs.bib" if not missing_bib else f"citations missin
 if keys - cites:
     print(f"note: bib entries not cited: {sorted(keys - cites)}")
 missing += missing_bib
+# hard-coded references ("Appendix~B", "Table 3") bypass \ref and can point at nothing
+hard = [(os.path.basename(p), m.group(0)) for p in glob.glob(os.path.join(PAPER, "sections", "*.tex"))
+        for m in re.finditer(r"\b(Appendix|Section|Table|Figure|Eq\.)~?\s?[A-Z0-9]+\b(?!\})(?!\s+of\s+\\cite)",
+                             re.sub(r"(?<!\\)%.*", "", open(p, encoding="utf-8").read()))]
+print("no hard-coded references" if not hard else f"hard-coded references: {hard}")
+missing += [h[1] for h in hard]
 emdash = [os.path.basename(p) for p, t in zip(glob.glob(os.path.join(PAPER, "sections", "*.tex")), texts) if "---" in t or "\u2014" in t]
 if emdash:
     print(f"em dashes found in: {emdash}")

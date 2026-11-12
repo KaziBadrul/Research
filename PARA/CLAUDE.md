@@ -63,4 +63,5 @@ python analysis/verify_claims.py para_results
 python analysis/make_tables.py para_results tables
 python analysis/paper_numbers.py para_results paper/numbers.json
 python analysis/check_paper_numbers.py paper
+powershell -File paper/build.ps1    # MiKTeX (user install): pdflatex + bibtex -> paper/build/main.pdf
 ```

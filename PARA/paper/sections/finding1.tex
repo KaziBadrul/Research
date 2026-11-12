@@ -13,7 +13,7 @@ This section explains why, and shows that a step depending on $K$ alone does at 
   \includegraphics[width=0.62\linewidth]{F1_para_eta_vs_K}
   \caption{PARA's step $\eta(S)$ against shots per class, mean over 10 support draws for each dataset
   (draw-to-draw ranges are smaller than the markers).
-  The curve is the prediction of Eq.~\eqref{eq:pred} from two constants of the frozen model,
+  The curve is the prediction of Eq.~\eqref{eq:pred} from two averages of the frozen geometry,
   $\bar\delta = 0.550$ and the pooled image cosine $0.867$.}
   \label{fig:eta_vs_K}
 \end{figure}
@@ -23,15 +23,15 @@ Figure~\ref{fig:geometry} (top left) compares, for $K = 16$ and one support draw
 with its discrepancy to the other classes' text.
 On five datasets the two differ by only $0.004$ to $0.018$; OrganAMNIST shows the largest gap
 ($0.604$ against $0.647$).
-The support images of a class are closest to their own class text for only one or two classes per dataset
-(three of eleven on OrganAMNIST).
+On the multi-class datasets, the support images of a class are closest to their own class text for only a minority of classes
+(1 of 4 on OCTMNIST, 1 of 8 on BloodMNIST, 2 of 7 on DermaMNIST and 3 of 11 on OrganAMNIST).
 In BiomedCLIP's frozen space, image and text embeddings occupy separate regions, the modality gap described by \citet{liang2022mind},
 so $\delta_c$ mostly measures the distance between the two modalities, which is the same for every class.
 Averaged over the six datasets, the own-text discrepancy is $\bar\delta = 0.550$.
 
 \paragraph{The agreement $\phi_c$ does not depend on the class either.}
 Sixteen images of one class give almost the same $\phi_c$ as sixteen random images drawn across classes
-(Figure~\ref{fig:geometry}, bottom left): the two differ by at most $1.3\%$ on five datasets and by $16\%$ on OrganAMNIST.
+(Figure~\ref{fig:geometry}, bottom left): the two differ by $0.6\%$ to $4.2\%$ on five datasets and by $16\%$ on OrganAMNIST.
 The reason is that the frozen image embeddings lie in a narrow cone.
 The mean cosine between two support images is $0.839$ to $0.962$ on five datasets, whether or not the images share a class,
 and $0.671$ for different-class pairs on OrganAMNIST.
@@ -53,7 +53,7 @@ When every pair of images has a cosine near 0.9, $\phi_c$ is close to its maximu
   \label{fig:geometry}
 \end{figure}
 
-\paragraph{Two constants predict the step.}
+\paragraph{Two summary statistics predict the step.}
 If every class has $\delta_c \approx \bar\delta$ and $\bar c_c \approx \bar c$, Eqs.~\eqref{eq:eta} and~\eqref{eq:phi} give
 \begin{equation}
   \eta(K) \approx \lambda\,\frac{a(K)}{1 + a(K)}, \qquad a(K) = \bar\delta\,\big(1 + (K - 1)\,\bar c\big).
@@ -64,6 +64,8 @@ $0.319$, $0.601$ and $0.798$ at $K = 1$, $4$ and $16$, against the measured $0.3
 Using the cosine pooled over same- and different-class pairs ($0.867$, the curve in Figure~\ref{fig:eta_vs_K}) changes the prediction by about $0.003$ at most,
 which is itself a symptom: the class structure that $\phi_c$ is meant to detect hardly registers.
 At $K = 1$, $\phi_c = 1$ exactly, so the step there depends on $\delta_c$ alone.
+The two statistics are averages measured on these six datasets (one $K = 16$ draw each), so this is a consistency check rather than an
+out-of-sample prediction: it shows that $\eta(S)$ is explained by two dataset-level averages, with nothing left for the individual support set.
 
 OrganAMNIST deserves a note, because it is the one dataset where the geometry does carry some class signal
 (the largest $\delta$ gap and a $16\%$ higher $\phi$ for real classes).
@@ -73,7 +75,9 @@ because the signal is small relative to the shared offset $\bar\delta$ and the n
 \paragraph{The step does not track the best step.}
 Within a setting, the small draw-to-draw variation of $\eta(S)$ is not informative either.
 Its Spearman correlation with the best $\eta$ for each draw (chosen on the test set, after removing each setting's mean)
-is $-0.12$ ($p = 0.04$): weakly negative, and of no practical use.
+is $-0.13$ ($p = 0.07$) over the 21 multi-class settings, where that best step is unique: weakly negative, and of no practical use.
+Including the binary settings, where the best step is set by grid tie-breaking, gives $-0.12$ ($p = 0.04$).
+Both treat the draws of the two prompt sets of a dataset as independent although they share support sets.
 
 \paragraph{A step that depends on $K$ alone does at least as well.}
 If the geometry adds nothing, the shot-only schedule $\eta_K = \lambda K / (1 + K)$ ($0.45$, $0.72$ and $0.85$) should match PARA.
@@ -85,10 +89,12 @@ All of that gain comes from OrganAMNIST ($3.27$ points, 3 of 3 settings).
 On the two binary held-out datasets the two steps give identical predictions on every draw,
 for a reason we explain in Section~\ref{sec:finding2}.
 
-\paragraph{Centering makes the geometry informative but does not give a better step.}
-Subtracting each modality's mean embedding before computing Eq.~\eqref{eq:eta} restores class information
-(Figure~\ref{fig:geometry}, right): real-class agreement rises to $1.62$ to $6.73$ against $0.94$ to $1.74$ for random sets,
-and the own-text discrepancy ($0.764$ to $0.926$) falls below the other-text discrepancy ($1.010$ to $1.130$) on all six datasets.
+\paragraph{Centering makes the geometry more informative but does not give a better step.}
+Subtracting each modality's mean embedding before computing Eq.~\eqref{eq:eta} restores some class information
+(Figure~\ref{fig:geometry}, right): real classes now agree more than random sets ($1.62$ to $6.73$ against $0.94$ to $1.74$),
+and the mean own-text discrepancy ($0.764$ to $0.926$) falls below the other-text discrepancy ($1.010$ to $1.130$) on all six datasets.
+The recovery is partial: on BloodMNIST and DermaMNIST the images of most classes are still closest to another class's text
+(7 of 8 and 5 of 7 classes), and on BreastMNIST real and random agreement remain close ($1.62$ against $1.29$).
 The resulting step is still not better: averaged over the design datasets it gives $55.79$ BAcc against $57.54$ for PARA,
 and it is worse than PARA on 5 of 6 datasets.
 Knowing how coherent a class looks in the frozen space is not what the step needs;

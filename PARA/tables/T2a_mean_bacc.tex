@@ -1,11 +1,12 @@
 \begin{table}[t]
 \centering
 \small
-\caption{Mean BAcc (\%) over 10 support draws, averaged over prompt sets. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
+\caption{Mean BAcc (\%) over 10 support draws, averaged over prompt sets. ZS: zero-shot; z: standardized blend; lp: log-probability blend; Shot: shot-only step. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
 \label{tab:T2a_mean_bacc}
+\begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Dataset & K & Zero-shot & Visual only & PARA (z) & PARA (log-prob) & Shot-only (z) & Oracle (log-prob)* \\
+Dataset & $K$ & ZS & Visual & PARA (z) & PARA (lp) & Shot (z) & Oracle (lp)* \\
 \midrule
 DermaMNIST & 1 & 21.16 & 29.70 & 26.45 & \textbf{29.91} & 28.76 & 32.24 \\
 DermaMNIST & 4 & 21.16 & 45.66 & 43.98 & \textbf{46.82} & 46.09 & 47.72 \\
@@ -24,7 +25,8 @@ PneumoniaMNIST & 4 & 67.35 & \textbf{82.75} & \textbf{82.75} & 81.03 & \textbf{8
 PneumoniaMNIST & 16 & 67.35 & \textbf{89.40} & \textbf{89.40} & 89.21 & \textbf{89.40} & 89.79 \\
 OrganAMNIST & 1 & 25.71 & \textbf{48.97} & 37.30 & 46.79 & 41.52 & 49.59 \\
 OrganAMNIST & 4 & 25.71 & \textbf{65.75} & 57.40 & 63.61 & 62.14 & 65.86 \\
-OrganAMNIST & 16 & 25.71 & \textbf{81.48} & 79.74 & 81.48 & 80.59 & 81.71 \\
+OrganAMNIST & 16 & 25.71 & \textbf{81.48} & 79.74 & \textbf{81.48} & 80.59 & 81.71 \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}

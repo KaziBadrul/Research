@@ -1,11 +1,12 @@
 \begin{table}[t]
 \centering
 \small
-\caption{CVaR20 BAcc (\%): mean of the worst 2 of 10 support draws, averaged over prompt sets. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
+\caption{CVaR20 BAcc (\%): mean of the worst 2 of 10 support draws, averaged over prompt sets. ZS: zero-shot; z: standardized blend; lp: log-probability blend; Shot: shot-only step. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
 \label{tab:T2b_cvar20_bacc}
+\begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Dataset & K & Zero-shot & Visual only & PARA (z) & PARA (log-prob) & Shot-only (z) & Oracle (log-prob)* \\
+Dataset & $K$ & ZS & Visual & PARA (z) & PARA (lp) & Shot (z) & Oracle (lp)* \\
 \midrule
 DermaMNIST & 1 & 21.16 & 20.41 & 22.70 & 22.40 & \textbf{23.33} & 25.63 \\
 DermaMNIST & 4 & 21.16 & 39.41 & 39.04 & 40.27 & \textbf{40.87} & 41.71 \\
@@ -27,4 +28,5 @@ OrganAMNIST & 4 & 25.71 & \textbf{59.99} & 53.06 & 58.25 & 56.71 & 60.02 \\
 OrganAMNIST & 16 & 25.71 & \textbf{80.32} & 78.19 & 80.29 & 79.35 & 80.45 \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}

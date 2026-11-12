@@ -1,18 +1,20 @@
 \begin{table}[t]
 \centering
 \small
-\caption{Paired differences over support draws. Wilcoxon signed-rank per (dataset, prompt set, K) setting; counts of settings significantly better/worse at $p<0.05$. ``Holm'' applies Holm's correction across the settings of each row. With 10 draws the smallest attainable two-sided Wilcoxon $p$ is $2/1024 \approx 0.002$, so a Holm-significant setting is one where nearly every draw moves the same way. $\Delta$CVaR20 is the mean over settings.}
+\caption{Paired differences over support draws. Wilcoxon signed-rank per (dataset, prompt set, K) setting; counts of settings significantly better/worse at $p<0.05$. ``Holm'' applies Holm's correction across the settings of each row. With 10 draws the smallest attainable two-sided Wilcoxon $p$ is $2/1024 \approx 0.002$, so a Holm-significant setting is one where nearly every draw moves the same way. $\Delta$CVaR20 is the mean over settings. (b) uses PARA's step for both blends. Counts of draws won and lost are in the CSV.}
 \label{tab:T3_paired_tests}
-\begin{tabular}{llrrlllrlllr}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrllrllr}
 \toprule
-Comparison & group & settings & dBAcc & won/lost BAcc & sig +/- BAcc & Holm +/- BAcc & dF1 & won/lost F1 & sig +/- F1 & Holm +/- F1 & dCVaR20 \\
+Comparison & Group & $n$ & $\Delta$BAcc & sig. & Holm & $\Delta$F1 & sig. (F1) & Holm (F1) & $\Delta$CVaR20 \\
 \midrule
-(a) Shot-only minus PARA & binary & 9 & 0.00 & 0/0 & 0/0 & 0/0 & 0.00 & 0/0 & 0/0 & 0/0 & 0.00 \\
-(a) Shot-only minus PARA & multi-class & 21 & 2.74 & 180/29 & 16/0 & 11/0 & 2.95 & 175/35 & 15/1 & 10/0 & 2.01 \\
-(a) Shot-only minus PARA & design & 18 & 2.65 & 150/29 & 13/0 & 8/0 & 2.84 & 145/35 & 12/1 & 7/0 & 1.84 \\
-(a) Shot-only minus PARA & held-out & 12 & 0.82 & 30/0 & 3/0 & 3/0 & 0.90 & 30/0 & 3/0 & 3/0 & 0.76 \\
-(b) Log-prob minus z-score at PARA eta & binary & 9 & 0.36 & 50/35 & 2/0 & 1/0 & 1.00 & 46/40 & 2/2 & 2/0 & -2.67 \\
-(b) Log-prob minus z-score at PARA eta & multi-class & 21 & 4.86 & 172/38 & 14/0 & 10/0 & 5.67 & 162/48 & 13/1 & 9/0 & 3.12 \\
+(a) shot-only minus PARA & binary & 9 & 0.00 & 0/0 & 0/0 & 0.00 & 0/0 & 0/0 & 0.00 \\
+(a) shot-only minus PARA & multi-class & 21 & 2.74 & 16/0 & 11/0 & 2.95 & 15/1 & 10/0 & 2.01 \\
+(a) shot-only minus PARA & design & 18 & 2.65 & 13/0 & 8/0 & 2.84 & 12/1 & 7/0 & 1.84 \\
+(a) shot-only minus PARA & held-out & 12 & 0.82 & 3/0 & 3/0 & 0.90 & 3/0 & 3/0 & 0.76 \\
+(b) log-prob minus z-score & binary & 9 & 0.36 & 2/0 & 1/0 & 1.00 & 2/2 & 2/0 & -2.67 \\
+(b) log-prob minus z-score & multi-class & 21 & 4.86 & 14/0 & 10/0 & 5.67 & 13/1 & 9/0 & 3.12 \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}

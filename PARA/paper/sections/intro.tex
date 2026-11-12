@@ -24,14 +24,15 @@ Our findings are:
   In BiomedCLIP's frozen space, the discrepancy and agreement signals barely depend on the class:
   images sit about equally far from every class's text, and any set of images agrees almost as much as a real class.
   The step is therefore the same function of $K$ on every dataset ($0.33$, $0.60$ and $0.80$ at $K = 1$, $4$ and $16$),
-  predictable from two constants of the pretrained model.
+  and two dataset-level averages of the frozen geometry reproduce it.
   A schedule that uses $K$ alone does better than PARA's step (significantly in 13 of 18 design settings, never worse).
   \item \textbf{On binary tasks the blend is a switch} (Section~\ref{sec:finding2}).
   Standardizing each branch's scores across two classes keeps only the sign of the prediction,
   so PARA returns the zero-shot prediction whenever $\eta < 0.5$ and the trained branch's prediction whenever $\eta > 0.5$, on every image.
   We prove this and confirm it on all 1,046 relevant evaluations.
   \item \textbf{The right step depends on the anchor's reliability relative to the trained branch} (Section~\ref{sec:finding3}).
-  The best step in hindsight ranges from $0.17$ to $0.95$ across datasets and shot counts, and follows how good the anchor is compared with the trained branch.
+  The best step in hindsight ranges from $0.49$ to $0.98$ for PARA's blend on multi-class datasets
+  (and from $0.17$ to $0.95$ for the log-probability blend of Section~\ref{sec:finding4}), and follows how good the anchor is compared with the trained branch.
   A rule based on the anchor's reliability alone, fixed in advance, improved on the design datasets and failed on the held-out ones.
   \item \textbf{Blending log-probabilities helps on multi-class tasks} (Section~\ref{sec:finding4}).
   With the same step and the same trained models, blending each branch's log-probabilities instead of its standardized scores

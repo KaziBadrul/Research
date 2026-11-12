@@ -3,8 +3,13 @@
 % Style: no em dashes; formulas in LaTeX.
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}  % keep each figure and table inside its own section
 \usepackage{graphicx}
 \usepackage[numbers]{natbib}
 \usepackage[hidelinks]{hyperref}
@@ -33,4 +38,7 @@
 
 \bibliographystyle{plainnat}
 \bibliography{refs}
+
+\appendix
+\input{sections/appendix}
 \end{document}

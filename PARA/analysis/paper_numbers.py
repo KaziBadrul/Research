@@ -50,6 +50,7 @@ for k in ["lora_rank", "lora_alpha", "epochs", "batch_size", "lr_lora", "lr_scal
     put(f"cfg_{k}", cfg[k], "config.json (identical across datasets)")
 pdraw = load("dermamnist/sweep_50_GPT_4_per_draw.csv")
 put("derma_gpt_zs_acc", pdraw[pdraw.method == "Zero-shot"].acc.iloc[0], "dermamnist/sweep_50_GPT_4_per_draw.csv")
+put("derma_gpt_zs_bacc", pdraw[pdraw.method == "Zero-shot"].bacc.iloc[0], "dermamnist/sweep_50_GPT_4_per_draw.csv")
 put("derma_gpt_zs_acc_paper", 53.78, "Kang et al. 2026, Table A3, DermaMNIST, BiomedCLIP (zero-shot) column, p. 15")
 put("frozen_c", 8, "PARA_followup_5.ipynb FROZEN_C")
 put("alpha", 0.05, "significance threshold (CLAUDE.md rule)")
@@ -156,6 +157,9 @@ dm = pdall[pdall.dataset.isin(DESIGN)].groupby("method").bacc.mean()
 put("bacc_design_para", dm["PARA"], "*/sweep_*_per_draw.csv, design, mean BAcc")
 put("bacc_design_para_centered", dm["PARA centered eta"], "*/sweep_*_per_draw.csv, design, mean BAcc")
 byds = pdall.groupby(["dataset", "method"]).bacc.mean().unstack()
+hm = pdall[pdall.dataset.isin(HELD)].groupby("method").bacc.mean()
+put("bacc_held_para", hm["PARA"], "*/sweep_*_per_draw.csv, held-out, mean BAcc")
+put("bacc_held_reliability_eta", hm["Reliability eta"], "*/sweep_*_per_draw.csv, held-out, mean BAcc, frozen-space reliability step")
 put("n_ds_centered_worse", int((byds["PARA centered eta"] < byds["PARA"]).sum()), "*/sweep_*_per_draw.csv")
 
 # ------------------------------------------------------------------ shot-only vs PARA
@@ -312,6 +316,34 @@ for ds in ["breastmnist", "pneumoniamnist", "octmnist"]:
             put(f"curve_{ds}_K{K}_{bl}_best", c.max(), f"{ds}/eta_curves.csv, mean over draws and prompt sets")
             put(f"curve_{ds}_K{K}_{bl}_argbest", c.idxmax(), f"{ds}/eta_curves.csv, eta of the best mean BAcc")
         put(f"curve_{ds}_K{K}_gain", curve.loc[("logprob", K)].max() - curve.loc[("zscore", K)].max(), f"{ds}/eta_curves.csv")
+
+# ------------------------------------------------------------------ additions from the 2026-11-12 review
+# phi of a real class against the uniform random baseline that Figure 2 plots
+ru = geo.raw_phi_real / geo.raw_phi_unif
+put("phi_unif_dev_min_five_pct", 100 * (ru[five] - 1).abs().min(), "14.2; |real/uniform random - 1|, all but Organ (as in Figure 2)")
+put("phi_unif_dev_max_five_pct", 100 * (ru[five] - 1).abs().max(), "14.2; |real/uniform random - 1|, all but Organ (as in Figure 2)")
+put("phi_unif_organ_pct", 100 * (ru["organamnist"] - 1), "14.2; real/uniform random - 1, OrganAMNIST")
+for ds in ALL:
+    put(f"cen_phi_real_{ds}", geo.loc[ds, "cen_phi_real"], "14.2, centered space")
+    put(f"cen_phi_unif_{ds}", geo.loc[ds, "cen_phi_unif"], "14.2, centered space (as in Figure 2)")
+# anchor reliability per (dataset, K), averaged over draws and prompt sets
+for (ds, K), v in rs.groupby(["dataset", "K"]).r_anchor.mean().items():
+    put(f"ra_{ds}_K{K}", v, "*/rule_scores.csv, mean r_anchor at this K")
+# eta(S) vs per-draw oracle eta, multi-class settings only (the z-score oracle eta is not unique on binary data)
+mmc = m[~m.dataset.isin(BIN)]
+r = spearmanr(mmc.value_e, mmc.value_o)
+put("spearman_eta_oracle_mc", r.statistic, "sweep eta files, within-setting demeaned, multi-class settings only")
+put("spearman_eta_oracle_mc_p", r.pvalue, "same")
+# frozen-space reliability step (Appendix): prior epsilon
+put("rel_eps", cfg["rel_eps"], "config.json rel_eps (REL_EPS in PARA_followup_2/3/5)")
+# HOSO-style eta on OrganAMNIST
+hs = rs[(rs.rule == "HOSO-style") & (rs.dataset == "organamnist")]
+for K in (4, 16):
+    put(f"hoso_organ_K{K}_eta_min", hs[hs.K == K].eta.min(), "organamnist rule_scores.csv, HOSO-style eta, min over draws")
+# DermaMNIST majority-class share of the test set
+scr = open(os.path.join(ROOT, "16_screening.txt"), encoding="utf-8").read()
+put("derma_majority_pct", float(re.search(r"dermamnist\s+templates\s+reference(?:\s+\S+){6}\s+([\d.]+)", scr).group(1)),
+    "16_screening.txt, dermamnist majority%")
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 json.dump(N, open(OUT, "w", encoding="utf-8"), indent=1)

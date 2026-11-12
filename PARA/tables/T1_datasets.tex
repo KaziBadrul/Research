@@ -1,18 +1,20 @@
 \begin{table}[t]
 \centering
 \small
-\caption{Datasets. Zero-shot BAcc (\%) on the evaluated test subset, per prompt set. ``Your prompts'' are 5 hand-written visual descriptions per class for DermaMNIST and 5 generic templates elsewhere; GPT-4 prompts are BiomedCoOp's (BreastMNIST via BUSI: benign and normal pooled).}
+\caption{Datasets. Zero-shot BAcc (\%) on the evaluated test subset, per prompt set. ``Your prompts'' are 5 hand-written visual descriptions per class for DermaMNIST and 5 generic templates elsewhere; GPT-4 prompts are BiomedCoOp's (BreastMNIST via BUSI: benign and normal pooled). ZS: zero-shot.}
 \label{tab:T1_datasets}
-\begin{tabular}{lrrrrlrrl}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrl}
 \toprule
-Dataset & Classes & Test (eval) & Test (full) & Image px & Prompt sets & ZS BAcc (your prompts) & ZS BAcc (GPT-4) & Split \\
+Dataset & Classes & Test images & Pixels & ZS BAcc, own & ZS BAcc, GPT-4 & Split \\
 \midrule
-DermaMNIST & 7 & 2000 & 2005 & 224 & hand-written (5/class), GPT-4 (50/class) & 20.93 & 21.39 & design \\
-OCTMNIST & 4 & 1000 & 1000 & 128 & templates (5), GPT-4 (50/class) & 49.30 & 51.50 & design \\
-BloodMNIST & 8 & 2000 & 3421 & 128 & templates (5), GPT-4 (50/class) & 14.86 & 13.49 & design \\
-BreastMNIST & 2 & 156 & 156 & 128 & templates (5), GPT-4 (50/class) & 53.63 & 70.93 & held-out \\
-PneumoniaMNIST & 2 & 624 & 624 & 128 & templates (5) & 67.35 & -- & held-out \\
-OrganAMNIST & 11 & 2000 & 17778 & 128 & templates (5) & 25.71 & -- & held-out \\
+DermaMNIST & 7 & 2000 & 224 & 20.93 & 21.39 & design \\
+OCTMNIST & 4 & 1000 & 128 & 49.30 & 51.50 & design \\
+BloodMNIST & 8 & 2000 & 128 & 14.86 & 13.49 & design \\
+BreastMNIST & 2 & 156 & 128 & 53.63 & 70.93 & held-out \\
+PneumoniaMNIST & 2 & 624 & 128 & 67.35 & -- & held-out \\
+OrganAMNIST & 11 & 2000 & 128 & 25.71 & -- & held-out \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}

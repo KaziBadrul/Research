@@ -6,7 +6,7 @@ We reimplement PARA on BiomedCLIP and study the step on six MedMNIST datasets, t
 with repeated support draws, balanced accuracy and worst-case (CVaR20) evaluation.
 We find that the geometric signals barely depend on the class in BiomedCLIP's frozen space,
 so the step reduces to the same function of the number of shots on every dataset ($0.33$, $0.60$ and $0.80$ at 1, 4 and 16 shots),
-predictable from two constants of the pretrained model; a schedule in the shot count alone does better.
+reproduced by two dataset-level averages of the frozen geometry; a schedule in the shot count alone does better.
 On binary tasks, standardizing each branch's scores turns the blend into a switch: PARA returns the zero-shot prediction below a step of $0.5$
 and the trained branch's prediction above it, on every image.
 The best step instead follows how reliable the anchor is relative to the trained branch;

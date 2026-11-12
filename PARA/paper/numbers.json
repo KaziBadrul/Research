@@ -39,6 +39,10 @@
   "value": 53.55,
   "source": "dermamnist/sweep_50_GPT_4_per_draw.csv"
  },
+ "derma_gpt_zs_bacc": {
+  "value": 21.3908,
+  "source": "dermamnist/sweep_50_GPT_4_per_draw.csv"
+ },
  "derma_gpt_zs_acc_paper": {
   "value": 53.78,
   "source": "Kang et al. 2026, Table A3, DermaMNIST, BiomedCLIP (zero-shot) column, p. 15"
@@ -498,6 +502,14 @@
  "bacc_design_para_centered": {
   "value": 55.78726777777777,
   "source": "*/sweep_*_per_draw.csv, design, mean BAcc"
+ },
+ "bacc_held_para": {
+  "value": 68.01466916666666,
+  "source": "*/sweep_*_per_draw.csv, held-out, mean BAcc"
+ },
+ "bacc_held_reliability_eta": {
+  "value": 65.09219833333333,
+  "source": "*/sweep_*_per_draw.csv, held-out, mean BAcc, frozen-space reliability step"
  },
  "n_ds_centered_worse": {
   "value": 5.0,
@@ -2338,5 +2350,161 @@
  "curve_octmnist_K16_gain": {
   "value": 0.9050000000000011,
   "source": "octmnist/eta_curves.csv"
+ },
+ "phi_unif_dev_min_five_pct": {
+  "value": 0.6258692628650975,
+  "source": "14.2; |real/uniform random - 1|, all but Organ (as in Figure 2)"
+ },
+ "phi_unif_dev_max_five_pct": {
+  "value": 4.172767203513916,
+  "source": "14.2; |real/uniform random - 1|, all but Organ (as in Figure 2)"
+ },
+ "phi_unif_organ_pct": {
+  "value": 16.2645218945487,
+  "source": "14.2; real/uniform random - 1, OrganAMNIST"
+ },
+ "cen_phi_real_bloodmnist": {
+  "value": 5.34,
+  "source": "14.2, centered space"
+ },
+ "cen_phi_unif_bloodmnist": {
+  "value": 0.94,
+  "source": "14.2, centered space (as in Figure 2)"
+ },
+ "cen_phi_real_dermamnist": {
+  "value": 3.83,
+  "source": "14.2, centered space"
+ },
+ "cen_phi_unif_dermamnist": {
+  "value": 1.37,
+  "source": "14.2, centered space (as in Figure 2)"
+ },
+ "cen_phi_real_octmnist": {
+  "value": 2.59,
+  "source": "14.2, centered space"
+ },
+ "cen_phi_unif_octmnist": {
+  "value": 1.01,
+  "source": "14.2, centered space (as in Figure 2)"
+ },
+ "cen_phi_real_breastmnist": {
+  "value": 1.62,
+  "source": "14.2, centered space"
+ },
+ "cen_phi_unif_breastmnist": {
+  "value": 1.29,
+  "source": "14.2, centered space (as in Figure 2)"
+ },
+ "cen_phi_real_organamnist": {
+  "value": 6.73,
+  "source": "14.2, centered space"
+ },
+ "cen_phi_unif_organamnist": {
+  "value": 1.44,
+  "source": "14.2, centered space (as in Figure 2)"
+ },
+ "cen_phi_real_pneumoniamnist": {
+  "value": 3.37,
+  "source": "14.2, centered space"
+ },
+ "cen_phi_unif_pneumoniamnist": {
+  "value": 1.74,
+  "source": "14.2, centered space (as in Figure 2)"
+ },
+ "ra_bloodmnist_K1": {
+  "value": 0.032752484083175624,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_bloodmnist_K4": {
+  "value": 0.021082173074994725,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_bloodmnist_K16": {
+  "value": 0.020764006035668466,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_breastmnist_K1": {
+  "value": 0.2822700262069702,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_breastmnist_K4": {
+  "value": 0.2204920351505279,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_breastmnist_K16": {
+  "value": 0.1946743905544281,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_dermamnist_K1": {
+  "value": 0.08983774570127326,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_dermamnist_K4": {
+  "value": 0.07729395218193527,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_dermamnist_K16": {
+  "value": 0.08067626357078549,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_octmnist_K1": {
+  "value": 0.12334626317024229,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_octmnist_K4": {
+  "value": 0.18479765256245925,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_octmnist_K16": {
+  "value": 0.18224957982699072,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_organamnist_K1": {
+  "value": 0.188552531003952,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_organamnist_K4": {
+  "value": 0.20761260986328123,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_organamnist_K16": {
+  "value": 0.19209980502724644,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_pneumoniamnist_K1": {
+  "value": 0.3447899580001831,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_pneumoniamnist_K4": {
+  "value": 0.444400954246521,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "ra_pneumoniamnist_K16": {
+  "value": 0.3839074850082397,
+  "source": "*/rule_scores.csv, mean r_anchor at this K"
+ },
+ "spearman_eta_oracle_mc": {
+  "value": -0.126584858916485,
+  "source": "sweep eta files, within-setting demeaned, multi-class settings only"
+ },
+ "spearman_eta_oracle_mc_p": {
+  "value": 0.0671286845590308,
+  "source": "same"
+ },
+ "rel_eps": {
+  "value": 0.1,
+  "source": "config.json rel_eps (REL_EPS in PARA_followup_2/3/5)"
+ },
+ "hoso_organ_K4_eta_min": {
+  "value": 1.0,
+  "source": "organamnist rule_scores.csv, HOSO-style eta, min over draws"
+ },
+ "hoso_organ_K16_eta_min": {
+  "value": 0.875,
+  "source": "organamnist rule_scores.csv, HOSO-style eta, min over draws"
+ },
+ "derma_majority_pct": {
+  "value": 66.7,
+  "source": "16_screening.txt, dermamnist majority%"
  }
 }

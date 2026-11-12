@@ -1,11 +1,12 @@
 \begin{table}[t]
 \centering
 \small
-\caption{Mean Macro-F1 (\%), same runs as Tables T2a and T2b. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
+\caption{Mean Macro-F1 (\%), same runs as Tables~\ref{tab:T2a_mean_bacc} and~\ref{tab:T2b_cvar20_bacc}. Bold: best non-oracle method per row. ZS: zero-shot; z: standardized blend; lp: log-probability blend; Shot: shot-only step. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
 \label{tab:T2c_macro_f1}
+\begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Dataset & K & Zero-shot & Visual only & PARA (z) & PARA (log-prob) & Shot-only (z) & Oracle (log-prob)* \\
+Dataset & $K$ & ZS & Visual & PARA (z) & PARA (lp) & Shot (z) & Oracle (lp)* \\
 \midrule
 DermaMNIST & 1 & 18.74 & 20.59 & 21.85 & \textbf{23.16} & 22.97 & 23.51 \\
 DermaMNIST & 4 & 18.74 & 32.88 & 34.70 & \textbf{35.89} & 35.60 & 36.61 \\
@@ -27,4 +28,5 @@ OrganAMNIST & 4 & 21.45 & \textbf{64.60} & 54.26 & 61.36 & 59.61 & 64.58 \\
 OrganAMNIST & 16 & 21.45 & \textbf{81.22} & 78.34 & 80.84 & 79.58 & 81.22 \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}

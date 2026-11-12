@@ -13,7 +13,7 @@ Each branch is standardized across classes (written $\bar z$), and the predictio
   \hat z_c(x) = \bar z^0_c(x) + \eta(S)\,\big(\bar z^S_c(x) - \bar z^0_c(x)\big).
   \label{eq:blend}
 \end{equation}
-The step is computed in closed form from the frozen support embeddings $u_i = F^0_v(x_i)$.
+The step is computed in closed form from the frozen support embeddings $u_i = F^0_v(x_i)$, which, like $t_c$, are L2-normalized.
 With $S_c$ the $n_c$ support images of class $c$, $h_c = \sum_{i \in S_c} u_i$ and $d_c = h_c / \lVert h_c \rVert$,
 \begin{equation}
   \eta(S) = \frac{\lambda}{C} \sum_{c=1}^{C} \frac{\delta_c \phi_c}{1 + \delta_c \phi_c},
@@ -36,6 +36,8 @@ and keep the final checkpoint.
 Two details the paper leaves open we set ourselves: a batch size of $32$ and random resized crops with scale $(0.5, 1)$ plus horizontal flips.
 As a check, BiomedCoOp's GPT-4 prompts give a DermaMNIST zero-shot accuracy of $53.55\%$ in our implementation,
 against $53.78\%$ for zero-shot BiomedCLIP in Table A3 of \citet{kang2026para}.
+This confirms that the pipeline matches theirs, not that the anchor is useful: both are below the $66.7\%$ obtained by always predicting
+the majority class (nevi), and the corresponding BAcc is $21.39\%$ (Table~\ref{tab:T1_datasets}).
 
 \paragraph{Datasets and prompts.}
 We use six 2D datasets from MedMNIST v2 \citep{yang2023medmnist} (Table~\ref{tab:T1_datasets}):
@@ -79,6 +81,9 @@ before any model was trained on them, and serve as \emph{held-out} datasets.
 The one tuned rule in this paper, the anchor-aware step of Section~\ref{sec:finding3},
 has a single constant $c$. We fixed $c = 8$ because it maximized CVaR20 BAcc pooled over the three design datasets
 ($56.07$, against $55.71$ for $c = 4$ and $55.61$ for $c = 16$); this choice is in-sample on those datasets.
-It was fixed before any held-out dataset was trained: file timestamps place the decision after the last design analysis
-and before the first held-out run.
-No dated commit records it, so we describe it as a pre-specified rule rather than a formally registered one.
+We made this choice between the last design analysis and the first held-out training run, but the evidence for that timing is weak.
+The decision itself was not recorded with a date: the held-out runs scored all nine values of $c$ without marking one as chosen,
+and the first committed record of $c = 8$ postdates the held-out runs.
+The zero-shot screening, which also computed $r_a$ on the held-out candidates, may have preceded the choice.
+We therefore call it a pre-specified rule, not a registered one; that $c = 8$ is not the best value on the held-out data
+(Section~\ref{sec:finding3}) argues against a choice informed by held-out results, but does not prove the order.
