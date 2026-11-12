@@ -1,5 +1,10 @@
 # PARA replication: findings so far (DermaMNIST, OCTMNIST, BloodMNIST)
 
+> **Status (2026-11-12):** this is a historical note covering only the three design datasets, written before the held-out runs.
+> `docs/findings_verified.md` supersedes it: use that file for all six datasets and for any number that goes into the paper.
+> The numbers below were re-checked against `para_results/` (`analysis/verify_claims.py`, `analysis/check_notes.py`).
+> Lines marked **[corrected]** were wrong; everything else matches the files.
+
 Paper: *Prompt-Anchored Residual Adaptation for Biomedical Vision-Language Models* (Kang et al., arXiv, Sep 2026).
 Setup: own reimplementation on BiomedCLIP ViT-B/16, LoRA r=8, 80 epochs, lambda=0.9. MedMNIST official splits
 (DermaMNIST 224 px, 2,000 test images; OCTMNIST 128 px, 1,000 balanced test images; BloodMNIST 128 px, 2,000 test images).
@@ -9,8 +14,11 @@ Metrics: Acc, Macro-F1, balanced accuracy (BAcc). Paired Wilcoxon tests across d
 ## FROZEN RULE (decided 2026-11-11, before any held-out dataset was run)
 **Anchor-aware eta = K / (K + k0), k0 = c * r_a / (1 - r_a), with c = 8.**
 r_a = anchor's mean probability of the true class on the labelled support images (frozen encoder), rescaled so chance = 0, perfect = 1.
-c = 8 was chosen by worst-case (CVaR20) BAcc under leave-one-dataset-out on DermaMNIST, OCTMNIST and BloodMNIST, because worst-case
+c = 8 was chosen by worst-case (CVaR20) BAcc on DermaMNIST, OCTMNIST and BloodMNIST, because worst-case
 reliability is the paper's primary metric. c = 4 (best mean BAcc) is reported as a sensitivity check.
+**[corrected]** The files do not reproduce "chosen under leave-one-dataset-out". c = 8 maximises CVaR20 pooled in-sample over the three
+design datasets (56.07, against 55.71 for c = 4 and 55.61 for c = 16). Leave-one-dataset-out by CVaR20 picks c = 16 (Blood left out),
+8 (Derma left out) and 4 (OCT left out). Describe the choice as pooled in-sample CVaR20.
 Every new (held-out) dataset is evaluated with c = 8 unchanged. Numbers for c = 8 on the original three datasets are in-sample and must be labelled so.
 Do not change c, the rule's form, or the selection criterion after seeing held-out results; any later change must be tested on yet more new data.
 
@@ -40,15 +48,22 @@ Run order: PneumoniaMNIST first (fast; send its 15.3 output as a sanity check), 
 ## Findings
 
 1. **delta and phi are degenerate in BiomedCLIP's frozen space** (all 3 datasets, both anchor sets).
-   - Own-text vs other-text delta differ by only 0.002 to 0.014; images are closest to their own class text for 1-2 classes only.
+   - **[corrected]** Own-text vs other-text delta (K=16, draw 0, your prompts) differ by only 0.004 to 0.012 (Blood 0.004, Derma 0.009,
+     OCT 0.012); images are closest to their own class text for 1-2 classes only. The earlier figure, 0.002 to 0.014, is not supported by any saved file.
+     On all six datasets the range is 0.004 to 0.043; OrganAMNIST is the exception at 0.043.
    - phi of a real class equals phi of 16 random mixed images (Derma 14.23 vs 14.32; OCT 14.85 vs 14.69; Blood 15.43 vs 15.23).
    - Mean cosine between any two images: 0.85 to 0.96 (Blood tightest: 0.962 same class vs 0.945 different class).
+     This holds for these three datasets only. On all six the range is 0.671 to 0.962 (Organ 0.800 / 0.671; Breast different-class 0.839).
    - After centering each modality, both become informative (real phi 2.6 to 5.3 vs random ~1.0).
-   - Derivation: phi = ||sum u_i||^2 / K = 1 + (K - 1) * (mean pairwise cosine), so with mean cosine ~0.9 and delta ~0.52 (both properties
-     of the pretrained model) PARA's eta is predicted as 0.31 / 0.59 / 0.79 at K = 1 / 4 / 16, matching the measured 0.32 / 0.61 / 0.80 on all datasets.
+   - Derivation: phi = ||sum u_i||^2 / K = 1 + (K - 1) * (mean pairwise cosine).
+   - **[corrected]** The constants: mean cosine ~0.9 and delta ~0.52 are not supported by the files. Averaged over all six datasets,
+     the 14.2 files give delta = 0.550 and mean cosine = 0.867. These predict eta = 0.320 / 0.598 / 0.797 at K = 1 / 4 / 16.
+     Measured: 0.328 / 0.603 / 0.798 pooled over six datasets; 0.326 / 0.607 / 0.801 over these three.
 
 2. **eta(S) collapses to a fixed function of K.** Across draws its SD is at most 0.0035 in all 18 settings, it is the same on every
    dataset (about 0.32 / 0.61 / 0.80 at K = 1 / 4 / 16), and it does not track the best eta from draw to draw.
+   **[corrected]** "Does not track" is right, but the relation is not zero: it is weakly negative (within-setting Spearman about -0.12 over
+   six datasets, p = 0.04). With the held-out datasets included, the maximum SD across draws is 0.0108 (Breast, your prompts, K=1).
 
 3. **A geometry-free schedule beats PARA's eta.** eta = lambda * K / (1 + K):
    BAcc wins 150 of 180 paired draws vs PARA (mean +2.65); significantly better in 13 of 18 settings, never significantly worse.
@@ -62,7 +77,8 @@ Run order: PneumoniaMNIST first (fast; send its 15.3 output as a sanity check), 
    - This replicates the paper's own CHMNIST failure mode on a second dataset.
 
 5. **DermaMNIST accuracy is a majority-class effect.** GPT-4 anchors reach 53.55% Acc (paper: 53.78%), but BAcc is 21.39% vs 20.93% for own prompts:
-   the gain comes from predicting "nevus" for ~65% of images. The best eta by Acc vs by BAcc can differ hugely (0.15 vs 0.72 at K = 1).
+   the gain comes from predicting "nevus" for ~65% of images. The best eta by Acc vs by BAcc can differ hugely (0.15 vs 0.72 at K = 1 with
+   GPT-4 prompts; 0.36 vs 0.67 with own prompts).
 
 6. **Two candidate fixes failed.** Centered eta and a frozen-space reliability eta (r_v from frozen leave-one-out prototypes) both set eta badly:
    frozen-space reliability underestimates the trained LoRA branch (frozen r_v 0.14-0.27 while the adapted branch reaches 80-91%).
@@ -90,7 +106,7 @@ Run order: PneumoniaMNIST first (fast; send its 15.3 output as a sanity check), 
 Verified to exist:
 - **Liang et al., "Mind the Gap", NeurIPS 2022**: modality gap and cone effect; CLIP gap distance 0.82 at default temperature. Explains finding 1; cite, don't claim as new.
 - **ProLIP (Fahes et al., WACV 2026)**: https://arxiv.org/abs/2410.05270 ; validation-free; scales its regularization inversely with shots per class. Prior art for shot-dependent schedules, so "shot-only eta" is a baseline, not a contribution.
-- **HOSO-Adapter (Vorster et al., arXiv 2603.04341, CVPR 2026 Findings)**: https://arxiv.org/abs/2603.04341 ; learns the blending ratio on one held-out support shot. Prior art for hold-out eta, so it is used as a baseline ("HOSO-style").
+- **HOSO-Adapter (Vorster et al., arXiv 2603.04341; the "CVPR 2026 Findings" venue was not confirmed on 2026-11-12, so cite as arXiv until it is)**: https://arxiv.org/abs/2603.04341 ; learns the blending ratio on one held-out support shot. Prior art for hold-out eta, so it is used as a baseline ("HOSO-style").
 - **vMFCoOp (Shao et al., AAAI 2026 oral)**: hyperspherical/vMF prompt learning for biomedical VLMs; related work.
 Not verified (do not cite without checking): Gemini report's claims about the PARA authors' other CVPR 2026 papers and PARA's code status.
 Gemini report errors to avoid repeating: (a) it predicts eta saturates near lambda; measured eta does not saturate, it loses all draw-to-draw variance, and phi (ignored by Gemini) is the bigger cause; (b) its "Euclidean vs hypersphere" critique does not apply: delta = 1 - cos is a monotone function of the angle, phi is the vMF mean-resultant statistic, and PARA blends standardized logits, not embedding vectors.

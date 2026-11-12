@@ -18,7 +18,8 @@ $\eta = \lambda \cdot \text{mean}_c\left[\frac{\delta_c \phi_c}{1+\delta_c \phi_
 - `para_results/` top level: `cross_dataset_summary.txt`, `cross_dataset_table.csv`, `16_screening.{txt,csv}`,
   `logprob_table.csv`, `logprob_summary.txt`.
 - `para_figures/`: F1 to F5 (PNG and PDF) and the scripts that make them (`make_figs.py`, `make_f3.py`, `cell_17_3_eta_curves.py`).
-- `analysis/`: read-only analysis scripts. `verify_claims.py` checks every claim; `make_tables.py` builds T1 to T4.
+- `analysis/`: read-only analysis scripts. `verify_claims.py` checks every claim; `check_notes.py` checks the design-only numbers in
+  `para-replication-findings.md`; `make_tables.py` builds T1 to T4.
 - `tables/`: the T1 to T4 tables, as LaTeX (booktabs) and CSV.
 - `docs/findings_verified.md`: every verified number with its source file and a list of corrections. **Use these values.**
 - `para-paper-outline.md`, `para-replication-findings.md`: earlier chat notes. These are not verified; check numbers against `docs/`.
