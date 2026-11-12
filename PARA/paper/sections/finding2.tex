@@ -1,0 +1,60 @@
+\section{On binary tasks the standardized blend is a switch}\label{sec:finding2}
+
+Eq.~\eqref{eq:blend} standardizes each branch across classes before blending, so that branches with different logit scales can be mixed.
+With two classes this standardization removes everything except the sign of the prediction, and the blend can only return one branch or the other.
+
+\paragraph{Why.}
+Let $\bar z = (z - \mu)/\sigma$, with $\mu$ and $\sigma$ the mean and (population) standard deviation of the scores over the classes,
+as in our implementation.
+For $C = 2$ and $z_1 \neq z_2$, this gives $\bar z = (+1, -1)$ when class 1 scores higher and $(-1, +1)$ otherwise,
+whatever the size of the margin.
+If the anchor and the support branch agree on an image, the blend agrees with both for every $\eta$.
+If they disagree, say $\bar z^0 = (+1, -1)$ and $\bar z^S = (-1, +1)$, Eq.~\eqref{eq:blend} gives
+\begin{equation}
+  \hat z = (1 - \eta)\,\bar z^0 + \eta\,\bar z^S = (1 - 2\eta)\,(+1, -1),
+\end{equation}
+which follows the anchor for $\eta < 0.5$ and the support branch for $\eta > 0.5$.
+So on every test image the blended prediction equals the zero-shot prediction when $\eta < 0.5$ and the visual-only prediction when $\eta > 0.5$,
+and any metric computed from predictions equals the zero-shot or the visual-only value.
+How confident either branch is never enters.
+At exactly $\eta = 0.5$, disagreeing branches tie and the result depends on how ties are broken.
+
+\paragraph{Evidence.}
+On BreastMNIST and PneumoniaMNIST we compared every step rule we evaluated (12 rules: PARA, shot-only, HOSO-style and nine values of the anchor-aware constant)
+with zero-shot and visual only on the same draw.
+In all 1,046 rule, draw and prompt-set combinations with $\eta \neq 0.5$, BAcc equals the zero-shot BAcc when $\eta < 0.5$ and the visual-only BAcc when $\eta > 0.5$.
+The same holds for the oracle rows (1,128 of 1,128 including them).
+Sweeping $\eta$ over a 41-point grid confirms it directly (Figure~\ref{fig:eta_curves}, blue):
+in all 60 BreastMNIST runs and all 30 PneumoniaMNIST runs the z-score blend takes exactly one BAcc value for every $\eta < 0.5$ and one for every $\eta > 0.5$.
+On the four-class OCTMNIST the same sweep is a genuine curve in all 60 runs.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{F3_eta_curves}
+  \caption{BAcc as a function of the step $\eta$ for the standardized blend of Eq.~\eqref{eq:blend} (blue) and the log-probability blend of
+  Section~\ref{sec:finding4} (orange), on two binary datasets and OCTMNIST.
+  Lines: mean over 10 support draws and the available prompt sets; bands: interquartile range over draws.
+  Dashed: PARA's step at that $K$. $\eta = 0$ is the anchor alone and $\eta = 1$ the trained branch alone.
+  On the binary datasets the standardized blend is flat on each side of $\eta = 0.5$; the dip at exactly $\eta = 0.5$
+  (PneumoniaMNIST, $K = 1$) is a tie between disagreeing branches.}
+  \label{fig:eta_curves}
+\end{figure}
+
+\input{../tables/T2a_mean_bacc.tex}
+
+\paragraph{Consequences for PARA.}
+Because PARA's step is a fixed curve in $K$ (Section~\ref{sec:finding1}), the switch is set by the shot count alone.
+On the binary datasets PARA's step never exceeds $0.347$ at $K = 1$ and is never below $0.580$ at $K = 4$,
+so PARA \emph{is} zero-shot at $K = 1$ and \emph{is} visual only at $K = 4$ and $16$, on every draw
+(Table~\ref{tab:T2a_mean_bacc}: on BreastMNIST, $62.28$ BAcc at $K = 1$, equal to zero-shot, and $65.50$ and $73.34$ at $K = 4$ and $16$, equal to visual only).
+The shot-only schedule falls on the same side of $0.5$ at every $K$, which is why the two give identical predictions on the binary datasets in Section~\ref{sec:finding1}.
+
+Two things follow.
+First, the worst-case protection that the anchor provides is all or nothing, and which one a user gets depends only on $K$.
+At $K = 1$ the switch happens to keep the anchor, which protects the worst draws:
+CVaR20 is $67.35$ on PneumoniaMNIST and $62.28$ on BreastMNIST, against $53.21$ and $46.49$ for visual only.
+At $K = 4$ on BreastMNIST it drops the anchor entirely: CVaR20 falls to $50.56$, the visual-only value, well below the anchor's $62.28$.
+Second, no intermediate step can help, because there is no intermediate prediction.
+Even the oracle can only choose a side per draw: its gains (\eg $67.65$ against $62.28$ on BreastMNIST at $K = 1$) come from picking zero-shot on some draws and visual only on others,
+not from blending.
+A blend that keeps each branch's confidence avoids this; Section~\ref{sec:finding4} evaluates one.

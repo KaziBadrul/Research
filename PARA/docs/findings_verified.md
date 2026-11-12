@@ -87,7 +87,7 @@ Every direction in the raw counts survives the correction; only the counts shrin
 | 10 | Cosine: same-class 0.800 to 0.962, different-class 0.671 to 0.945 | 14.2 |
 | 11 | Centered $\phi$: real 1.62 to 6.73, random 0.94 to 1.74. Centered own $\delta$ (0.764 to 0.926) is below other $\delta$ (1.010 to 1.130) on all six datasets. | 14.2 |
 | 12 | Mean $\eta(S)$ = 0.328 / 0.603 / 0.798 at K = 1 / 4 / 16 (pooled over all rows; per-dataset means 0.316 to 0.353, 0.587 to 0.610, 0.790 to 0.802) | `*/sweep_*_eta.csv`, quantity `eta(S)` |
-| 13 | $\eta(K) = 0.9\,a/(1+a)$ with $a = \bar\delta\,(1+(K-1)\bar c)$, $\bar\delta$ = 0.550, $\bar c$ = 0.867, gives 0.320 / 0.598 / 0.797 | 14.2 |
+| 13 | $\eta(K) = 0.9\,a/(1+a)$ with $a = \bar\delta\,(1+(K-1)\bar c)$, $\bar\delta$ = 0.550, $\bar c$ = 0.867, gives 0.319 / 0.598 / 0.797 (exact 0.3195 at K=1). With the same-class cosine $\bar c$ = 0.886, which is what $\phi_c$ depends on exactly: 0.319 / 0.601 / 0.798 | 14.2 |
 | 14 | Maximum SD 0.0108 (Breast, your prompts, K=1); 0.0035 over design datasets only (Derma GPT-4, K=4) | sweep eta files |
 | 15 | Spearman($\eta(S)$, per-draw oracle $\eta$): mean within-setting −0.13; pooled −0.12 (p = 0.04) | sweep eta files, quantity `oracle BAcc` |
 | 16 | Shot-only $\lambda K/(1+K)$ minus PARA, BAcc: design +2.65, 13 significantly better / 0 worse of 18; held-out +0.82, 3 / 0 of 12 (won 30, lost 0) | `*/rule_scores.csv` |

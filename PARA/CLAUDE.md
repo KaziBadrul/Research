@@ -22,6 +22,8 @@ $\eta = \lambda \cdot \text{mean}_c\left[\frac{\delta_c \phi_c}{1+\delta_c \phi_
   `para-replication-findings.md`; `make_tables.py` builds T1 to T4.
 - `tables/`: T1, T2a (mean BAcc), T2b (CVaR20), T2c (Macro-F1), T3 and T4, as LaTeX (booktabs) and CSV,
   plus `T3a`/`T3b_per_setting.csv`.
+- `paper/`: the LaTeX draft (`main.tex`, `sections/*.tex`, `refs.bib`). `paper/numbers.json` holds every number the draft quotes,
+  written by `analysis/paper_numbers.py`. After editing a section, run `analysis/check_paper_numbers.py`; every decimal must trace.
 - `docs/findings_verified.md`: every verified number with its source file and a list of corrections. **Use these values.**
 - `para-paper-outline.md`, `para-replication-findings.md`: earlier chat notes. These are not verified; check numbers against `docs/`.
 
@@ -59,4 +61,6 @@ python para_figures/make_figs.py para_results para_results/logprob_table.csv par
 python para_figures/make_f3.py para_results/pneumoniamnist/eta_curves.csv para_results/breastmnist/eta_curves.csv para_results/octmnist/eta_curves.csv para_results/logprob_table.csv para_figures/out
 python analysis/verify_claims.py para_results
 python analysis/make_tables.py para_results tables
+python analysis/paper_numbers.py para_results paper/numbers.json
+python analysis/check_paper_numbers.py paper
 ```

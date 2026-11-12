@@ -1,0 +1,33 @@
+\section{Related work}\label{sec:related}
+
+\paragraph{Few-shot adaptation of vision-language models.}
+Contrastive vision-language models such as CLIP \citep{radford2021clip} are adapted to new tasks with a few labelled examples in two broad ways.
+Prompt learning replaces hand-written prompts with learned context vectors \citep{zhou2022coop}.
+Adapter and residual methods instead keep the pretrained prediction and add a learned correction:
+CLIP-Adapter blends adapted and original features through a residual connection \citep{gao2024clipadapter},
+Tip-Adapter adds a cache built from the support set to CLIP's zero-shot logits \citep{zhang2022tipadapter},
+and TaskRes learns a residual on top of the frozen text classifier \citep{yu2023taskres}.
+All of these combine a pretrained and a learned component, and the weight given to each is usually a hyperparameter.
+In biomedical imaging, BiomedCLIP \citep{zhang2023biomedclip} provides the pretrained model,
+and BiomedCoOp \citep{koleilat2025biomedcoop} and vMFCoOp \citep{shao2026vmfcoop} adapt prompt learning to it;
+BiomedCoOp's GPT-4 class descriptions are also the prompts PARA uses.
+
+\paragraph{Setting the blending weight without validation data.}
+With a few examples per class there is rarely data to spare for validation, so several methods set the balance between pretrained and learned components without it.
+ProLIP fine-tunes only CLIP's image projection, regularized towards its pretrained value,
+and in its validation-free variant scales the regularization weight as $1/N$ in the number of shots per class \citep{fahes2026prolip}.
+HOSO-Adapter holds out one support example per class to learn the blending ratio of CLIP-Adapter \citep{vorster2026hoso}.
+PARA \citep{kang2026para} computes its step in closed form from the geometry of the frozen support embeddings, with no training and no held-out data.
+Our shot-only and HOSO-style baselines follow the first two ideas, applied to PARA's blend, so that the three ways of setting the step can be compared on the same trained models.
+
+\paragraph{Geometry of contrastive embedding spaces.}
+\citet{liang2022mind} showed that CLIP-style models place image and text embeddings in separate regions of the shared space (the modality gap),
+with each modality confined to a narrow cone.
+These two properties explain our first finding: PARA's discrepancy mostly measures the gap, which is the same for every class,
+and its agreement mostly measures the cone, which is the same for any set of images.
+We build on their analysis rather than claim the phenomenon as new.
+
+\paragraph{Evaluation under support-set variation.}
+Because few-shot results depend on the sampled support set, PARA evaluates over repeated support draws and reports the worst $20\%$ as well as the mean.
+We adopt this protocol, share the draws across every method so that comparisons are paired,
+and add balanced accuracy, tests per setting with multiple-comparison correction, and a split into design and held-out datasets.

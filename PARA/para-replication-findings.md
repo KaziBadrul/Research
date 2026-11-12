@@ -57,7 +57,7 @@ Run order: PneumoniaMNIST first (fast; send its 15.3 output as a sanity check), 
    - After centering each modality, both become informative (real phi 2.6 to 5.3 vs random ~1.0).
    - Derivation: phi = ||sum u_i||^2 / K = 1 + (K - 1) * (mean pairwise cosine).
    - **[corrected]** The constants: mean cosine ~0.9 and delta ~0.52 are not supported by the files. Averaged over all six datasets,
-     the 14.2 files give delta = 0.550 and mean cosine = 0.867. These predict eta = 0.320 / 0.598 / 0.797 at K = 1 / 4 / 16.
+     the 14.2 files give delta = 0.550 and mean cosine = 0.867. These predict eta = 0.319 / 0.598 / 0.797 at K = 1 / 4 / 16.
      Measured: 0.328 / 0.603 / 0.798 pooled over six datasets; 0.326 / 0.607 / 0.801 over these three.
 
 2. **eta(S) collapses to a fixed function of K.** Across draws its SD is at most 0.0035 in all 18 settings, it is the same on every

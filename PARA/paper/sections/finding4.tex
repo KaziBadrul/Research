@@ -1,0 +1,58 @@
+\section{The blend space matters: a log-probability blend}\label{sec:finding4}
+
+Section~\ref{sec:finding2} traced the binary switch to the standardization in Eq.~\eqref{eq:blend}, which discards each branch's confidence.
+A natural correction is to blend the branches' log-probabilities instead, keeping PARA's step unchanged:
+\begin{equation}
+  \hat z(x) = (1 - \eta)\,\log \operatorname{softmax}\big(z^0(x)\big) + \eta\,\log \operatorname{softmax}\big(z^S(x)\big).
+  \label{eq:logprob}
+\end{equation}
+Each branch keeps its own temperature ($\tau_0$ for the anchor, the learned $\tau_v$ for the support branch),
+so a confident branch can outweigh an unsure one, also with two classes.
+Eq.~\eqref{eq:logprob} adds no parameter and uses the same step values and the same trained models as before;
+only the way the two predictions are combined changes.
+We were led to it by the binary failure seen on the held-out datasets, so we present it as a principled correction to be tested further,
+not as a new method.
+Because nothing in it is fitted, we evaluate it on all six datasets.
+
+\paragraph{Same step, better predictions on multi-class tasks.}
+At PARA's own step, the log-probability blend improves mean BAcc by $4.86$ points on the multi-class datasets
+(Table~\ref{tab:T3_paired_tests}; significantly better in 14 of 21 settings, 10 after Holm's correction, worse in none)
+and Macro-F1 by $5.67$.
+The gains are largest where the anchor is weakest and PARA's step keeps too much of it.
+On BloodMNIST at $K = 1$, mean BAcc rises from $34.28$ to $53.09$ and CVaR20 from $27.01$ to $43.96$;
+on OrganAMNIST at $K = 1$, CVaR20 rises from $34.62$ to $43.00$ (Table~\ref{tab:T2b_cvar20_bacc}).
+On the binary datasets the mean gain is small ($0.36$ BAcc; 2 of 9 settings better, 1 after Holm's correction, none worse),
+and all of it comes from BreastMNIST; on PneumoniaMNIST the log-probability blend is slightly worse at every $K$.
+
+\input{../tables/T3_paired_tests.tex}
+
+\paragraph{The cost: worst-case protection where the anchor is good.}
+The same property that helps weak anchors hurts good ones.
+At $K = 1$ on the three datasets where the anchor matches the trained branch, CVaR20 falls:
+from $67.35$ to $53.59$ on PneumoniaMNIST, from $62.28$ to $50.55$ on BreastMNIST, and from $47.70$ to $43.50$ on OCTMNIST
+(Figure~\ref{fig:worst_case}, green bars).
+On the binary datasets the worst case falls by $2.67$ points on average over settings.
+On the two binary datasets, PARA at $K = 1$ under the standardized blend returned the anchor on every image and so inherited its stable worst case.
+Under the log-probability blend the support branch can overrule the anchor wherever it is more confident,
+including on the poor draws where its confident predictions are wrong.
+We did not measure calibration directly; this explanation is consistent with the pattern but remains a hypothesis.
+\input{../tables/T2b_cvar20_bacc.tex}
+
+\paragraph{The blend has a real interior, but PARA's step does not fit it.}
+Sweeping $\eta$ shows what the log-probability blend makes possible (Figure~\ref{fig:eta_curves}, orange).
+The optima below are chosen in hindsight on the mean curve, so they show what a good step could achieve, not what any rule achieved.
+On BreastMNIST the curve has an interior optimum that beats both branches, which the standardized blend cannot produce:
+$64.60$ BAcc at $\eta = 0.075$ for $K = 1$, $69.33$ at $0.35$ for $K = 4$, and $74.28$ at $0.525$ for $K = 16$,
+against best standardized values of $62.28$, $65.50$ and $73.34$.
+On PneumoniaMNIST there is no meaningful gain: the best value is the anchor at $K = 1$ and the trained branch at $K = 16$,
+and at $K = 4$ the optimum ($82.81$ at $\eta = 0.975$) is within $0.06$ points of the standardized blend.
+On OCTMNIST the gains are modest ($1.18$, $0.41$ and $0.91$ points at $K = 1$, $4$ and $16$),
+but the optimum sits much lower for the log-probability blend ($0.15$, $0.40$ and $0.55$) than for the standardized one ($0.55$, $0.80$ and $0.875$).
+The same $\eta$ therefore means different things in the two blends, and PARA's schedule, calibrated for neither, transfers to neither.
+The best step for the log-probability blend still follows relative anchor quality (Figure~\ref{fig:best_eta}, right).
+
+\paragraph{The oracle confirms the direction.}
+Choosing the step in hindsight for each draw, the log-probability blend matches or beats the standardized blend in 17 of 18 dataset and $K$ cells
+(the exception is DermaMNIST at $K = 16$, by $0.02$ points), with the largest margins on BreastMNIST.
+Blending in log-probability space is thus at least as expressive as blending standardized scores, and on binary tasks strictly more so;
+what it still needs is a step that knows how reliable each branch is, which is the open problem of Section~\ref{sec:finding3}.

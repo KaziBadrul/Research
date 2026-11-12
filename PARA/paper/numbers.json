@@ -1,0 +1,2342 @@
+{
+ "tau0": {
+  "value": 85.23,
+  "source": "PARA.ipynb cell 8 output"
+ },
+ "cfg_lora_rank": {
+  "value": 8.0,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_lora_alpha": {
+  "value": 16.0,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_epochs": {
+  "value": 80.0,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_batch_size": {
+  "value": 32.0,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_lr_lora": {
+  "value": 0.0001,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_lr_scale": {
+  "value": 0.001,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_weight_decay": {
+  "value": 0.0001,
+  "source": "config.json (identical across datasets)"
+ },
+ "cfg_lambda_": {
+  "value": 0.9,
+  "source": "config.json (identical across datasets)"
+ },
+ "derma_gpt_zs_acc": {
+  "value": 53.55,
+  "source": "dermamnist/sweep_50_GPT_4_per_draw.csv"
+ },
+ "derma_gpt_zs_acc_paper": {
+  "value": 53.78,
+  "source": "Kang et al. 2026, Table A3, DermaMNIST, BiomedCLIP (zero-shot) column, p. 15"
+ },
+ "frozen_c": {
+  "value": 8.0,
+  "source": "PARA_followup_5.ipynb FROZEN_C"
+ },
+ "alpha": {
+  "value": 0.05,
+  "source": "significance threshold (CLAUDE.md rule)"
+ },
+ "p_report_floor": {
+  "value": 0.001,
+  "source": "reporting convention: p below this is written p < 0.001"
+ },
+ "crop_scale_min": {
+  "value": 0.5,
+  "source": "train_tf RandomResizedCrop(224, scale=(0.5, 1.0)) in the notebooks (not specified by the paper)"
+ },
+ "wilcoxon_min_p": {
+  "value": 0.001953125,
+  "source": "scipy: smallest two-sided Wilcoxon p with n = 10 (2/1024)"
+ },
+ "c8_pooled_cvar": {
+  "value": 56.068598699172306,
+  "source": "rule_scores.csv, design datasets, pooled CVaR20"
+ },
+ "c4_pooled_cvar": {
+  "value": 55.71373428590047,
+  "source": "rule_scores.csv, design datasets, pooled CVaR20"
+ },
+ "c16_pooled_cvar": {
+  "value": 55.61001510857784,
+  "source": "rule_scores.csv, design datasets, pooled CVaR20"
+ },
+ "gap_bloodmnist": {
+  "value": 0.004,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "own_bloodmnist": {
+  "value": 0.524,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "other_bloodmnist": {
+  "value": 0.527,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_real_bloodmnist": {
+  "value": 15.43,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_mix_bloodmnist": {
+  "value": 15.23,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_unif_bloodmnist": {
+  "value": 15.16,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_same_bloodmnist": {
+  "value": 0.962,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_diff_bloodmnist": {
+  "value": 0.945,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "closest_bloodmnist": {
+  "value": 1.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "C_bloodmnist": {
+  "value": 8.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_dermamnist": {
+  "value": 0.009,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "own_dermamnist": {
+  "value": 0.525,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "other_dermamnist": {
+  "value": 0.534,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_real_dermamnist": {
+  "value": 14.23,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_mix_dermamnist": {
+  "value": 14.32,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_unif_dermamnist": {
+  "value": 13.66,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_same_dermamnist": {
+  "value": 0.882,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_diff_dermamnist": {
+  "value": 0.854,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "closest_dermamnist": {
+  "value": 2.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "C_dermamnist": {
+  "value": 7.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_octmnist": {
+  "value": 0.012,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "own_octmnist": {
+  "value": 0.558,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "other_octmnist": {
+  "value": 0.57,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_real_octmnist": {
+  "value": 14.85,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_mix_octmnist": {
+  "value": 14.69,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_unif_octmnist": {
+  "value": 14.65,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_same_octmnist": {
+  "value": 0.924,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_diff_octmnist": {
+  "value": 0.912,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "closest_octmnist": {
+  "value": 1.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "C_octmnist": {
+  "value": 4.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_breastmnist": {
+  "value": 0.006,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "own_breastmnist": {
+  "value": 0.54,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "other_breastmnist": {
+  "value": 0.546,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_real_breastmnist": {
+  "value": 13.73,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_mix_breastmnist": {
+  "value": 13.37,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_unif_breastmnist": {
+  "value": 13.58,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_same_breastmnist": {
+  "value": 0.849,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_diff_breastmnist": {
+  "value": 0.839,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "closest_breastmnist": {
+  "value": 1.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "C_breastmnist": {
+  "value": 2.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_organamnist": {
+  "value": 0.043,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "own_organamnist": {
+  "value": 0.604,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "other_organamnist": {
+  "value": 0.647,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_real_organamnist": {
+  "value": 13.01,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_mix_organamnist": {
+  "value": 11.05,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_unif_organamnist": {
+  "value": 11.19,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_same_organamnist": {
+  "value": 0.8,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_diff_organamnist": {
+  "value": 0.671,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "closest_organamnist": {
+  "value": 3.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "C_organamnist": {
+  "value": 11.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_pneumoniamnist": {
+  "value": 0.018,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "own_pneumoniamnist": {
+  "value": 0.551,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "other_pneumoniamnist": {
+  "value": 0.569,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_real_pneumoniamnist": {
+  "value": 14.47,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_mix_pneumoniamnist": {
+  "value": 14.18,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "phi_unif_pneumoniamnist": {
+  "value": 14.38,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_same_pneumoniamnist": {
+  "value": 0.898,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_diff_pneumoniamnist": {
+  "value": 0.864,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "closest_pneumoniamnist": {
+  "value": 1.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "C_pneumoniamnist": {
+  "value": 2.0,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_min": {
+  "value": 0.004,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "gap_max_five": {
+  "value": 0.018,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts); all but OrganAMNIST"
+ },
+ "phi_ratio_dev_max_five_pct": {
+  "value": 1.3131976362442455,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts); |real/max(random) - 1|, all but Organ"
+ },
+ "phi_ratio_organ_pct": {
+  "value": 16.2645218945487,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_min": {
+  "value": 0.671,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_max": {
+  "value": 0.962,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cos_min_five": {
+  "value": 0.839,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "delta_bar": {
+  "value": 0.5503333333333335,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts); mean own-text delta"
+ },
+ "c_bar_pooled": {
+  "value": 0.8666666666666667,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts); mean of same- and different-class cosine"
+ },
+ "c_bar_same": {
+  "value": 0.8858333333333333,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts); mean same-class cosine"
+ },
+ "cen_phi_real_min": {
+  "value": 1.62,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_phi_real_max": {
+  "value": 6.73,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_phi_rand_min": {
+  "value": 0.94,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_phi_rand_max": {
+  "value": 1.74,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_own_min": {
+  "value": 0.764,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_own_max": {
+  "value": 0.926,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_other_min": {
+  "value": 1.01,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "cen_other_max": {
+  "value": 1.13,
+  "source": "*/14.2_geometry_check.txt (K=16, draw 0, your prompts)"
+ },
+ "pred_pooled_K1": {
+  "value": 0.31947968178886266,
+  "source": "derived: 14.2 constants"
+ },
+ "pred_same_K1": {
+  "value": 0.31947968178886266,
+  "source": "derived: 14.2 constants"
+ },
+ "pred_pooled_K4": {
+  "value": 0.5981081443713941,
+  "source": "derived: 14.2 constants"
+ },
+ "pred_same_K4": {
+  "value": 0.6012789410227822,
+  "source": "derived: 14.2 constants"
+ },
+ "pred_pooled_K16": {
+  "value": 0.7966071838860381,
+  "source": "derived: 14.2 constants"
+ },
+ "pred_same_K16": {
+  "value": 0.7984529590384625,
+  "source": "derived: 14.2 constants"
+ },
+ "eta_meas_K1": {
+  "value": 0.32806040000000003,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), pooled"
+ },
+ "eta_meas_K4": {
+  "value": 0.6025456,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), pooled"
+ },
+ "eta_meas_K16": {
+  "value": 0.7982223,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), pooled"
+ },
+ "eta_ds_min_K1": {
+  "value": 0.315774,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), per-dataset mean"
+ },
+ "eta_ds_max_K1": {
+  "value": 0.353327,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), per-dataset mean"
+ },
+ "eta_ds_min_K4": {
+  "value": 0.587299,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), per-dataset mean"
+ },
+ "eta_ds_max_K4": {
+  "value": 0.6101915,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), per-dataset mean"
+ },
+ "eta_ds_min_K16": {
+  "value": 0.7897545,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), per-dataset mean"
+ },
+ "eta_ds_max_K16": {
+  "value": 0.802109,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), per-dataset mean"
+ },
+ "eta_organ_K1": {
+  "value": 0.353327,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), OrganAMNIST mean"
+ },
+ "eta_organ_K4": {
+  "value": 0.6048910000000001,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), OrganAMNIST mean"
+ },
+ "eta_organ_K16": {
+  "value": 0.7972330000000001,
+  "source": "*/sweep_*_eta.csv, quantity eta(S), OrganAMNIST mean"
+ },
+ "pred_diff_max": {
+  "value": 0.003170796651388086,
+  "source": "derived: same-class vs pooled cosine prediction"
+ },
+ "eta_sd_max": {
+  "value": 0.010843297776353228,
+  "source": "*/sweep_*_eta.csv, quantity eta(S); at ('breastmnist', 'your prompts', np.int64(1))"
+ },
+ "eta_sd_max_design": {
+  "value": 0.0034846144374633186,
+  "source": "*/sweep_*_eta.csv, quantity eta(S)"
+ },
+ "spearman_eta_oracle": {
+  "value": -0.11787735613862885,
+  "source": "*/sweep_*_eta.csv, quantity eta(S) vs oracle BAcc, within-setting demeaned, pooled"
+ },
+ "spearman_eta_oracle_p": {
+  "value": 0.04132138056834709,
+  "source": "*/sweep_*_eta.csv, quantity eta(S)"
+ },
+ "eta_centered_K1": {
+  "value": 0.4283014,
+  "source": "*/sweep_*_eta.csv, quantity centered"
+ },
+ "eta_centered_K4": {
+  "value": 0.4975307,
+  "source": "*/sweep_*_eta.csv, quantity centered"
+ },
+ "eta_centered_K16": {
+  "value": 0.6210281,
+  "source": "*/sweep_*_eta.csv, quantity centered"
+ },
+ "bacc_design_para": {
+  "value": 57.54133111111111,
+  "source": "*/sweep_*_per_draw.csv, design, mean BAcc"
+ },
+ "bacc_design_para_centered": {
+  "value": 55.78726777777777,
+  "source": "*/sweep_*_per_draw.csv, design, mean BAcc"
+ },
+ "n_ds_centered_worse": {
+  "value": 5.0,
+  "source": "*/sweep_*_per_draw.csv"
+ },
+ "shot_design_mean": {
+  "value": 2.6479034564555697,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_design_settings": {
+  "value": 18.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_design_sig_better": {
+  "value": 13.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_design_sig_worse": {
+  "value": 0.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_design_holm_better": {
+  "value": 8.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_design_won": {
+  "value": 150.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_design_lost": {
+  "value": 29.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, design"
+ },
+ "shot_heldout_mean": {
+  "value": 0.8180347202953447,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_heldout_settings": {
+  "value": 12.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_heldout_sig_better": {
+  "value": 3.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_heldout_sig_worse": {
+  "value": 0.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_heldout_holm_better": {
+  "value": 3.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_heldout_won": {
+  "value": 30.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_heldout_lost": {
+  "value": 0.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, heldout"
+ },
+ "shot_organ_mean": {
+  "value": 3.272138881181379,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_organ_settings": {
+  "value": 3.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_organ_sig_better": {
+  "value": 3.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_organ_sig_worse": {
+  "value": 0.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_organ_holm_better": {
+  "value": 3.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_organ_won": {
+  "value": 30.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_organ_lost": {
+  "value": 0.0,
+  "source": "*/rule_scores.csv, shot-only minus PARA BAcc, organ"
+ },
+ "shot_binary_nonzero": {
+  "value": 0.0,
+  "source": "*/rule_scores.csv, binary datasets"
+ },
+ "shot_eta_K1": {
+  "value": 0.45,
+  "source": "lambda K / (1 + K)"
+ },
+ "shot_eta_K4": {
+  "value": 0.72,
+  "source": "lambda K / (1 + K)"
+ },
+ "shot_eta_K16": {
+  "value": 0.8470588235294118,
+  "source": "lambda K / (1 + K)"
+ },
+ "switch_rows_nonoracle": {
+  "value": 1046.0,
+  "source": "breast+pneumonia rule_scores.csv, rule rows (nonoracle), eta != 0.5"
+ },
+ "switch_match_nonoracle": {
+  "value": 1046.0,
+  "source": "breast+pneumonia rule_scores.csv, rule rows (nonoracle), eta != 0.5"
+ },
+ "switch_rows_all": {
+  "value": 1128.0,
+  "source": "breast+pneumonia rule_scores.csv, rule rows (all), eta != 0.5"
+ },
+ "switch_match_all": {
+  "value": 1128.0,
+  "source": "breast+pneumonia rule_scores.csv, rule rows (all), eta != 0.5"
+ },
+ "switch_rules_n": {
+  "value": 12.0,
+  "source": "distinct non-oracle step rules on binary data"
+ },
+ "para_bin_eta_max_K1": {
+  "value": 0.3466951489448547,
+  "source": "breast+pneumonia rule_scores.csv, PARA eta, K=1, max over draws"
+ },
+ "para_bin_eta_min_K4": {
+  "value": 0.5800371944904328,
+  "source": "breast+pneumonia rule_scores.csv, PARA eta, K=4, min over draws"
+ },
+ "curves_runs_breastmnist": {
+  "value": 60.0,
+  "source": "breastmnist/eta_curves.csv, z-score blend, 41-point grid"
+ },
+ "curves_switch_breastmnist": {
+  "value": 60.0,
+  "source": "breastmnist/eta_curves.csv, z-score blend, 41-point grid: runs with one BAcc below and one above 0.5"
+ },
+ "curves_runs_pneumoniamnist": {
+  "value": 30.0,
+  "source": "pneumoniamnist/eta_curves.csv, z-score blend, 41-point grid"
+ },
+ "curves_switch_pneumoniamnist": {
+  "value": 30.0,
+  "source": "pneumoniamnist/eta_curves.csv, z-score blend, 41-point grid: runs with one BAcc below and one above 0.5"
+ },
+ "curves_runs_octmnist": {
+  "value": 60.0,
+  "source": "octmnist/eta_curves.csv, z-score blend, 41-point grid"
+ },
+ "curves_switch_octmnist": {
+  "value": 0.0,
+  "source": "octmnist/eta_curves.csv, z-score blend, 41-point grid: runs with one BAcc below and one above 0.5"
+ },
+ "eta_grid_n": {
+  "value": 41.0,
+  "source": "eta_curves.csv grid size"
+ },
+ "breastmnist_K1_zs_bacc": {
+  "value": 62.28070175438595,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_zs_cvar": {
+  "value": 62.280701754385966,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_vo_bacc": {
+  "value": 60.96491228070177,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_vo_cvar": {
+  "value": 46.49122807017544,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_para_bacc": {
+  "value": 62.28070175438595,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_para_cvar": {
+  "value": 62.280701754385966,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_oraclez_bacc": {
+  "value": 67.65037593984962,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_oraclez_cvar": {
+  "value": 62.31203007518797,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_zs_bacc": {
+  "value": 62.28070175438595,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_zs_cvar": {
+  "value": 62.280701754385966,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_vo_bacc": {
+  "value": 65.50125313283209,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_vo_cvar": {
+  "value": 50.56390977443609,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_para_bacc": {
+  "value": 65.50125313283209,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_para_cvar": {
+  "value": 50.56390977443609,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_oraclez_bacc": {
+  "value": 69.3671679197995,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_oraclez_cvar": {
+  "value": 63.283208020050125,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_zs_bacc": {
+  "value": 62.28070175438595,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_zs_cvar": {
+  "value": 62.280701754385966,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_vo_bacc": {
+  "value": 73.33646616541353,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_vo_cvar": {
+  "value": 66.83897243107769,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_para_bacc": {
+  "value": 73.33646616541353,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_para_cvar": {
+  "value": 66.83897243107769,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_oraclez_bacc": {
+  "value": 74.07894736842104,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_oraclez_cvar": {
+  "value": 68.89097744360902,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_zs_bacc": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_zs_cvar": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_vo_bacc": {
+  "value": 66.50854700854701,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_vo_cvar": {
+  "value": 53.20512820512821,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_para_bacc": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_para_cvar": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_oraclez_bacc": {
+  "value": 71.26495726495726,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_oraclez_cvar": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_zs_bacc": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_zs_cvar": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_vo_bacc": {
+  "value": 82.74786324786325,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_vo_cvar": {
+  "value": 76.32478632478633,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_para_bacc": {
+  "value": 82.74786324786325,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_para_cvar": {
+  "value": 76.32478632478633,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_oraclez_bacc": {
+  "value": 82.74786324786325,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_oraclez_cvar": {
+  "value": 76.32478632478633,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_zs_bacc": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_zs_cvar": {
+  "value": 67.35042735042735,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_vo_bacc": {
+  "value": 89.40170940170941,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_vo_cvar": {
+  "value": 87.22222222222223,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_para_bacc": {
+  "value": 89.40170940170941,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_para_cvar": {
+  "value": 87.22222222222223,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_oraclez_bacc": {
+  "value": 89.40170940170941,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_oraclez_cvar": {
+  "value": 87.22222222222223,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_zs_bacc": {
+  "value": 14.178051660273916,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_zs_cvar": {
+  "value": 14.178051660273916,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_vo_bacc": {
+  "value": 57.7600061433666,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_vo_cvar": {
+  "value": 50.71014996909259,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_para_bacc": {
+  "value": 34.275753760675585,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_para_cvar": {
+  "value": 27.01035549957915,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_relq": {
+  "value": -43.58195448309269,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "bloodmnist_K1_oracle_zscore_eta": {
+  "value": 0.9512500000000002,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_oracle_zscore_bacc": {
+  "value": 58.0389069452138,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_oracle_logprob_eta": {
+  "value": 0.7975000000000001,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_oracle_logprob_bacc": {
+  "value": 58.11982291413076,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_zs_bacc": {
+  "value": 14.178051660273916,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_zs_cvar": {
+  "value": 14.178051660273916,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_vo_bacc": {
+  "value": 82.78240167276957,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_vo_cvar": {
+  "value": 77.85347798868052,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_para_bacc": {
+  "value": 69.39468686798234,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_para_cvar": {
+  "value": 64.64235874880318,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_relq": {
+  "value": -68.60435001249564,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "bloodmnist_K4_oracle_zscore_eta": {
+  "value": 0.9762500000000004,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_oracle_zscore_bacc": {
+  "value": 82.89745087514643,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_oracle_logprob_eta": {
+  "value": 0.905,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_oracle_logprob_bacc": {
+  "value": 82.96841005964646,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_zs_bacc": {
+  "value": 14.178051660273916,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_zs_cvar": {
+  "value": 14.178051660273916,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_vo_bacc": {
+  "value": 90.72604093234732,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_vo_cvar": {
+  "value": 89.28369784770057,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_para_bacc": {
+  "value": 88.65496015957838,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_para_cvar": {
+  "value": 86.71134526479533,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_relq": {
+  "value": -76.54798927207341,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "bloodmnist_K16_oracle_zscore_eta": {
+  "value": 0.9812500000000002,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_oracle_zscore_bacc": {
+  "value": 90.79310735094222,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_oracle_logprob_eta": {
+  "value": 0.87625,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_oracle_logprob_bacc": {
+  "value": 90.8094591387432,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_zs_bacc": {
+  "value": 21.161308218307465,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_zs_cvar": {
+  "value": 21.161308218307468,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_vo_bacc": {
+  "value": 29.69700763965519,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_vo_cvar": {
+  "value": 20.409594982732656,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_para_bacc": {
+  "value": 26.449895537478785,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_para_cvar": {
+  "value": 22.704035127372904,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_relq": {
+  "value": -8.535699421347726,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "dermamnist_K1_oracle_zscore_eta": {
+  "value": 0.6925000000000001,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_oracle_zscore_bacc": {
+  "value": 32.06859674709439,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_oracle_logprob_eta": {
+  "value": 0.4800000000000001,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_oracle_logprob_bacc": {
+  "value": 32.24111417045552,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_zs_bacc": {
+  "value": 21.161308218307465,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_zs_cvar": {
+  "value": 21.161308218307468,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_vo_bacc": {
+  "value": 45.66116370652345,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_vo_cvar": {
+  "value": 39.407992134051085,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_para_bacc": {
+  "value": 43.98032204420189,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_para_cvar": {
+  "value": 39.0422740560224,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_relq": {
+  "value": -24.49985548821599,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "dermamnist_K4_oracle_zscore_eta": {
+  "value": 0.80625,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_oracle_zscore_bacc": {
+  "value": 47.47579542136506,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_oracle_logprob_eta": {
+  "value": 0.6199999999999999,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_oracle_logprob_bacc": {
+  "value": 47.71603464699725,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_zs_bacc": {
+  "value": 21.161308218307465,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_zs_cvar": {
+  "value": 21.161308218307468,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_vo_bacc": {
+  "value": 57.68325501260279,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_vo_cvar": {
+  "value": 54.616989956502536,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_para_bacc": {
+  "value": 57.40635133138686,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_para_cvar": {
+  "value": 54.199771049800646,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_relq": {
+  "value": -36.52194679429533,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "dermamnist_K16_oracle_zscore_eta": {
+  "value": 0.8862500000000001,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_oracle_zscore_bacc": {
+  "value": 58.63823609291518,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_oracle_logprob_eta": {
+  "value": 0.7062499999999999,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_oracle_logprob_bacc": {
+  "value": 58.62131722668325,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_zs_bacc": {
+  "value": 50.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_zs_cvar": {
+  "value": 50.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_vo_bacc": {
+  "value": 48.75500000000001,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_vo_cvar": {
+  "value": 37.05,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_para_bacc": {
+  "value": 52.56,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_para_cvar": {
+  "value": 47.7,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_relq": {
+  "value": 1.644999999999989,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "octmnist_K1_oracle_zscore_eta": {
+  "value": 0.49,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_oracle_zscore_bacc": {
+  "value": 56.585,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_oracle_logprob_eta": {
+  "value": 0.16625,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_oracle_logprob_bacc": {
+  "value": 56.655,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_zs_bacc": {
+  "value": 50.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_zs_cvar": {
+  "value": 50.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_vo_bacc": {
+  "value": 65.28,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_vo_cvar": {
+  "value": 46.775,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_para_bacc": {
+  "value": 64.655,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_para_cvar": {
+  "value": 52.6,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_relq": {
+  "value": -14.880000000000003,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "octmnist_K4_oracle_zscore_eta": {
+  "value": 0.7462500000000001,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_oracle_zscore_bacc": {
+  "value": 68.135,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_oracle_logprob_eta": {
+  "value": 0.4725,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_oracle_logprob_bacc": {
+  "value": 68.72,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_zs_bacc": {
+  "value": 50.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_zs_cvar": {
+  "value": 50.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_vo_bacc": {
+  "value": 80.35999999999999,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_vo_cvar": {
+  "value": 71.925,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_para_bacc": {
+  "value": 80.49499999999999,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_para_cvar": {
+  "value": 73.575,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_relq": {
+  "value": -29.959999999999987,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "octmnist_K16_oracle_zscore_eta": {
+  "value": 0.8775000000000001,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_oracle_zscore_bacc": {
+  "value": 81.655,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_oracle_logprob_eta": {
+  "value": 0.58125,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_oracle_logprob_bacc": {
+  "value": 82.38500000000002,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_relq": {
+  "value": 1.315789473684184,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "breastmnist_K1_oracle_zscore_eta": {
+  "value": 0.3375,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_oracle_zscore_bacc": {
+  "value": 67.65037593984962,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_oracle_logprob_eta": {
+  "value": 0.28375,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_oracle_logprob_bacc": {
+  "value": 70.36027568922304,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_relq": {
+  "value": -3.220551378446139,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "breastmnist_K4_oracle_zscore_eta": {
+  "value": 0.3375,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_oracle_zscore_bacc": {
+  "value": 69.3671679197995,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_oracle_logprob_eta": {
+  "value": 0.3725,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_oracle_logprob_bacc": {
+  "value": 73.1672932330827,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_relq": {
+  "value": -11.055764411027575,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "breastmnist_K16_oracle_zscore_eta": {
+  "value": 0.44375,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_oracle_zscore_bacc": {
+  "value": 74.07894736842104,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_oracle_logprob_eta": {
+  "value": 0.4774999999999999,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_oracle_logprob_bacc": {
+  "value": 76.97994987468672,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_zs_bacc": {
+  "value": 25.7087584748876,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_zs_cvar": {
+  "value": 25.7087584748876,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_vo_bacc": {
+  "value": 48.96556326292954,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_vo_cvar": {
+  "value": 45.34324257301133,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_para_bacc": {
+  "value": 37.296243500096494,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_para_cvar": {
+  "value": 34.62387184128224,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_relq": {
+  "value": -23.256804788041944,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "organamnist_K1_oracle_zscore_eta": {
+  "value": 0.9075,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_oracle_zscore_bacc": {
+  "value": 49.35584053569665,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_oracle_logprob_eta": {
+  "value": 0.7224999999999999,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_oracle_logprob_bacc": {
+  "value": 49.59249399394068,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_zs_bacc": {
+  "value": 25.7087584748876,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_zs_cvar": {
+  "value": 25.7087584748876,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_vo_bacc": {
+  "value": 65.75131204475727,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_vo_cvar": {
+  "value": 59.99492466051551,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_para_bacc": {
+  "value": 57.39987946631519,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_para_cvar": {
+  "value": 53.06487535008762,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_relq": {
+  "value": -40.04255356986967,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "organamnist_K4_oracle_zscore_eta": {
+  "value": 0.9625,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_oracle_zscore_bacc": {
+  "value": 65.85352882116095,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_oracle_logprob_eta": {
+  "value": 0.95,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_oracle_logprob_bacc": {
+  "value": 65.86494352786468,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_zs_bacc": {
+  "value": 25.7087584748876,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_zs_cvar": {
+  "value": 25.7087584748876,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_vo_bacc": {
+  "value": 81.47719435127732,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_vo_cvar": {
+  "value": 80.32490368546577,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_para_bacc": {
+  "value": 79.74310156581393,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_para_cvar": {
+  "value": 78.18963927880198,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_relq": {
+  "value": -55.76843587638972,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "organamnist_K16_oracle_zscore_eta": {
+  "value": 0.955,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_oracle_zscore_bacc": {
+  "value": 81.62275489323885,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_oracle_logprob_eta": {
+  "value": 0.8775000000000001,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_oracle_logprob_bacc": {
+  "value": 81.70867420331,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_relq": {
+  "value": 0.8418803418803407,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "pneumoniamnist_K1_oracle_zscore_eta": {
+  "value": 0.21,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_oracle_zscore_bacc": {
+  "value": 71.26495726495726,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_oracle_logprob_eta": {
+  "value": 0.235,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_oracle_logprob_bacc": {
+  "value": 71.52991452991454,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_relq": {
+  "value": -15.397435897435898,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "pneumoniamnist_K4_oracle_zscore_eta": {
+  "value": 0.5250000000000001,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_oracle_zscore_bacc": {
+  "value": 82.74786324786325,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_oracle_logprob_eta": {
+  "value": 0.8925000000000001,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_oracle_logprob_bacc": {
+  "value": 83.41452991452992,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_relq": {
+  "value": -22.051282051282058,
+  "source": "logprob_table.csv: zero-shot minus visual-only BAcc"
+ },
+ "pneumoniamnist_K16_oracle_zscore_eta": {
+  "value": 0.5250000000000001,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_oracle_zscore_bacc": {
+  "value": 89.40170940170941,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_oracle_logprob_eta": {
+  "value": 0.8800000000000001,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_oracle_logprob_bacc": {
+  "value": 89.7863247863248,
+  "source": "logprob_table.csv"
+ },
+ "rho_relq_oracle_lp": {
+  "value": -0.7997936016511867,
+  "source": "logprob_table.csv: Spearman over 18 (dataset, K), log-prob oracle eta"
+ },
+ "rho_relq_oracle_lp_p": {
+  "value": 6.775961943481652e-05,
+  "source": "logprob_table.csv"
+ },
+ "rho_relq_oracle_z_mc": {
+  "value": -0.9370629370629372,
+  "source": "logprob_table.csv: Spearman over 12 multi-class (dataset, K), z-score oracle eta"
+ },
+ "rho_relq_oracle_z_mc_p": {
+  "value": 6.9931649532105415e-06,
+  "source": "logprob_table.csv"
+ },
+ "oracle_lp_eta_min": {
+  "value": 0.16625,
+  "source": "logprob_table.csv"
+ },
+ "oracle_lp_eta_max": {
+  "value": 0.95,
+  "source": "logprob_table.csv"
+ },
+ "oracle_z_eta_min_mc": {
+  "value": 0.49,
+  "source": "logprob_table.csv, multi-class"
+ },
+ "oracle_z_eta_max_mc": {
+  "value": 0.9812500000000002,
+  "source": "logprob_table.csv, multi-class"
+ },
+ "ra_bloodmnist": {
+  "value": 0.024686987814191062,
+  "source": "*/rule_scores.csv, mean r_anchor"
+ },
+ "ra_dermamnist": {
+  "value": 0.08243821991155995,
+  "source": "*/rule_scores.csv, mean r_anchor"
+ },
+ "ra_octmnist": {
+  "value": 0.1643762765960259,
+  "source": "*/rule_scores.csv, mean r_anchor"
+ },
+ "ra_breastmnist": {
+  "value": 0.23134719891981645,
+  "source": "*/rule_scores.csv, mean r_anchor"
+ },
+ "ra_organamnist": {
+  "value": 0.19625958312302827,
+  "source": "*/rule_scores.csv, mean r_anchor"
+ },
+ "ra_pneumoniamnist": {
+  "value": 0.3920837727459994,
+  "source": "*/rule_scores.csv, mean r_anchor"
+ },
+ "rho_ra_oracle_design": {
+  "value": -0.7110423116615068,
+  "source": "rule_scores r_anchor vs sweep oracle BAcc eta, 18 design settings"
+ },
+ "rho_ra_oracle_design_p": {
+  "value": 0.0009391049276515936,
+  "source": "same"
+ },
+ "rho_ra_oracle_mc_all": {
+  "value": -0.45324675324675323,
+  "source": "same, all multi-class settings incl. OrganAMNIST"
+ },
+ "n_ra_oracle_mc_all": {
+  "value": 21.0,
+  "source": "same"
+ },
+ "organamnist_K1_c8_eta": {
+  "value": 0.3674487526191779,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_c8_bacc": {
+  "value": 37.86093280315716,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_c8_cvar": {
+  "value": 33.35173426116127,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_paratab_eta": {
+  "value": 0.3533268946409226,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_paratab_bacc": {
+  "value": 37.296243500096494,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_paratab_cvar": {
+  "value": 34.62387184128224,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_votab_eta": {
+  "value": 1.0,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_votab_bacc": {
+  "value": 48.96556326292954,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_votab_cvar": {
+  "value": 45.34324257301133,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_orctab_eta": {
+  "value": 0.9075,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_orctab_bacc": {
+  "value": 49.35584053569665,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K1_orctab_cvar": {
+  "value": 45.92302108705159,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_c8_eta": {
+  "value": 0.4148255763916523,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_c8_bacc": {
+  "value": 71.11538461538461,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_c8_cvar": {
+  "value": 67.35042735042735,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_paratab_eta": {
+  "value": 0.6030768066644667,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_paratab_bacc": {
+  "value": 82.74786324786325,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_paratab_cvar": {
+  "value": 76.32478632478633,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_votab_eta": {
+  "value": 1.0,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_votab_bacc": {
+  "value": 82.74786324786325,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_votab_cvar": {
+  "value": 76.32478632478633,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_orctab_eta": {
+  "value": 0.5250000000000001,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_orctab_bacc": {
+  "value": 82.74786324786325,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_orctab_cvar": {
+  "value": 76.32478632478633,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_hoso_eta": {
+  "value": 0.4,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_hoso_bacc": {
+  "value": 74.17948717948718,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K4_hoso_cvar": {
+  "value": 67.35042735042735,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_c8_eta": {
+  "value": 0.5279133417102131,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_c8_bacc": {
+  "value": 62.15225563909773,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_c8_cvar": {
+  "value": 46.49122807017544,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_paratab_eta": {
+  "value": 0.3246242205798625,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_paratab_bacc": {
+  "value": 62.28070175438595,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_paratab_cvar": {
+  "value": 62.280701754385966,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_votab_eta": {
+  "value": 1.0,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_votab_bacc": {
+  "value": 60.96491228070177,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_votab_cvar": {
+  "value": 46.49122807017544,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_orctab_eta": {
+  "value": 0.3375,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_orctab_bacc": {
+  "value": 67.65037593984962,
+  "source": "cross_dataset_table.csv"
+ },
+ "breastmnist_K1_orctab_cvar": {
+  "value": 62.31203007518797,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_c8_eta": {
+  "value": 0.4997288267100148,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_c8_bacc": {
+  "value": 53.24,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_c8_cvar": {
+  "value": 47.775,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_paratab_eta": {
+  "value": 0.3277960024774075,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_paratab_bacc": {
+  "value": 52.56,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_paratab_cvar": {
+  "value": 47.7,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_votab_eta": {
+  "value": 1.0,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_votab_bacc": {
+  "value": 48.75500000000001,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_votab_cvar": {
+  "value": 37.05,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_orctab_eta": {
+  "value": 0.49,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_orctab_bacc": {
+  "value": 56.585,
+  "source": "cross_dataset_table.csv"
+ },
+ "octmnist_K1_orctab_cvar": {
+  "value": 51.375,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_hoso_bacc": {
+  "value": 65.75131204475727,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_hoso_cvar": {
+  "value": 59.99492466051551,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_orctab_bacc": {
+  "value": 65.85352882116095,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_orctab_cvar": {
+  "value": 60.01392350759376,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_paratab_bacc": {
+  "value": 57.39987946631519,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_paratab_cvar": {
+  "value": 53.06487535008762,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K16_hoso_bacc": {
+  "value": 81.46024189706678,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K16_hoso_cvar": {
+  "value": 80.24014141441316,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K16_orctab_bacc": {
+  "value": 81.62275489323885,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K16_orctab_cvar": {
+  "value": 80.4577985157806,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K16_paratab_bacc": {
+  "value": 79.74310156581393,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K16_paratab_cvar": {
+  "value": 78.18963927880198,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K16_hoso_bacc": {
+  "value": 83.30769230769229,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K16_hoso_cvar": {
+  "value": 67.35042735042735,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K16_orctab_bacc": {
+  "value": 89.40170940170941,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K16_orctab_cvar": {
+  "value": 87.22222222222223,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K16_paratab_bacc": {
+  "value": 89.40170940170941,
+  "source": "cross_dataset_table.csv"
+ },
+ "pneumoniamnist_K16_paratab_cvar": {
+  "value": 87.22222222222223,
+  "source": "cross_dataset_table.csv"
+ },
+ "organamnist_K4_hoso_gap": {
+  "value": 0.10221677640367943,
+  "source": "cross_dataset_table.csv: oracle minus HOSO-style BAcc"
+ },
+ "organamnist_K16_hoso_gap": {
+  "value": 0.16251299617206882,
+  "source": "cross_dataset_table.csv: oracle minus HOSO-style BAcc"
+ },
+ "pneu_K4_c8_below": {
+  "value": 7.0,
+  "source": "pneumoniamnist rule_scores.csv, c=8, K=4: draws with eta < 0.5"
+ },
+ "pneu_K4_c8_n": {
+  "value": 10.0,
+  "source": "same"
+ },
+ "breast_K1_c8_above": {
+  "value": 11.0,
+  "source": "breastmnist rule_scores.csv, c=8, K=1: draws with eta > 0.5"
+ },
+ "breast_K1_c8_n": {
+  "value": 20.0,
+  "source": "same"
+ },
+ "bacc_design_reliability_eta": {
+  "value": 54.734542222222224,
+  "source": "*/sweep_*_per_draw.csv, design, mean BAcc, frozen-space reliability step"
+ },
+ "t4_ins_para_dbacc": {
+  "value": 4.765675246642543,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_para_dcvar": {
+  "value": 4.048027616241904,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_para_df1": {
+  "value": 5.004138133488048,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_shot_dbacc": {
+  "value": 2.117771790186973,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_shot_dcvar": {
+  "value": 2.2062747123762643,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_shot_df1": {
+  "value": 2.1655904854312693,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_vo_dbacc": {
+  "value": 0.2286857570913134,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_vo_dcvar": {
+  "value": 1.8428317126434195,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_ins_vo_df1": {
+  "value": -7.092306111425492e-05,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_para_dbacc": {
+  "value": 4.935462623182714,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_para_dcvar": {
+  "value": 3.2292743140811857,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_para_df1": {
+  "value": 5.5108672280958455,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_shot_dbacc": {
+  "value": 2.2875591667271444,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_shot_dcvar": {
+  "value": 1.3875214102155464,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_shot_df1": {
+  "value": 2.6723195800390664,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_vo_dbacc": {
+  "value": 0.3984731336314849,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_vo_dcvar": {
+  "value": 1.0240784104827014,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_lodo_vo_df1": {
+  "value": 0.5066581715466829,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_para_dbacc": {
+  "value": -0.6793703733196748,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_para_dcvar": {
+  "value": -4.053316333056915,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_para_df1": {
+  "value": -0.2621789553838949,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_shot_dbacc": {
+  "value": -1.4974050936150196,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_shot_dcvar": {
+  "value": -4.815474351953873,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_shot_df1": {
+  "value": -1.1647636902759353,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_vo_dbacc": {
+  "value": -2.2028191931104875,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_vo_dcvar": {
+  "value": -1.891686160981962,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "t4_held_vo_df1": {
+  "value": -3.078569665215631,
+  "source": "tables/T4_preregistered_rule.csv"
+ },
+ "bloodmnist_K1_paralp_bacc": {
+  "value": 53.09298707013246,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K1_paralp_cvar": {
+  "value": 43.95619451101001,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_paralp_bacc": {
+  "value": 81.63137763242005,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K4_paralp_cvar": {
+  "value": 76.65574343297855,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_paralp_bacc": {
+  "value": 90.57352154660175,
+  "source": "logprob_table.csv"
+ },
+ "bloodmnist_K16_paralp_cvar": {
+  "value": 89.03828375700827,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_paralp_bacc": {
+  "value": 29.906543988690835,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K1_paralp_cvar": {
+  "value": 22.401737741839725,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_paralp_bacc": {
+  "value": 46.82377363797967,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K4_paralp_cvar": {
+  "value": 40.27311928449823,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_paralp_bacc": {
+  "value": 57.94094487262809,
+  "source": "logprob_table.csv"
+ },
+ "dermamnist_K16_paralp_cvar": {
+  "value": 54.76821888863145,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_paralp_bacc": {
+  "value": 52.4,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K1_paralp_cvar": {
+  "value": 43.5,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_paralp_bacc": {
+  "value": 66.98000000000002,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K4_paralp_cvar": {
+  "value": 49.6,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_paralp_bacc": {
+  "value": 80.85999999999999,
+  "source": "logprob_table.csv"
+ },
+ "octmnist_K16_paralp_cvar": {
+  "value": 72.95,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_paralp_bacc": {
+  "value": 62.4436090225564,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K1_paralp_cvar": {
+  "value": 50.54824561403509,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_paralp_bacc": {
+  "value": 67.81015037593986,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K4_paralp_cvar": {
+  "value": 57.17418546365914,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_paralp_bacc": {
+  "value": 73.8063909774436,
+  "source": "logprob_table.csv"
+ },
+ "breastmnist_K16_paralp_cvar": {
+  "value": 67.12092731829573,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_paralp_bacc": {
+  "value": 46.78596090233192,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K1_paralp_cvar": {
+  "value": 43.000043066213166,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_paralp_bacc": {
+  "value": 63.61173671957162,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K4_paralp_cvar": {
+  "value": 58.25123131751634,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_paralp_bacc": {
+  "value": 81.47592326334136,
+  "source": "logprob_table.csv"
+ },
+ "organamnist_K16_paralp_cvar": {
+  "value": 80.28971320066097,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_paralp_bacc": {
+  "value": 66.58547008547008,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K1_paralp_cvar": {
+  "value": 53.58974358974359,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_paralp_bacc": {
+  "value": 81.02991452991452,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K4_paralp_cvar": {
+  "value": 75.94017094017094,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_paralp_bacc": {
+  "value": 89.20940170940172,
+  "source": "logprob_table.csv"
+ },
+ "pneumoniamnist_K16_paralp_cvar": {
+  "value": 86.98717948717949,
+  "source": "logprob_table.csv"
+ },
+ "oracle_lp_ge_z_n": {
+  "value": 17.0,
+  "source": "logprob_table.csv: settings where log-prob oracle >= z-score oracle"
+ },
+ "oracle_lp_lt_z_derma16": {
+  "value": -0.016918866231925733,
+  "source": "logprob_table.csv"
+ },
+ "t3b_binary_dbacc": {
+  "value": 0.3564716634892061,
+  "source": "tables/T3_paired_tests.csv"
+ },
+ "t3b_binary_df1": {
+  "value": 1.004018357561402,
+  "source": "tables/T3_paired_tests.csv"
+ },
+ "t3b_binary_dcvar": {
+  "value": -2.673421445351273,
+  "source": "tables/T3_paired_tests.csv"
+ },
+ "t3b_multiclass_dbacc": {
+  "value": 4.862321640348444,
+  "source": "tables/T3_paired_tests.csv"
+ },
+ "t3b_multiclass_df1": {
+  "value": 5.66796458303468,
+  "source": "tables/T3_paired_tests.csv"
+ },
+ "t3b_multiclass_dcvar": {
+  "value": 3.122805564447808,
+  "source": "tables/T3_paired_tests.csv"
+ },
+ "curve_breastmnist_K1_zscore_best": {
+  "value": 62.280701754385966,
+  "source": "breastmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_breastmnist_K1_zscore_argbest": {
+  "value": 0.0,
+  "source": "breastmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_breastmnist_K1_logprob_best": {
+  "value": 64.59586466165413,
+  "source": "breastmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_breastmnist_K1_logprob_argbest": {
+  "value": 0.075,
+  "source": "breastmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_breastmnist_K1_gain": {
+  "value": 2.315162907268167,
+  "source": "breastmnist/eta_curves.csv"
+ },
+ "curve_breastmnist_K4_zscore_best": {
+  "value": 65.50125313283209,
+  "source": "breastmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_breastmnist_K4_zscore_argbest": {
+  "value": 0.525,
+  "source": "breastmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_breastmnist_K4_logprob_best": {
+  "value": 69.3327067669173,
+  "source": "breastmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_breastmnist_K4_logprob_argbest": {
+  "value": 0.35,
+  "source": "breastmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_breastmnist_K4_gain": {
+  "value": 3.8314536340852072,
+  "source": "breastmnist/eta_curves.csv"
+ },
+ "curve_breastmnist_K16_zscore_best": {
+  "value": 73.33646616541353,
+  "source": "breastmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_breastmnist_K16_zscore_argbest": {
+  "value": 0.525,
+  "source": "breastmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_breastmnist_K16_logprob_best": {
+  "value": 74.2825814536341,
+  "source": "breastmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_breastmnist_K16_logprob_argbest": {
+  "value": 0.525,
+  "source": "breastmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_breastmnist_K16_gain": {
+  "value": 0.9461152882205681,
+  "source": "breastmnist/eta_curves.csv"
+ },
+ "curve_pneumoniamnist_K1_zscore_best": {
+  "value": 67.35042735042735,
+  "source": "pneumoniamnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_pneumoniamnist_K1_zscore_argbest": {
+  "value": 0.0,
+  "source": "pneumoniamnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_pneumoniamnist_K1_logprob_best": {
+  "value": 67.35042735042735,
+  "source": "pneumoniamnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_pneumoniamnist_K1_logprob_argbest": {
+  "value": 0.0,
+  "source": "pneumoniamnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_pneumoniamnist_K1_gain": {
+  "value": 0.0,
+  "source": "pneumoniamnist/eta_curves.csv"
+ },
+ "curve_pneumoniamnist_K4_zscore_best": {
+  "value": 82.74786324786325,
+  "source": "pneumoniamnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_pneumoniamnist_K4_zscore_argbest": {
+  "value": 0.525,
+  "source": "pneumoniamnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_pneumoniamnist_K4_logprob_best": {
+  "value": 82.81196581196582,
+  "source": "pneumoniamnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_pneumoniamnist_K4_logprob_argbest": {
+  "value": 0.975,
+  "source": "pneumoniamnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_pneumoniamnist_K4_gain": {
+  "value": 0.0641025641025692,
+  "source": "pneumoniamnist/eta_curves.csv"
+ },
+ "curve_pneumoniamnist_K16_zscore_best": {
+  "value": 89.4017094017094,
+  "source": "pneumoniamnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_pneumoniamnist_K16_zscore_argbest": {
+  "value": 0.525,
+  "source": "pneumoniamnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_pneumoniamnist_K16_logprob_best": {
+  "value": 89.4017094017094,
+  "source": "pneumoniamnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_pneumoniamnist_K16_logprob_argbest": {
+  "value": 1.0,
+  "source": "pneumoniamnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_pneumoniamnist_K16_gain": {
+  "value": 0.0,
+  "source": "pneumoniamnist/eta_curves.csv"
+ },
+ "curve_octmnist_K1_zscore_best": {
+  "value": 53.75,
+  "source": "octmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_octmnist_K1_zscore_argbest": {
+  "value": 0.55,
+  "source": "octmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_octmnist_K1_logprob_best": {
+  "value": 54.93,
+  "source": "octmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_octmnist_K1_logprob_argbest": {
+  "value": 0.15,
+  "source": "octmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_octmnist_K1_gain": {
+  "value": 1.1799999999999997,
+  "source": "octmnist/eta_curves.csv"
+ },
+ "curve_octmnist_K4_zscore_best": {
+  "value": 66.815,
+  "source": "octmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_octmnist_K4_zscore_argbest": {
+  "value": 0.8,
+  "source": "octmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_octmnist_K4_logprob_best": {
+  "value": 67.225,
+  "source": "octmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_octmnist_K4_logprob_argbest": {
+  "value": 0.4,
+  "source": "octmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_octmnist_K4_gain": {
+  "value": 0.4099999999999966,
+  "source": "octmnist/eta_curves.csv"
+ },
+ "curve_octmnist_K16_zscore_best": {
+  "value": 80.975,
+  "source": "octmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_octmnist_K16_zscore_argbest": {
+  "value": 0.875,
+  "source": "octmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_octmnist_K16_logprob_best": {
+  "value": 81.88,
+  "source": "octmnist/eta_curves.csv, mean over draws and prompt sets"
+ },
+ "curve_octmnist_K16_logprob_argbest": {
+  "value": 0.55,
+  "source": "octmnist/eta_curves.csv, eta of the best mean BAcc"
+ },
+ "curve_octmnist_K16_gain": {
+  "value": 0.9050000000000011,
+  "source": "octmnist/eta_curves.csv"
+ }
+}

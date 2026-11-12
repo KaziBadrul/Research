@@ -1,0 +1,18 @@
+\begin{abstract}
+Few-shot adaptation of biomedical vision-language models depends on which examples are drawn.
+Prompt-Anchored Residual Adaptation (PARA) addresses this by keeping the frozen prompt prediction as an anchor
+and moving towards a prediction trained on the support set by a step computed from the geometry of the support embeddings.
+We reimplement PARA on BiomedCLIP and study the step on six MedMNIST datasets, three used for design and three held out,
+with repeated support draws, balanced accuracy and worst-case (CVaR20) evaluation.
+We find that the geometric signals barely depend on the class in BiomedCLIP's frozen space,
+so the step reduces to the same function of the number of shots on every dataset ($0.33$, $0.60$ and $0.80$ at 1, 4 and 16 shots),
+predictable from two constants of the pretrained model; a schedule in the shot count alone does better.
+On binary tasks, standardizing each branch's scores turns the blend into a switch: PARA returns the zero-shot prediction below a step of $0.5$
+and the trained branch's prediction above it, on every image.
+The best step instead follows how reliable the anchor is relative to the trained branch;
+a rule based on the anchor's reliability alone, fixed before the held-out runs, improved on the design datasets and failed on the held-out ones.
+Blending log-probabilities instead of standardized scores, with no new parameters, raises balanced accuracy by $4.86$ points on multi-class datasets
+but lowers the worst case where the anchor is good.
+We conclude with recommendations for evaluating adaptive blending: check that adaptive signals vary across support draws,
+compare against shot-only and single-branch baselines, include binary tasks, and test on held-out data.
+\end{abstract}

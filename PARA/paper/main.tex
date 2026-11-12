@@ -1,0 +1,36 @@
+% Draft. Every decimal number in sections/*.tex must trace to paper/numbers.json
+% (python analysis/paper_numbers.py, then python analysis/check_paper_numbers.py).
+% Style: no em dashes; formulas in LaTeX.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{../para_figures/}}
+
+\newcommand{\eg}{e.g.,\ }
+\newcommand{\ie}{i.e.,\ }
+
+\title{Does the Support Set Steer the Step?\\An Analysis of Prompt-Anchored Residual Adaptation\\for Biomedical Vision-Language Models}
+\author{Draft}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/setup}
+\input{sections/finding1}
+\input{sections/finding2}
+\input{sections/finding3}
+\input{sections/finding4}
+\input{sections/discussion}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

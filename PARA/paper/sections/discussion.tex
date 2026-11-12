@@ -1,0 +1,71 @@
+\section{Discussion}\label{sec:discussion}
+
+\paragraph{What PARA's step does, and what a step should do.}
+PARA's design rests on two good ideas: keep the frozen prompt prediction as a support-invariant anchor, and move away from it by a step that adapts to the support set.
+Our analysis supports the first and not the second, at least in BiomedCLIP's frozen space.
+The geometric signals in Eq.~\eqref{eq:eta} mostly measure properties of the pretrained model, the gap between modalities and the narrow cone of image embeddings,
+so the step becomes a fixed function of $K$ (Section~\ref{sec:finding1}).
+The standardized blend then turns that step into a switch on binary tasks (Section~\ref{sec:finding2}).
+Neither observation is a flaw in the idea of anchoring; both concern how the step is computed and applied.
+What the step should track is the reliability of the trained branch relative to the anchor (Section~\ref{sec:finding3}),
+and the blend should let each branch's confidence count (Section~\ref{sec:finding4}).
+Neither is solved here.
+The anchor's side of the comparison is easy to estimate on the support set; the trained branch's side is not, because the branch is fitted to those same images.
+The log-probability blend helps on multi-class tasks but costs worst-case accuracy where the anchor is good, which suggests that the branches' confidences need calibrating before they are blended.
+
+\paragraph{Recommendations for evaluating adaptive blending.}
+Four practices would have exposed these effects early, and we suggest them for future work on prompt-anchored or residual adaptation.
+\begin{enumerate}
+  \item \emph{Check that an adaptive signal adapts.} Report how much the step varies across support draws and whether it tracks the best step per draw.
+  A step with a standard deviation near $0.01$ across draws is a schedule, whatever its formula.
+  \item \emph{Compare against the simplest baselines on the same trained models:} zero-shot, visual only, and a step that depends only on $K$.
+  Here the shot-only schedule beat the adaptive step, and on binary tasks both reduced to one of the two branches.
+  \item \emph{Include binary tasks and balanced metrics.} The switch of Section~\ref{sec:finding2} is invisible on multi-class benchmarks,
+  and plain accuracy can reward majority-class predictions (DermaMNIST in our setup).
+  \item \emph{Report worst-case alongside mean performance, and test rules on data not used to design them.}
+  The anchor-aware rule looked convincing on the design datasets and failed on held-out ones;
+  its worst case moved further than its mean.
+\end{enumerate}
+
+\paragraph{Scope.}
+Our claims concern PARA's step and blend as specified in the paper, reimplemented without official code, and studied in few-shot classification.
+PARA also reports base-to-novel generalization \citep{kang2026para}, which we do not examine.
+Finding~1 follows from two properties of the frozen space, the modality gap and the narrow image cone, which are known for CLIP-style models generally \citep{liang2022mind};
+we expect it to carry over, but we tested only BiomedCLIP.
+Finding~2 follows from the standardization alone and holds for any backbone with two classes.
+
+\paragraph{Limitations.}
+\begin{itemize}
+  \item \emph{One training seed and three shot levels.} Each support draw is trained once, so draw-to-draw variation includes optimization noise.
+  We use $K \in \{1, 4, 16\}$ only.
+  \item \emph{Datasets and resolution.} We use MedMNIST v2 at $128$ or $224$ pixels with MedMNIST splits and fixed test subsets,
+  so absolute numbers are not comparable to the paper's benchmark.
+  Three held-out datasets is a small test: two are binary, only OrganAMNIST is multi-class, and BreastMNIST has 156 test images.
+  \item \emph{Dependence between settings.} The two prompt sets of a dataset share their support draws, so settings are not independent and pooled counts overstate the evidence;
+  the per-setting tests are the safer reading.
+  With 10 draws per setting, the smallest attainable Wilcoxon $p$ is about $0.002$, which limits how many settings can survive Holm's correction.
+  \item \emph{The anchor-aware constant.} $c = 8$ was chosen in-sample on the design datasets.
+  It was fixed before any held-out run, but this is documented by file timestamps rather than a dated commit.
+  \item \emph{The log-probability blend was motivated by held-out results.} It has no fitted parameters, but the idea came after we saw the binary failure,
+  so its binary results are not a clean held-out test.
+  \item \emph{Hindsight quantities.} The oracle step, the best points on the $\eta$ curves, and the zero-shot minus visual-only gap all use test labels.
+  We use them only to describe what a good step would do, never as rules.
+  \item \emph{Baselines are adapted.} The HOSO-style step chooses PARA's $\eta$ on one held-out shot per class; it follows the idea of \citet{vorster2026hoso}
+  but is not their method, which learns the ratio by gradient descent.
+\end{itemize}
+
+\paragraph{Future work.}
+The most useful next step is an estimate of the trained branch's reliability relative to the anchor that needs no test labels,
+for example from held-out shots when $K$ allows, or from agreement between the branches on unlabelled images.
+A second is calibrated blending: rescaling each branch's confidence on the support set before combining log-probabilities,
+which may keep the multi-class gains of Section~\ref{sec:finding4} without the loss in worst case.
+Both should be tested on more held-out datasets, more seeds and a second backbone.
+
+\section{Conclusion}\label{sec:conclusion}
+PARA keeps a frozen prompt prediction as an anchor and moves away from it by a step computed from the support set.
+In BiomedCLIP, that step is set by the number of shots and not by the support set, because its geometric signals reflect the pretrained space rather than the classes;
+on binary tasks the standardized blend turns it into a choice between the anchor and the trained branch.
+A schedule in $K$ alone does as well or better.
+What the step should depend on is how reliable the anchor is relative to the trained branch; a rule based on the anchor alone did not survive held-out testing,
+and blending log-probabilities helps on multi-class tasks at a cost in worst-case accuracy.
+Measuring the trained branch's reliability, and calibrating both branches before blending, are the open problems for anchored few-shot adaptation.

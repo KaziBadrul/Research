@@ -1,0 +1,43 @@
+\section{Introduction}\label{sec:intro}
+
+Biomedical vision-language models such as BiomedCLIP \citep{zhang2023biomedclip} classify images zero-shot from text prompts,
+and a few labelled examples per class can adapt them further \citep{koleilat2025biomedcoop}.
+With so few examples, however, the adapted model depends on which examples were drawn.
+A support set that happens to be unrepresentative can produce a classifier much worse than the zero-shot one,
+and in medical use the worst plausible outcome matters at least as much as the average.
+
+Prompt-Anchored Residual Adaptation (PARA) \citep{kang2026para} addresses this directly.
+It keeps the frozen prompt prediction as an anchor that no support set can change,
+learns a visual prediction from the support set, and moves from the anchor towards it by a residual step $\eta(S)$.
+The step is computed in closed form from the frozen support embeddings, from how far the class images lie from their text and how consistently they agree,
+so that a support set which disagrees with the prompts earns a larger step.
+PARA also introduces a repeated-support protocol that reports the worst $20\%$ of support draws (CVaR20) alongside the mean,
+and reports state-of-the-art results on both.
+
+This paper asks whether the support set actually steers PARA's step, and what happens when it does not.
+We reimplement PARA on BiomedCLIP and study it on six MedMNIST datasets with its own repeated-support protocol, balanced accuracy and CVaR20.
+Three datasets were used to develop every analysis; three others were chosen afterwards and serve as held-out tests,
+including a rule whose constant was fixed before any held-out model was trained.
+Our findings are:
+\begin{enumerate}
+  \item \textbf{The step is a fixed curve in the number of shots} (Section~\ref{sec:finding1}).
+  In BiomedCLIP's frozen space, the discrepancy and agreement signals barely depend on the class:
+  images sit about equally far from every class's text, and any set of images agrees almost as much as a real class.
+  The step is therefore the same function of $K$ on every dataset ($0.33$, $0.60$ and $0.80$ at $K = 1$, $4$ and $16$),
+  predictable from two constants of the pretrained model.
+  A schedule that uses $K$ alone does better than PARA's step (significantly in 13 of 18 design settings, never worse).
+  \item \textbf{On binary tasks the blend is a switch} (Section~\ref{sec:finding2}).
+  Standardizing each branch's scores across two classes keeps only the sign of the prediction,
+  so PARA returns the zero-shot prediction whenever $\eta < 0.5$ and the trained branch's prediction whenever $\eta > 0.5$, on every image.
+  We prove this and confirm it on all 1,046 relevant evaluations.
+  \item \textbf{The right step depends on the anchor's reliability relative to the trained branch} (Section~\ref{sec:finding3}).
+  The best step in hindsight ranges from $0.17$ to $0.95$ across datasets and shot counts, and follows how good the anchor is compared with the trained branch.
+  A rule based on the anchor's reliability alone, fixed in advance, improved on the design datasets and failed on the held-out ones.
+  \item \textbf{Blending log-probabilities helps on multi-class tasks} (Section~\ref{sec:finding4}).
+  With the same step and the same trained models, blending each branch's log-probabilities instead of its standardized scores
+  raises mean balanced accuracy by $4.86$ points on multi-class datasets, but lowers the worst case where the anchor is good.
+\end{enumerate}
+From these we draw practical recommendations for evaluating adaptive blending (Section~\ref{sec:discussion}).
+We do not claim that PARA is worse than other few-shot methods, and we do not reproduce its benchmark numbers;
+our subject is how its step behaves and what a step of this kind would need to do.
+% TODO: code and prompt-mapping release statement, once decided.
