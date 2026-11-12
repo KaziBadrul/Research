@@ -1,4 +1,4 @@
-# octmnist | config 50c2cb2afc | 2026-11-12 00:18:05
+# octmnist | config 50c2cb2afc | 2026-11-12 19:22:10
 choroidal neovascularization                 -> 'choroidal neovascularization': 50 prompts | cos(hand anchor, GPT anchor) = 0.889
 diabetic macular edema                       -> 'diabetic macular edema': 50 prompts | cos(hand anchor, GPT anchor) = 0.917
 drusen                                       -> 'drusen': 50 prompts | cos(hand anchor, GPT anchor) = 0.927

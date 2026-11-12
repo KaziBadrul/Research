@@ -1,4 +1,4 @@
-# octmnist | config 50c2cb2afc | 2026-11-12 00:17:59
+# octmnist | config 50c2cb2afc | 2026-11-12 19:22:07
 
 ######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
 class                              delta own mean other nearest other own closest?     phi

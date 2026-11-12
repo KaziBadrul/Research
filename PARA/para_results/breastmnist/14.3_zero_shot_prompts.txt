@@ -1,4 +1,4 @@
-# breastmnist | config 7d80fcfffe | 2026-11-12 01:12:19
+# breastmnist | config 7d80fcfffe | 2026-11-12 19:18:54
 malignant                                    -> 'malignant tumor': 50 prompts | cos(hand anchor, GPT anchor) = 0.942
 normal, benign                               -> 'benign tumor + normal scan': 100 prompts | cos(hand anchor, GPT anchor) = 0.940
 example: an ultrasound image showing irregular or spiculated margins, indicating a malignant breast tumor.

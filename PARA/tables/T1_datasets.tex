@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Datasets. Zero-shot BAcc (\%) on the evaluated test subset, per prompt set.}
+\label{tab:T1_datasets}
+\begin{tabular}{lrrrrlrrl}
+\toprule
+Dataset & Classes & Test (eval) & Test (full) & Image px & Prompt sets & ZS BAcc (your prompts) & ZS BAcc (GPT-4) & Split \\
+\midrule
+DermaMNIST & 7 & 2000 & 2005 & 224 & your prompts, 50 GPT-4 & 20.93 & 21.39 & design \\
+OCTMNIST & 4 & 1000 & 1000 & 128 & your prompts, 50 GPT-4 & 49.30 & 51.50 & design \\
+BloodMNIST & 8 & 2000 & 3421 & 128 & your prompts, 50 GPT-4 & 14.86 & 13.49 & design \\
+BreastMNIST & 2 & 156 & 156 & 128 & your prompts, 50 GPT-4 & 53.63 & 70.93 & held-out \\
+PneumoniaMNIST & 2 & 624 & 624 & 128 & your prompts & 67.35 & -- & held-out \\
+OrganAMNIST & 11 & 2000 & 17778 & 128 & your prompts & 25.71 & -- & held-out \\
+\bottomrule
+\end{tabular}
+\end{table}

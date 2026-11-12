@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Mean BAcc and CVaR20 BAcc (\%) over 10 support draws (and prompt sets). Bold: best non-oracle method per row and metric. *Oracle picks $\eta$ on the test set and is not achievable.}
+\label{tab:T2_main_results}
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+Dataset & K & Zero-shot BAcc & Zero-shot CVaR & Visual only BAcc & Visual only CVaR & PARA (z) BAcc & PARA (z) CVaR & PARA (log-prob) BAcc & PARA (log-prob) CVaR & Shot-only (z) BAcc & Shot-only (z) CVaR & Oracle (log-prob)* BAcc & Oracle (log-prob)* CVaR \\
+\midrule
+DermaMNIST & 1 & 21.16 & 21.16 & 29.70 & 20.41 & 26.45 & 22.70 & \textbf{29.91} & 22.40 & 28.76 & \textbf{23.33} & 32.24 & 25.63 \\
+DermaMNIST & 4 & 21.16 & 21.16 & 45.66 & 39.41 & 43.98 & 39.04 & \textbf{46.82} & 40.27 & 46.09 & \textbf{40.87} & 47.72 & 41.71 \\
+DermaMNIST & 16 & 21.16 & 21.16 & 57.68 & 54.62 & 57.41 & 54.20 & \textbf{57.94} & 54.77 & 57.75 & \textbf{54.90} & 58.62 & 55.34 \\
+OCTMNIST & 1 & 50.40 & \textbf{50.40} & 48.76 & 37.05 & 52.56 & 47.70 & 52.40 & 43.50 & \textbf{52.72} & 47.28 & 56.66 & 51.93 \\
+OCTMNIST & 4 & 50.40 & 50.40 & 65.28 & 46.77 & 64.66 & \textbf{52.60} & \textbf{66.98} & 49.60 & 66.40 & 50.55 & 68.72 & 55.23 \\
+OCTMNIST & 16 & 50.40 & 50.40 & 80.36 & 71.92 & 80.49 & 73.58 & 80.86 & 72.95 & \textbf{80.97} & \textbf{73.65} & 82.39 & 75.23 \\
+BloodMNIST & 1 & 14.18 & 14.18 & \textbf{57.76} & \textbf{50.71} & 34.28 & 27.01 & 53.09 & 43.96 & 43.53 & 33.97 & 58.12 & 50.83 \\
+BloodMNIST & 4 & 14.18 & 14.18 & \textbf{82.78} & \textbf{77.85} & 69.39 & 64.64 & 81.63 & 76.66 & 75.80 & 72.11 & 82.97 & 78.00 \\
+BloodMNIST & 16 & 14.18 & 14.18 & \textbf{90.73} & \textbf{89.28} & 88.65 & 86.71 & 90.57 & 89.04 & 89.68 & 88.10 & 90.81 & 89.38 \\
+BreastMNIST & 1 & 62.28 & \textbf{62.28} & 60.96 & 46.49 & 62.28 & \textbf{62.28} & \textbf{62.44} & 50.55 & 62.28 & \textbf{62.28} & 70.36 & 63.47 \\
+BreastMNIST & 4 & 62.28 & \textbf{62.28} & 65.50 & 50.56 & 65.50 & 50.56 & \textbf{67.81} & 57.17 & 65.50 & 50.56 & 73.17 & 68.17 \\
+BreastMNIST & 16 & 62.28 & 62.28 & 73.34 & 66.84 & 73.34 & 66.84 & \textbf{73.81} & \textbf{67.12} & 73.34 & 66.84 & 76.98 & 72.21 \\
+PneumoniaMNIST & 1 & \textbf{67.35} & \textbf{67.35} & 66.51 & 53.21 & \textbf{67.35} & \textbf{67.35} & 66.59 & 53.59 & \textbf{67.35} & \textbf{67.35} & 71.53 & 67.35 \\
+PneumoniaMNIST & 4 & 67.35 & 67.35 & \textbf{82.75} & \textbf{76.32} & \textbf{82.75} & \textbf{76.32} & 81.03 & 75.94 & \textbf{82.75} & \textbf{76.32} & 83.41 & 76.84 \\
+PneumoniaMNIST & 16 & 67.35 & 67.35 & \textbf{89.40} & \textbf{87.22} & \textbf{89.40} & \textbf{87.22} & 89.21 & 86.99 & \textbf{89.40} & \textbf{87.22} & 89.79 & 87.46 \\
+OrganAMNIST & 1 & 25.71 & 25.71 & \textbf{48.97} & \textbf{45.34} & 37.30 & 34.62 & 46.79 & 43.00 & 41.52 & 38.97 & 49.59 & 46.12 \\
+OrganAMNIST & 4 & 25.71 & 25.71 & \textbf{65.75} & \textbf{59.99} & 57.40 & 53.06 & 63.61 & 58.25 & 62.14 & 56.71 & 65.86 & 60.02 \\
+OrganAMNIST & 16 & 25.71 & 25.71 & \textbf{81.48} & \textbf{80.32} & 79.74 & 78.19 & 81.48 & 80.29 & 80.59 & 79.35 & 81.71 & 80.45 \\
+\bottomrule
+\end{tabular}
+\end{table}

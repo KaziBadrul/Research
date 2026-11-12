@@ -1,4 +1,4 @@
-# breastmnist | config 7d80fcfffe | 2026-11-12 01:11:30
+# breastmnist | config 7d80fcfffe | 2026-11-12 19:18:50
 
 ######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
 class                              delta own mean other nearest other own closest?     phi

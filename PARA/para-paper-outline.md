@@ -1,4 +1,4 @@
-# Paper outline: what PARA's adaptive step really does (draft, 2026-11-12)
+# Paper outline: what PARA's adaptive step really does (draft, updated 2026-11-12)
 
 Working title options:
 - "Does the Support Set Steer the Step? An Analysis of Prompt-Anchored Residual Adaptation for Biomedical VLMs"
@@ -36,19 +36,21 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
 
 ## 4. Finding 1: the geometry is uninformative, so the step is a fixed curve in K
 - delta own vs other text (gap 0.002-0.014); phi of real classes = phi of random mixes; pairwise cosine 0.85-0.96.
-- Derivation: phi = 1 + (K-1) * mean cosine -> predicted eta 0.31 / 0.59 / 0.79 vs measured 0.32 / 0.61 / 0.80 on all 6 datasets.
-- eta SD across draws <= 0.0035; no correlation with the best eta per draw.
+- Derivation: phi = 1 + (K-1) * mean cosine -> predicted eta 0.32 / 0.60 / 0.80 (delta 0.55, cosine 0.87, averaged over 6 datasets)
+  vs measured 0.33 / 0.60 / 0.80 on all 6 datasets (Figure 1).
+- eta SD across draws <= 0.011; no correlation with the best eta per draw.
 - Shot-only schedule vs PARA: 13 / 0 settings significantly better (design), +0.82 held-out.
-- Centering restores signal (phi real 2.6-5.3 vs random ~1.0) but does not by itself give a better step (Appendix B).
+- Centering restores signal (phi real 1.5-6.7 vs random ~1.0-1.7) but does not by itself give a better step (Appendix B).
 
 ## 5. Finding 2: the standardized blend is a switch on binary tasks
 - Short proof: 2-class z-scores are (+1, -1); (1-eta) a + eta b keeps a's sign iff eta < 0.5.
-- Empirical check: 1,046 / 1,046 binary rows equal zero-shot (eta < 0.5) or visual-only (eta > 0.5).
+- Empirical check: 1,046 / 1,046 binary rows equal zero-shot (eta < 0.5) or visual-only (eta > 0.5). Confirmed again on the full
+  41-point eta grid (Figure 3): every binary run takes exactly one BAcc value below 0.5 and one above.
 - Consequence: PARA = zero-shot at K=1 and visual-only at K>=4 on binary tasks.
 
 ## 6. Finding 3: anchor reliability relative to the trained branch decides whether anchoring helps
-- Worst case at K=1: anchoring helps (OCT +10.6 CVaR over visual; Pneumonia, Breast-GPT anchor-protected) vs hurts (Blood -22 to -26; Organ).
-- Best eta orders by relative anchor quality (Figure 4). PARA's step is identical across these cases.
+- Worst case at K=1: anchoring helps (OCT, Pneumonia, Breast anchor-protected) vs hurts (Blood, Organ) (Figure 5).
+- Best eta orders by relative anchor quality (Figure 4): roughly 0.17 to 0.98. PARA's step is identical across these cases.
 - Pre-registered test: anchor-aware rule (c = 8) in-sample gains vs held-out failure (Table 4); OrganAMNIST shows why (r_a higher than OCT,
   yet best eta 0.91-0.96 because the visual branch is far stronger). HOSO-style as the reliability-measuring baseline: matches oracle on Organ,
   noisy on binary.
@@ -57,7 +59,11 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
 - Log-prob blend, same eta, no new parameters: multi-class +4.86 BAcc (14 / 0 settings), binary +0.36 (2 / 0).
 - Gains concentrate where the anchor is weak (Blood K=1 CVaR 27.0 -> 44.0; Organ 34.6 -> 43.0).
 - Trade-off: overconfident few-shot branch erodes worst-case protection with good anchors (Pneumonia K=1 CVaR 67.4 -> 53.6; Breast 62.3 -> 50.5; OCT 47.7 -> 43.5).
-- Ceiling: log-prob oracle >= z-score oracle everywhere; much higher on binary (Breast K=1 70.4 vs 67.7).
+- Figure 3 (eta-grid curves, mean BAcc): log-prob turns the binary switch into a smooth curve.
+  - BreastMNIST: interior optimum that beats both branches (K=1 64.6 at eta 0.08 vs 62.3; K=4 69.3 at 0.35 vs 65.5; K=16 74.3 at 0.52 vs 73.3).
+  - PneumoniaMNIST: no gain; best is an endpoint (anchor at K=1, visual at K=4/16). Only "your prompts" available for Pneumonia.
+  - OCTMNIST: small gains (+0.4 to +1.2) but the log-prob optimum sits much lower (0.15 / 0.40 / 0.55 vs z-score 0.55 / 0.80 / 0.88):
+    the same eta means different things in the two blends, so PARA's schedule does not transfer.
 - State honestly: motivated by the binary flaw seen on held-out data; no parameters fitted.
 
 ## 8. Discussion
@@ -66,16 +72,15 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
   whether adaptive signals actually vary across support draws.
 - Limitations: 1 seed; K in {1, 4, 16}; MedMNIST 128 px and splits (absolute numbers not comparable to the paper); one backbone;
   one multi-class held-out dataset; BreastMNIST test set small.
-- Future work: calibrated blending (support-set temperature scaling), cross-validated relative reliability, more held-out datasets.
+- Future work: estimating trained-branch reliability relative to the anchor without test labels (r_a measured only the anchor side);
+  calibrated blending (support-set temperature scaling); more held-out datasets.
 
-## Figures
-- **F1** PARA's eta vs K on all 6 datasets (points, with draw-to-draw spread) + the predicted curve from the two constants. Data: sweep_*_eta.csv.
-- **F2** Geometry check per dataset: delta own vs other text; phi real vs random mix; raw vs centered. Data: 14.2_geometry_check.txt.
-- **F3** BAcc vs eta at K=1 on PneumoniaMNIST and BreastMNIST: z-score blend (step at 0.5) vs log-prob blend (smooth). Data: NOT SAVED YET,
-  needs a small cell that saves the eta-grid curves (cached runs, no training).
-- **F4** Best eta (oracle) vs relative anchor quality (zero-shot BAcc minus visual-only BAcc), one point per dataset x prompts x K, both blends.
-  Data: logprob_table.csv, cross_dataset_table.csv.
-- **F5** Worst-case BAcc (CVaR20) at K=1 per dataset: zero-shot, visual, PARA z-score, PARA log-prob, shot-only, oracle. Data: logprob_table.csv.
+## Figures (all made 2026-11-12, PNG + PDF, scripts make_figs.py and make_f3.py)
+- **F1** PARA's eta vs K on all 6 datasets + predicted curve from two constants. Data: sweep_*_eta.csv.
+- **F2** Geometry check: delta own vs other text; phi real vs random; raw vs centered. Data: 14.2_geometry_check.txt.
+- **F3** BAcc vs eta (3 x 3 grid: Pneumonia, Breast, OCT x K = 1, 4, 16), z-score vs log-prob, IQR bands. Data: eta_curves.csv (cell 17.3).
+- **F4** Best eta (oracle) vs zero-shot minus visual-only BAcc, both blends, PARA's eta as dashed lines. Data: logprob_table.csv.
+- **F5** Worst-case BAcc (CVaR20) at K=1 per dataset ordered by relative anchor quality. Data: logprob_table.csv.
 
 ## Tables
 - **T1** Datasets: classes, test size, image size, prompt sets, zero-shot BAcc and anchor quality, design vs held-out. Data: 16_screening.txt.
@@ -91,8 +96,11 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
 - E. Implementation details and hyperparameters; code and prompt files released.
 
 ## To do before submission
-1. Small cell to save eta-grid curves for F3 (cached runs, minutes).
-2. Supervisor review of this outline and the findings; choose venue.
+1. Tables T1-T4 (from existing files).
+2. Supervisor review of outline, figures and findings; choose venue.
 3. Optional, depending on venue: 3 seeds; K = 2, 8; second backbone (plain CLIP) to show Finding 1 is not BiomedCLIP-specific.
 4. Re-check arXiv for a PARA v2 and code release; verify every related-work citation directly.
-5. Make figures, write, release code (notebook) and the BUSI prompt mapping.
+5. Write, release code (notebook) and the BUSI prompt mapping.
+
+Rejected idea (2026-11-12): Gemini's "PARA + PRiSM regularizer + NeuFS active support selection to maximize CVaR20". CVaR20 is over support
+draws and cannot be optimized in one run; active selection removes the random-draw protocol; does not address relative reliability.

@@ -1,4 +1,4 @@
-# pneumoniamnist | config d5009332c7 | 2026-11-12 00:39:15
+# pneumoniamnist | config d5009332c7 | 2026-11-12 19:16:58
 
 ######## RAW frozen space (what PARA uses) | K=16, draw 0 ########
 class                              delta own mean other nearest other own closest?     phi

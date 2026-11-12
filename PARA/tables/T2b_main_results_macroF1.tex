@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Mean Macro-F1 (\%), same runs as Table T2. Bold: best non-oracle. *Oracle is not achievable.}
+\label{tab:T2b_main_results_macroF1}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Dataset & K & Zero-shot F1 & Visual only F1 & PARA (z) F1 & PARA (log-prob) F1 & Shot-only (z) F1 & Oracle (log-prob)* F1 \\
+\midrule
+DermaMNIST & 1 & 18.74 & 20.59 & 21.85 & \textbf{23.16} & 22.97 & 23.51 \\
+DermaMNIST & 4 & 18.74 & 32.88 & 34.70 & \textbf{35.89} & 35.60 & 36.61 \\
+DermaMNIST & 16 & 18.74 & 42.51 & \textbf{44.24} & 43.58 & 44.08 & 44.62 \\
+OCTMNIST & 1 & 42.05 & 46.58 & 44.49 & \textbf{49.51} & 45.76 & 52.13 \\
+OCTMNIST & 4 & 42.05 & 64.45 & 61.61 & \textbf{65.75} & 64.59 & 66.68 \\
+OCTMNIST & 16 & 42.05 & 80.40 & 80.22 & \textbf{80.84} & 80.80 & 82.20 \\
+BloodMNIST & 1 & 8.09 & \textbf{55.27} & 29.30 & 50.36 & 39.18 & 55.64 \\
+BloodMNIST & 4 & 8.09 & \textbf{81.42} & 65.37 & 80.11 & 73.12 & 81.55 \\
+BloodMNIST & 16 & 8.09 & \textbf{89.94} & 87.24 & 89.72 & 88.46 & 89.98 \\
+BreastMNIST & 1 & 49.36 & 54.14 & 49.36 & \textbf{55.39} & 49.36 & 64.72 \\
+BreastMNIST & 4 & 49.36 & 63.38 & 63.38 & \textbf{64.43} & 63.38 & 68.91 \\
+BreastMNIST & 16 & 49.36 & 69.05 & 69.05 & \textbf{69.08} & 69.05 & 71.96 \\
+PneumoniaMNIST & 1 & \textbf{58.31} & 56.11 & \textbf{58.31} & 56.11 & \textbf{58.31} & 64.03 \\
+PneumoniaMNIST & 4 & 58.31 & \textbf{79.46} & \textbf{79.46} & 76.94 & \textbf{79.46} & 79.91 \\
+PneumoniaMNIST & 16 & 58.31 & \textbf{87.97} & \textbf{87.97} & 87.49 & \textbf{87.97} & 88.17 \\
+OrganAMNIST & 1 & 21.45 & \textbf{46.05} & 32.81 & 42.44 & 37.05 & 46.19 \\
+OrganAMNIST & 4 & 21.45 & \textbf{64.60} & 54.26 & 61.36 & 59.61 & 64.58 \\
+OrganAMNIST & 16 & 21.45 & \textbf{81.22} & 78.34 & 80.84 & 79.58 & 81.22 \\
+\bottomrule
+\end{tabular}
+\end{table}

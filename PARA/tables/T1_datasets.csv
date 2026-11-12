@@ -1,0 +1,7 @@
+Dataset,Classes,Test (eval),Test (full),Image px,Prompt sets,ZS BAcc (your prompts),ZS BAcc (GPT-4),Split
+DermaMNIST,7,2000,2005,224,"your prompts, 50 GPT-4",20.93183238432308,21.39078405229186,design
+OCTMNIST,4,1000,1000,128,"your prompts, 50 GPT-4",49.3,51.5,design
+BloodMNIST,8,2000,3421,128,"your prompts, 50 GPT-4",14.861617209106672,13.494486111441155,design
+BreastMNIST,2,156,156,128,"your prompts, 50 GPT-4",53.63408521303258,70.92731829573935,held-out
+PneumoniaMNIST,2,624,624,128,your prompts,67.35042735042735,,held-out
+OrganAMNIST,11,2000,17778,128,your prompts,25.7087584748876,,held-out

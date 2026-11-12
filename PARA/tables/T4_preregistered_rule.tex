@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Anchor-aware rule minus each baseline. Wilcoxon per setting over 10 draws; counts of settings significantly better/worse ($p<0.05$). LODO picks $c$ by mean BAcc on the other design datasets.}
+\label{tab:T4_preregistered_rule}
+\begin{tabular}{llrrllrllr}
+\toprule
+Setting & vs & settings & dBAcc & won/lost BAcc & sig +/- BAcc & dF1 & won/lost F1 & sig +/- F1 & dCVaR20 \\
+\midrule
+Design, in-sample (frozen c=8) & PARA & 18 & 4.77 & 140/39 & 10/0 & 5.00 & 126/54 & 9/2 & 4.05 \\
+Design, in-sample (frozen c=8) & Shot-only & 18 & 2.12 & 113/65 & 6/0 & 2.17 & 104/75 & 7/3 & 2.21 \\
+Design, in-sample (frozen c=8) & Visual only & 18 & 0.23 & 85/85 & 2/1 & -0.00 & 92/79 & 3/1 & 1.84 \\
+Design, leave-one-dataset-out & PARA & 18 & 4.94 & 140/40 & 10/0 & 5.51 & 122/58 & 9/3 & 3.23 \\
+Design, leave-one-dataset-out & Shot-only & 18 & 2.29 & 120/57 & 6/0 & 2.67 & 116/64 & 6/4 & 1.39 \\
+Design, leave-one-dataset-out & Visual only & 18 & 0.40 & 105/59 & 3/1 & 0.51 & 106/61 & 4/2 & 1.02 \\
+Held-out (frozen c=8) & PARA & 12 & -0.68 & 35/22 & 1/1 & -0.26 & 37/20 & 3/1 & -4.05 \\
+Held-out (frozen c=8) & Shot-only & 12 & -1.50 & 24/33 & 1/3 & -1.16 & 25/32 & 2/2 & -4.82 \\
+Held-out (frozen c=8) & Visual only & 12 & -2.20 & 12/45 & 0/3 & -3.08 & 13/44 & 0/4 & -1.89 \\
+\bottomrule
+\end{tabular}
+\end{table}
