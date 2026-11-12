@@ -35,7 +35,8 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
 - Design vs held-out split and the pre-registration (dates, frozen rule, prompt policy, dataset choice from zero-shot screening only).
   State exactly how c = 8 was chosen. The files support "best CVaR20 pooled in-sample over the three design datasets" (56.07). They do not
   support "leave-one-dataset-out": that procedure picks c = 16 / 8 / 4 by CVaR20, or 4 / 4 / 2 by mean BAcc.
-  Check PARA_followup_4.ipynb output from 2026-11-11 for the run actually used.
+  Traced 2026-11-12: no CVaR-based LODO was ever run. c = 8 came from the pooled in-sample CVaR20 table and was fixed between 20:37 and 21:57
+  on 2026-11-11, before the first held-out run. This is documented by file timestamps only. See docs/findings_verified.md, claim 19.
 - Why BAcc: DermaMNIST accuracy rewards predicting "nevus" (Appendix A).
 
 ## 4. Finding 1: the geometry is uninformative, so the step is a fixed curve in K
@@ -95,9 +96,10 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
 
 ## Tables (built 2026-11-12 by analysis/make_tables.py into tables/, LaTeX booktabs + CSV)
 - **T1** Datasets: classes, test size (scored subset and full), image size, prompt sets, zero-shot BAcc per prompt set, design vs held-out.
-  Zero-shot comes from the sweep files, not 16_screening (which scores the full test split and, for Derma, differs: 24.80 templates vs 20.93).
-- **T2** Main results: mean / CVaR20 BAcc at K = 1, 4, 16 for zero-shot, visual, PARA (z), PARA log-prob, shot-only, oracle (log-prob).
-  T2b gives the same runs as Macro-F1. All values match logprob_table.csv. 14 columns: split into panels or use \resizebox.
+  Zero-shot comes from the sweep files, not 16_screening (that file scores 1,000 random test images with templates; Derma's own
+  prompts are hand-written descriptions, so its screening row is not comparable).
+- **T2** Main results at K = 1, 4, 16 for zero-shot, visual, PARA (z), PARA log-prob, shot-only, oracle (log-prob), as three
+  8-column tables: T2a mean BAcc, T2b CVaR20 BAcc, T2c Macro-F1. All values match logprob_table.csv.
 - **T3** Paired tests, recomputed from rule_scores.csv and logprob_scores.csv: shot-only vs PARA; log-prob vs z-score (binary / multi-class).
   Matches logprob_summary.txt except binary "won" (50 here vs 51 saved). Per-setting results: T3a/T3b_per_setting.csv.
 - **T4** Pre-registered anchor-aware rule: design (in-sample, LODO) vs held-out, recomputed from rule_scores.csv. Matches cross_dataset_summary.txt.
@@ -111,13 +113,14 @@ multi-class tasks but exposes an overconfident few-shot branch that erodes worst
 - E. Implementation details and hyperparameters; code and prompt files released.
 
 ## To do before submission
-1. ~~Tables T1-T4~~ done 2026-11-12. Still to do: add Holm-adjusted significance counts to T3/T4; split T2 for page width.
+1. ~~Tables T1-T4~~, ~~Holm-adjusted counts in T3/T4~~, ~~split T2~~: done 2026-11-12. T3 and T4 are 12 columns wide; use \resizebox
+   or move the Macro-F1 columns to the appendix.
 2. Supervisor review of outline, figures and findings; choose venue.
 3. Optional, depending on venue: 3 seeds; K = 2, 8; second backbone (plain CLIP) to show Finding 1 is not BiomedCLIP-specific.
 4. ~~Re-check arXiv for PARA v2 / code~~ done 2026-11-12: v1 only (arXiv:2609.33701, 27 Sep 2026), no official code.
    Citations checked: Mind the Gap, ProLIP (now titled "CLIP's Visual Embedding Projector is a Few-shot Cornucopia"), HOSO (arXiv only;
    venue unconfirmed), vMFCoOp (AAAI-26). Recheck PARA once more before submission.
-5. Resolve the Derma zero-shot discrepancy between 16_screening (templates 24.80) and the sweeps ("your prompts" 20.93).
+5. ~~Derma zero-shot discrepancy~~: resolved 2026-11-12 (different prompts and different test images; see docs/findings_verified.md).
 6. Write, release code (notebook) and the BUSI prompt mapping.
 
 Rejected idea (2026-11-12): Gemini's "PARA + PRiSM regularizer + NeuFS active support selection to maximize CVaR20". CVaR20 is over support

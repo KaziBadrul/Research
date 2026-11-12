@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\small
+\caption{CVaR20 BAcc (\%): mean of the worst 2 of 10 support draws, averaged over prompt sets. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
+\label{tab:T2b_cvar20_bacc}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Dataset & K & Zero-shot & Visual only & PARA (z) & PARA (log-prob) & Shot-only (z) & Oracle (log-prob)* \\
+\midrule
+DermaMNIST & 1 & 21.16 & 20.41 & 22.70 & 22.40 & \textbf{23.33} & 25.63 \\
+DermaMNIST & 4 & 21.16 & 39.41 & 39.04 & 40.27 & \textbf{40.87} & 41.71 \\
+DermaMNIST & 16 & 21.16 & 54.62 & 54.20 & 54.77 & \textbf{54.90} & 55.34 \\
+OCTMNIST & 1 & \textbf{50.40} & 37.05 & 47.70 & 43.50 & 47.28 & 51.93 \\
+OCTMNIST & 4 & 50.40 & 46.77 & \textbf{52.60} & 49.60 & 50.55 & 55.23 \\
+OCTMNIST & 16 & 50.40 & 71.92 & 73.58 & 72.95 & \textbf{73.65} & 75.23 \\
+BloodMNIST & 1 & 14.18 & \textbf{50.71} & 27.01 & 43.96 & 33.97 & 50.83 \\
+BloodMNIST & 4 & 14.18 & \textbf{77.85} & 64.64 & 76.66 & 72.11 & 78.00 \\
+BloodMNIST & 16 & 14.18 & \textbf{89.28} & 86.71 & 89.04 & 88.10 & 89.38 \\
+BreastMNIST & 1 & \textbf{62.28} & 46.49 & \textbf{62.28} & 50.55 & \textbf{62.28} & 63.47 \\
+BreastMNIST & 4 & \textbf{62.28} & 50.56 & 50.56 & 57.17 & 50.56 & 68.17 \\
+BreastMNIST & 16 & 62.28 & 66.84 & 66.84 & \textbf{67.12} & 66.84 & 72.21 \\
+PneumoniaMNIST & 1 & \textbf{67.35} & 53.21 & \textbf{67.35} & 53.59 & \textbf{67.35} & 67.35 \\
+PneumoniaMNIST & 4 & 67.35 & \textbf{76.32} & \textbf{76.32} & 75.94 & \textbf{76.32} & 76.84 \\
+PneumoniaMNIST & 16 & 67.35 & \textbf{87.22} & \textbf{87.22} & 86.99 & \textbf{87.22} & 87.46 \\
+OrganAMNIST & 1 & 25.71 & \textbf{45.34} & 34.62 & 43.00 & 38.97 & 46.12 \\
+OrganAMNIST & 4 & 25.71 & \textbf{59.99} & 53.06 & 58.25 & 56.71 & 60.02 \\
+OrganAMNIST & 16 & 25.71 & \textbf{80.32} & 78.19 & 80.29 & 79.35 & 80.45 \\
+\bottomrule
+\end{tabular}
+\end{table}

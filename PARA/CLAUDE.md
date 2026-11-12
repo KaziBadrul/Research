@@ -20,7 +20,8 @@ $\eta = \lambda \cdot \text{mean}_c\left[\frac{\delta_c \phi_c}{1+\delta_c \phi_
 - `para_figures/`: F1 to F5 (PNG and PDF) and the scripts that make them (`make_figs.py`, `make_f3.py`, `cell_17_3_eta_curves.py`).
 - `analysis/`: read-only analysis scripts. `verify_claims.py` checks every claim; `check_notes.py` checks the design-only numbers in
   `para-replication-findings.md`; `make_tables.py` builds T1 to T4.
-- `tables/`: the T1 to T4 tables, as LaTeX (booktabs) and CSV.
+- `tables/`: T1, T2a (mean BAcc), T2b (CVaR20), T2c (Macro-F1), T3 and T4, as LaTeX (booktabs) and CSV,
+  plus `T3a`/`T3b_per_setting.csv`.
 - `docs/findings_verified.md`: every verified number with its source file and a list of corrections. **Use these values.**
 - `para-paper-outline.md`, `para-replication-findings.md`: earlier chat notes. These are not verified; check numbers against `docs/`.
 
@@ -46,7 +47,9 @@ Protocol for every dataset:
 - The anchor-aware rule is frozen at c = 8. Do not re-tune it. The rule is
   $\eta = K/(K+k_0)$, $k_0 = c\, r_a/(1-r_a)$, where $r_a$ is the rescaled mean true-class softmax probability of the anchor on the support set.
 - Paired tests use a Wilcoxon signed-rank test over the 10 draws in each (dataset, prompts, K) setting, with significance at p < 0.05.
-  A setting whose differences are all zero counts as not significant.
+  A setting whose differences are all zero counts as not significant. Report Holm-adjusted counts next to raw counts.
+  The smallest attainable p is 2/1024, so never apply Holm to a family of more than 25 settings.
+- "Your prompts" means 5 hand-written descriptions per class on DermaMNIST and 5 generic templates on every other dataset.
 - Writing style: no em dashes; formulas in LaTeX.
 - Every number that goes into the paper must trace to a file in `para_results/` and a script in `analysis/`.
 

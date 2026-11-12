@@ -99,14 +99,28 @@ def paired(df, a, b, col, key=("dataset", "prompts", "K", "draw")):
     return pd.DataFrame(rows)
 
 
+def holm(p):
+    """Holm step-down adjusted p-values (family = the settings passed in)."""
+    p = np.asarray(p, dtype=float)
+    order = np.argsort(p)
+    adj = np.empty_like(p)
+    running = 0.0
+    for rank, i in enumerate(order):
+        running = max(running, min(1.0, (len(p) - rank) * p[i]))
+        adj[i] = running
+    return adj
+
+
 def aggregate(per, label):
-    """mean over all paired draws (= mean of setting means, since every setting has 10 draws)."""
+    """mean over all paired draws (= mean of setting means, since every setting has 10 draws).
+    'sig' counts use raw p < 0.05 per setting; 'Holm' counts adjust within the settings of this row."""
     out = {"group": label, "settings": len(per)}
     for m, tag in [("bacc", "BAcc"), ("macro_f1", "F1")]:
         out[f"d{tag}"] = np.average(per[f"d_{m}"], weights=per[f"n_{m}"])
         out[f"won/lost {tag}"] = f"{per[f'won_{m}'].sum()}/{per[f'lost_{m}'].sum()}"
-        out[f"sig +/- {tag}"] = f"{int(((per[f'p_{m}'] < 0.05) & (per[f'd_{m}'] > 0)).sum())}/" \
-                                f"{int(((per[f'p_{m}'] < 0.05) & (per[f'd_{m}'] < 0)).sum())}"
+        for kind, p in [("sig", per[f"p_{m}"].to_numpy()), ("Holm", holm(per[f"p_{m}"]))]:
+            out[f"{kind} +/- {tag}"] = f"{int(((p < 0.05) & (per[f'd_{m}'] > 0)).sum())}/" \
+                                       f"{int(((p < 0.05) & (per[f'd_{m}'] < 0)).sum())}"
     out["dCVaR20"] = per.d_cvar20.mean()
     return out
 
@@ -127,13 +141,17 @@ for d in ORDER:
     zsb = zs.groupby("prompts").bacc.agg(["mean", "std"])
     assert (zsb["std"].fillna(0) < 1e-9).all(), "zero-shot should not depend on the support draw"
     full = screen[screen.dataset == d].n_test_total.iloc[0]
+    own = "hand-written (5/class)" if d == "dermamnist" else "templates (5)"   # class_prompts() in the notebooks
+    sets = [own] + (["GPT-4 (50/class)"] if "50 GPT-4" in zsb.index else [])
     t1.append({"Dataset": NICE[d], "Classes": classes[d], "Test (eval)": int(cfg[d].n_test), "Test (full)": int(full),
-               "Image px": int(cfg[d].medmnist_size), "Prompt sets": ", ".join(sorted(zsb.index, reverse=True)),
+               "Image px": int(cfg[d].medmnist_size), "Prompt sets": ", ".join(sets),
                "ZS BAcc (your prompts)": zsb.loc["your prompts", "mean"],
                "ZS BAcc (GPT-4)": zsb["mean"].get("50 GPT-4", np.nan),
                "Split": "design" if d in DESIGN else "held-out"})
 t1 = pd.DataFrame(t1)
-save(t1, "T1_datasets", "Datasets. Zero-shot BAcc (\\%) on the evaluated test subset, per prompt set.")
+save(t1, "T1_datasets", "Datasets. Zero-shot BAcc (\\%) on the evaluated test subset, per prompt set. "
+     "``Your prompts'' are 5 hand-written visual descriptions per class for DermaMNIST and 5 generic templates elsewhere; "
+     "GPT-4 prompts are BiomedCoOp's (BreastMNIST via BUSI: benign and normal pooled).")
 # compare zero-shot with 16_screening (which used the full test split) and logprob_table
 pairs = []
 for _, r in t1.iterrows():
@@ -147,8 +165,9 @@ for _, r in t1.iterrows():
     pairs.append((f"{d} ZS mean over prompt sets vs logprob_table",
                   np.nanmean([r["ZS BAcc (your prompts)"], r["ZS BAcc (GPT-4)"]]), zrow))
 report_diffs("T1", pairs)
-print("   note: 16_screening.csv scores the full test split; the sweeps use a fixed subset of n_test images "
-      "(config.json), so differences there are expected.")
+print("   note: 16_screening scores 1,000 random test images (N_SCREEN) with the generic templates; the sweeps score a fixed "
+      "subset of n_test images (config.json). Equal when the test split has <= 1,000 images (OCT, Breast, Pneumonia). "
+      "DermaMNIST 'your prompts' are hand-written descriptions, not the templates, so that row compares different prompts.")
 
 # ================================================================ T2 main results
 METHODS = [("Zero-shot", "Zero-shot"), ("Visual only", "Visual only"), ("PARA (z)", "PARA [zscore]"),
@@ -174,10 +193,17 @@ for d in ORDER:
         boldf |= {(i, c) for c, v in candf.items() if np.isclose(v, max(candf.values()), atol=1e-9)}
         t2.append(row); t2f.append(rowf)
 t2, t2f = pd.DataFrame(t2), pd.DataFrame(t2f)
-save(t2, "T2_main_results", "Mean BAcc and CVaR20 BAcc (\\%) over 10 support draws (and prompt sets). Bold: best "
-     "non-oracle method per row and metric. *Oracle picks $\\eta$ on the test set and is not achievable.", bold)
-save(t2f, "T2b_main_results_macroF1", "Mean Macro-F1 (\\%), same runs as Table T2. Bold: best non-oracle. "
-     "*Oracle is not achievable.", boldf)
+ORACLE_NOTE = "*Oracle picks $\\eta$ on the test set per draw and is not achievable."
+for name, metric, what in [("T2a_mean_bacc", "BAcc", "Mean BAcc (\\%) over 10 support draws, averaged over prompt sets"),
+                           ("T2b_cvar20_bacc", "CVaR", "CVaR20 BAcc (\\%): mean of the worst 2 of 10 support draws, "
+                                                      "averaged over prompt sets")]:
+    cols = ["Dataset", "K"] + [c for c in t2.columns if c.endswith(f" {metric}")]
+    panel = t2[cols].rename(columns=lambda c: c[: -len(f" {metric}")] if c.endswith(f" {metric}") else c)
+    pbold = {(i, c[: -len(f" {metric}")]) for i, c in bold if c.endswith(f" {metric}")}
+    save(panel, name, f"{what}. Bold: best non-oracle method per row. {ORACLE_NOTE}", pbold)
+t2f_panel = t2f.rename(columns=lambda c: c[:-3] if c.endswith(" F1") else c)
+save(t2f_panel, "T2c_macro_f1", f"Mean Macro-F1 (\\%), same runs as Tables T2a and T2b. Bold: best non-oracle method "
+     f"per row. {ORACLE_NOTE}", {(i, c[:-3]) for i, c in boldf})
 report_diffs("T2 vs logprob_table.csv", pairs)
 # cross-check: z-score PARA / shot-only in logprob_scores vs rule_scores (two independent files, same runs)
 x = []
@@ -196,14 +222,19 @@ per_a.to_csv(os.path.join(OUT, "T3a_per_setting.csv"), index=False)
 per_b.to_csv(os.path.join(OUT, "T3b_per_setting.csv"), index=False)
 t3 = []
 for comp, per in [("(a) Shot-only minus PARA", per_a), ("(b) Log-prob minus z-score at PARA eta", per_b)]:
-    groups = [("binary", per.dataset.isin(binary)), ("multi-class", ~per.dataset.isin(binary)), ("all", per.dataset.notna())]
+    # No pooled "all" row: with 10 draws the smallest Wilcoxon p is 2/1024, so Holm over more than 25 settings can never reject.
+    groups = [("binary", per.dataset.isin(binary)), ("multi-class", ~per.dataset.isin(binary))]
     if comp.startswith("(a)"):
         groups += [("design", per.dataset.isin(DESIGN)), ("held-out", per.dataset.isin(HELD))]
     for g, mask in groups:
         t3.append({"Comparison": comp, **aggregate(per[mask], g)})
 t3 = pd.DataFrame(t3)
+HOLM_NOTE = ("``Holm'' applies Holm's correction across the settings of each row. With 10 draws the smallest attainable "
+             "two-sided Wilcoxon $p$ is $2/1024 \\approx 0.002$, so a Holm-significant setting is one where nearly every "
+             "draw moves the same way.")
 save(t3, "T3_paired_tests", "Paired differences over support draws. Wilcoxon signed-rank per (dataset, prompt set, K) "
-     "setting; counts of settings significantly better/worse at $p<0.05$. $\\Delta$CVaR20 is the mean over settings.")
+     "setting; counts of settings significantly better/worse at $p<0.05$. " + HOLM_NOTE +
+     " $\\Delta$CVaR20 is the mean over settings.")
 # compare (b) with logprob_summary.txt; (a) design/held-out with the values recorded during verification
 txt = open(os.path.join(ROOT, "logprob_summary.txt"), encoding="utf-8").read()
 pairs = []
@@ -238,7 +269,8 @@ for block, rule, dss in [("Design, in-sample (frozen c=8)", "Frozen c=8", DESIGN
         t4.append({"Setting": block, "vs": other, **{k: v for k, v in aggregate(per, "").items() if k != "group"}})
 t4 = pd.DataFrame(t4)
 save(t4, "T4_preregistered_rule", "Anchor-aware rule minus each baseline. Wilcoxon per setting over 10 draws; counts "
-     "of settings significantly better/worse ($p<0.05$). LODO picks $c$ by mean BAcc on the other design datasets.")
+     "of settings significantly better/worse ($p<0.05$). " + HOLM_NOTE +
+     " LODO picks $c$ by mean BAcc on the other design datasets.")
 # compare with cross_dataset_summary.txt
 txt = open(os.path.join(ROOT, "cross_dataset_summary.txt"), encoding="utf-8").read()
 blocks = {"Held-out (frozen c=8)": r"HELD-OUT datasets.*?<-- the main test\n(.*?)\n\n",

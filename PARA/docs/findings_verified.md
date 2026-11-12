@@ -16,17 +16,57 @@ Design datasets are Blood, Derma and OCT; held-out datasets are Breast, Organ an
 - **Claim 19.** c = 8 maximises **pooled in-sample** CVaR20 BAcc over the three design datasets (56.07; c=4: 55.71; c=16: 55.61).
   Leave-one-dataset-out by CVaR20 chooses c = 16 (leaving Blood out), 8 (leaving Derma out) and 4 (leaving OCT out).
   The "Anchor-aware (LODO)" rows in `cross_dataset_summary.txt` choose c by mean BAcc instead (4, 4, 2).
+  **Provenance (traced 2026-11-12):**
+  - No notebook ever ran a CVaR-based selection of c. The only selection code is leave-one-dataset-out by mean BAcc
+    (`PARA_followup_3.ipynb` cell 51, which printed c = 4, 4, 2).
+  - The CVaR20 choice was made outside the notebooks, from the pooled in-sample table in `para-replication-findings.md`
+    (c=8 62.3 / 56.1 against c=4 62.6 / 55.7). That table reproduces from `rule_scores.csv`.
+  - The notebook text "chosen by worst-case (CVaR20) BAcc under leave-one-dataset-out" (cell 43 of `PARA_followup_4.ipynb` and of `_5`) is inaccurate.
+  - Timing, from file timestamps and output headers only:
+    - design 15.3 runs at 18:05 (Derma), 19:09 (OCT) and 20:04 (Blood) on 2026-11-11;
+    - `PARA_followup_3.ipynb` (with the mean-BAcc LODO run) last saved at 20:37;
+    - screening at 21:38;
+    - the first held-out run at 21:57 (Pneumonia), then Breast at 22:26 and Organ at 23:33.
+  - So c = 8 was fixed between 20:37 and 21:57, before any held-out training.
+    No commit records this: the first commit containing `FROZEN_C = 8` is 4ae1c16 (2026-11-12 01:24), after the held-out runs.
+  - The design-set scores in `rule_scores.csv` are the same ones used at decision time: the LODO rows in today's summary equal the
+    `PARA_followup_3.ipynb` output exactly.
+  - Paper wording: "c = 8 maximised CVaR20 BAcc pooled over the three design datasets (in-sample) and was fixed before any held-out
+    dataset was trained." Report leave-one-dataset-out (mean BAcc: c = 4, 4, 2) separately as an out-of-sample check on the design data.
+    Disclose that the freeze is documented by file timestamps, not by a dated commit.
 - **Claim 25.** The log-prob oracle is **not** at least the z-score oracle everywhere: Derma K=16 is 58.62 vs 58.64 (−0.02). It is higher in the other 17 settings.
 - **Claim 26.** At Pneumonia K=4 the log-prob curve peaks inside the range, at 82.81 with $\eta$ = 0.975, vs 82.75 for z-score (+0.06). K=1 and K=16 peak at the endpoints.
 - `logprob_summary.txt` lists binary PARA as "won 51"; a recount gives 50. All other counts match.
-- `16_screening.csv` gives different zero-shot BAcc from the sweeps for Derma (template prompts 24.80 vs "your prompts" 20.93; GPT-4 22.03 vs 21.39),
-  Blood and Organ. The screening scores the full test split, while the sweeps score a fixed subset of `n_test` images.
-  For Derma, the subset (2000 images) is almost the whole split (2005), so the template-prompt gap is likely a different prompt set, not the subset. Unresolved.
-  Report zero-shot numbers from the sweep files (Table T1), not from the screening.
+- `16_screening.csv` gives different zero-shot BAcc from the sweeps for Derma (templates 24.80 vs "your prompts" 20.93; GPT-4 22.03 vs 21.39),
+  Blood and Organ. **Resolved 2026-11-12** from the notebook code, with two causes:
+  1. The screening scores 1,000 random test images (`N_SCREEN`), while the sweeps score a fixed subset of `n_test` images.
+     Its `n_test_total` column is the split size, not the number of images scored. The two agree whenever the split has at most
+     1,000 images (OCT, Breast, Pneumonia, which match exactly). For Blood, Organ and Derma GPT-4 the image sets differ.
+  2. For DermaMNIST only, "your prompts" are 5 hand-written visual descriptions per class (`DESCRIPTIONS` in `class_prompts()`).
+     On every other dataset, "your prompts" are the 5 generic templates that the screening also uses.
+     So the Derma 24.80 vs 20.93 gap compares different prompts as well as different images.
+  Report zero-shot numbers from the sweep files (Table T1), and say in the paper that Derma's own prompts are hand-written descriptions.
 
 ## Tables
-`python analysis/make_tables.py para_results tables` builds T1 to T4 and T2b (Macro-F1). Every T2 and T4 number matches
-`logprob_table.csv`, `cross_dataset_table.csv` and `cross_dataset_summary.txt` (within 0.005).
+`python analysis/make_tables.py para_results tables` builds T1, T2a (mean BAcc), T2b (CVaR20 BAcc), T2c (Macro-F1), T3 and T4.
+Every T2 and T4 number matches `logprob_table.csv`, `cross_dataset_table.csv` and `cross_dataset_summary.txt` (within 0.005).
+
+**Holm-adjusted counts.** The family is the set of settings in each row; the columns read "better / worse" at adjusted p < 0.05.
+With 10 draws the smallest Wilcoxon p is $2/1024 \approx 0.002$, so Holm over more than 25 settings can never reject.
+The pooled 30-setting rows were therefore dropped.
+
+| Comparison | Raw p < 0.05 | Holm |
+|---|---|---|
+| Shot-only minus PARA, multi-class (21 settings) | 16 / 0 | 11 / 0 |
+| Shot-only minus PARA, design (18) | 13 / 0 | 8 / 0 |
+| Shot-only minus PARA, held-out (12) | 3 / 0 | 3 / 0 |
+| Log-prob minus z-score, multi-class (21) | 14 / 0 | 10 / 0 |
+| Log-prob minus z-score, binary (9) | 2 / 0 | 1 / 0 |
+| Frozen c = 8, held-out, vs PARA (12) | 1 / 1 | 1 / 0 |
+| Frozen c = 8, held-out, vs shot-only (12) | 1 / 3 | 1 / 1 |
+| Frozen c = 8, held-out, vs visual-only (12) | 0 / 3 | 0 / 2 |
+
+Every direction in the raw counts survives the correction; only the counts shrink.
 
 ## A. Setup
 | # | Verified value | Source |

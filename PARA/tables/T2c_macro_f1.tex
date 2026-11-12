@@ -1,11 +1,11 @@
 \begin{table}[t]
 \centering
 \small
-\caption{Mean Macro-F1 (\%), same runs as Table T2. Bold: best non-oracle. *Oracle is not achievable.}
-\label{tab:T2b_main_results_macroF1}
+\caption{Mean Macro-F1 (\%), same runs as Tables T2a and T2b. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
+\label{tab:T2c_macro_f1}
 \begin{tabular}{lrrrrrrr}
 \toprule
-Dataset & K & Zero-shot F1 & Visual only F1 & PARA (z) F1 & PARA (log-prob) F1 & Shot-only (z) F1 & Oracle (log-prob)* F1 \\
+Dataset & K & Zero-shot & Visual only & PARA (z) & PARA (log-prob) & Shot-only (z) & Oracle (log-prob)* \\
 \midrule
 DermaMNIST & 1 & 18.74 & 20.59 & 21.85 & \textbf{23.16} & 22.97 & 23.51 \\
 DermaMNIST & 4 & 18.74 & 32.88 & 34.70 & \textbf{35.89} & 35.60 & 36.61 \\

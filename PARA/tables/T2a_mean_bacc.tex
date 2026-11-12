@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Mean BAcc (\%) over 10 support draws, averaged over prompt sets. Bold: best non-oracle method per row. *Oracle picks $\eta$ on the test set per draw and is not achievable.}
+\label{tab:T2a_mean_bacc}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Dataset & K & Zero-shot & Visual only & PARA (z) & PARA (log-prob) & Shot-only (z) & Oracle (log-prob)* \\
+\midrule
+DermaMNIST & 1 & 21.16 & 29.70 & 26.45 & \textbf{29.91} & 28.76 & 32.24 \\
+DermaMNIST & 4 & 21.16 & 45.66 & 43.98 & \textbf{46.82} & 46.09 & 47.72 \\
+DermaMNIST & 16 & 21.16 & 57.68 & 57.41 & \textbf{57.94} & 57.75 & 58.62 \\
+OCTMNIST & 1 & 50.40 & 48.76 & 52.56 & 52.40 & \textbf{52.72} & 56.66 \\
+OCTMNIST & 4 & 50.40 & 65.28 & 64.66 & \textbf{66.98} & 66.40 & 68.72 \\
+OCTMNIST & 16 & 50.40 & 80.36 & 80.49 & 80.86 & \textbf{80.97} & 82.39 \\
+BloodMNIST & 1 & 14.18 & \textbf{57.76} & 34.28 & 53.09 & 43.53 & 58.12 \\
+BloodMNIST & 4 & 14.18 & \textbf{82.78} & 69.39 & 81.63 & 75.80 & 82.97 \\
+BloodMNIST & 16 & 14.18 & \textbf{90.73} & 88.65 & 90.57 & 89.68 & 90.81 \\
+BreastMNIST & 1 & 62.28 & 60.96 & 62.28 & \textbf{62.44} & 62.28 & 70.36 \\
+BreastMNIST & 4 & 62.28 & 65.50 & 65.50 & \textbf{67.81} & 65.50 & 73.17 \\
+BreastMNIST & 16 & 62.28 & 73.34 & 73.34 & \textbf{73.81} & 73.34 & 76.98 \\
+PneumoniaMNIST & 1 & \textbf{67.35} & 66.51 & \textbf{67.35} & 66.59 & \textbf{67.35} & 71.53 \\
+PneumoniaMNIST & 4 & 67.35 & \textbf{82.75} & \textbf{82.75} & 81.03 & \textbf{82.75} & 83.41 \\
+PneumoniaMNIST & 16 & 67.35 & \textbf{89.40} & \textbf{89.40} & 89.21 & \textbf{89.40} & 89.79 \\
+OrganAMNIST & 1 & 25.71 & \textbf{48.97} & 37.30 & 46.79 & 41.52 & 49.59 \\
+OrganAMNIST & 4 & 25.71 & \textbf{65.75} & 57.40 & 63.61 & 62.14 & 65.86 \\
+OrganAMNIST & 16 & 25.71 & \textbf{81.48} & 79.74 & 81.48 & 80.59 & 81.71 \\
+\bottomrule
+\end{tabular}
+\end{table}
