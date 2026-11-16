@@ -59,10 +59,9 @@ Dual_kernel/mm_pipeline_*/*.log
 Dual_kernel/mm_pipeline_busi/captions_334084db.jsonl
 Dual_kernel/mm_pipeline_busi/captions_ef30351b.jsonl
 Dual_kernel/mm_pipeline_busi/captions_8aff7799.jsonl
-# Dual_kernel scratch and a friend's notebooks (not mine to publish)
+# Dual_kernel scratch and the old prototype
 Dual_kernel/cell6.py
 Dual_kernel/dualkernel_biovlm.ipynb
-Dual_kernel/others_run/
 
 # local inference tools and model files (llama.cpp, GGUF)
 tools/
