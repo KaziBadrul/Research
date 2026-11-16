@@ -1,0 +1,25 @@
+{
+  "model": "google/medgemma-4b-it",
+  "backend": "llamacpp",
+  "quantization": "Q8_0 GGUF + F16 mmproj (unsloth/medgemma-4b-it-GGUF), llama.cpp b12383, Vulkan",
+  "prompt": "This is a chest X-ray image.\nReturn ONLY valid JSON, nothing else, with exactly this structure:\n{\"description\": \"<2-3 short sentences describing the visible findings>\", \"answers\": [\"<answer 1>\", ..., \"<answer 10>\"]}\nThe list must contain exactly 10 strings, one per question, each AT MOST 15 words:\n1. Are there visible opacities or consolidations? If so, are they bilateral, peripheral, or lower-zone predominant?\n2. Are there ground-glass opacities (GGO)?\n3. Is there evidence of pleural effusion?\n4. Are the lung volumes normal, reduced, or hyperinflated?\n5. Is the cardiac silhouette normal in size and shape?\n6. Are the hilar and mediastinal contours normal?\n7. Are there any nodules or masses visible?\n8. Is there evidence of pneumothorax?\n9. Describe any visible hardware (e.g., tubes, lines, pacemaker).\n10. Comment on image quality, patient positioning (AP/PA), or artifacts.\nDo NOT state a diagnosis, disease name, or BI-RADS category.",
+  "system": "You are an expert radiologist.",
+  "questions": [
+    "Are there visible opacities or consolidations? If so, are they bilateral, peripheral, or lower-zone predominant?",
+    "Are there ground-glass opacities (GGO)?",
+    "Is there evidence of pleural effusion?",
+    "Are the lung volumes normal, reduced, or hyperinflated?",
+    "Is the cardiac silhouette normal in size and shape?",
+    "Are the hilar and mediastinal contours normal?",
+    "Are there any nodules or masses visible?",
+    "Is there evidence of pneumothorax?",
+    "Describe any visible hardware (e.g., tubes, lines, pacemaker).",
+    "Comment on image quality, patient positioning (AP/PA), or artifacts."
+  ],
+  "caps_file": "./mm_pipeline_covid_full/captions_5d6d7f4d.jsonl",
+  "pool_frac": 0.05,
+  "text_fractions": [
+    0.0063
+  ],
+  "cap_batch": 1
+}

@@ -1,0 +1,27 @@
+{
+  "model": "google/medgemma-4b-it",
+  "backend": "llamacpp",
+  "quantization": "Q8_0 GGUF + F16 mmproj (unsloth/medgemma-4b-it-GGUF), llama.cpp b12383, Vulkan",
+  "prompt": "This is a breast ultrasound image.\nReturn ONLY valid JSON, nothing else, with exactly this structure:\n{\"description\": \"<2-3 short sentences describing the visible findings>\", \"answers\": [\"<answer 1>\", ..., \"<answer 10>\"]}\nThe list must contain exactly 10 strings, one per question, each AT MOST 15 words:\n1. Is a distinct lesion visible? If so, is its shape oval, round, or irregular? If none, say so.\n2. Describe the lesion margin (circumscribed, indistinct, angular, microlobulated, spiculated), or say no lesion.\n3. Is the lesion orientation parallel or not parallel to the skin? If no lesion, say 'no lesion'.\n4. Describe the internal echo pattern (anechoic, hypoechoic, isoechoic, hyperechoic, heterogeneous).\n5. Describe posterior acoustic features (enhancement, shadowing, none). If no lesion, say 'no lesion'.\n6. Are calcifications or echogenic foci visible?\n7. Describe the surrounding tissue (fat, glandular, architectural distortion).\n8. Where is the lesion in the image, and roughly how large relative to the image? If no lesion, say 'no lesion'.\n9. Is there one lesion or multiple?\n10. Describe acoustic artifacts only (e.g., reverberation, poor penetration, speckle). Ignore any text, calipers, or markers.\nDo NOT state a diagnosis, disease name, or BI-RADS category.",
+  "system": "You are an expert radiologist.",
+  "questions": [
+    "Is a distinct lesion visible? If so, is its shape oval, round, or irregular? If none, say so.",
+    "Describe the lesion margin (circumscribed, indistinct, angular, microlobulated, spiculated), or say no lesion.",
+    "Is the lesion orientation parallel or not parallel to the skin? If no lesion, say 'no lesion'.",
+    "Describe the internal echo pattern (anechoic, hypoechoic, isoechoic, hyperechoic, heterogeneous).",
+    "Describe posterior acoustic features (enhancement, shadowing, none). If no lesion, say 'no lesion'.",
+    "Are calcifications or echogenic foci visible?",
+    "Describe the surrounding tissue (fat, glandular, architectural distortion).",
+    "Where is the lesion in the image, and roughly how large relative to the image? If no lesion, say 'no lesion'.",
+    "Is there one lesion or multiple?",
+    "Describe acoustic artifacts only (e.g., reverberation, poor penetration, speckle). Ignore any text, calipers, or markers."
+  ],
+  "caps_file": "./mm_pipeline_busi/captions_820ce55c.jsonl",
+  "pool_frac": 0.25,
+  "text_fractions": [
+    0.0063,
+    0.0125,
+    0.125
+  ],
+  "cap_batch": 1
+}
