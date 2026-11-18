@@ -66,3 +66,9 @@ Dual_kernel/dualkernel_biovlm.ipynb
 # local inference tools and model files (llama.cpp, GGUF)
 tools/
 Dual_kernel/mm_pipeline_*/*partial*
+# DKA notebook caches (text embeddings); keep its CSV results
+Dual_kernel/mm_dka/*.pt
+# BioVLM attribute JSONs (upstream repo has no licence; fetched locally for reference only)
+Dual_kernel/biovlm_attributes/
+# MedSigLIP notebook caches (image/text embeddings)
+Dual_kernel/mm_medsiglip/*.pt
